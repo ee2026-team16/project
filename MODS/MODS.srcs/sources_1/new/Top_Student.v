@@ -158,19 +158,35 @@ module Top_Student (
     );
 
     // ---------- tasks ----------
-    wire clicked_start, clicked_settings;
+    wire clicked_start, clicked_settings_main;
+    wire clicked_settings;
     wire [15:0] main_menu_pixel_data;
-    main_menu(clk, pixel_index, main_menu_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, clicked_start, clicked_settings);
+    main_menu(clk, pixel_index, main_menu_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, clicked_start, clicked_settings_main);
     
     wire clicked_back;
     wire [15:0] settings_menu_pixel_data;
     wire [4:0] volume_level; // goes from 0 to 9
     settings_menu(clk, pixel_index, settings_menu_pixel_data, debounced_btnC, debounced_btnU, debounced_btnL, debounced_btnR, debounced_btnD, clicked_back, volume_level);
     
+    wire clicked_home_win;
+    wire clicked_home_lose;
+    wire clicked_settings_win;
+    wire clicked_settings_lose;
+    wire clicked_home;
+    wire [15:0] game_over_win_pixel_data;
+    wire [15:0] game_over_lose_pixel_data;
+    game_over_menu game_over_win_menu(clk, pixel_index, game_over_win_pixel_data, 1, debounced_btnC, debounced_btnL, debounced_btnR, clicked_home_win, clicked_settings_win);
+    game_over_menu game_over_lose_menu(clk, pixel_index, game_over_lose_pixel_data, 0, debounced_btnC, debounced_btnL, debounced_btnR, clicked_home_lose, clicked_settings_lose);
+    
+    assign clicked_home = clicked_home_win || clicked_home_lose;
+    assign clicked_settings = clicked_settings_main || clicked_settings_win || clicked_settings_lose;
+    
     // ---------- state machine ----------
     reg [31:0] MAIN = 0;
     reg [31:0] SETTINGS = 1;
     reg [31:0] START = 2;
+    reg [31:0] GAME_OVER_WIN = 3;
+    reg [31:0] GAME_OVER_LOSE = 4;
     
     reg [31:0] state;
     
@@ -184,15 +200,17 @@ module Top_Student (
         if (state == MAIN && clicked_start) state <= START;
         else if (state == MAIN && clicked_settings) state <= SETTINGS;
         else if (state == SETTINGS && clicked_back) state <= MAIN;
+        else if ((state == GAME_OVER_WIN || state == GAME_OVER_LOSE) && clicked_home) state <= MAIN;
+        else if ((state == GAME_OVER_WIN || state == GAME_OVER_LOSE) && clicked_settings) state <= SETTINGS;
         
         case (state)
             MAIN: pixel_data <= main_menu_pixel_data;
             SETTINGS: pixel_data <= settings_menu_pixel_data;
-            START: pixel_data <= 16'b11111_000000_00000;
+            START: pixel_data <= 16'b11111_111111_11111;
+            GAME_OVER_WIN: pixel_data <= game_over_win_pixel_data;
+            GAME_OVER_LOSE: pixel_data <= game_over_lose_pixel_data;
             default: pixel_data <= black;
         endcase
     end
-    
-    
     
 endmodule

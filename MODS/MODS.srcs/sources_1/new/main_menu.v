@@ -877,7 +877,7 @@ module main_menu(
         x = pixel_index % 96;
         y = pixel_index / 96;
         
-        // "WHACK-A-MOLE
+        // "WHACK-A-MOLE"
         if (is_char(x, y, 8, 8, 87)) pixel_data <= title_text;
         else if (is_char(x, y, 13, 8, 72)) pixel_data <= title_text;
         else if (is_char(x, y, 18, 8, 65)) pixel_data <= title_text;
