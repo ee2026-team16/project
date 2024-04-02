@@ -20,6 +20,7 @@ module Top_Student (
     output [3:0] an,
     input btnC, btnU, btnL, btnR, btnD,
     output [7:0] JC,
+    output [7:0] JB,
     inout PS2Clk, PS2Data
 );
     //  clocks
@@ -181,6 +182,46 @@ module Top_Student (
     assign clicked_home = clicked_home_win || clicked_home_lose;
     assign clicked_settings = clicked_settings_main || clicked_settings_win || clicked_settings_lose;
     
+    reg game_start;
+    wire transfer;
+
+    Count_Down_Timer timer(
+        .pb_start(game_start),
+        .basys_clk(clk),
+        .seg(seg),
+        .dp(dp),
+        .an(an),
+        .stop(transfer)
+    );
+    wire [31:0] points;
+    LED_Switch_Random unit(
+        .enable(game_start),
+        .stop(transfer),
+        .basys_clk(clk),
+        .sw(sw),
+        .led(led),
+        .points_output(points)
+    );
+    
+    wire [15:0] mole_sequence_pixel_data;
+    wire [31:0] total_points;
+    wire bomb_defused;
+    mole_sequence game(.basys_clock(clk), 
+    .clk_25MHz(clk_25m), 
+    .sw2(1),
+    .left_click(left),
+    .btnC(btnC), 
+    .btnU(btnU),
+    .btnL(btnL),
+    .btnR(btnR),
+    .btnD(btnD),
+    .xpos(xpos), 
+    .ypos(ypos),
+    .pixel_index(pixel_index), 
+    .switch_points(points),
+    .oled_data(mole_sequence_pixel_data),
+    .total_points(total_points),
+    .bomb_defused(bomb_defused)); 
     // ---------- state machine ----------
     reg [31:0] MAIN = 0;
     reg [31:0] SETTINGS = 1;
@@ -189,12 +230,27 @@ module Top_Student (
     reg [31:0] GAME_OVER_LOSE = 4;
     
     reg [31:0] state;
+
+    wire clk_25MHz;
+    flexible_clock_module flexible_clock_module_25MHz (
+        .basys_clock(clk),
+        .my_m_value(1),
+        .my_clk(clk_25MHz)
+    );
     
+    Music_player Music(
+        .volume(volume_level), //assume 0 - 9;
+        .start(1),
+        .clk(clk_25MHz),
+        .o_audio(JB[0]),
+        .gain(JB[1]),
+        .shutdown(JB[3])
+    ); 
     initial
     begin
         state = MAIN;
     end
-        
+    
     always @ (posedge clk)
     begin
         if (state == MAIN && clicked_start) state <= START;
@@ -202,11 +258,11 @@ module Top_Student (
         else if (state == SETTINGS && clicked_back) state <= MAIN;
         else if ((state == GAME_OVER_WIN || state == GAME_OVER_LOSE) && clicked_home) state <= MAIN;
         else if ((state == GAME_OVER_WIN || state == GAME_OVER_LOSE) && clicked_settings) state <= SETTINGS;
-        
+        game_start = (state == START)?1:0;
         case (state)
             MAIN: pixel_data <= main_menu_pixel_data;
             SETTINGS: pixel_data <= settings_menu_pixel_data;
-            START: pixel_data <= 16'b11111_111111_11111;
+            START: pixel_data <= mole_sequence_pixel_data;
             GAME_OVER_WIN: pixel_data <= game_over_win_pixel_data;
             GAME_OVER_LOSE: pixel_data <= game_over_lose_pixel_data;
             default: pixel_data <= black;
