@@ -26,6 +26,8 @@ module game_over_menu(
     output reg [15:0] pixel_data,
     input is_win,
     input btnC, btnL, btnR,
+    input [11:0] xpos, ypos,
+    input left,
     output reg clicked_home, clicked_settings
 );
     reg [15:0] background = 16'b11100_100101_00111;
@@ -33,6 +35,7 @@ module game_over_menu(
     reg [15:0] home_text = 16'b01101_010010_00010;
     reg [15:0] settings_gear = 16'b00110_100011_01000;
     reg [15:0] rectangle_border = 16'b10011_100111_10011;
+    reg [15:0] mouse = 16'b11111_000000_00000;
     
     wire clk_25m, clk_10;
     flexible_clock_module flexible_clock_module_25m (
@@ -94,6 +97,34 @@ module game_over_menu(
             begin
                 is_rectangle_border = 1;
             end
+        end
+    endfunction
+    
+    function is_within_rectangle_border;
+        input [11:0] xpos;
+        input [11:0] ypos;
+        input [7:0] origin_x;
+        input [7:0] origin_y;
+        input [7:0] a;
+        input [7:0] b;
+        begin
+            if (xpos >= origin_x - a / 2 && xpos < origin_x + a / 2 && ypos >= origin_y - b / 2 && ypos < origin_y + b / 2)
+                is_within_rectangle_border = 1;
+            else
+                is_within_rectangle_border = 0;
+        end
+    endfunction
+
+    function is_mouse;
+        input [7:0] curr_x;
+        input [7:0] curr_y;
+        input [11:0] xpos;
+        input [11:0] ypos;
+        begin
+            if (((x - xpos) ** 2 + (y - ypos) ** 2) < 5)
+                is_mouse = 1;
+            else
+                is_mouse = 0;
         end
     endfunction
     
@@ -714,7 +745,21 @@ module game_over_menu(
         
     always @ (posedge clk)
     begin
-        if (rectangle_border_x == 128 && btnL)
+        if (is_within_rectangle_border(xpos, ypos, select_home_x, select_home_y, select_home_a, select_home_b))
+            begin
+                rectangle_border_x = select_home_x;
+                rectangle_border_y = select_home_y;
+                rectangle_border_a = select_home_a;
+                rectangle_border_b = select_home_b;
+            end
+        else if (is_within_rectangle_border(xpos, ypos, select_settings_x, select_settings_y, select_settings_a, select_settings_b))
+            begin
+                rectangle_border_x = select_settings_x;
+                rectangle_border_y = select_settings_y;
+                rectangle_border_a = select_settings_a;
+                rectangle_border_b = select_settings_b;
+            end
+        else if (rectangle_border_x == 128 && btnL)
             begin
                 rectangle_border_x = select_home_x;
                 rectangle_border_y = select_home_y;
@@ -743,7 +788,7 @@ module game_over_menu(
                 rectangle_border_b = select_home_b;
             end
         
-        if (rectangle_border_x == select_home_x && btnC)
+        if (rectangle_border_x == select_home_x && (btnC || left))
             begin
                 clicked_home = 1;
                 rectangle_border_x = 128;
@@ -756,7 +801,7 @@ module game_over_menu(
                 clicked_home = 0;
             end
             
-        if (rectangle_border_x == select_settings_x && btnC)
+        if (rectangle_border_x == select_settings_x && (btnC || left))
             begin
                 clicked_settings = 1;
                 rectangle_border_x = 128;
@@ -782,9 +827,12 @@ module game_over_menu(
     begin
         x = pixel_index % 96;
         y = pixel_index / 96;
+
+        // mouse
+        if (is_mouse(x, y, xpos, ypos)) pixel_data <= mouse;
         
         // "HOME"
-        if (is_char(x, y, 23, 52, 72)) pixel_data <= home_text;
+        else if (is_char(x, y, 23, 52, 72)) pixel_data <= home_text;
         else if (is_char(x, y, 28, 52, 79)) pixel_data <= home_text;
         else if (is_char(x, y, 33, 52, 77)) pixel_data <= home_text;
         else if (is_char(x, y, 38, 52, 69)) pixel_data <= home_text;

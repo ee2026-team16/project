@@ -25,6 +25,8 @@ module settings_menu(
     input [12:0] pixel_index,
     output reg [15:0] pixel_data,
     input btnC, btnU, btnL, btnR, btnD,
+    input [11:0] xpos, ypos,
+    input left,
     output reg clicked_back = 0,
     output reg [4:0] volume_level = 5,
     output reg [4:0] animation_level = 5
@@ -37,6 +39,7 @@ module settings_menu(
     reg [15:0] slider_full = 16'b00000_011110_11011;
     reg [15:0] slider_empty = 16'b01100_011010_01101;
     reg [15:0] slider_cursor = 16'b11110_111110_11101;
+    reg [15:0] mouse = 16'b11111_000000_00000;
     
     wire clk_25m, clk_1000;
     flexible_clock_module flexible_clock_module_25m (
@@ -63,6 +66,34 @@ module settings_menu(
             begin
                 is_rectangle_border = 1;
             end
+        end
+    endfunction
+
+    function is_within_rectangle_border;
+        input [11:0] xpos;
+        input [11:0] ypos;
+        input [7:0] origin_x;
+        input [7:0] origin_y;
+        input [7:0] a;
+        input [7:0] b;
+        begin
+            if (xpos >= origin_x - a / 2 && xpos < origin_x + a / 2 && ypos >= origin_y - b / 2 && ypos < origin_y + b / 2)
+                is_within_rectangle_border = 1;
+            else
+                is_within_rectangle_border = 0;
+        end
+    endfunction
+
+    function is_mouse;
+        input [7:0] curr_x;
+        input [7:0] curr_y;
+        input [11:0] xpos;
+        input [11:0] ypos;
+        begin
+            if (((x - xpos) ** 2 + (y - ypos) ** 2) < 5)
+                is_mouse = 1;
+            else
+                is_mouse = 0;
         end
     endfunction
     
@@ -720,7 +751,28 @@ module settings_menu(
     
     always @ (posedge clk_1000)
     begin
-        if (rectangle_border_y == 128 && btnU)
+        if (is_within_rectangle_border(xpos, ypos, select_back_x, select_back_y, select_back_a, select_back_b))
+            begin
+                rectangle_border_x = select_back_x;
+                rectangle_border_y = select_back_y;
+                rectangle_border_a = select_back_a;
+                rectangle_border_b = select_back_b;
+            end
+        else if (is_within_rectangle_border(xpos, ypos, select_volume_x, select_volume_y, select_volume_a, select_volume_b))
+            begin
+                rectangle_border_x = select_volume_x;
+                rectangle_border_y = select_volume_y;
+                rectangle_border_a = select_volume_a;
+                rectangle_border_b = select_volume_b;
+            end
+        else if (is_within_rectangle_border(xpos, ypos, select_animation_x, select_animation_y, select_animation_a, select_animation_b))
+            begin
+                rectangle_border_x = select_animation_x;
+                rectangle_border_y = select_animation_y;
+                rectangle_border_a = select_animation_a;
+                rectangle_border_b = select_animation_b;
+            end
+        else if (rectangle_border_y == 128 && btnU)
             begin
                 rectangle_border_x = select_volume_x;
                 rectangle_border_y = select_volume_y;
@@ -763,7 +815,7 @@ module settings_menu(
                 rectangle_border_b = select_animation_b;
             end
         
-        if (rectangle_border_y == select_back_y && btnC)
+        if (rectangle_border_y == select_back_y && (btnC || left))
             begin
                 clicked_back = 1;
                 rectangle_border_x = 128;
@@ -821,8 +873,11 @@ module settings_menu(
         x = pixel_index % 96;
         y = pixel_index / 96;
 
+        // mouse
+        if (is_mouse(x, y, xpos, ypos)) pixel_data <= mouse;
+
         // SETTINGS
-        if (is_char(x, y, 8, 8, 83)) pixel_data <= title_text;
+        else if (is_char(x, y, 8, 8, 83)) pixel_data <= title_text;
         else if (is_char(x, y, 13, 8, 69)) pixel_data <= title_text;
         else if (is_char(x, y, 18, 8, 84)) pixel_data <= title_text;
         else if (is_char(x, y, 23, 8, 84)) pixel_data <= title_text;

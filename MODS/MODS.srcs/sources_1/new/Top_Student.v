@@ -41,14 +41,6 @@ module Top_Student (
         .my_clk(clk_1000)
     );
     
-    // debounced buttons
-    wire debounced_btnC, debounced_btnU, debounced_btnL, debounced_btnR, debounced_btnD;
-    debounce(clk_1000, btnC, debounced_btnC);
-    debounce(clk_1000, btnU, debounced_btnU);
-    debounce(clk_1000, btnL, debounced_btnL);
-    debounce(clk_1000, btnR, debounced_btnR);
-    debounce(clk_1000, btnD, debounced_btnD);
-    
     // ---------- oled ----------    
     //  inputs
     reg reset = 0;
@@ -111,16 +103,28 @@ module Top_Student (
     );
     
     // ---------- tasks ----------
+    // debounced buttons
+    wire debounced_btnC, debounced_btnU, debounced_btnL, debounced_btnR, debounced_btnD;
+    debounce(clk_1000, btnC, debounced_btnC);
+    debounce(clk_1000, btnU, debounced_btnU);
+    debounce(clk_1000, btnL, debounced_btnL);
+    debounce(clk_1000, btnR, debounced_btnR);
+    debounce(clk_1000, btnD, debounced_btnD);
+
+    // debounced mouse left
+    wire debounced_left;
+    debounce(clk_1000, left, debounced_left);
+
     wire clicked_start, clicked_settings_main;
     wire clicked_settings;
     wire [15:0] main_menu_pixel_data;
-    main_menu(clk, pixel_index, main_menu_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, clicked_start, clicked_settings_main);
+    main_menu(clk, pixel_index, main_menu_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, xpos, ypos, debounced_left, clicked_start, clicked_settings_main);
     
     wire clicked_back;
     wire [15:0] settings_menu_pixel_data;
     wire [4:0] volume_level; // goes from 0 to 9
     wire [4:0] animation_level; // goes from 0 to 9
-    settings_menu(clk, pixel_index, settings_menu_pixel_data, debounced_btnC, debounced_btnU, debounced_btnL, debounced_btnR, debounced_btnD, clicked_back, volume_level, animation_level);
+    settings_menu(clk, pixel_index, settings_menu_pixel_data, debounced_btnC, debounced_btnU, debounced_btnL, debounced_btnR, debounced_btnD, xpos, ypos, debounced_left, clicked_back, volume_level, animation_level);
     
     wire clicked_home_win;
     wire clicked_home_lose;
@@ -129,8 +133,8 @@ module Top_Student (
     wire clicked_home;
     wire [15:0] game_over_win_pixel_data;
     wire [15:0] game_over_lose_pixel_data;
-    game_over_menu game_over_win_menu(clk, pixel_index, game_over_win_pixel_data, 1, debounced_btnC, debounced_btnL, debounced_btnR, clicked_home_win, clicked_settings_win);
-    game_over_menu game_over_lose_menu(clk, pixel_index, game_over_lose_pixel_data, 0, debounced_btnC, debounced_btnL, debounced_btnR, clicked_home_lose, clicked_settings_lose);
+    game_over_menu game_over_win_menu(clk, pixel_index, game_over_win_pixel_data, 1, debounced_btnC, debounced_btnL, debounced_btnR, xpos, ypos, debounced_left, clicked_home_win, clicked_settings_win);
+    game_over_menu game_over_lose_menu(clk, pixel_index, game_over_lose_pixel_data, 0, debounced_btnC, debounced_btnL, debounced_btnR, xpos, ypos, debounced_left, clicked_home_lose, clicked_settings_lose);
     
     // wire clicked_home_tutorial_page_1;
     // wire clicked_next_tutorial_page_1;
@@ -250,7 +254,7 @@ module Top_Student (
 
     initial
     begin
-        state = MAIN;
+        state = GAME_OVER_WIN;
     end
         
     always @ (posedge clk)

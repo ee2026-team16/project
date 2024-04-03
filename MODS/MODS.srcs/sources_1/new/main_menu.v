@@ -24,6 +24,8 @@ module main_menu(
     input [12:0] pixel_index,
     output reg [15:0] pixel_data,
     input btnC, btnL, btnR,
+    input [11:0] xpos, ypos,
+    input left,
     output reg clicked_start, clicked_settings
 );
     reg [15:0] background = 16'b11100_100101_00111;
@@ -35,6 +37,7 @@ module main_menu(
     reg [15:0] bomb = 16'b0;
     reg [15:0] bomb_fuse = 16'b01110_011101_01110;
     reg [15:0] bomb_fire = 16'b11100_001010_00000;
+    reg [15:0] mouse = 16'b11111_000000_00000;
 
     wire clk_25m, clk_1000;
     flexible_clock_module flexible_clock_module_25m (
@@ -188,6 +191,34 @@ module main_menu(
             begin
                 is_rectangle_border = 1;
             end
+        end
+    endfunction
+    
+    function is_within_rectangle_border;
+        input [11:0] xpos;
+        input [11:0] ypos;
+        input [7:0] origin_x;
+        input [7:0] origin_y;
+        input [7:0] a;
+        input [7:0] b;
+        begin
+            if (xpos >= origin_x - a / 2 && xpos < origin_x + a / 2 && ypos >= origin_y - b / 2 && ypos < origin_y + b / 2)
+                is_within_rectangle_border = 1;
+            else
+                is_within_rectangle_border = 0;
+        end
+    endfunction
+
+    function is_mouse;
+        input [7:0] curr_x;
+        input [7:0] curr_y;
+        input [11:0] xpos;
+        input [11:0] ypos;
+        begin
+            if (((x - xpos) ** 2 + (y - ypos) ** 2) < 5)
+                is_mouse = 1;
+            else
+                is_mouse = 0;
         end
     endfunction
 
@@ -788,7 +819,21 @@ module main_menu(
         
     always @ (posedge clk)
     begin
-        if (rectangle_border_x == 128 && btnL)
+        if (is_within_rectangle_border(xpos, ypos, select_start_x, select_start_y, select_start_a, select_start_b))
+            begin
+                rectangle_border_x = select_start_x;
+                rectangle_border_y = select_start_y;
+                rectangle_border_a = select_start_a;
+                rectangle_border_b = select_start_b;
+            end
+        else if (is_within_rectangle_border(xpos, ypos, select_settings_x, select_settings_y, select_settings_a, select_settings_b))
+            begin
+                rectangle_border_x = select_settings_x;
+                rectangle_border_y = select_settings_y;
+                rectangle_border_a = select_settings_a;
+                rectangle_border_b = select_settings_b;
+            end
+        else if (rectangle_border_x == 128 && btnL)
             begin
                 rectangle_border_x = select_start_x;
                 rectangle_border_y = select_start_y;
@@ -817,7 +862,7 @@ module main_menu(
                 rectangle_border_b = select_start_b;
             end
         
-        if (rectangle_border_x == select_start_x && btnC)
+        if (rectangle_border_x == select_start_x && (btnC || left))
             begin
                 clicked_start = 1;
                 clicked_settings = 0;
@@ -826,7 +871,7 @@ module main_menu(
                 rectangle_border_a = 128;
                 rectangle_border_b = 128;
             end
-        else if (rectangle_border_x == select_settings_x && btnC)
+        else if (rectangle_border_x == select_settings_x && (btnC || left))
             begin
                 clicked_start = 0;
                 clicked_settings = 1;
@@ -847,9 +892,12 @@ module main_menu(
     begin
         x = pixel_index % 96;
         y = pixel_index / 96;
+
+        // mouse
+        if (is_mouse(x, y, xpos, ypos)) pixel_data <= mouse;
         
         // "WHACK-A-MOLE"
-        if (is_char(x, y, 8, 8, 87)) pixel_data <= title_text;
+        else if (is_char(x, y, 8, 8, 87)) pixel_data <= title_text;
         else if (is_char(x, y, 14, 8, 72)) pixel_data <= title_text;
         else if (is_char(x, y, 19, 8, 65)) pixel_data <= title_text;
         else if (is_char(x, y, 24, 8, 67)) pixel_data <= title_text;
