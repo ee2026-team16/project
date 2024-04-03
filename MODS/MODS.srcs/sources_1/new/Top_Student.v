@@ -24,16 +24,11 @@ module Top_Student (
     inout PS2Clk, PS2Data
 );
     //  clocks
-    wire clk_25m, clk_12p5m, clk_6p25m, clk_1000, clk_1;
+    wire clk_25m, clk_6p25m, clk_1000;
     flexible_clock_module flexible_clock_module_25m (
         .basys_clock(clk),
         .my_m_value(1),
         .my_clk(clk_25m)
-    );
-    flexible_clock_module flexible_clock_module_12p5m (
-        .basys_clock(clk),
-        .my_m_value(3),
-        .my_clk(clk_12p5m)
     );
     flexible_clock_module flexible_clock_module_6p25m (
         .basys_clock(clk),
@@ -45,11 +40,6 @@ module Top_Student (
         .my_m_value(49999),
         .my_clk(clk_1000)
     );
-    flexible_clock_module flexible_clock_module_1 (
-        .basys_clock(clk),
-        .my_m_value(49999999),
-        .my_clk(clk_1)
-    );
     
     // debounced buttons
     wire debounced_btnC, debounced_btnU, debounced_btnL, debounced_btnR, debounced_btnD;
@@ -59,11 +49,7 @@ module Top_Student (
     debounce(clk_1000, btnR, debounced_btnR);
     debounce(clk_1000, btnD, debounced_btnD);
     
-    // ---------- oled ----------
-    // constants
-    reg [15:0] black = 16'b0;
-    reg [15:0] white = 16'b11111_111111_11111;
-    
+    // ---------- oled ----------    
     //  inputs
     reg reset = 0;
     reg [15:0] pixel_data;
@@ -124,40 +110,6 @@ module Top_Student (
         .ps2_data(PS2Data)
     );
     
-//    assign led[15] = left;
-//    assign led[14] = middle;
-//    assign led[13] = right;
-    
-    // ---------- paint ----------
-    //  inputs
-    wire enable; // disable = 0
-    assign enable = sw[8];
-    
-    wire paint_reset;
-    assign paint_reset = sw[8] == 0 || right;
-    
-    //  outputs
-    wire [15:0] colour_chooser;
-    
-    wire [6:0] paint_seg;
-    //  initialize
-    paint(
-        .mouse_x(xpos),
-        .mouse_y(ypos),
-        .mouse_l(left),
-        .reset(paint_reset),
-        .pixel_index(pixel_index),
-        .enable(enable),
-        .clk_100M(clk),
-        .clk_25M(clk_25m),
-        .clk_12p5M(clk_12p5m),
-        .clk_6p25M(clk_6p25m),
-        .slow_clk(clk_1),
-        .seg(paint_seg),
-//        .led(led),
-        .colour_chooser(colour_chooser)
-    );
-
     // ---------- tasks ----------
     wire clicked_start, clicked_settings_main;
     wire clicked_settings;
@@ -179,6 +131,19 @@ module Top_Student (
     game_over_menu game_over_win_menu(clk, pixel_index, game_over_win_pixel_data, 1, debounced_btnC, debounced_btnL, debounced_btnR, clicked_home_win, clicked_settings_win);
     game_over_menu game_over_lose_menu(clk, pixel_index, game_over_lose_pixel_data, 0, debounced_btnC, debounced_btnL, debounced_btnR, clicked_home_lose, clicked_settings_lose);
     
+    wire clicked_home_tutorial_page_1;
+    wire clicked_next_tutorial_page_1;
+    wire clicked_back_tutorial_page_2;
+    wire clicked_next_tutorial_page_2;
+    wire clicked_back_tutorial_page_3;
+    wire clicked_home_tutorial_page_3;
+    wire [15:0] tutorial_menu_page_1_pixel_data;
+    wire [15:0] tutorial_menu_page_2_pixel_data;
+    wire [15:0] tutorial_menu_page_3_pixel_data;
+    tutorial_menu_page_1(clk, pixel_index, tutorial_menu_page_1_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, clicked_home_tutorial_page_1, clicked_next_tutorial_page_1);
+    tutorial_menu_page_2(clk, pixel_index, tutorial_menu_page_2_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, clicked_back_tutorial_page_2, clicked_next_tutorial_page_2);
+    tutorial_menu_page_3(clk, pixel_index, tutorial_menu_page_3_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, clicked_back_tutorial_page_3, clicked_home_tutorial_page_3);
+        
     assign clicked_home = clicked_home_win || clicked_home_lose;
     assign clicked_settings = clicked_settings_main || clicked_settings_win || clicked_settings_lose;
     
@@ -221,51 +186,61 @@ module Top_Student (
     .switch_points(points),
     .oled_data(mole_sequence_pixel_data),
     .total_points(total_points),
-    .bomb_defused(bomb_defused)); 
-    // ---------- state machine ----------
-    reg [31:0] MAIN = 0;
-    reg [31:0] SETTINGS = 1;
-    reg [31:0] START = 2;
-    reg [31:0] GAME_OVER_WIN = 3;
-    reg [31:0] GAME_OVER_LOSE = 4;
-    
-    reg [31:0] state;
-
-    wire clk_25MHz;
-    flexible_clock_module flexible_clock_module_25MHz (
-        .basys_clock(clk),
-        .my_m_value(1),
-        .my_clk(clk_25MHz)
-    );
+    .bomb_defused(bomb_defused));
     
     Music_player Music(
         .volume(volume_level), //assume 0 - 9;
         .start(1),
-        .clk(clk_25MHz),
+        .clk(clk_25m),
         .o_audio(JB[0]),
         .gain(JB[1]),
         .shutdown(JB[3])
-    ); 
+    );
+    
+    // ---------- state machine ----------
+    reg [3:0] MAIN = 4'b0000;
+    reg [3:0] SETTINGS = 4'b0001;
+    reg [3:0] START = 4'b0010;
+    reg [3:0] GAME_OVER_WIN = 4'b0011;
+    reg [3:0] GAME_OVER_LOSE = 4'b0100;
+    // reg [3:0] TUTORIAL_PAGE_1 = 4'b0101;
+    // reg [3:0] TUTORIAL_PAGE_2 = 4'b0110;
+    // reg [3:0] TUTORIAL_PAGE_3 = 4'b0111;
+    
+    reg [3:0] state;
+    
     initial
     begin
         state = MAIN;
     end
-    
+        
     always @ (posedge clk)
     begin
         if (state == MAIN && clicked_start) state <= START;
-        else if (state == MAIN && clicked_settings) state <= SETTINGS;
+        else if (state == MAIN && clicked_settings) state <= SETTINGS; 
+        // else if (state == MAIN && clicked_tutorial) state <= TUTORIAL_PAGE_1;
         else if (state == SETTINGS && clicked_back) state <= MAIN;
         else if ((state == GAME_OVER_WIN || state == GAME_OVER_LOSE) && clicked_home) state <= MAIN;
         else if ((state == GAME_OVER_WIN || state == GAME_OVER_LOSE) && clicked_settings) state <= SETTINGS;
-        game_start = (state == START)?1:0;
+        // else if (state == TUTORIAL_PAGE_1 && clicked_home_tutorial_page_1) state <= MAIN;
+        // else if (state == TUTORIAL_PAGE_1 && clicked_next_tutorial_page_1) state <= TUTORIAL_PAGE_2;
+        // else if (state == TUTORIAL_PAGE_2 && clicked_back_tutorial_page_2) state <= TUTORIAL_PAGE_1;
+        // else if (state == TUTORIAL_PAGE_2 && clicked_next_tutorial_page_2) state <= TUTORIAL_PAGE_3;
+        // else if (state == TUTORIAL_PAGE_3 && clicked_back_tutorial_page_3) state <= TUTORIAL_PAGE_2;
+        // else if (state == TUTORIAL_PAGE_3 && clicked_home_tutorial_page_3) state <= MAIN;
+        
+        game_start = (state == START) ? 1 : 0;
+        
         case (state)
             MAIN: pixel_data <= main_menu_pixel_data;
             SETTINGS: pixel_data <= settings_menu_pixel_data;
             START: pixel_data <= mole_sequence_pixel_data;
             GAME_OVER_WIN: pixel_data <= game_over_win_pixel_data;
             GAME_OVER_LOSE: pixel_data <= game_over_lose_pixel_data;
-            default: pixel_data <= black;
+            // TUTORIAL_PAGE_1: pixel_data <= tutorial_menu_page_1_pixel_data;
+            // TUTORIAL_PAGE_2: pixel_data <= tutorial_menu_page_2_pixel_data;
+            // TUTORIAL_PAGE_3: pixel_data <= tutorial_menu_page_3_pixel_data;
+            default: pixel_data <= 16'b0;
         endcase
     end
     

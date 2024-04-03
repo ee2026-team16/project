@@ -782,7 +782,7 @@ module settings_menu(
     begin
         x = pixel_index % 96;
         y = pixel_index / 96;
-        
+
         // SETTINGS
         if (is_char(x, y, 8, 8, 83)) pixel_data <= title_text;
         else if (is_char(x, y, 13, 8, 69)) pixel_data <= title_text;
@@ -792,7 +792,15 @@ module settings_menu(
         else if (is_char(x, y, 30, 8, 78)) pixel_data <= title_text;
         else if (is_char(x, y, 35, 8, 71)) pixel_data <= title_text;
         else if (is_char(x, y, 41, 8, 83)) pixel_data <= title_text;
-        
+
+        // VOLUME
+        else if (is_char(x, y, 33, 20, 86)) pixel_data <= title_text;
+        else if (is_char(x, y, 39, 20, 79)) pixel_data <= title_text;
+        else if (is_char(x, y, 44, 20, 76)) pixel_data <= title_text;
+        else if (is_char(x, y, 49, 20, 85)) pixel_data <= title_text;
+        else if (is_char(x, y, 54, 20, 77)) pixel_data <= title_text;
+        else if (is_char(x, y, 59, 20, 69)) pixel_data <= title_text;
+
         // BACK
         else if (is_char(x, y, 39, 52, 66)) pixel_data <= back_text;
         else if (is_char(x, y, 44, 52, 65)) pixel_data <= back_text;

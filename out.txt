@@ -1,0 +1,2820 @@
+else if (x == 18 && y == 20)
+begin
+    pixel_data <= 16'b01010_001110_10000;
+end
+else if (x == 19 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 21 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 22 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 23 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 24 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 25 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 26 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 27 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 20)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 67 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 69 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 70 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 71 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 72 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 73 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 74 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 75 && y == 20)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 20)
+begin
+    pixel_data <= 16'b01111_001111_01111;
+end
+else if (x == 17 && y == 21)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 18 && y == 21)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 19 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 21 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 22 && y == 21)
+begin
+    pixel_data <= 16'b01010_010000_10000;
+end
+else if (x == 23 && y == 21)
+begin
+    pixel_data <= 16'b01010_010000_01111;
+end
+else if (x == 24 && y == 21)
+begin
+    pixel_data <= 16'b01010_001111_10000;
+end
+else if (x == 25 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 26 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 27 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 21)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 29 && y == 21)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 30 && y == 21)
+begin
+    pixel_data <= 16'b11111_011111_11111;
+end
+else if (x == 64 && y == 21)
+begin
+    pixel_data <= 16'b01100_001100_10010;
+end
+else if (x == 65 && y == 21)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 66 && y == 21)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 67 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 69 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 70 && y == 21)
+begin
+    pixel_data <= 16'b01101_001111_10010;
+end
+else if (x == 71 && y == 21)
+begin
+    pixel_data <= 16'b01101_010000_10010;
+end
+else if (x == 72 && y == 21)
+begin
+    pixel_data <= 16'b01101_001111_10010;
+end
+else if (x == 73 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 74 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 75 && y == 21)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 21)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 77 && y == 21)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 17 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 21 && y == 22)
+begin
+    pixel_data <= 16'b01010_010010_01110;
+end
+else if (x == 22 && y == 22)
+begin
+    pixel_data <= 16'b01010_011110_01001;
+end
+else if (x == 23 && y == 22)
+begin
+    pixel_data <= 16'b01010_011110_01001;
+end
+else if (x == 24 && y == 22)
+begin
+    pixel_data <= 16'b01010_011100_01010;
+end
+else if (x == 25 && y == 22)
+begin
+    pixel_data <= 16'b01010_010000_01111;
+end
+else if (x == 26 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 27 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 22)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 64 && y == 22)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 65 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 69 && y == 22)
+begin
+    pixel_data <= 16'b10000_010001_10010;
+end
+else if (x == 70 && y == 22)
+begin
+    pixel_data <= 16'b11101_011101_10110;
+end
+else if (x == 71 && y == 22)
+begin
+    pixel_data <= 16'b11110_011110_10110;
+end
+else if (x == 72 && y == 22)
+begin
+    pixel_data <= 16'b11100_011100_10110;
+end
+else if (x == 73 && y == 22)
+begin
+    pixel_data <= 16'b01110_010000_10010;
+end
+else if (x == 74 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 75 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 22)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 23)
+begin
+    pixel_data <= 16'b01010_001111_10000;
+end
+else if (x == 21 && y == 23)
+begin
+    pixel_data <= 16'b01010_011110_01001;
+end
+else if (x == 22 && y == 23)
+begin
+    pixel_data <= 16'b01010_011111_01001;
+end
+else if (x == 23 && y == 23)
+begin
+    pixel_data <= 16'b01010_011111_01001;
+end
+else if (x == 24 && y == 23)
+begin
+    pixel_data <= 16'b01010_011111_01001;
+end
+else if (x == 25 && y == 23)
+begin
+    pixel_data <= 16'b01010_011100_01010;
+end
+else if (x == 26 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 27 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 23)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 49 && y == 23)
+begin
+    pixel_data <= 16'b01010_010100_11001;
+end
+else if (x == 50 && y == 23)
+begin
+    pixel_data <= 16'b01001_010110_11011;
+end
+else if (x == 64 && y == 23)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 23)
+begin
+    pixel_data <= 16'b01101_001111_10001;
+end
+else if (x == 69 && y == 23)
+begin
+    pixel_data <= 16'b11101_011101_10110;
+end
+else if (x == 70 && y == 23)
+begin
+    pixel_data <= 16'b11111_011110_10110;
+end
+else if (x == 71 && y == 23)
+begin
+    pixel_data <= 16'b11111_011110_10110;
+end
+else if (x == 72 && y == 23)
+begin
+    pixel_data <= 16'b11111_011110_10110;
+end
+else if (x == 73 && y == 23)
+begin
+    pixel_data <= 16'b11100_011100_10110;
+end
+else if (x == 74 && y == 23)
+begin
+    pixel_data <= 16'b01011_001110_10001;
+end
+else if (x == 75 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 23)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 24)
+begin
+    pixel_data <= 16'b01010_010000_10000;
+end
+else if (x == 21 && y == 24)
+begin
+    pixel_data <= 16'b01010_011110_01001;
+end
+else if (x == 22 && y == 24)
+begin
+    pixel_data <= 16'b01010_011111_01001;
+end
+else if (x == 23 && y == 24)
+begin
+    pixel_data <= 16'b01010_011111_01001;
+end
+else if (x == 24 && y == 24)
+begin
+    pixel_data <= 16'b01010_011111_01001;
+end
+else if (x == 25 && y == 24)
+begin
+    pixel_data <= 16'b01010_011100_01010;
+end
+else if (x == 26 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 27 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 24)
+begin
+    pixel_data <= 16'b01100_001100_01111;
+end
+else if (x == 49 && y == 24)
+begin
+    pixel_data <= 16'b01001_010110_11011;
+end
+else if (x == 50 && y == 24)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 51 && y == 24)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 64 && y == 24)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 24)
+begin
+    pixel_data <= 16'b01101_001111_10001;
+end
+else if (x == 69 && y == 24)
+begin
+    pixel_data <= 16'b11110_011101_10110;
+end
+else if (x == 70 && y == 24)
+begin
+    pixel_data <= 16'b11111_011110_10110;
+end
+else if (x == 71 && y == 24)
+begin
+    pixel_data <= 16'b11110_011110_10110;
+end
+else if (x == 72 && y == 24)
+begin
+    pixel_data <= 16'b11111_011110_10110;
+end
+else if (x == 73 && y == 24)
+begin
+    pixel_data <= 16'b11100_011100_10110;
+end
+else if (x == 74 && y == 24)
+begin
+    pixel_data <= 16'b01011_001110_10001;
+end
+else if (x == 75 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 24)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 25)
+begin
+    pixel_data <= 16'b01010_001111_10000;
+end
+else if (x == 21 && y == 25)
+begin
+    pixel_data <= 16'b01010_011100_01010;
+end
+else if (x == 22 && y == 25)
+begin
+    pixel_data <= 16'b01010_011111_01001;
+end
+else if (x == 23 && y == 25)
+begin
+    pixel_data <= 16'b01010_011111_01001;
+end
+else if (x == 24 && y == 25)
+begin
+    pixel_data <= 16'b01010_011110_01001;
+end
+else if (x == 25 && y == 25)
+begin
+    pixel_data <= 16'b01010_011010_01011;
+end
+else if (x == 26 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 27 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 25)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 49 && y == 25)
+begin
+    pixel_data <= 16'b01001_010101_11011;
+end
+else if (x == 50 && y == 25)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 51 && y == 25)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 52 && y == 25)
+begin
+    pixel_data <= 16'b01010_010110_11100;
+end
+else if (x == 64 && y == 25)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 25)
+begin
+    pixel_data <= 16'b01100_001111_10001;
+end
+else if (x == 69 && y == 25)
+begin
+    pixel_data <= 16'b11011_011011_10110;
+end
+else if (x == 70 && y == 25)
+begin
+    pixel_data <= 16'b11111_011110_10110;
+end
+else if (x == 71 && y == 25)
+begin
+    pixel_data <= 16'b11111_011110_10110;
+end
+else if (x == 72 && y == 25)
+begin
+    pixel_data <= 16'b11111_011110_10110;
+end
+else if (x == 73 && y == 25)
+begin
+    pixel_data <= 16'b11010_011010_10101;
+end
+else if (x == 74 && y == 25)
+begin
+    pixel_data <= 16'b01011_001110_10001;
+end
+else if (x == 75 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 25)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 21 && y == 26)
+begin
+    pixel_data <= 16'b01010_001111_10000;
+end
+else if (x == 22 && y == 26)
+begin
+    pixel_data <= 16'b01010_011011_01010;
+end
+else if (x == 23 && y == 26)
+begin
+    pixel_data <= 16'b01010_011100_01010;
+end
+else if (x == 24 && y == 26)
+begin
+    pixel_data <= 16'b01010_011001_01011;
+end
+else if (x == 25 && y == 26)
+begin
+    pixel_data <= 16'b01010_001110_10000;
+end
+else if (x == 26 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 27 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 26)
+begin
+    pixel_data <= 16'b01100_001100_01111;
+end
+else if (x == 49 && y == 26)
+begin
+    pixel_data <= 16'b01010_010101_11011;
+end
+else if (x == 50 && y == 26)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 51 && y == 26)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 52 && y == 26)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 53 && y == 26)
+begin
+    pixel_data <= 16'b01001_010110_11011;
+end
+else if (x == 64 && y == 26)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 69 && y == 26)
+begin
+    pixel_data <= 16'b01101_001111_10001;
+end
+else if (x == 70 && y == 26)
+begin
+    pixel_data <= 16'b11010_011010_10101;
+end
+else if (x == 71 && y == 26)
+begin
+    pixel_data <= 16'b11011_011011_10110;
+end
+else if (x == 72 && y == 26)
+begin
+    pixel_data <= 16'b11001_011001_10101;
+end
+else if (x == 73 && y == 26)
+begin
+    pixel_data <= 16'b01100_001110_10001;
+end
+else if (x == 74 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 75 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 26)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 21 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 22 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 23 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 24 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 25 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 26 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 27 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 27)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 39 && y == 27)
+begin
+    pixel_data <= 16'b01100_010010_11000;
+end
+else if (x == 40 && y == 27)
+begin
+    pixel_data <= 16'b01001_010101_11100;
+end
+else if (x == 41 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 42 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 43 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 44 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 45 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 46 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 47 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 48 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 49 && y == 27)
+begin
+    pixel_data <= 16'b01001_010101_11011;
+end
+else if (x == 50 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 51 && y == 27)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 52 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 53 && y == 27)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 54 && y == 27)
+begin
+    pixel_data <= 16'b01001_010101_11011;
+end
+else if (x == 64 && y == 27)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 69 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 70 && y == 27)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 71 && y == 27)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 72 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 73 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 74 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 75 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 27)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 21 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 22 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 23 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 24 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 25 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 26 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 27 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 28)
+begin
+    pixel_data <= 16'b01100_001100_01111;
+end
+else if (x == 39 && y == 28)
+begin
+    pixel_data <= 16'b01001_010110_11100;
+end
+else if (x == 40 && y == 28)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 41 && y == 28)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 42 && y == 28)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 43 && y == 28)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 44 && y == 28)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 45 && y == 28)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 46 && y == 28)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 47 && y == 28)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 48 && y == 28)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 49 && y == 28)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 50 && y == 28)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 51 && y == 28)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 52 && y == 28)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 53 && y == 28)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 54 && y == 28)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 55 && y == 28)
+begin
+    pixel_data <= 16'b01010_010110_11100;
+end
+else if (x == 56 && y == 28)
+begin
+    pixel_data <= 16'b00000_011111_11111;
+end
+else if (x == 64 && y == 28)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 69 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 70 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 71 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 72 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 73 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 74 && y == 28)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 75 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 28)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 29)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 20 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 21 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 22 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 23 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 24 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 25 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 26 && y == 29)
+begin
+    pixel_data <= 16'b01000_001001_01010;
+end
+else if (x == 27 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 29)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 39 && y == 29)
+begin
+    pixel_data <= 16'b01001_010110_11100;
+end
+else if (x == 40 && y == 29)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 41 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 42 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 43 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 44 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 45 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 46 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 47 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 48 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 49 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 50 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 51 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 52 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 53 && y == 29)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 54 && y == 29)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 55 && y == 29)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 56 && y == 29)
+begin
+    pixel_data <= 16'b01111_010111_11011;
+end
+else if (x == 64 && y == 29)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 29)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 69 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 70 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 71 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 72 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 73 && y == 29)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 74 && y == 29)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 75 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 29)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 30)
+begin
+    pixel_data <= 16'b01010_001100_01111;
+end
+else if (x == 20 && y == 30)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 21 && y == 30)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 22 && y == 30)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 23 && y == 30)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 24 && y == 30)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 25 && y == 30)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 26 && y == 30)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 27 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 30)
+begin
+    pixel_data <= 16'b01100_001100_01111;
+end
+else if (x == 39 && y == 30)
+begin
+    pixel_data <= 16'b01001_010110_11100;
+end
+else if (x == 40 && y == 30)
+begin
+    pixel_data <= 16'b00111_010110_11100;
+end
+else if (x == 41 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11110;
+end
+else if (x == 42 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 43 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 44 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 45 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 46 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 47 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 48 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 49 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 50 && y == 30)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 51 && y == 30)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 52 && y == 30)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 53 && y == 30)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 54 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 55 && y == 30)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 56 && y == 30)
+begin
+    pixel_data <= 16'b01101_010110_11010;
+end
+else if (x == 64 && y == 30)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 30)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 30)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 69 && y == 30)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 70 && y == 30)
+begin
+    pixel_data <= 16'b01011_001011_01010;
+end
+else if (x == 71 && y == 30)
+begin
+    pixel_data <= 16'b01100_001011_01010;
+end
+else if (x == 72 && y == 30)
+begin
+    pixel_data <= 16'b01011_001011_01010;
+end
+else if (x == 73 && y == 30)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 74 && y == 30)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 75 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 30)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 31)
+begin
+    pixel_data <= 16'b01010_001100_01111;
+end
+else if (x == 20 && y == 31)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 21 && y == 31)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 22 && y == 31)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 23 && y == 31)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 24 && y == 31)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 25 && y == 31)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 26 && y == 31)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 27 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 31)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 39 && y == 31)
+begin
+    pixel_data <= 16'b01001_010110_11100;
+end
+else if (x == 40 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 41 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 42 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 43 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 44 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 45 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 46 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 47 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 48 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 49 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 50 && y == 31)
+begin
+    pixel_data <= 16'b00111_010110_11100;
+end
+else if (x == 51 && y == 31)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 52 && y == 31)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 53 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 54 && y == 31)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 55 && y == 31)
+begin
+    pixel_data <= 16'b01100_010111_11100;
+end
+else if (x == 64 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 65 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 31)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 31)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 69 && y == 31)
+begin
+    pixel_data <= 16'b01010_001010_01001;
+end
+else if (x == 70 && y == 31)
+begin
+    pixel_data <= 16'b11010_011001_10100;
+end
+else if (x == 71 && y == 31)
+begin
+    pixel_data <= 16'b11011_011011_10100;
+end
+else if (x == 72 && y == 31)
+begin
+    pixel_data <= 16'b11000_011000_10011;
+end
+else if (x == 73 && y == 31)
+begin
+    pixel_data <= 16'b01001_001001_01000;
+end
+else if (x == 74 && y == 31)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 75 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 31)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 32)
+begin
+    pixel_data <= 16'b01010_001100_01111;
+end
+else if (x == 20 && y == 32)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 21 && y == 32)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 22 && y == 32)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 23 && y == 32)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 24 && y == 32)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 25 && y == 32)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 26 && y == 32)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 27 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 32)
+begin
+    pixel_data <= 16'b01100_001100_01111;
+end
+else if (x == 39 && y == 32)
+begin
+    pixel_data <= 16'b11111_011111_11111;
+end
+else if (x == 40 && y == 32)
+begin
+    pixel_data <= 16'b01100_010101_11011;
+end
+else if (x == 41 && y == 32)
+begin
+    pixel_data <= 16'b01100_011000_11011;
+end
+else if (x == 42 && y == 32)
+begin
+    pixel_data <= 16'b01100_010101_11011;
+end
+else if (x == 43 && y == 32)
+begin
+    pixel_data <= 16'b01100_010101_11011;
+end
+else if (x == 44 && y == 32)
+begin
+    pixel_data <= 16'b01100_010101_11011;
+end
+else if (x == 45 && y == 32)
+begin
+    pixel_data <= 16'b01100_010101_11011;
+end
+else if (x == 46 && y == 32)
+begin
+    pixel_data <= 16'b01100_010101_11011;
+end
+else if (x == 47 && y == 32)
+begin
+    pixel_data <= 16'b01100_010101_11011;
+end
+else if (x == 48 && y == 32)
+begin
+    pixel_data <= 16'b01100_010101_11011;
+end
+else if (x == 49 && y == 32)
+begin
+    pixel_data <= 16'b01001_010110_11011;
+end
+else if (x == 50 && y == 32)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 51 && y == 32)
+begin
+    pixel_data <= 16'b00111_010110_11101;
+end
+else if (x == 52 && y == 32)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 53 && y == 32)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 54 && y == 32)
+begin
+    pixel_data <= 16'b01010_010101_11011;
+end
+else if (x == 64 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 65 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 32)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 32)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 69 && y == 32)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 70 && y == 32)
+begin
+    pixel_data <= 16'b01001_001001_01001;
+end
+else if (x == 71 && y == 32)
+begin
+    pixel_data <= 16'b01001_001001_01001;
+end
+else if (x == 72 && y == 32)
+begin
+    pixel_data <= 16'b01001_001001_01001;
+end
+else if (x == 73 && y == 32)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 74 && y == 32)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 75 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 32)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 33)
+begin
+    pixel_data <= 16'b01010_001100_01111;
+end
+else if (x == 20 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 21 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 22 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 23 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 24 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 25 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 26 && y == 33)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 27 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 33)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 49 && y == 33)
+begin
+    pixel_data <= 16'b01001_010110_11011;
+end
+else if (x == 50 && y == 33)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 51 && y == 33)
+begin
+    pixel_data <= 16'b01000_010110_11101;
+end
+else if (x == 52 && y == 33)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 53 && y == 33)
+begin
+    pixel_data <= 16'b01100_010110_11011;
+end
+else if (x == 64 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 65 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 33)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 69 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 70 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 71 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 72 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 73 && y == 33)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 74 && y == 33)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 75 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 33)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 34)
+begin
+    pixel_data <= 16'b01010_001100_01111;
+end
+else if (x == 20 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 21 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 22 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 23 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 24 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 25 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 26 && y == 34)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 27 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 34)
+begin
+    pixel_data <= 16'b01100_001100_01111;
+end
+else if (x == 49 && y == 34)
+begin
+    pixel_data <= 16'b01001_010110_11100;
+end
+else if (x == 50 && y == 34)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 51 && y == 34)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 52 && y == 34)
+begin
+    pixel_data <= 16'b01100_010110_11011;
+end
+else if (x == 64 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 65 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 34)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 69 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 70 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 71 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 72 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 73 && y == 34)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 74 && y == 34)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 75 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 34)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 35)
+begin
+    pixel_data <= 16'b01010_001100_01111;
+end
+else if (x == 20 && y == 35)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 21 && y == 35)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 22 && y == 35)
+begin
+    pixel_data <= 16'b01011_001011_01010;
+end
+else if (x == 23 && y == 35)
+begin
+    pixel_data <= 16'b01011_001011_01010;
+end
+else if (x == 24 && y == 35)
+begin
+    pixel_data <= 16'b01010_001010_01010;
+end
+else if (x == 25 && y == 35)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 26 && y == 35)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 27 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 35)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 49 && y == 35)
+begin
+    pixel_data <= 16'b01001_010110_11011;
+end
+else if (x == 50 && y == 35)
+begin
+    pixel_data <= 16'b01000_010110_11100;
+end
+else if (x == 51 && y == 35)
+begin
+    pixel_data <= 16'b01010_010101_11011;
+end
+else if (x == 64 && y == 35)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 35)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 35)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 69 && y == 35)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 70 && y == 35)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 71 && y == 35)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 72 && y == 35)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 73 && y == 35)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 74 && y == 35)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 75 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 35)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 36)
+begin
+    pixel_data <= 16'b01010_001100_01111;
+end
+else if (x == 20 && y == 36)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 21 && y == 36)
+begin
+    pixel_data <= 16'b01011_001010_01010;
+end
+else if (x == 22 && y == 36)
+begin
+    pixel_data <= 16'b11010_011010_10100;
+end
+else if (x == 23 && y == 36)
+begin
+    pixel_data <= 16'b11011_011011_10101;
+end
+else if (x == 24 && y == 36)
+begin
+    pixel_data <= 16'b11000_011000_10010;
+end
+else if (x == 25 && y == 36)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 26 && y == 36)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 27 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 36)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 49 && y == 36)
+begin
+    pixel_data <= 16'b01111_001111_11111;
+end
+else if (x == 50 && y == 36)
+begin
+    pixel_data <= 16'b01100_010101_11011;
+end
+else if (x == 64 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 65 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 36)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 36)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 69 && y == 36)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 70 && y == 36)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 71 && y == 36)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 72 && y == 36)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 73 && y == 36)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 74 && y == 36)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 75 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 36)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 37)
+begin
+    pixel_data <= 16'b01010_001100_01111;
+end
+else if (x == 20 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 21 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 22 && y == 37)
+begin
+    pixel_data <= 16'b01010_001001_01001;
+end
+else if (x == 23 && y == 37)
+begin
+    pixel_data <= 16'b01010_001010_01001;
+end
+else if (x == 24 && y == 37)
+begin
+    pixel_data <= 16'b01001_001001_01001;
+end
+else if (x == 25 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 26 && y == 37)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 27 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 37)
+begin
+    pixel_data <= 16'b01100_001111_01111;
+end
+else if (x == 64 && y == 37)
+begin
+    pixel_data <= 16'b01011_001101_01111;
+end
+else if (x == 65 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 37)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 69 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 70 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 71 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 72 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 73 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01000;
+end
+else if (x == 74 && y == 37)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 75 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 37)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 18 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 19 && y == 38)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 20 && y == 38)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 21 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 22 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 23 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 24 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 25 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 26 && y == 38)
+begin
+    pixel_data <= 16'b01001_001001_01010;
+end
+else if (x == 27 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 29 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 30 && y == 38)
+begin
+    pixel_data <= 16'b01101_001101_10001;
+end
+else if (x == 64 && y == 38)
+begin
+    pixel_data <= 16'b01011_001101_10000;
+end
+else if (x == 65 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 66 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 67 && y == 38)
+begin
+    pixel_data <= 16'b01010_001100_10000;
+end
+else if (x == 68 && y == 38)
+begin
+    pixel_data <= 16'b01000_001001_01001;
+end
+else if (x == 69 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 70 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 71 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 72 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 73 && y == 38)
+begin
+    pixel_data <= 16'b01000_001000_01001;
+end
+else if (x == 74 && y == 38)
+begin
+    pixel_data <= 16'b01000_001001_01010;
+end
+else if (x == 75 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 77 && y == 38)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 17 && y == 39)
+begin
+    pixel_data <= 16'b01011_001110_10010;
+end
+else if (x == 18 && y == 39)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 19 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 21 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 22 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 23 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 24 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 25 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 26 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 27 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 39)
+begin
+    pixel_data <= 16'b01101_010000_10001;
+end
+else if (x == 29 && y == 39)
+begin
+    pixel_data <= 16'b01100_001111_10001;
+end
+else if (x == 64 && y == 39)
+begin
+    pixel_data <= 16'b01111_001111_01111;
+end
+else if (x == 65 && y == 39)
+begin
+    pixel_data <= 16'b01011_001110_10010;
+end
+else if (x == 66 && y == 39)
+begin
+    pixel_data <= 16'b01100_001110_10001;
+end
+else if (x == 67 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 69 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 70 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 71 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 72 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 73 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10000;
+end
+else if (x == 74 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 75 && y == 39)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 39)
+begin
+    pixel_data <= 16'b01101_001110_10001;
+end
+else if (x == 77 && y == 39)
+begin
+    pixel_data <= 16'b01011_001110_10000;
+end
+else if (x == 18 && y == 40)
+begin
+    pixel_data <= 16'b01011_001110_10001;
+end
+else if (x == 19 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 20 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 21 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 22 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 23 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 24 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 25 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 26 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 27 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 28 && y == 40)
+begin
+    pixel_data <= 16'b10100_010100_10100;
+end
+else if (x == 66 && y == 40)
+begin
+    pixel_data <= 16'b01011_001101_10001;
+end
+else if (x == 67 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 68 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 69 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 70 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 71 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 72 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 73 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 74 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 75 && y == 40)
+begin
+    pixel_data <= 16'b01010_001101_10001;
+end
+else if (x == 76 && y == 40)
+begin
+    pixel_data <= 16'b01101_001101_01101;
+end

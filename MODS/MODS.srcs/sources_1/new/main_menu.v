@@ -28,51 +28,25 @@ module main_menu(
 );
     reg [15:0] background = 16'b11100_100101_00111;
     reg [15:0] title_text = 16'b00111_000000_00010;
-    reg [15:0] start_text = 16'b01101_010010_00010;
+    reg [15:0] subtitle_text = 16'b01101_010010_00010;
     reg [15:0] settings_gear = 16'b00110_100011_01000;
     reg [15:0] rectangle_border = 16'b10011_100111_10011;
-//    reg [15:0] mole_body = 16'b01111_010110_01000;
-//    reg [15:0] mole_eye = 16'b0;
     reg [15:0] fire = 16'b11100_001010_00000;
     reg [15:0] bomb = 16'b0;
     reg [15:0] bomb_fuse = 16'b01110_011101_01110;
     reg [15:0] bomb_fire = 16'b11100_001010_00000;
 
-    wire clk_25m;
+    wire clk_25m, clk_1000;
     flexible_clock_module flexible_clock_module_25m (
         .basys_clock(clk),
         .my_m_value(1),
         .my_clk(clk_25m)
     );
-    
-//    function is_mole;
-//        input [7:0] curr_x;
-//        input [7:0] curr_y;
-//        input [7:0] origin_x;
-//        input [7:0] origin_y;
-//        begin
-//            if ((curr_y >= origin_y) &&
-//                (curr_y < origin_y + 16) &&
-//                (curr_x >= origin_x) &&
-//                (curr_x < origin_x + 12))
-//                is_mole = 1;
-//            else
-//                is_mole = 0;
-//        end
-//    endfunction
-    
-//    function is_mole_eye;
-//        input [7:0] curr_x;
-//        input [7:0] curr_y;
-//        input [7:0] origin_x;
-//        input [7:0] origin_y;
-//        begin
-//            if ((curr_y == origin_y) && (curr_x == origin_x || curr_x == origin_x + 4))
-//                is_mole_eye = 1;
-//            else
-//                is_mole_eye = 0;
-//        end
-//    endfunction
+    flexible_clock_module flexible_clock_module_1000 (
+        .basys_clock(clk),
+        .my_m_value(49999),
+        .my_clk(clk_1000)
+    );
             
     reg [7:0] bomb_radius = 8;
     function is_bomb;
@@ -98,17 +72,16 @@ module main_menu(
         input [7:0] curr_y;
         input [7:0] origin_x;
         input [7:0] origin_y;
-        integer i;
         reg [7:0] sine_lut [0:96];
-        
+        integer i;
         begin
-            // sine lut
-            for (i = 0; i <= bomb_fuse_period; i = i + 1)
-                begin
-                    sine_lut[i] = bomb_fuse_amplitude * ($sin(2 * 3.141592 * i / bomb_fuse_period));
-                end
-                   
             is_bomb_fuse = 0;
+
+            for (i = 0; i < bomb_fuse_period; i = i + 1)
+            begin
+                sine_lut[i] = bomb_fuse_amplitude * ($sin(2 * 3.141592 * i / bomb_fuse_period));
+            end
+
             for (i = 0; i < bomb_fuse_period; i = i + 1)
             begin
                 if (curr_x == origin_x + i)
@@ -797,7 +770,7 @@ module main_menu(
     endfunction
     
     // selection at start
-    reg [7:0] select_start_x = 34;
+    reg [7:0] select_start_x = 33;
     reg [7:0] select_start_y = 54;
     reg [7:0] select_start_a = 14;
     reg [7:0] select_start_b = 5;
@@ -847,18 +820,15 @@ module main_menu(
         if (rectangle_border_x == select_start_x && btnC)
             begin
                 clicked_start = 1;
+                clicked_settings = 0;
                 rectangle_border_x = 128;
                 rectangle_border_y = 128;
                 rectangle_border_a = 128;
                 rectangle_border_b = 128;
             end
-        else
+        else if (rectangle_border_x == select_settings_x && btnC)
             begin
                 clicked_start = 0;
-            end
-            
-        if (rectangle_border_x == select_settings_x && btnC)
-            begin
                 clicked_settings = 1;
                 rectangle_border_x = 128;
                 rectangle_border_y = 128;
@@ -867,6 +837,7 @@ module main_menu(
             end
         else
             begin
+                clicked_start = 0;
                 clicked_settings = 0;
             end
     end
@@ -892,11 +863,11 @@ module main_menu(
         else if (is_char(x, y, 63, 8, 69)) pixel_data <= title_text;
         
         // "START"
-        else if (is_char(x, y, 23, 52, 83)) pixel_data <= start_text;
-        else if (is_char(x, y, 28, 52, 84)) pixel_data <= start_text;
-        else if (is_char(x, y, 33, 52, 65)) pixel_data <= start_text;
-        else if (is_char(x, y, 38, 52, 82)) pixel_data <= start_text;
-        else if (is_char(x, y, 43, 52, 84)) pixel_data <= start_text;
+        else if (is_char(x, y, 23, 52, 83)) pixel_data <= subtitle_text;
+        else if (is_char(x, y, 28, 52, 84)) pixel_data <= subtitle_text;
+        else if (is_char(x, y, 33, 52, 65)) pixel_data <= subtitle_text;
+        else if (is_char(x, y, 38, 52, 82)) pixel_data <= subtitle_text;
+        else if (is_char(x, y, 43, 52, 84)) pixel_data <= subtitle_text;
         
         // selection
         else if (is_rectangle_border(x, y, rectangle_border_x, rectangle_border_y, rectangle_border_a, rectangle_border_b)) pixel_data <= rectangle_border;
@@ -907,95 +878,95 @@ module main_menu(
         // mole 1
         else if (x == 18 && y == 24)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 19 && y == 24)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 20 && y == 24)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 21 && y == 24)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 15 && y == 25)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 16 && y == 25)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 17 && y == 25)
         begin
-            pixel_data <= 16'b00101_000101_00101;
+            pixel_data <= 16'b00101_000100_00011;
         end
         else if (x == 18 && y == 25)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 19 && y == 25)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11001_010011_01110;
         end
         else if (x == 20 && y == 25)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11001_010011_01110;
         end
         else if (x == 21 && y == 25)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 22 && y == 25)
         begin
-            pixel_data <= 16'b00100_000100_00100;
+            pixel_data <= 16'b00101_000011_00010;
         end
         else if (x == 23 && y == 25)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 24 && y == 25)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 15 && y == 26)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 16 && y == 26)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 17 && y == 26)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 18 && y == 26)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 19 && y == 26)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 20 && y == 26)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 21 && y == 26)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010001_01101;
         end
         else if (x == 22 && y == 26)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 23 && y == 26)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 24 && y == 26)
         begin
@@ -1003,387 +974,387 @@ module main_menu(
         end
         else if (x == 14 && y == 27)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 15 && y == 27)
         begin
-            pixel_data <= 16'b00101_000101_00101;
+            pixel_data <= 16'b00101_000100_00011;
         end
         else if (x == 16 && y == 27)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 17 && y == 27)
         begin
-            pixel_data <= 16'b00101_000101_00101;
+            pixel_data <= 16'b00110_000101_00100;
         end
         else if (x == 18 && y == 27)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 19 && y == 27)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 20 && y == 27)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01110;
         end
         else if (x == 21 && y == 27)
         begin
-            pixel_data <= 16'b00101_000101_00101;
+            pixel_data <= 16'b00101_000101_00100;
         end
         else if (x == 22 && y == 27)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 23 && y == 27)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 24 && y == 27)
         begin
-            pixel_data <= 16'b00100_000100_00100;
+            pixel_data <= 16'b00100_000011_00010;
         end
         else if (x == 25 && y == 27)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 14 && y == 28)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 15 && y == 28)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 16 && y == 28)
         begin
-            pixel_data <= 16'b10111_010111_10111;
+            pixel_data <= 16'b11011_010101_01111;
         end
         else if (x == 17 && y == 28)
         begin
-            pixel_data <= 16'b11001_011001_11001;
+            pixel_data <= 16'b11001_011000_10010;
         end
         else if (x == 18 && y == 28)
         begin
-            pixel_data <= 16'b00110_000110_00110;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 19 && y == 28)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 20 && y == 28)
         begin
-            pixel_data <= 16'b10111_010111_10111;
+            pixel_data <= 16'b11100_010110_01111;
         end
         else if (x == 21 && y == 28)
         begin
-            pixel_data <= 16'b11001_011001_11001;
+            pixel_data <= 16'b11001_011000_10010;
         end
         else if (x == 22 && y == 28)
         begin
-            pixel_data <= 16'b00110_000110_00110;
+            pixel_data <= 16'b00110_000101_00100;
         end
         else if (x == 23 && y == 28)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 24 && y == 28)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010001_01101;
         end
         else if (x == 25 && y == 28)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 14 && y == 29)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 15 && y == 29)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010010_01101;
         end
         else if (x == 16 && y == 29)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010101_01111;
         end
         else if (x == 17 && y == 29)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010101_01111;
         end
         else if (x == 18 && y == 29)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 19 && y == 29)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 20 && y == 29)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 21 && y == 29)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 22 && y == 29)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11010_010011_01110;
         end
         else if (x == 23 && y == 29)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 24 && y == 29)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 25 && y == 29)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 14 && y == 30)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 15 && y == 30)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 16 && y == 30)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 17 && y == 30)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10110_010000_01100;
         end
         else if (x == 18 && y == 30)
         begin
-            pixel_data <= 16'b00110_000100_00101;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 19 && y == 30)
         begin
-            pixel_data <= 16'b00101_000100_00100;
+            pixel_data <= 16'b00101_000100_00011;
         end
         else if (x == 20 && y == 30)
         begin
-            pixel_data <= 16'b00101_000100_00100;
+            pixel_data <= 16'b00101_000011_00011;
         end
         else if (x == 21 && y == 30)
         begin
-            pixel_data <= 16'b00110_000101_00101;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 22 && y == 30)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 23 && y == 30)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 24 && y == 30)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 25 && y == 30)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 14 && y == 31)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 15 && y == 31)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 16 && y == 31)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 17 && y == 31)
         begin
-            pixel_data <= 16'b00111_000110_00110;
+            pixel_data <= 16'b01000_000101_00100;
         end
         else if (x == 18 && y == 31)
         begin
-            pixel_data <= 16'b10111_001111_10000;
+            pixel_data <= 16'b10110_001111_10000;
         end
         else if (x == 19 && y == 31)
         begin
-            pixel_data <= 16'b11000_010000_10001;
+            pixel_data <= 16'b11000_010000_10010;
         end
         else if (x == 20 && y == 31)
         begin
-            pixel_data <= 16'b11001_010000_10001;
+            pixel_data <= 16'b11001_010000_10010;
         end
         else if (x == 21 && y == 31)
         begin
-            pixel_data <= 16'b10110_001110_01111;
+            pixel_data <= 16'b10110_001110_10000;
         end
         else if (x == 22 && y == 31)
         begin
-            pixel_data <= 16'b00110_000101_00110;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 23 && y == 31)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 24 && y == 31)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 25 && y == 31)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 14 && y == 32)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 15 && y == 32)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 16 && y == 32)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 17 && y == 32)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010001_01101;
         end
         else if (x == 18 && y == 32)
         begin
-            pixel_data <= 16'b00101_000100_00100;
+            pixel_data <= 16'b00110_000100_00100;
         end
         else if (x == 19 && y == 32)
         begin
-            pixel_data <= 16'b00100_000011_00100;
+            pixel_data <= 16'b00101_000011_00011;
         end
         else if (x == 20 && y == 32)
         begin
-            pixel_data <= 16'b00100_000011_00100;
+            pixel_data <= 16'b00101_000011_00011;
         end
         else if (x == 21 && y == 32)
         begin
-            pixel_data <= 16'b00110_000101_00101;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 22 && y == 32)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 23 && y == 32)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 24 && y == 32)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 25 && y == 32)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 14 && y == 33)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 15 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 16 && y == 33)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 17 && y == 33)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 18 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 19 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 20 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 21 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 22 && y == 33)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 23 && y == 33)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 24 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 25 && y == 33)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 14 && y == 34)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 15 && y == 34)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10101_010000_01100;
         end
         else if (x == 16 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 17 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 18 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 19 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 20 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 21 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 22 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 23 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 24 && y == 34)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10101_010000_01100;
         end
         else if (x == 25 && y == 34)
         begin
-            pixel_data <= 16'b00000_000001_00001;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 13 && y == 35)
         begin
@@ -1395,43 +1366,43 @@ module main_menu(
         end
         else if (x == 15 && y == 35)
         begin
-            pixel_data <= 16'b00101_000100_00100;
+            pixel_data <= 16'b00110_000100_00011;
         end
         else if (x == 16 && y == 35)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 17 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 18 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 19 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 20 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 21 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 22 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 23 && y == 35)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 24 && y == 35)
         begin
-            pixel_data <= 16'b00100_000100_00100;
+            pixel_data <= 16'b00101_000100_00011;
         end
         else if (x == 25 && y == 35)
         begin
@@ -1443,15 +1414,15 @@ module main_menu(
         end
         else if (x == 11 && y == 36)
         begin
-            pixel_data <= 16'b00010_000001_00001;
+            pixel_data <= 16'b00001_000000_00001;
         end
         else if (x == 12 && y == 36)
         begin
-            pixel_data <= 16'b00110_000100_00100;
+            pixel_data <= 16'b00101_000011_00100;
         end
         else if (x == 13 && y == 36)
         begin
-            pixel_data <= 16'b11010_010001_10011;
+            pixel_data <= 16'b11010_010001_10010;
         end
         else if (x == 14 && y == 36)
         begin
@@ -1459,39 +1430,39 @@ module main_menu(
         end
         else if (x == 15 && y == 36)
         begin
-            pixel_data <= 16'b11001_010000_10010;
+            pixel_data <= 16'b11001_010001_10010;
         end
         else if (x == 16 && y == 36)
         begin
-            pixel_data <= 16'b00111_000110_00110;
+            pixel_data <= 16'b01000_000101_00101;
         end
         else if (x == 17 && y == 36)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010000_01100;
         end
         else if (x == 18 && y == 36)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 19 && y == 36)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 20 && y == 36)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 21 && y == 36)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 22 && y == 36)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10110_010000_01100;
         end
         else if (x == 23 && y == 36)
         begin
-            pixel_data <= 16'b01000_000110_00110;
+            pixel_data <= 16'b01000_000110_00101;
         end
         else if (x == 24 && y == 36)
         begin
@@ -1507,19 +1478,15 @@ module main_menu(
         end
         else if (x == 27 && y == 36)
         begin
-            pixel_data <= 16'b00101_000100_00100;
-        end
-        else if (x == 28 && y == 36)
-        begin
-            pixel_data <= 16'b00010_000001_00001;
+            pixel_data <= 16'b00101_000011_00100;
         end
         else if (x == 10 && y == 37)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 11 && y == 37)
         begin
-            pixel_data <= 16'b00011_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 12 && y == 37)
         begin
@@ -1539,7 +1506,7 @@ module main_menu(
         end
         else if (x == 16 && y == 37)
         begin
-            pixel_data <= 16'b11001_010001_10010;
+            pixel_data <= 16'b11010_010001_10010;
         end
         else if (x == 17 && y == 37)
         begin
@@ -1547,7 +1514,7 @@ module main_menu(
         end
         else if (x == 18 && y == 37)
         begin
-            pixel_data <= 16'b00010_000010_00001;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 19 && y == 37)
         begin
@@ -1559,11 +1526,11 @@ module main_menu(
         end
         else if (x == 21 && y == 37)
         begin
-            pixel_data <= 16'b00010_000010_00001;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 22 && y == 37)
         begin
-            pixel_data <= 16'b00011_000010_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 23 && y == 37)
         begin
@@ -1583,7 +1550,7 @@ module main_menu(
         end
         else if (x == 27 && y == 37)
         begin
-            pixel_data <= 16'b11001_010000_10010;
+            pixel_data <= 16'b11001_010001_10010;
         end
         else if (x == 28 && y == 37)
         begin
@@ -1591,11 +1558,11 @@ module main_menu(
         end
         else if (x == 29 && y == 37)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 8 && y == 38)
         begin
-            pixel_data <= 16'b00001_000000_00000;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 9 && y == 38)
         begin
@@ -1611,7 +1578,7 @@ module main_menu(
         end
         else if (x == 12 && y == 38)
         begin
-            pixel_data <= 16'b10110_001111_10000;
+            pixel_data <= 16'b10110_001110_10000;
         end
         else if (x == 13 && y == 38)
         begin
@@ -1631,7 +1598,7 @@ module main_menu(
         end
         else if (x == 17 && y == 38)
         begin
-            pixel_data <= 16'b00101_000011_00010;
+            pixel_data <= 16'b00101_000011_00011;
         end
         else if (x == 18 && y == 38)
         begin
@@ -1639,15 +1606,15 @@ module main_menu(
         end
         else if (x == 19 && y == 38)
         begin
-            pixel_data <= 16'b10001_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 20 && y == 38)
         begin
-            pixel_data <= 16'b10001_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 21 && y == 38)
         begin
-            pixel_data <= 16'b01110_001000_00101;
+            pixel_data <= 16'b01111_001000_00101;
         end
         else if (x == 22 && y == 38)
         begin
@@ -1655,7 +1622,7 @@ module main_menu(
         end
         else if (x == 23 && y == 38)
         begin
-            pixel_data <= 16'b10110_001110_10000;
+            pixel_data <= 16'b10110_001110_01111;
         end
         else if (x == 24 && y == 38)
         begin
@@ -1663,7 +1630,7 @@ module main_menu(
         end
         else if (x == 25 && y == 38)
         begin
-            pixel_data <= 16'b10110_001110_01111;
+            pixel_data <= 16'b10101_001110_01111;
         end
         else if (x == 26 && y == 38)
         begin
@@ -1671,7 +1638,7 @@ module main_menu(
         end
         else if (x == 27 && y == 38)
         begin
-            pixel_data <= 16'b10110_001110_10000;
+            pixel_data <= 16'b10110_001110_01111;
         end
         else if (x == 28 && y == 38)
         begin
@@ -1685,13 +1652,17 @@ module main_menu(
         begin
             pixel_data <= 16'b00011_000010_00001;
         end
+        else if (x == 31 && y == 38)
+        begin
+            pixel_data <= 16'b00001_000001_00001;
+        end
         else if (x == 8 && y == 39)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 9 && y == 39)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b01111_001001_00110;
         end
         else if (x == 10 && y == 39)
         begin
@@ -1699,7 +1670,7 @@ module main_menu(
         end
         else if (x == 11 && y == 39)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 12 && y == 39)
         begin
@@ -1743,7 +1714,7 @@ module main_menu(
         end
         else if (x == 22 && y == 39)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 23 && y == 39)
         begin
@@ -1763,7 +1734,7 @@ module main_menu(
         end
         else if (x == 27 && y == 39)
         begin
-            pixel_data <= 16'b00101_000011_00010;
+            pixel_data <= 16'b00110_000011_00010;
         end
         else if (x == 28 && y == 39)
         begin
@@ -1783,11 +1754,11 @@ module main_menu(
         end
         else if (x == 8 && y == 40)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 9 && y == 40)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b01110_001000_00110;
         end
         else if (x == 10 && y == 40)
         begin
@@ -1799,7 +1770,7 @@ module main_menu(
         end
         else if (x == 12 && y == 40)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 13 && y == 40)
         begin
@@ -1807,7 +1778,7 @@ module main_menu(
         end
         else if (x == 14 && y == 40)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 15 && y == 40)
         begin
@@ -1815,7 +1786,7 @@ module main_menu(
         end
         else if (x == 16 && y == 40)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 17 && y == 40)
         begin
@@ -1843,7 +1814,7 @@ module main_menu(
         end
         else if (x == 23 && y == 40)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 24 && y == 40)
         begin
@@ -1859,11 +1830,11 @@ module main_menu(
         end
         else if (x == 27 && y == 40)
         begin
-            pixel_data <= 16'b10000_001010_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 28 && y == 40)
         begin
-            pixel_data <= 16'b10010_001010_00111;
+            pixel_data <= 16'b10010_001011_00111;
         end
         else if (x == 29 && y == 40)
         begin
@@ -1871,19 +1842,15 @@ module main_menu(
         end
         else if (x == 30 && y == 40)
         begin
-            pixel_data <= 16'b01111_001000_00110;
+            pixel_data <= 16'b01110_001000_00101;
         end
         else if (x == 31 && y == 40)
         begin
             pixel_data <= 16'b00001_000000_00000;
         end
-        else if (x == 8 && y == 41)
-        begin
-            pixel_data <= 16'b00001_000000_00000;
-        end
         else if (x == 9 && y == 41)
         begin
-            pixel_data <= 16'b00011_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 10 && y == 41)
         begin
@@ -1891,15 +1858,15 @@ module main_menu(
         end
         else if (x == 11 && y == 41)
         begin
-            pixel_data <= 16'b10001_001010_00110;
+            pixel_data <= 16'b10000_001010_00110;
         end
         else if (x == 12 && y == 41)
         begin
-            pixel_data <= 16'b10010_001011_00111;
+            pixel_data <= 16'b10010_001010_00111;
         end
         else if (x == 13 && y == 41)
         begin
-            pixel_data <= 16'b10010_001010_00111;
+            pixel_data <= 16'b10010_001011_00111;
         end
         else if (x == 14 && y == 41)
         begin
@@ -1951,7 +1918,7 @@ module main_menu(
         end
         else if (x == 26 && y == 41)
         begin
-            pixel_data <= 16'b10010_001010_00111;
+            pixel_data <= 16'b10010_001011_00111;
         end
         else if (x == 27 && y == 41)
         begin
@@ -1959,11 +1926,11 @@ module main_menu(
         end
         else if (x == 28 && y == 41)
         begin
-            pixel_data <= 16'b10001_001010_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 29 && y == 41)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b01110_001000_00110;
         end
         else if (x == 30 && y == 41)
         begin
@@ -1975,15 +1942,15 @@ module main_menu(
         end
         else if (x == 11 && y == 42)
         begin
-            pixel_data <= 16'b00011_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 12 && y == 42)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b01111_001000_00110;
         end
         else if (x == 13 && y == 42)
         begin
-            pixel_data <= 16'b10001_001010_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 14 && y == 42)
         begin
@@ -2035,15 +2002,15 @@ module main_menu(
         end
         else if (x == 26 && y == 42)
         begin
-            pixel_data <= 16'b10001_001010_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 27 && y == 42)
         begin
-            pixel_data <= 16'b01111_001000_00110;
+            pixel_data <= 16'b01110_001000_00110;
         end
         else if (x == 28 && y == 42)
         begin
-            pixel_data <= 16'b00010_000001_00001;
+            pixel_data <= 16'b00010_000001_00000;
         end
         else if (x == 29 && y == 42)
         begin
@@ -2051,7 +2018,7 @@ module main_menu(
         end
         else if (x == 30 && y == 42)
         begin
-            pixel_data <= 16'b00000_000001_00001;
+            pixel_data <= 16'b00001_000001_00001;
         end
         else if (x == 12 && y == 43)
         begin
@@ -2059,7 +2026,7 @@ module main_menu(
         end
         else if (x == 13 && y == 43)
         begin
-            pixel_data <= 16'b00011_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 14 && y == 43)
         begin
@@ -2107,7 +2074,7 @@ module main_menu(
         end
         else if (x == 25 && y == 43)
         begin
-            pixel_data <= 16'b01111_001000_00110;
+            pixel_data <= 16'b01110_001000_00101;
         end
         else if (x == 26 && y == 43)
         begin
@@ -2119,11 +2086,11 @@ module main_menu(
         end
         else if (x == 14 && y == 44)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 15 && y == 44)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 16 && y == 44)
         begin
@@ -2159,12 +2126,13 @@ module main_menu(
         end
         else if (x == 24 && y == 44)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 25 && y == 44)
         begin
             pixel_data <= 16'b00001_000000_00000;
         end
+
         
         
         
@@ -2173,95 +2141,95 @@ module main_menu(
         // mole 2
         else if (x == 44 && y == 24)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 45 && y == 24)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 46 && y == 24)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 47 && y == 24)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 41 && y == 25)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 42 && y == 25)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 43 && y == 25)
         begin
-            pixel_data <= 16'b00101_000101_00101;
+            pixel_data <= 16'b00101_000100_00011;
         end
         else if (x == 44 && y == 25)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 45 && y == 25)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11001_010011_01110;
         end
         else if (x == 46 && y == 25)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11001_010011_01110;
         end
         else if (x == 47 && y == 25)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 48 && y == 25)
         begin
-            pixel_data <= 16'b00100_000100_00100;
+            pixel_data <= 16'b00101_000011_00010;
         end
         else if (x == 49 && y == 25)
         begin
-            pixel_data <= 16'b00011_000011_00011;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 50 && y == 25)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 41 && y == 26)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 42 && y == 26)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 43 && y == 26)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 44 && y == 26)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 45 && y == 26)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 46 && y == 26)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 47 && y == 26)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010001_01101;
         end
         else if (x == 48 && y == 26)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 49 && y == 26)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 50 && y == 26)
         begin
@@ -2269,387 +2237,387 @@ module main_menu(
         end
         else if (x == 40 && y == 27)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 41 && y == 27)
         begin
-            pixel_data <= 16'b00101_000101_00101;
+            pixel_data <= 16'b00101_000100_00011;
         end
         else if (x == 42 && y == 27)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 43 && y == 27)
         begin
-            pixel_data <= 16'b00101_000101_00101;
+            pixel_data <= 16'b00110_000101_00100;
         end
         else if (x == 44 && y == 27)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 45 && y == 27)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 46 && y == 27)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01110;
         end
         else if (x == 47 && y == 27)
         begin
-            pixel_data <= 16'b00101_000101_00101;
+            pixel_data <= 16'b00101_000101_00100;
         end
         else if (x == 48 && y == 27)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 49 && y == 27)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 50 && y == 27)
         begin
-            pixel_data <= 16'b00100_000100_00100;
+            pixel_data <= 16'b00100_000011_00010;
         end
         else if (x == 51 && y == 27)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 40 && y == 28)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 41 && y == 28)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 42 && y == 28)
         begin
-            pixel_data <= 16'b10111_010111_10111;
+            pixel_data <= 16'b11011_010101_01111;
         end
         else if (x == 43 && y == 28)
         begin
-            pixel_data <= 16'b11001_011001_11001;
+            pixel_data <= 16'b11001_011000_10010;
         end
         else if (x == 44 && y == 28)
         begin
-            pixel_data <= 16'b00110_000110_00110;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 45 && y == 28)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 46 && y == 28)
         begin
-            pixel_data <= 16'b10111_010111_10111;
+            pixel_data <= 16'b11100_010110_01111;
         end
         else if (x == 47 && y == 28)
         begin
-            pixel_data <= 16'b11001_011001_11001;
+            pixel_data <= 16'b11001_011000_10010;
         end
         else if (x == 48 && y == 28)
         begin
-            pixel_data <= 16'b00110_000110_00110;
+            pixel_data <= 16'b00110_000101_00100;
         end
         else if (x == 49 && y == 28)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 50 && y == 28)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010001_01101;
         end
         else if (x == 51 && y == 28)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 40 && y == 29)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 41 && y == 29)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010010_01101;
         end
         else if (x == 42 && y == 29)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010101_01111;
         end
         else if (x == 43 && y == 29)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010101_01111;
         end
         else if (x == 44 && y == 29)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 45 && y == 29)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010001_01100;
         end
         else if (x == 46 && y == 29)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 47 && y == 29)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 48 && y == 29)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11010_010011_01110;
         end
         else if (x == 49 && y == 29)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 50 && y == 29)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 51 && y == 29)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 40 && y == 30)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 41 && y == 30)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 42 && y == 30)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 43 && y == 30)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10110_010000_01100;
         end
         else if (x == 44 && y == 30)
         begin
-            pixel_data <= 16'b00110_000100_00101;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 45 && y == 30)
         begin
-            pixel_data <= 16'b00101_000100_00100;
+            pixel_data <= 16'b00101_000100_00011;
         end
         else if (x == 46 && y == 30)
         begin
-            pixel_data <= 16'b00101_000100_00100;
+            pixel_data <= 16'b00101_000011_00011;
         end
         else if (x == 47 && y == 30)
         begin
-            pixel_data <= 16'b00110_000101_00101;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 48 && y == 30)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 49 && y == 30)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 50 && y == 30)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 51 && y == 30)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 40 && y == 31)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 41 && y == 31)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 42 && y == 31)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 43 && y == 31)
         begin
-            pixel_data <= 16'b00111_000110_00110;
+            pixel_data <= 16'b01000_000101_00100;
         end
         else if (x == 44 && y == 31)
         begin
-            pixel_data <= 16'b10111_001111_10000;
+            pixel_data <= 16'b10110_001111_10000;
         end
         else if (x == 45 && y == 31)
         begin
-            pixel_data <= 16'b11000_010000_10001;
+            pixel_data <= 16'b11000_010000_10010;
         end
         else if (x == 46 && y == 31)
         begin
-            pixel_data <= 16'b11001_010000_10001;
+            pixel_data <= 16'b11001_010000_10010;
         end
         else if (x == 47 && y == 31)
         begin
-            pixel_data <= 16'b10110_001110_01111;
+            pixel_data <= 16'b10110_001110_10000;
         end
         else if (x == 48 && y == 31)
         begin
-            pixel_data <= 16'b00110_000101_00110;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 49 && y == 31)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 50 && y == 31)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 51 && y == 31)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 40 && y == 32)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 41 && y == 32)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 42 && y == 32)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 43 && y == 32)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010001_01101;
         end
         else if (x == 44 && y == 32)
         begin
-            pixel_data <= 16'b00101_000100_00100;
+            pixel_data <= 16'b00110_000100_00100;
         end
         else if (x == 45 && y == 32)
         begin
-            pixel_data <= 16'b00100_000011_00100;
+            pixel_data <= 16'b00101_000011_00011;
         end
         else if (x == 46 && y == 32)
         begin
-            pixel_data <= 16'b00100_000011_00100;
+            pixel_data <= 16'b00101_000011_00011;
         end
         else if (x == 47 && y == 32)
         begin
-            pixel_data <= 16'b00110_000101_00101;
+            pixel_data <= 16'b00111_000101_00100;
         end
         else if (x == 48 && y == 32)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 49 && y == 32)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 50 && y == 32)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 51 && y == 32)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 40 && y == 33)
         begin
-            pixel_data <= 16'b00010_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 41 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 42 && y == 33)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 43 && y == 33)
         begin
-            pixel_data <= 16'b10101_010101_10101;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 44 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 45 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 46 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 47 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 48 && y == 33)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 49 && y == 33)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 50 && y == 33)
         begin
-            pixel_data <= 16'b10100_010100_10100;
+            pixel_data <= 16'b11001_010011_01101;
         end
         else if (x == 51 && y == 33)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 40 && y == 34)
         begin
-            pixel_data <= 16'b00001_000001_00001;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 41 && y == 34)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10101_010000_01100;
         end
         else if (x == 42 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 43 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 44 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 45 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 46 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 47 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 48 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 49 && y == 34)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 50 && y == 34)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10101_010000_01100;
         end
         else if (x == 51 && y == 34)
         begin
-            pixel_data <= 16'b00000_000001_00001;
+            pixel_data <= 16'b00001_000001_00000;
         end
         else if (x == 39 && y == 35)
         begin
@@ -2661,43 +2629,43 @@ module main_menu(
         end
         else if (x == 41 && y == 35)
         begin
-            pixel_data <= 16'b00101_000100_00100;
+            pixel_data <= 16'b00110_000100_00011;
         end
         else if (x == 42 && y == 35)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 43 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 44 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 45 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 46 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 47 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01111;
         end
         else if (x == 48 && y == 35)
         begin
-            pixel_data <= 16'b10110_010110_10110;
+            pixel_data <= 16'b11011_010100_01110;
         end
         else if (x == 49 && y == 35)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10110_010001_01100;
         end
         else if (x == 50 && y == 35)
         begin
-            pixel_data <= 16'b00100_000100_00100;
+            pixel_data <= 16'b00101_000100_00011;
         end
         else if (x == 51 && y == 35)
         begin
@@ -2709,15 +2677,15 @@ module main_menu(
         end
         else if (x == 37 && y == 36)
         begin
-            pixel_data <= 16'b00010_000001_00001;
+            pixel_data <= 16'b00001_000000_00001;
         end
         else if (x == 38 && y == 36)
         begin
-            pixel_data <= 16'b00110_000100_00100;
+            pixel_data <= 16'b00101_000011_00100;
         end
         else if (x == 39 && y == 36)
         begin
-            pixel_data <= 16'b11010_010001_10011;
+            pixel_data <= 16'b11010_010001_10010;
         end
         else if (x == 40 && y == 36)
         begin
@@ -2725,39 +2693,39 @@ module main_menu(
         end
         else if (x == 41 && y == 36)
         begin
-            pixel_data <= 16'b11001_010000_10010;
+            pixel_data <= 16'b11001_010001_10010;
         end
         else if (x == 42 && y == 36)
         begin
-            pixel_data <= 16'b00111_000110_00110;
+            pixel_data <= 16'b01000_000101_00101;
         end
         else if (x == 43 && y == 36)
         begin
-            pixel_data <= 16'b10010_010010_10010;
+            pixel_data <= 16'b10110_010000_01100;
         end
         else if (x == 44 && y == 36)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 45 && y == 36)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 46 && y == 36)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b10111_010010_01101;
         end
         else if (x == 47 && y == 36)
         begin
-            pixel_data <= 16'b10011_010011_10011;
+            pixel_data <= 16'b11000_010010_01101;
         end
         else if (x == 48 && y == 36)
         begin
-            pixel_data <= 16'b10001_010001_10001;
+            pixel_data <= 16'b10110_010000_01100;
         end
         else if (x == 49 && y == 36)
         begin
-            pixel_data <= 16'b01000_000110_00110;
+            pixel_data <= 16'b01000_000110_00101;
         end
         else if (x == 50 && y == 36)
         begin
@@ -2773,19 +2741,15 @@ module main_menu(
         end
         else if (x == 53 && y == 36)
         begin
-            pixel_data <= 16'b00101_000100_00100;
-        end
-        else if (x == 54 && y == 36)
-        begin
-            pixel_data <= 16'b00010_000001_00001;
+            pixel_data <= 16'b00101_000011_00100;
         end
         else if (x == 36 && y == 37)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 37 && y == 37)
         begin
-            pixel_data <= 16'b00011_000010_00010;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 38 && y == 37)
         begin
@@ -2805,7 +2769,7 @@ module main_menu(
         end
         else if (x == 42 && y == 37)
         begin
-            pixel_data <= 16'b11001_010001_10010;
+            pixel_data <= 16'b11010_010001_10010;
         end
         else if (x == 43 && y == 37)
         begin
@@ -2813,7 +2777,7 @@ module main_menu(
         end
         else if (x == 44 && y == 37)
         begin
-            pixel_data <= 16'b00010_000010_00001;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 45 && y == 37)
         begin
@@ -2825,11 +2789,11 @@ module main_menu(
         end
         else if (x == 47 && y == 37)
         begin
-            pixel_data <= 16'b00010_000010_00001;
+            pixel_data <= 16'b00011_000010_00001;
         end
         else if (x == 48 && y == 37)
         begin
-            pixel_data <= 16'b00011_000010_00011;
+            pixel_data <= 16'b00011_000010_00010;
         end
         else if (x == 49 && y == 37)
         begin
@@ -2849,7 +2813,7 @@ module main_menu(
         end
         else if (x == 53 && y == 37)
         begin
-            pixel_data <= 16'b11001_010000_10010;
+            pixel_data <= 16'b11001_010001_10010;
         end
         else if (x == 54 && y == 37)
         begin
@@ -2857,11 +2821,11 @@ module main_menu(
         end
         else if (x == 55 && y == 37)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 34 && y == 38)
         begin
-            pixel_data <= 16'b00001_000000_00000;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 35 && y == 38)
         begin
@@ -2877,7 +2841,7 @@ module main_menu(
         end
         else if (x == 38 && y == 38)
         begin
-            pixel_data <= 16'b10110_001111_10000;
+            pixel_data <= 16'b10110_001110_10000;
         end
         else if (x == 39 && y == 38)
         begin
@@ -2897,7 +2861,7 @@ module main_menu(
         end
         else if (x == 43 && y == 38)
         begin
-            pixel_data <= 16'b00101_000011_00010;
+            pixel_data <= 16'b00101_000011_00011;
         end
         else if (x == 44 && y == 38)
         begin
@@ -2905,15 +2869,15 @@ module main_menu(
         end
         else if (x == 45 && y == 38)
         begin
-            pixel_data <= 16'b10001_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 46 && y == 38)
         begin
-            pixel_data <= 16'b10001_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 47 && y == 38)
         begin
-            pixel_data <= 16'b01110_001000_00101;
+            pixel_data <= 16'b01111_001000_00101;
         end
         else if (x == 48 && y == 38)
         begin
@@ -2921,7 +2885,7 @@ module main_menu(
         end
         else if (x == 49 && y == 38)
         begin
-            pixel_data <= 16'b10110_001110_10000;
+            pixel_data <= 16'b10110_001110_01111;
         end
         else if (x == 50 && y == 38)
         begin
@@ -2929,7 +2893,7 @@ module main_menu(
         end
         else if (x == 51 && y == 38)
         begin
-            pixel_data <= 16'b10110_001110_01111;
+            pixel_data <= 16'b10101_001110_01111;
         end
         else if (x == 52 && y == 38)
         begin
@@ -2937,7 +2901,7 @@ module main_menu(
         end
         else if (x == 53 && y == 38)
         begin
-            pixel_data <= 16'b10110_001110_10000;
+            pixel_data <= 16'b10110_001110_01111;
         end
         else if (x == 54 && y == 38)
         begin
@@ -2951,13 +2915,17 @@ module main_menu(
         begin
             pixel_data <= 16'b00011_000010_00001;
         end
+        else if (x == 57 && y == 38)
+        begin
+            pixel_data <= 16'b00001_000001_00001;
+        end
         else if (x == 34 && y == 39)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 35 && y == 39)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b01111_001001_00110;
         end
         else if (x == 36 && y == 39)
         begin
@@ -2965,7 +2933,7 @@ module main_menu(
         end
         else if (x == 37 && y == 39)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 38 && y == 39)
         begin
@@ -3009,7 +2977,7 @@ module main_menu(
         end
         else if (x == 48 && y == 39)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 49 && y == 39)
         begin
@@ -3029,7 +2997,7 @@ module main_menu(
         end
         else if (x == 53 && y == 39)
         begin
-            pixel_data <= 16'b00101_000011_00010;
+            pixel_data <= 16'b00110_000011_00010;
         end
         else if (x == 54 && y == 39)
         begin
@@ -3049,11 +3017,11 @@ module main_menu(
         end
         else if (x == 34 && y == 40)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 35 && y == 40)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b01110_001000_00110;
         end
         else if (x == 36 && y == 40)
         begin
@@ -3065,7 +3033,7 @@ module main_menu(
         end
         else if (x == 38 && y == 40)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 39 && y == 40)
         begin
@@ -3073,7 +3041,7 @@ module main_menu(
         end
         else if (x == 40 && y == 40)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 41 && y == 40)
         begin
@@ -3081,7 +3049,7 @@ module main_menu(
         end
         else if (x == 42 && y == 40)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 43 && y == 40)
         begin
@@ -3109,7 +3077,7 @@ module main_menu(
         end
         else if (x == 49 && y == 40)
         begin
-            pixel_data <= 16'b10000_001001_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 50 && y == 40)
         begin
@@ -3125,11 +3093,11 @@ module main_menu(
         end
         else if (x == 53 && y == 40)
         begin
-            pixel_data <= 16'b10000_001010_00110;
+            pixel_data <= 16'b10001_001010_00110;
         end
         else if (x == 54 && y == 40)
         begin
-            pixel_data <= 16'b10010_001010_00111;
+            pixel_data <= 16'b10010_001011_00111;
         end
         else if (x == 55 && y == 40)
         begin
@@ -3137,19 +3105,15 @@ module main_menu(
         end
         else if (x == 56 && y == 40)
         begin
-            pixel_data <= 16'b01111_001000_00110;
+            pixel_data <= 16'b01110_001000_00101;
         end
         else if (x == 57 && y == 40)
         begin
             pixel_data <= 16'b00001_000000_00000;
         end
-        else if (x == 34 && y == 41)
-        begin
-            pixel_data <= 16'b00001_000000_00000;
-        end
         else if (x == 35 && y == 41)
         begin
-            pixel_data <= 16'b00011_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 36 && y == 41)
         begin
@@ -3157,15 +3121,15 @@ module main_menu(
         end
         else if (x == 37 && y == 41)
         begin
-            pixel_data <= 16'b10001_001010_00110;
+            pixel_data <= 16'b10000_001010_00110;
         end
         else if (x == 38 && y == 41)
         begin
-            pixel_data <= 16'b10010_001011_00111;
+            pixel_data <= 16'b10010_001010_00111;
         end
         else if (x == 39 && y == 41)
         begin
-            pixel_data <= 16'b10010_001010_00111;
+            pixel_data <= 16'b10010_001011_00111;
         end
         else if (x == 40 && y == 41)
         begin
@@ -3217,7 +3181,7 @@ module main_menu(
         end
         else if (x == 52 && y == 41)
         begin
-            pixel_data <= 16'b10010_001010_00111;
+            pixel_data <= 16'b10010_001011_00111;
         end
         else if (x == 53 && y == 41)
         begin
@@ -3225,11 +3189,11 @@ module main_menu(
         end
         else if (x == 54 && y == 41)
         begin
-            pixel_data <= 16'b10001_001010_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 55 && y == 41)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b01110_001000_00110;
         end
         else if (x == 56 && y == 41)
         begin
@@ -3241,15 +3205,15 @@ module main_menu(
         end
         else if (x == 37 && y == 42)
         begin
-            pixel_data <= 16'b00011_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 38 && y == 42)
         begin
-            pixel_data <= 16'b01111_001001_00110;
+            pixel_data <= 16'b01111_001000_00110;
         end
         else if (x == 39 && y == 42)
         begin
-            pixel_data <= 16'b10001_001010_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 40 && y == 42)
         begin
@@ -3301,15 +3265,15 @@ module main_menu(
         end
         else if (x == 52 && y == 42)
         begin
-            pixel_data <= 16'b10001_001010_00110;
+            pixel_data <= 16'b10000_001001_00110;
         end
         else if (x == 53 && y == 42)
         begin
-            pixel_data <= 16'b01111_001000_00110;
+            pixel_data <= 16'b01110_001000_00110;
         end
         else if (x == 54 && y == 42)
         begin
-            pixel_data <= 16'b00010_000001_00001;
+            pixel_data <= 16'b00010_000001_00000;
         end
         else if (x == 55 && y == 42)
         begin
@@ -3317,7 +3281,7 @@ module main_menu(
         end
         else if (x == 56 && y == 42)
         begin
-            pixel_data <= 16'b00000_000001_00001;
+            pixel_data <= 16'b00001_000001_00001;
         end
         else if (x == 38 && y == 43)
         begin
@@ -3325,7 +3289,7 @@ module main_menu(
         end
         else if (x == 39 && y == 43)
         begin
-            pixel_data <= 16'b00011_000001_00001;
+            pixel_data <= 16'b00010_000001_00001;
         end
         else if (x == 40 && y == 43)
         begin
@@ -3373,7 +3337,7 @@ module main_menu(
         end
         else if (x == 51 && y == 43)
         begin
-            pixel_data <= 16'b01111_001000_00110;
+            pixel_data <= 16'b01110_001000_00101;
         end
         else if (x == 52 && y == 43)
         begin
@@ -3385,11 +3349,11 @@ module main_menu(
         end
         else if (x == 40 && y == 44)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 41 && y == 44)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 42 && y == 44)
         begin
@@ -3425,7 +3389,7 @@ module main_menu(
         end
         else if (x == 50 && y == 44)
         begin
-            pixel_data <= 16'b00001_000001_00000;
+            pixel_data <= 16'b00001_000000_00000;
         end
         else if (x == 51 && y == 44)
         begin
@@ -3433,7 +3397,7 @@ module main_menu(
         end
         
         // bomb
-        else if (is_bomb_fuse(x, y, 70, 25)) pixel_data <= bomb_fuse;
+        else if (is_bomb_fuse(x, y, 70, 26)) pixel_data <= bomb_fuse;
         else if (is_bomb(x, y, 68, 33)) pixel_data <= bomb;
         else if (is_bomb_fire(x, y, 84, 35)) pixel_data <= bomb_fire;
         
