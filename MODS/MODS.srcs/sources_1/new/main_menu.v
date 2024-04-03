@@ -850,17 +850,17 @@ module main_menu(
         
         // "WHACK-A-MOLE"
         if (is_char(x, y, 8, 8, 87)) pixel_data <= title_text;
-        else if (is_char(x, y, 13, 8, 72)) pixel_data <= title_text;
-        else if (is_char(x, y, 18, 8, 65)) pixel_data <= title_text;
-        else if (is_char(x, y, 23, 8, 67)) pixel_data <= title_text;
-        else if (is_char(x, y, 28, 8, 75)) pixel_data <= title_text;
-        else if (is_char(x, y, 33, 8, 45)) pixel_data <= title_text;
-        else if (is_char(x, y, 38, 8, 65)) pixel_data <= title_text;
-        else if (is_char(x, y, 43, 8, 45)) pixel_data <= title_text;
-        else if (is_char(x, y, 48, 8, 77)) pixel_data <= title_text;
-        else if (is_char(x, y, 53, 8, 79)) pixel_data <= title_text;
-        else if (is_char(x, y, 58, 8, 76)) pixel_data <= title_text;
-        else if (is_char(x, y, 63, 8, 69)) pixel_data <= title_text;
+        else if (is_char(x, y, 14, 8, 72)) pixel_data <= title_text;
+        else if (is_char(x, y, 19, 8, 65)) pixel_data <= title_text;
+        else if (is_char(x, y, 24, 8, 67)) pixel_data <= title_text;
+        else if (is_char(x, y, 29, 8, 75)) pixel_data <= title_text;
+        else if (is_char(x, y, 34, 8, 45)) pixel_data <= title_text;
+        else if (is_char(x, y, 40, 8, 65)) pixel_data <= title_text;
+        else if (is_char(x, y, 45, 8, 45)) pixel_data <= title_text;
+        else if (is_char(x, y, 51, 8, 77)) pixel_data <= title_text;
+        else if (is_char(x, y, 56, 8, 79)) pixel_data <= title_text;
+        else if (is_char(x, y, 61, 8, 76)) pixel_data <= title_text;
+        else if (is_char(x, y, 66, 8, 69)) pixel_data <= title_text;
         
         // "START"
         else if (is_char(x, y, 23, 52, 83)) pixel_data <= subtitle_text;
@@ -3399,7 +3399,7 @@ module main_menu(
         // bomb
         else if (is_bomb_fuse(x, y, 70, 26)) pixel_data <= bomb_fuse;
         else if (is_bomb(x, y, 68, 33)) pixel_data <= bomb;
-        else if (is_bomb_fire(x, y, 84, 35)) pixel_data <= bomb_fire;
+        else if (is_bomb_fire(x, y, 82, 36)) pixel_data <= bomb_fire;
         
         else pixel_data <= background;
     end

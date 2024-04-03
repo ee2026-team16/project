@@ -696,9 +696,9 @@ module game_over_menu(
     endfunction
     
     // selection at home
-    reg [7:0] select_home_x = 34;
+    reg [7:0] select_home_x = 32;
     reg [7:0] select_home_y = 54;
-    reg [7:0] select_home_a = 14;
+    reg [7:0] select_home_a = 13;
     reg [7:0] select_home_b = 5;
     
     // selection at settings

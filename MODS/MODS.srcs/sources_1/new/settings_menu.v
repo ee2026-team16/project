@@ -26,16 +26,17 @@ module settings_menu(
     output reg [15:0] pixel_data,
     input btnC, btnU, btnL, btnR, btnD,
     output reg clicked_back = 0,
-    output reg [4:0] volume_level = 5
+    output reg [4:0] volume_level = 5,
+    output reg [4:0] animation_level = 5
 );
     reg [15:0] background = 16'b11100_100101_00111;
     reg [15:0] title_text = 16'b00111_000000_00010;
     reg [15:0] back_text = 16'b01101_010010_00010;
     reg [15:0] rectangle_border = 16'b10011_100111_10011;
-    reg [15:0] volume_slider_border = 16'b00001_000110_00011;
-    reg [15:0] volume_slider_full = 16'b00000_011110_11011;
-    reg [15:0] volume_slider_empty = 16'b01100_011010_01101;
-    reg [15:0] volume_slider_cursor = 16'b11110_111110_11101;
+    reg [15:0] slider_border = 16'b00001_000110_00011;
+    reg [15:0] slider_full = 16'b00000_011110_11011;
+    reg [15:0] slider_empty = 16'b01100_011010_01101;
+    reg [15:0] slider_cursor = 16'b11110_111110_11101;
     
     wire clk_25m, clk_1000;
     flexible_clock_module flexible_clock_module_25m (
@@ -65,32 +66,32 @@ module settings_menu(
         end
     endfunction
     
-    reg [7:0] volume_slider_origin_x = 48;
-    reg [7:0] volume_slider_origin_y = 32;
     reg [7:0] width = 30;
     reg [7:0] height = 6;
-    function is_volume_slider_border;
+    function is_slider_border;
         input [7:0] curr_x;
         input [7:0] curr_y;
+        input [7:0] origin_x;
+        input [7:0] origin_y;
         begin
-            is_volume_slider_border = 0;
+            is_slider_border = 0;
     
-            if (curr_y == volume_slider_origin_y + height / 2 ||
-                curr_y == volume_slider_origin_y - height / 2)
+            if (curr_y == origin_y + height / 2 ||
+                curr_y == origin_y - height / 2)
                 begin
-                    if (curr_x >= volume_slider_origin_x - width / 2 &&
-                        curr_x <= volume_slider_origin_x + width / 2)
+                    if (curr_x >= origin_x - width / 2 &&
+                        curr_x <= origin_x + width / 2)
                         begin
-                            is_volume_slider_border = 1;
+                            is_slider_border = 1;
                         end
                 end
-            else if (curr_x == volume_slider_origin_x + width / 2 ||
-                    curr_x == volume_slider_origin_x - width / 2)
+            else if (curr_x == origin_x + width / 2 ||
+                    curr_x == origin_x - width / 2)
                     begin
-                        if (curr_y >= volume_slider_origin_y - height / 2 &&
-                            curr_y <= volume_slider_origin_y + height / 2)
+                        if (curr_y >= origin_y - height / 2 &&
+                            curr_y <= origin_y + height / 2)
                             begin
-                                is_volume_slider_border = 1;
+                                is_slider_border = 1;
                             end
                     end
         end
@@ -700,25 +701,31 @@ module settings_menu(
     reg [7:0] select_back_a = 14;
     reg [7:0] select_back_b = 5;
     
-    // selection at slider
-    reg [7:0] select_slider_x = 48;
-    reg [7:0] select_slider_y = 32;
-    reg [7:0] select_slider_a = 17;
-    reg [7:0] select_slider_b = 4;
+    // selection at volume
+    reg [7:0] select_volume_x = 66;
+    reg [7:0] select_volume_y = 24;
+    reg [7:0] select_volume_a = 17;
+    reg [7:0] select_volume_b = 4;
+
+    // selection at animation
+    reg [7:0] select_animation_x = 66;
+    reg [7:0] select_animation_y = 40;
+    reg [7:0] select_animation_a = 17;
+    reg [7:0] select_animation_b = 4;
         
     reg [7:0] rectangle_border_x = 128;
     reg [7:0] rectangle_border_y = 128;
     reg [7:0] rectangle_border_a = 128;
     reg [7:0] rectangle_border_b = 128;
     
-    always @ (posedge clk)
+    always @ (posedge clk_1000)
     begin
         if (rectangle_border_y == 128 && btnU)
             begin
-                rectangle_border_x = select_slider_x;
-                rectangle_border_y = select_slider_y;
-                rectangle_border_a = select_slider_a;
-                rectangle_border_b = select_slider_b;
+                rectangle_border_x = select_volume_x;
+                rectangle_border_y = select_volume_y;
+                rectangle_border_a = select_volume_a;
+                rectangle_border_b = select_volume_b;
             end
         else if (rectangle_border_y == 128 && btnD)
             begin
@@ -727,19 +734,33 @@ module settings_menu(
                 rectangle_border_a = select_back_a;
                 rectangle_border_b = select_back_b;
             end
-        else if (rectangle_border_y == select_back_y && btnU)
+        else if (rectangle_border_y == select_volume_y && btnD)
             begin
-                rectangle_border_x = select_slider_x;
-                rectangle_border_y = select_slider_y;
-                rectangle_border_a = select_slider_a;
-                rectangle_border_b = select_slider_b;
+                rectangle_border_x = select_animation_x;
+                rectangle_border_y = select_animation_y;
+                rectangle_border_a = select_animation_a;
+                rectangle_border_b = select_animation_b;
             end
-        else if (rectangle_border_y == select_slider_y && btnD)
+        else if (rectangle_border_y == select_animation_y && btnU)
+            begin
+                rectangle_border_x = select_volume_x;
+                rectangle_border_y = select_volume_y;
+                rectangle_border_a = select_volume_a;
+                rectangle_border_b = select_volume_b;
+            end
+        else if (rectangle_border_y == select_animation_y && btnD)
             begin
                 rectangle_border_x = select_back_x;
                 rectangle_border_y = select_back_y;
                 rectangle_border_a = select_back_a;
                 rectangle_border_b = select_back_b;
+            end
+        else if (rectangle_border_y == select_back_y && btnU)
+            begin
+                rectangle_border_x = select_animation_x;
+                rectangle_border_y = select_animation_y;
+                rectangle_border_a = select_animation_a;
+                rectangle_border_b = select_animation_b;
             end
         
         if (rectangle_border_y == select_back_y && btnC)
@@ -757,23 +778,40 @@ module settings_menu(
     end
     
     reg [7:0] volume_slider_cursor_x;
-    reg [7:0] volume_slider_cursor_y;
     initial
     begin
-        volume_slider_cursor_x = 48;
-        volume_slider_cursor_y = 30;
+        volume_slider_cursor_x = select_volume_x;
     end
     always @ (posedge clk_1000)
     begin
-        if (rectangle_border_y == select_slider_y && btnR && volume_slider_cursor_x < 60)
+        if (rectangle_border_y == select_volume_y && btnR && volume_slider_cursor_x < select_volume_x + 3 * 4)
             begin
                 volume_slider_cursor_x <= volume_slider_cursor_x + 3;
                 volume_level <= volume_level + 1;
             end
-        else if (rectangle_border_y == select_slider_y && btnL && volume_slider_cursor_x > 35)
+        else if (rectangle_border_y == select_volume_y && btnL && volume_slider_cursor_x >= select_volume_x - 3 * 4)
             begin
                 volume_slider_cursor_x <= volume_slider_cursor_x - 3;
                 volume_level <= volume_level - 1;
+            end
+    end
+
+    reg [7:0] animation_slider_cursor_x;
+    initial
+    begin
+        animation_slider_cursor_x = select_animation_x;
+    end
+    always @ (posedge clk_1000)
+    begin
+        if (rectangle_border_y == select_animation_y && btnR && animation_slider_cursor_x < select_animation_x + 3 * 4)
+            begin
+                animation_slider_cursor_x <= animation_slider_cursor_x + 3;
+                animation_level <= animation_level - 1;
+            end
+        else if (rectangle_border_y == select_animation_y && btnL && animation_slider_cursor_x >= select_animation_x - 3 * 4)
+            begin
+                animation_slider_cursor_x <= animation_slider_cursor_x - 3;
+                animation_level <= animation_level + 1;
             end
     end
     
@@ -794,12 +832,23 @@ module settings_menu(
         else if (is_char(x, y, 41, 8, 83)) pixel_data <= title_text;
 
         // VOLUME
-        else if (is_char(x, y, 33, 20, 86)) pixel_data <= title_text;
-        else if (is_char(x, y, 39, 20, 79)) pixel_data <= title_text;
-        else if (is_char(x, y, 44, 20, 76)) pixel_data <= title_text;
-        else if (is_char(x, y, 49, 20, 85)) pixel_data <= title_text;
-        else if (is_char(x, y, 54, 20, 77)) pixel_data <= title_text;
-        else if (is_char(x, y, 59, 20, 69)) pixel_data <= title_text;
+        else if (is_char(x, y, 8, select_volume_y - 2, 86)) pixel_data <= title_text;
+        else if (is_char(x, y, 14, select_volume_y - 2, 79)) pixel_data <= title_text;
+        else if (is_char(x, y, 19, select_volume_y - 2, 76)) pixel_data <= title_text;
+        else if (is_char(x, y, 24, select_volume_y - 2, 85)) pixel_data <= title_text;
+        else if (is_char(x, y, 29, select_volume_y - 2, 77)) pixel_data <= title_text;
+        else if (is_char(x, y, 35, select_volume_y - 2, 69)) pixel_data <= title_text;
+
+        // ANIMATION
+        else if (is_char(x, y, 8, select_animation_y - 2, 65)) pixel_data <= title_text;
+        else if (is_char(x, y, 13, select_animation_y - 2, 78)) pixel_data <= title_text;
+        else if (is_char(x, y, 18, select_animation_y - 2, 73)) pixel_data <= title_text;
+        else if (is_char(x, y, 20, select_animation_y - 2, 77)) pixel_data <= title_text;
+        else if (is_char(x, y, 26, select_animation_y - 2, 65)) pixel_data <= title_text;
+        else if (is_char(x, y, 31, select_animation_y - 2, 84)) pixel_data <= title_text;
+        else if (is_char(x, y, 36, select_animation_y - 2, 73)) pixel_data <= title_text;
+        else if (is_char(x, y, 38, select_animation_y - 2, 79)) pixel_data <= title_text;
+        else if (is_char(x, y, 43, select_animation_y - 2, 78)) pixel_data <= title_text;
 
         // BACK
         else if (is_char(x, y, 39, 52, 66)) pixel_data <= back_text;
@@ -808,10 +857,16 @@ module settings_menu(
         else if (is_char(x, y, 54, 52, 75)) pixel_data <= back_text;
         
         // volume slider
-        else if (is_volume_slider_border(x, y)) pixel_data <= volume_slider_border;
-        else if (is_rectangle(x, y, volume_slider_cursor_x, volume_slider_cursor_y, 2, height)) pixel_data <= volume_slider_cursor;
-        else if (is_rectangle(x, y, volume_slider_origin_x - width / 2, volume_slider_cursor_y, volume_slider_cursor_x - (volume_slider_origin_x - width / 2), height)) pixel_data <= volume_slider_full;
-        else if (is_rectangle(x, y, volume_slider_cursor_x + 2, volume_slider_cursor_y, volume_slider_origin_x + width / 2 - volume_slider_cursor_x, height)) pixel_data <= volume_slider_empty;
+        else if (is_slider_border(x, y, select_volume_x, select_volume_y)) pixel_data <= slider_border;
+        else if (is_rectangle(x, y, volume_slider_cursor_x, select_volume_y - 2, 2, height)) pixel_data <= slider_cursor;
+        else if (is_rectangle(x, y, select_volume_x - width / 2, select_volume_y - 2, volume_slider_cursor_x - (select_volume_x - width / 2), height)) pixel_data <= slider_full;
+        else if (is_rectangle(x, y, volume_slider_cursor_x + 2, select_volume_y - 2, select_volume_x + width / 2 - volume_slider_cursor_x, height)) pixel_data <= slider_empty;
+
+        // animation slider
+        else if (is_slider_border(x, y, select_animation_x, select_animation_y)) pixel_data <= slider_border;
+        else if (is_rectangle(x, y, animation_slider_cursor_x, select_animation_y - 2, 2, height)) pixel_data <= slider_cursor;
+        else if (is_rectangle(x, y, select_animation_x - width / 2, select_animation_y - 2, animation_slider_cursor_x - (select_animation_x - width / 2), height)) pixel_data <= slider_full;
+        else if (is_rectangle(x, y, animation_slider_cursor_x + 2, select_animation_y - 2, select_animation_x + width / 2 - animation_slider_cursor_x, height)) pixel_data <= slider_empty;
         
         // selection
         else if (is_rectangle_border(x, y, rectangle_border_x, rectangle_border_y, rectangle_border_a, rectangle_border_b)) pixel_data <= rectangle_border;
