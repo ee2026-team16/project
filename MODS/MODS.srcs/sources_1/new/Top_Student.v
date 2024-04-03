@@ -197,35 +197,37 @@ module Top_Student (
     wire [31:0] total_points, mole_y [2:0];
     wire bomb_defused, mole_state [2:0];
     
-//    mole_sequence game(.is_master(1),
-//    .input_mole_state0(0),
-//    .input_mole_state1(0), 
-//    .input_mole_state2(0),
-//    .input_mole_y0(0), 
-//    .input_mole_y1(0), 
-//    .input_mole_y2(0),
-//    .basys_clock(clk), 
-//    .clk_25MHz(clk_25m), 
-//    .sw2(1),
-//    .left_click(left),
-//    .btnC(btnC), 
-//    .btnU(btnU),
-//    .btnL(btnL),
-//    .btnR(btnR),
-//    .btnD(btnD),
-//    .xpos(xpos), 
-//    .ypos(ypos),
-//    .pixel_index(pixel_index), 
-//    .switch_points(points),
-//    .oled_data(mole_sequence_pixel_data),
-//    .total_points(total_points),
-//    .bomb_defused(bomb_defused),
-//    .mole_state0(mole_state[0]),
-//    .mole_state1(mole_state[1]),
-//    .mole_state2(mole_state[2]),
-//    .mole_y0(mole_y[0]),
-//    .mole_y1(mole_y[1]),
-//    .mole_y2(mole_y[2]));
+    mole_sequence game(
+        .is_master(1),
+        .input_mole_state0(0),
+        .input_mole_state1(0), 
+        .input_mole_state2(0),
+        .input_mole_y0(0), 
+        .input_mole_y1(0), 
+        .input_mole_y2(0),
+        .basys_clock(clk), 
+        .clk_25MHz(clk_25m), 
+        .sw2(1),
+        .left_click(left),
+        .btnC(btnC), 
+        .btnU(btnU),
+        .btnL(btnL),
+        .btnR(btnR),
+        .btnD(btnD),
+        .xpos(xpos), 
+        .ypos(ypos),
+        .pixel_index(pixel_index), 
+        .switch_points(points),
+        .oled_data(mole_sequence_pixel_data),
+        .total_points(total_points),
+        .bomb_defused(bomb_defused),
+        .mole_state0(mole_state[0]),
+        .mole_state1(mole_state[1]),
+        .mole_state2(mole_state[2]),
+        .mole_y0(mole_y[0]),
+        .mole_y1(mole_y[1]),
+        .mole_y2(mole_y[2])
+    );
     
     Music_player Music(
         .volume(volume_level), //assume 0 - 9;
@@ -254,7 +256,7 @@ module Top_Student (
 
     initial
     begin
-        state = GAME_OVER_WIN;
+        state = MAIN;
     end
         
     always @ (posedge clk)

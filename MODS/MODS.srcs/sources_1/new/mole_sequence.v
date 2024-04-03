@@ -3,7 +3,7 @@
 // Engineer: Mohamed Abubaker Mustafa Abdelaal Elsayed
 
 
-module mole_sequence(input basys_clock, clk_25MHz, sw2, left_click, btnC, btnU, btnL, btnR, btnD, input [11:0] xpos, ypos, input [12:0] pixel_index, input [31:0] switch_points, output reg [15:0] oled_data, output reg [31:0] total_points = 0, output reg bomb_defused = 1);
+module mole_sequence(input is_master, input input_mole_state0, input_mole_state1, input_mole_state2, input [31:0] input_mole_y0, input_mole_y1, input_mole_y2, input basys_clock, clk_25MHz, sw2, left_click, btnC, btnU, btnL, btnR, btnD, input [11:0] xpos, ypos, input [12:0] pixel_index, input [31:0] switch_points, output reg [15:0] oled_data, output reg [31:0] total_points = 0, output reg bomb_defused = 1, output mole_state0, mole_state1, mole_state2, output [31:0] mole_y0, mole_y1, mole_y2);
     parameter BLACK = 16'b00000_000000_00000; // else case
     parameter BLUE = 16'b00000_000000_11111;
     parameter WHITE = 16'b11111_111111_11111;
@@ -19,10 +19,17 @@ module mole_sequence(input basys_clock, clk_25MHz, sw2, left_click, btnC, btnU, 
     flexible_clock_module flexible_clock_1000 (basys_clock, 49999, clk_1000);
     
     reg [31:0] x, y, points = 0;
-    reg mole_state [2:0], click_mole[2:0], mole_hit[2:0], wrong_hit = 0;
+    reg mole_state[2:0], click_mole[2:0], mole_hit[2:0], wrong_hit = 0;
     wire [31:0] generated_mole_count [2:0], generated_mole_position_change[2:0];
-    reg [31:0] prev_mole_count [2:0], mole_position_change[2:0], mole_count [2:0], mole_dead_count [2:0], wrong_hit_count = 0, mole_y [3:0], count = 0;
-    reg start = 0, circleC, circleU, circleL, circleR, circleD, mouse_arrow;
+    reg [31:0] prev_mole_count [2:0], mole_y[2:0], mole_position_change[2:0], mole_count [2:0], mole_dead_count [2:0], wrong_hit_count = 0, count = 0;
+    reg start = 0, moleC, moleR, moleL, mouse_arrow;
+    
+    assign mole_state0 = mole_state[0];
+    assign mole_state1 = mole_state[1];
+    assign mole_state2 = mole_state[2];
+    assign mole_y0 = mole_y[0];
+    assign mole_y1 = mole_y[1];
+    assign mole_y2 = mole_y[2];
     
     random_number_generator unit1(basys_clock, prev_mole_count[0], generated_mole_count[0]);
     random_number_generator unit2(basys_clock, prev_mole_count[1], generated_mole_count[1]);
@@ -52,10 +59,13 @@ module mole_sequence(input basys_clock, clk_25MHz, sw2, left_click, btnC, btnU, 
     .pixel_index(pixel_index),
     .oled_data(defuse_oled_data),
     .correct_press_count(correct_press_count));
+
+    wire [15:0] points_oled_data;
+    point_display unit9(.clk_25MHz(clk_25MHz), .total_points(switch_points + points), .pixel_index(pixel_index), .oled_data(points_oled_data));
     
     
     wire debounced_left_click;
-    debounce unit9 (clk_1000, left_click, debounced_left_click);
+    debounce unit10 (clk_1000, left_click, debounced_left_click);
     
     
     always @ (posedge clk_25MHz) 
@@ -100,15 +110,15 @@ module mole_sequence(input basys_clock, clk_25MHz, sw2, left_click, btnC, btnU, 
         
         prev_mole_count[0] <= generated_mole_count[0] + 1;
         mole_count[0] <= (mole_state[0]) ? ((count == 0) ? mole_count[0] + 1 : mole_count[0]) : 0;
-        mole_state[0] <= ((count == 0) && ((prev_mole_count[0] % 25 == 1 && mole_state[0] == 0) || mole_count[0] == 15)) ? ~mole_state[0] : mole_state[0];
+        mole_state[0] <= (is_master) ? (((count == 0) && ((prev_mole_count[0] % 25 == 1 && mole_state[0] == 0) || mole_count[0] == 15)) ? ~mole_state[0] : mole_state[0]) : input_mole_state0;
         
         prev_mole_count[1] <= generated_mole_count[1] + 2; 
         mole_count[1] <= (mole_state[1]) ? ((count == 0) ? mole_count[1] + 1 : mole_count[1]) : 0; 
-        mole_state[1] <= ((count == 0) && ((prev_mole_count[1] % 25 == 1 && mole_state[1] == 0) || (mole_count[1] == 15))) ? ~mole_state[1] : mole_state[1];
+        mole_state[1] <= (is_master) ? (((count == 0) && ((prev_mole_count[1] % 25 == 1 && mole_state[1] == 0) || (mole_count[1] == 15))) ? ~mole_state[1] : mole_state[1]) : input_mole_state1;
         
         prev_mole_count[2] <= generated_mole_count[2] + 3; 
         mole_count[2] <= (mole_state[2]) ? ((count == 0) ? mole_count[2] + 1 : mole_count[2]) : 0; 
-        mole_state[2] <= ((count == 0) && ((prev_mole_count[2] % 25 == 1 && mole_state[2] == 0) || (mole_count[2] == 15))) ? ~mole_state[2] : mole_state[2];
+        mole_state[2] <= (is_master) ? (((count == 0) && ((prev_mole_count[2] % 25 == 1 && mole_state[2] == 0) || (mole_count[2] == 15))) ? ~mole_state[2] : mole_state[2]) : input_mole_state2;
         
         mole_position_change[0] <= (count == 0 && mole_state[0] == 0 && !mole_hit[0]) ? generated_mole_position_change[0] + 1 : mole_position_change[0];
         mole_position_change[1] <= (count == 0 && mole_state[1] == 0 && !mole_hit[1]) ? generated_mole_position_change[1] + 2: mole_position_change[1];
@@ -117,13 +127,13 @@ module mole_sequence(input basys_clock, clk_25MHz, sw2, left_click, btnC, btnU, 
         
         //display equations
         
-        mole_y[1] <= 32 + 5 - mole_position_change[1] % 12;
-        mole_y[0] <= 32 + 4 - mole_position_change[0] % 12;
-        mole_y[2] <= 32 + 6 - mole_position_change[2] % 12;
+        mole_y[1] <= (is_master) ? (32 + 5 - mole_position_change[1] % 12) : input_mole_y1;
+        mole_y[0] <= (is_master) ? (32 + 4 - mole_position_change[0] % 12) : input_mole_y0;
+        mole_y[2] <= (is_master) ? (32 + 6 - mole_position_change[2] % 12) : input_mole_y2;
         
-        circleC = (((x - 48) ** 2 + (y - mole_y[1]) ** 2) <= 64);
-        circleL = (((x - 24) ** 2 + (y - mole_y[0]) ** 2) <= 81);
-        circleR = (((x - 72) ** 2 + (y - mole_y[2]) ** 2) <= 81);
+        moleC = (((x - 48) ** 2 + (y - mole_y[1]) ** 2) <= 64);
+        moleL = (((x - 24) ** 2 + (y - mole_y[0]) ** 2) <= 81) || (y > mole_y[0] && y <= mole_y[0] + 9 && x <= 24 + 9 && x >= 24 - 9);
+        moleR = (((x - 72) ** 2 + (y - mole_y[2]) ** 2) <= 81) || (y > mole_y[2] && y <= mole_y[2] + 9 && x <= 72 + 9 && x >= 72 - 9);
         
         mouse_arrow = (((x - xpos) ** 2 + (y - ypos) ** 2) < 5);
         
@@ -134,359 +144,18 @@ module mole_sequence(input basys_clock, clk_25MHz, sw2, left_click, btnC, btnU, 
         end 
         else if (mouse_arrow) begin
             oled_data <= RED;
-        end
-        else if((x == 10 && y == 0) || 
-        (x == 11 && y == 0) || 
-        (x == 12 && y == 0) || 
-        (x == 10 && y == 1) || 
-        (x == 13 && y == 1) || 
-        (x == 10 && y == 2) || 
-        (x == 11 && y == 2) || 
-        (x == 12 && y == 2) || 
-        (x == 10 && y == 3) || 
-        (x == 10 && y == 4) || 
-        (x == 16 && y == 0) || 
-        (x == 17 && y == 0) || 
-        (x == 15 && y == 1) || 
-        (x == 18 && y == 1) || 
-        (x == 15 && y == 2) || 
-        (x == 18 && y == 2) || 
-        (x == 15 && y == 3) || 
-        (x == 18 && y == 3) || 
-        (x == 16 && y == 4) || 
-        (x == 17 && y == 4) || 
-        (x == 20 && y == 0) || 
-        (x == 20 && y == 1) || 
-        (x == 20 && y == 2) || 
-        (x == 20 && y == 3) || 
-        (x == 20 && y == 4) || 
-        (x == 22 && y == 0) || 
-        (x == 25 && y == 0) || 
-        (x == 22 && y == 1) || 
-        (x == 23 && y == 1) || 
-        (x == 25 && y == 1) || 
-        (x == 22 && y == 2) || 
-        (x == 24 && y == 2) || 
-        (x == 25 && y == 2) || 
-        (x == 22 && y == 3) || 
-        (x == 25 && y == 3) || 
-        (x == 22 && y == 4) || 
-        (x == 25 && y == 4) || 
-        (x == 27 && y == 0) || 
-        (x == 28 && y == 0) || 
-        (x == 29 && y == 0) || 
-        (x == 28 && y == 1) || 
-        (x == 28 && y == 2) || 
-        (x == 28 && y == 3) || 
-        (x == 28 && y == 4) || 
-        (x == 31 && y == 0) || 
-        (x == 32 && y == 0) || 
-        (x == 33 && y == 0) || 
-        (x == 34 && y == 0) || 
-        (x == 31 && y == 1) || 
-        (x == 31 && y == 2) || 
-        (x == 32 && y == 2) || 
-        (x == 33 && y == 2) || 
-        (x == 34 && y == 2) || 
-        (x == 34 && y == 3) || 
-        (x == 31 && y == 4) || 
-        (x == 32 && y == 4) || 
-        (x == 33 && y == 4) || 
-        (x == 34 && y == 4) ) begin
-            oled_data <= BLACK;
-        end
-        else if (((x == 1 && y == 0) || 
-            (x == 0 && y == 1) || 
-            (x == 2 && y == 1) || 
-            (x == 0 && y == 2) || 
-            (x == 2 && y == 2) || 
-            (x == 0 && y == 3) || 
-            (x == 2 && y == 3) || 
-            (x == 1 && y == 4)) && (points + switch_points) / 10 == 0) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 1 && y == 0) || 
-            (x == 0 && y == 1) || 
-            (x == 1 && y == 1) || 
-            (x == 1 && y == 2) || 
-            (x == 1 && y == 3) || 
-            (x == 0 && y == 4) || 
-            (x == 1 && y == 4) || 
-            (x == 2 && y == 4)) && (points + switch_points) / 10 == 1) begin
-            oled_data <= WHITE;
-        end 
-        else if (((x == 0 && y == 0) || 
-        (x == 1 && y == 0) || 
-        (x == 2 && y == 0) || 
-        (x == 2 && y == 1) || 
-        (x == 0 && y == 2) || 
-        (x == 1 && y == 2) || 
-        (x == 2 && y == 2) || 
-        (x == 0 && y == 3) || 
-        (x == 0 && y == 4) || 
-        (x == 1 && y == 4) || 
-        (x == 2 && y == 4) ) && (points + switch_points) / 10 == 2) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 0 && y == 0) || 
-        (x == 1 && y == 0) || 
-        (x == 2 && y == 0) || 
-        (x == 2 && y == 1) || 
-        (x == 0 && y == 2) || 
-        (x == 1 && y == 2) || 
-        (x == 2 && y == 2) || 
-        (x == 2 && y == 3) || 
-        (x == 0 && y == 4) || 
-        (x == 1 && y == 4) || 
-        (x == 2 && y == 4) ) && (points + switch_points) / 10 == 3) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 0 && y == 0) || 
-        (x == 2 && y == 0) || 
-        (x == 0 && y == 1) || 
-        (x == 2 && y == 1) || 
-        (x == 0 && y == 2) || 
-        (x == 1 && y == 2) || 
-        (x == 2 && y == 2) || 
-        (x == 2 && y == 3) || 
-        (x == 2 && y == 4) ) && (points + switch_points) / 10 == 4) begin
-            oled_data <= WHITE;
-        end  
-        else if (((x == 0 && y == 0) || 
-        (x == 1 && y == 0) || 
-        (x == 2 && y == 0) || 
-        (x == 0 && y == 1) || 
-        (x == 0 && y == 2) || 
-        (x == 1 && y == 2) || 
-        (x == 2 && y == 2) || 
-        (x == 2 && y == 3) || 
-        (x == 0 && y == 4) || 
-        (x == 1 && y == 4) || 
-        (x == 2 && y == 4) ) && (points + switch_points) / 10 == 5) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 0 && y == 0) || 
-        (x == 1 && y == 0) || 
-        (x == 2 && y == 0) || 
-        (x == 0 && y == 1) || 
-        (x == 0 && y == 2) || 
-        (x == 1 && y == 2) || 
-        (x == 2 && y == 2) || 
-        (x == 0 && y == 3) || 
-        (x == 2 && y == 3) || 
-        (x == 0 && y == 4) || 
-        (x == 1 && y == 4) || 
-        (x == 2 && y == 4) ) && (points + switch_points) / 10 == 6) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 0 && y == 0) || 
-        (x == 1 && y == 0) || 
-        (x == 2 && y == 0) || 
-        (x == 2 && y == 1) || 
-        (x == 2 && y == 2) || 
-        (x == 2 && y == 3) || 
-        (x == 2 && y == 4) ) && (points + switch_points) / 10 == 7) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 0 && y == 0) || 
-        (x == 1 && y == 0) || 
-        (x == 2 && y == 0) || 
-        (x == 0 && y == 1) || 
-        (x == 2 && y == 1) || 
-        (x == 0 && y == 2) || 
-        (x == 1 && y == 2) || 
-        (x == 2 && y == 2) || 
-        (x == 0 && y == 3) || 
-        (x == 2 && y == 3) || 
-        (x == 0 && y == 4) || 
-        (x == 1 && y == 4) || 
-        (x == 2 && y == 4) ) && (points + switch_points) / 10 == 8) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 0 && y == 0) || 
-        (x == 1 && y == 0) || 
-        (x == 2 && y == 0) || 
-        (x == 0 && y == 1) || 
-        (x == 2 && y == 1) || 
-        (x == 0 && y == 2) || 
-        (x == 1 && y == 2) || 
-        (x == 2 && y == 2) || 
-        (x == 2 && y == 3) || 
-        (x == 0 && y == 4) || 
-        (x == 1 && y == 4) || 
-        (x == 2 && y == 4) ) && (points + switch_points) / 10 == 9) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 0 && y == 0) || 
-            (x == 4 && y == 0) || 
-            (x == 0 && y == 1) || 
-            (x == 1 && y == 1) || 
-            (x == 3 && y == 1) || 
-            (x == 4 && y == 1) || 
-            (x == 0 && y == 2) || 
-            (x == 2 && y == 2) || 
-            (x == 4 && y == 2) || 
-            (x == 0 && y == 3) || 
-            (x == 4 && y == 3) || 
-            (x == 0 && y == 4) || 
-            (x == 4 && y == 4) || 
-            (x == 7 && y == 0) || 
-            (x == 8 && y == 0) || 
-            (x == 6 && y == 1) || 
-            (x == 9 && y == 1) || 
-            (x == 6 && y == 2) || 
-            (x == 7 && y == 2) || 
-            (x == 8 && y == 2) || 
-            (x == 9 && y == 2) || 
-            (x == 6 && y == 3) || 
-            (x == 9 && y == 3) || 
-            (x == 6 && y == 4) || 
-            (x == 9 && y == 4) || 
-            (x == 11 && y == 0) || 
-            (x == 13 && y == 0) || 
-            (x == 11 && y == 1) || 
-            (x == 13 && y == 1) || 
-            (x == 12 && y == 2) || 
-            (x == 11 && y == 3) || 
-            (x == 13 && y == 3) || 
-            (x == 11 && y == 4) || 
-            (x == 13 && y == 4) ) && (points + switch_points) >= 100) begin
-            oled_data <= GREEN;
-        end
-        else if (((x == 5 && y == 0) || 
-        (x == 4 && y == 1) || 
-        (x == 6 && y == 1) || 
-        (x == 4 && y == 2) || 
-        (x == 6 && y == 2) || 
-        (x == 4 && y == 3) || 
-        (x == 6 && y == 3) || 
-        (x == 5 && y == 4) ) && (points + switch_points) % 10 == 0) begin
-            oled_data <= WHITE;
-        end     
-        else if (((x == 5 && y == 0) || 
-        (x == 4 && y == 1) || 
-        (x == 5 && y == 1) || 
-        (x == 5 && y == 2) || 
-        (x == 5 && y == 3) || 
-        (x == 4 && y == 4) || 
-        (x == 5 && y == 4) || 
-        (x == 6 && y == 4) ) && (points + switch_points) % 10 == 1) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 4 && y == 0) || 
-        (x == 5 && y == 0) || 
-        (x == 6 && y == 0) || 
-        (x == 6 && y == 1) || 
-        (x == 4 && y == 2) || 
-        (x == 5 && y == 2) || 
-        (x == 6 && y == 2) || 
-        (x == 4 && y == 3) || 
-        (x == 4 && y == 4) || 
-        (x == 5 && y == 4) || 
-        (x == 6 && y == 4) ) && (points + switch_points) % 10 == 2) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 4 && y == 0) || 
-        (x == 5 && y == 0) || 
-        (x == 6 && y == 0) || 
-        (x == 6 && y == 1) || 
-        (x == 4 && y == 2) || 
-        (x == 5 && y == 2) || 
-        (x == 6 && y == 2) || 
-        (x == 6 && y == 3) || 
-        (x == 4 && y == 4) || 
-        (x == 5 && y == 4) || 
-        (x == 6 && y == 4) ) && (points + switch_points) % 10 == 3) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 4 && y == 0) || 
-        (x == 6 && y == 0) || 
-        (x == 4 && y == 1) || 
-        (x == 6 && y == 1) || 
-        (x == 4 && y == 2) || 
-        (x == 5 && y == 2) || 
-        (x == 6 && y == 2) || 
-        (x == 6 && y == 3) || 
-        (x == 6 && y == 4) ) && (points + switch_points) % 10 == 4) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 4 && y == 0) || 
-        (x == 5 && y == 0) || 
-        (x == 6 && y == 0) || 
-        (x == 4 && y == 1) || 
-        (x == 4 && y == 2) || 
-        (x == 5 && y == 2) || 
-        (x == 6 && y == 2) || 
-        (x == 6 && y == 3) || 
-        (x == 4 && y == 4) || 
-        (x == 5 && y == 4) || 
-        (x == 6 && y == 4) ) && (points + switch_points) % 10 == 5) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 4 && y == 0) || 
-        (x == 5 && y == 0) || 
-        (x == 6 && y == 0) || 
-        (x == 4 && y == 1) || 
-        (x == 4 && y == 2) || 
-        (x == 5 && y == 2) || 
-        (x == 6 && y == 2) || 
-        (x == 4 && y == 3) || 
-        (x == 6 && y == 3) || 
-        (x == 4 && y == 4) || 
-        (x == 5 && y == 4) || 
-        (x == 6 && y == 4) ) && (points + switch_points) % 10 == 6) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 4 && y == 0) || 
-        (x == 5 && y == 0) || 
-        (x == 6 && y == 0) || 
-        (x == 6 && y == 1) || 
-        (x == 6 && y == 2) || 
-        (x == 6 && y == 3) || 
-        (x == 6 && y == 4) ) && (points + switch_points) % 10 == 7) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 4 && y == 0) || 
-        (x == 5 && y == 0) || 
-        (x == 6 && y == 0) || 
-        (x == 4 && y == 1) || 
-        (x == 6 && y == 1) || 
-        (x == 4 && y == 2) || 
-        (x == 5 && y == 2) || 
-        (x == 6 && y == 2) || 
-        (x == 4 && y == 3) || 
-        (x == 6 && y == 3) || 
-        (x == 4 && y == 4) || 
-        (x == 5 && y == 4) || 
-        (x == 6 && y == 4) ) && (points + switch_points) % 10 == 8) begin
-            oled_data <= WHITE;
-        end
-        else if (((x == 4 && y == 0) || 
-        (x == 5 && y == 0) || 
-        (x == 6 && y == 0) || 
-        (x == 4 && y == 1) || 
-        (x == 6 && y == 1) || 
-        (x == 4 && y == 2) || 
-        (x == 5 && y == 2) || 
-        (x == 6 && y == 2) || 
-        (x == 6 && y == 3) || 
-        (x == 4 && y == 4) || 
-        (x == 5 && y == 4) || 
-        (x == 6 && y == 4) ) && (points + switch_points) % 10 == 9) begin
-            oled_data <= WHITE;
-        end
-                                                           
-        else if (circleC) begin
+        end                                                
+        else if (moleC) begin
             oled_data <= (mole_state[1]) ? ((!mole_hit[1]) ? (((y == mole_y[1] - 4 || y == mole_y[1] - 3) && (x == 44 || x == 45 || x == 52 || x == 51)) ? WHITE : BROWN) : GREY) : background_green;
         end
-        else if (circleL) begin
+        else if (moleL) begin
             oled_data <= (mole_state[0]) ? ((!mole_hit[0]) ? ((((y >= mole_y[0] - 4) && (y <= mole_y[0] - 2)) && (x == 20 || x == 21 || x == 28 || x == 27)) ? WHITE : BROWN) : GREY) : background_green;
         end
-        else if (circleR) begin
+        else if (moleR) begin
             oled_data <= (mole_state[2]) ? ((!mole_hit[2]) ? (((y >= mole_y[2] - 4 && y <= mole_y[2] - 2) && (x == 68 || x == 69 || x == 76 || x == 75)) ? WHITE : BROWN) : GREY) : background_green;
         end
         else begin
-            oled_data <= background_green;
+            oled_data <= points_oled_data;
         end
         
         //mole clicking
@@ -524,7 +193,7 @@ module mole_sequence(input basys_clock, clk_25MHz, sw2, left_click, btnC, btnU, 
         
         //defuse sequence
         prev_defuse_length <= (count == 0) ? (generated_defuse_length + 1) : prev_defuse_length;
-        defuse_timer <= (bomb_defused) ? ((count == 0) ? defuse_timer + 1 : defuse_timer) : 0;
+        defuse_timer <= (defuse_timer == 302) ? ((count == 0) ? defuse_timer + 1 : defuse_timer) : 0;
         if (defuse_timer == 300) begin
             launch = 1;
             bomb_defused = 0;
