@@ -16,8 +16,6 @@ module defuse_sequence(input basys_clock, clk_25MHz, btnC, btnU, btnL, btnR, btn
     parameter bomb_fire = 16'b11100_001010_00000;
     parameter background = 16'b11100_100101_00111;
     parameter background_green = 16'b00110_110001_00110;
-    wire clk_1000;
-    flexible_clock_module flexible_clock_1000 (basys_clock, 49999, clk_1000);
     
     reg [31:0] x, y;
     reg [31:0] state = 1;
@@ -86,6 +84,7 @@ module defuse_sequence(input basys_clock, clk_25MHz, btnC, btnU, btnL, btnR, btn
             end
         end
     endfunction
+    
     reg [7:0] bomb_fire_amplitude = 10;
     function is_bomb_fire;
         input [7:0] curr_x;
@@ -129,37 +128,15 @@ module defuse_sequence(input basys_clock, clk_25MHz, btnC, btnU, btnL, btnR, btn
         end
     endfunction
     
-    always @ (posedge clk_25MHz)
-    begin
-        y = pixel_index / 96;
-        x = pixel_index % 96;
-        
-        if (!launch) begin
-            count = 0;
-            defuse_state = 1;
-            correct_press_count = 0;
-            show_bomb_count = 0;
-        end
-                   
-        count <= (count == 12500001) ? 0 : count + 1;
-        show_bomb_count <= (count == 0) ? show_bomb_count + 1 : show_bomb_count;
-  
-        circleC = (((y - 32) ** 2 + (x - 48) ** 2) < 64);
-        circleL = (((y - 32) ** 2 + (x - 28) ** 2) < 64);
-        circleR = (((y - 32) ** 2 + (x - 68) ** 2) < 64);
-        circleU = (((y - 14) ** 2 + (x - 48) ** 2) < 64);
-        circleD = (((y - 50) ** 2 + (x - 48) ** 2) < 64);
-        
-        
-        state <= ((defuse_state == 1 && only_btnC) || (defuse_state == 2 && only_btnL) || (defuse_state == 3 && only_btnR) || (defuse_state == 4 && only_btnU) || (defuse_state == 5 && only_btnD)) ? (generated_state) : state;
-        defuse_state <= state % 5 + 1;
-        button_pressed <= (count == 0) ? 0 : button_pressed;
-        if (!button_pressed && ((defuse_state == 1 && only_btnC) || (defuse_state == 2 && only_btnL) || (defuse_state == 3 && only_btnR) || (defuse_state == 4 && only_btnU) || (defuse_state == 5 && only_btnD))) begin
-            correct_press_count <= correct_press_count + 1;
-            button_pressed = 1;
-        end
-        //prints: Alert
-        if (show_bomb_count > 6) begin
+    function alert;
+        input [31:0] curr_x;
+        input [31:0] curr_y;
+        input [31:0] origin_x;
+        input [31:0] origin_y;
+        reg [31:0] x, y;
+        begin
+            x = curr_x - origin_x;
+            y = curr_y - origin_y; 
             if ((x == 1 && y == 0) || 
             (x == 2 && y == 0) || 
             (x == 0 && y == 1) || 
@@ -348,6 +325,47 @@ module defuse_sequence(input basys_clock, clk_25MHz, btnC, btnU, btnL, btnR, btn
             (x == 80 && y == 0) || 
             (x == 80 && y == 1) || 
             (x == 80 && y == 3) ) begin
+                alert = 1;
+            end
+            else begin
+                alert = 0;
+            end
+        end
+    endfunction
+    
+
+    always @ (posedge clk_25MHz)
+    begin
+        y = pixel_index / 96;
+        x = pixel_index % 96;
+        
+        if (!launch) begin
+            count = 0;
+            defuse_state = 1;
+            correct_press_count = 0;
+            show_bomb_count = 0;
+        end
+                   
+        count <= (count == 12500001) ? 0 : count + 1;
+        show_bomb_count <= (count == 0) ? show_bomb_count + 1 : show_bomb_count;
+  
+        circleC = (((y - 32) ** 2 + (x - 48) ** 2) < 64);
+        circleL = (((y - 32) ** 2 + (x - 28) ** 2) < 64);
+        circleR = (((y - 32) ** 2 + (x - 68) ** 2) < 64);
+        circleU = (((y - 14) ** 2 + (x - 48) ** 2) < 64);
+        circleD = (((y - 50) ** 2 + (x - 48) ** 2) < 64);
+        
+        
+        state <= ((defuse_state == 1 && only_btnC) || (defuse_state == 2 && only_btnL) || (defuse_state == 3 && only_btnR) || (defuse_state == 4 && only_btnU) || (defuse_state == 5 && only_btnD)) ? (generated_state) : state;
+        defuse_state <= state % 5 + 1;
+        button_pressed <= (count == 0) ? 0 : button_pressed;
+        if (!button_pressed && ((defuse_state == 1 && only_btnC) || (defuse_state == 2 && only_btnL) || (defuse_state == 3 && only_btnR) || (defuse_state == 4 && only_btnU) || (defuse_state == 5 && only_btnD))) begin
+            correct_press_count <= correct_press_count + 1;
+            button_pressed = 1;
+        end
+        //prints: Alert
+        if (show_bomb_count > 6) begin
+            if (alert(x, y, 1, 1)) begin
                 oled_data <= BLACK;
             end
             else if (circleC) begin
