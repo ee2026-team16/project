@@ -90,7 +90,7 @@ module settings_menu(
         input [11:0] xpos;
         input [11:0] ypos;
         begin
-            if (((x - xpos) ** 2 + (y - ypos) ** 2) < 5)
+            if (((curr_x - xpos) ** 2 + (curr_y - ypos) ** 2) < 5)
                 is_mouse = 1;
             else
                 is_mouse = 0;
@@ -727,22 +727,22 @@ module settings_menu(
     endfunction
     
     // selection at back
-    reg [7:0] select_back_x = 48;
-    reg [7:0] select_back_y = 54;
-    reg [7:0] select_back_a = 14;
-    reg [7:0] select_back_b = 5;
+    localparam select_back_x = 48;
+    localparam select_back_y = 54;
+    localparam select_back_a = 14;
+    localparam select_back_b = 5;
     
     // selection at volume
-    reg [7:0] select_volume_x = 66;
-    reg [7:0] select_volume_y = 24;
-    reg [7:0] select_volume_a = 17;
-    reg [7:0] select_volume_b = 4;
+    localparam select_volume_x = 66;
+    localparam select_volume_y = 24;
+    localparam select_volume_a = 17;
+    localparam select_volume_b = 4;
 
     // selection at animation
-    reg [7:0] select_animation_x = 66;
-    reg [7:0] select_animation_y = 40;
-    reg [7:0] select_animation_a = 17;
-    reg [7:0] select_animation_b = 4;
+    localparam select_animation_x = 66;
+    localparam select_animation_y = 40;
+    localparam select_animation_a = 17;
+    localparam select_animation_b = 4;
         
     reg [7:0] rectangle_border_x = 128;
     reg [7:0] rectangle_border_y = 128;
