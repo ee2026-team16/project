@@ -172,8 +172,9 @@ module Top_Student (
     wire [15:0] fade_lose_main_pixel_data;
     fade_animation(clk, pixel_index, fade_lose_main_pixel_data, game_over_lose_pixel_data, main_menu_pixel_data, fade_lose_main_active, fade_lose_main_end, animation_level);
     
-    reg game_start;
-    wire transfer;
+    reg game_start; //game_start = 1 is start, 0 is not start
+    wire game_stop; //game_stop = 1 is stop, 0 is not stop
+    wire game_moving; //game_moving = 1 is moving, 0 is not moving
 
     Count_Down_Timer timer(
         .pb_start(game_start),
@@ -181,17 +182,11 @@ module Top_Student (
         .seg(seg),
         .dp(dp),
         .an(an),
-        .stop(transfer)
+        .stopped(game_stop),
+        .moving(game_moving)
     );
+    
     wire [31:0] points;
-    LED_Switch_Random unit(
-        .enable(game_start),
-        .stop(transfer),
-        .basys_clk(clk),
-        .sw(sw),
-        .led(led),
-        .points_output(points)
-    );
     
     wire [15:0] mole_sequence_pixel_data;
     wire [31:0] total_points, mole_y [2:0];
@@ -207,7 +202,7 @@ module Top_Student (
         .input_mole_y2(0),
         .basys_clock(clk), 
         .clk_25MHz(clk_25m), 
-        .sw2(1),
+        .reset(game_moving),
         .left_click(left),
         .btnC(btnC), 
         .btnU(btnU),
@@ -228,6 +223,16 @@ module Top_Student (
         .mole_y1(mole_y[1]),
         .mole_y2(mole_y[2])
     );
+    
+    LED_Switch_Random unit(
+        .enable(game_moving),
+        .defuse(bomb_defused),
+        .stop(game_stop),
+        .basys_clk(clk),
+        .sw(sw),
+        .led(led),
+        .points(points)
+        );
     
     Music_player Music(
         .volume(volume_level), //assume 0 - 9;
@@ -262,6 +267,7 @@ module Top_Student (
     always @ (posedge clk)
     begin
         if (state == MAIN && clicked_start) state <= START;
+        else if (state == START && game_stop) state <= GAME_OVER_WIN; //go to game_over directly
         else if (state == MAIN && clicked_settings) begin state <= WIPE_MAIN_SETTINGS; wipe_main_settings_active <= 1; end
         else if (state == WIPE_MAIN_SETTINGS && wipe_main_settings_end) begin state <= SETTINGS; wipe_main_settings_active <= 0; end
         // else if (state == MAIN && clicked_tutorial) state <= TUTORIAL_PAGE_1;

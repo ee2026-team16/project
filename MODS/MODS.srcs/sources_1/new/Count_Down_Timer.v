@@ -26,7 +26,8 @@ module Count_Down_Timer(
     output [6:0] seg,
     output dp,
     output [3:0] an,
-    output stop
+    output reg stopped, //when time_count = 0, stopped =1 for 1 sec
+    output reg moving // when running , moving = 1
     );
    
     wire clk_1Hz;
@@ -45,49 +46,55 @@ module Count_Down_Timer(
     
     reg [31:0] timer_count = 90;
     reg digit = 0;
-    reg [6:0] seg_display;
-    reg [3:0] an_display;
-    reg done = 1; //1 is done, 0 is not done
+    reg [6:0] seg_display = 7'b1111111;
+    reg [3:0] an_display = 4'b1111;
     reg [3:0]timer_digit;
     assign seg = seg_display;
     assign an = an_display;
     assign dp = 1;
-    assign stop = done; //stop = 1 is stopped, stop = 0 is not stopped
-       
+    //assign moving = ongoing; //moving = 1 is moving, moving = 0 is not moving
+          
     always @ (posedge clk_1Hz)
     begin
-        if(done == 0)
+        if(moving == 1)
         begin
             timer_count <= (timer_count == 0)? 0: timer_count - 1;
+            if(timer_count == 0)
+            begin
+                stopped =  1;
+            end
         end
         else
         begin
-            timer_count = 90;
+            timer_count <= 90;
+            stopped = 0;
         end
     end 
-    
+
     always @ (posedge clk_100Hz)
     begin
-        if(done==1)
+        if(moving == 0)
         begin
             if(pb_start == 1)
             begin
-                done = 0;
+                moving = 1;
             end
             else
             begin
+                moving = 0;
                 seg_display = 7'b1111111;
-                an_display = 4'b1110; 
+                an_display = 4'b1111; 
             end
         end
         else
+        begin
+            if(stopped == 1)
             begin
-            if(timer_count == 0)
-            begin
-                done = 1;
+                moving = 0;
             end
             else
             begin
+                moving = 1;
                 if(digit == 0)
                     begin
                     an_display = 4'b1110;   
