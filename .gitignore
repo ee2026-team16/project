@@ -11,7 +11,7 @@ bin/
 /text-ui-test/ACTUAL.TXT
 text-ui-test/EXPECTED-UNIX.TXT
 
-#self added
+# self added
 *.class*.[oa]
 *~
 node_modules
@@ -23,7 +23,6 @@ node_modules
 *.exe
 # temp files
 temp/*.tmp
- 
 
-
-
+MODS/vivado*
+MODS/webtalk*
