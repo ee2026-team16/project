@@ -15,8 +15,7 @@ text-ui-test/EXPECTED-UNIX.TXT
 *.class*.[oa]
 *~
 node_modules
-MODS/group.*
-MODS/integrated.*
+
 
 # binary files
 *.class
@@ -25,14 +24,6 @@ MODS/integrated.*
 # temp files
 temp/*.tmp
  
-MODS.srcs/sources_1/ip/
-MODS.cache/
-MODS.hw/
-MODS.ip_user_files/
-MODS.runs/
-MODS.xpr
-archive_project_summary.txt
-vivado.jou
-vivado.log
+
 
 

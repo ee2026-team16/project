@@ -1,0 +1,179 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Apr  4 18:14:29 2024
+| Host         : SureWin running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
+| Design       : Top_Student
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |   108 |
+| Unused register locations in slices containing registers |   174 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            6 |
+|      4 |            2 |
+|      6 |            1 |
+|      8 |            7 |
+|     10 |            3 |
+|     12 |            3 |
+|     14 |            4 |
+|    16+ |           82 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            2290 |          443 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            2452 |          331 |
+| Yes          | No                    | No                     |             460 |           94 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             976 |          151 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------------------------+---------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+
+|                                 Clock Signal                                 |                         Enable Signal                         |                          Set/Reset Signal                         | Slice Load Count | Bel Load Count |
++------------------------------------------------------------------------------+---------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+
+|  animation_counter_reg[0]_i_4__0_n_0                                         |                                                               |                                                                   |                1 |              2 |
+|  animation_counter_reg[0]_i_4__1_n_0                                         |                                                               |                                                                   |                1 |              2 |
+|  timer_count_reg[31]_i_3_n_0                                                 |                                                               |                                                                   |                1 |              2 |
+|  wipe_main_settings/flexible_clock_module_10/animation_counter_reg[0]        |                                                               |                                                                   |                1 |              2 |
+|  animation_counter_reg[0]_i_4_n_0                                            |                                                               |                                                                   |                1 |              2 |
+|  rectangle_border_y_reg[7]_i_3_n_0                                           |                                                               |                                                                   |                1 |              2 |
+|  timer/flexible_clock_module_100Hz/my_clk                                    | timer/an_display[1]_i_1_n_0                                   |                                                                   |                1 |              4 |
+| ~clk_6p25m_BUFG                                                              |                                                               |                                                                   |                2 |              4 |
+|  clk_1000                                                                    |                                                               |                                                                   |                1 |              6 |
+|  clk_IBUF_BUFG                                                               | nolabel_line121/b0                                            |                                                                   |                1 |              8 |
+|  time_counter_reg[2]_i_2_n_0                                                 |                                                               |                                                                   |                1 |              8 |
+|  nolabel_line121/flexible_clock_module_1/bomb_radius_reg[0]                  |                                                               | nolabel_line121/bomb_radius[3]                                    |                1 |              8 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/Inst_Ps2Interface/shift_frame                  | nolabel_line86/Inst_Ps2Interface/reset_bit_count                  |                2 |              8 |
+|  rectangle_border_y_reg[7]_i_3_n_0                                           | nolabel_line127/b0                                            |                                                                   |                2 |              8 |
+|  clk_IBUF_BUFG                                                               | game_over_lose_menu/b0                                        |                                                                   |                1 |              8 |
+|  clk_IBUF_BUFG                                                               | game_over_win_menu/b0                                         |                                                                   |                3 |              8 |
+|  game_over_lose_menu/flexible_clock_module_10/simple_harmonic_counter_reg[0] |                                                               |                                                                   |                5 |             10 |
+|  game_over_win_menu/flexible_clock_module_10/simple_harmonic_counter_reg[0]  |                                                               |                                                                   |                3 |             10 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/Inst_Ps2Interface/left_down_reg                | nolabel_line86/x_overflow_i_1_n_0                                 |                4 |             10 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line121/rectangle_border_y[7]_i_1__1_n_0                  |                3 |             12 |
+|  nolabel_line121/flexible_clock_module_25m/my_clk                            |                                                               | nolabel_line56/pixel_data_reg[0]_1                                |                3 |             12 |
+|  rectangle_border_y_reg[7]_i_3_n_0                                           |                                                               | nolabel_line127/sel0[8]                                           |                4 |             12 |
+|  clk_25m_BUFG                                                                |                                                               | nolabel_line127/speaker_time_reg[8]                               |                3 |             14 |
+|  timer/flexible_clock_module_100Hz/my_clk                                    | timer/seg_display0_in                                         | timer/seg_display[6]_i_1_n_0                                      |                2 |             14 |
+|  clk_25m_BUFG                                                                |                                                               | Music/speaker                                                     |                4 |             14 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0 | nolabel_line86/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0     |                2 |             14 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/Inst_Ps2Interface/y_inc_reg[0]                 | nolabel_line86/y_inc[5]_i_1_n_0                                   |                2 |             16 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/write_data_1                                   |                                                                   |                4 |             16 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/Inst_Ps2Interface/x_inc_reg[0]                 | nolabel_line86/x_inc[7]_i_1_n_0                                   |                4 |             16 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/Inst_Ps2Interface/load_rx_data                 |                                                                   |                2 |             16 |
+|  clk_25m_BUFG                                                                |                                                               | nolabel_line56/oled_data_reg[7]                                   |                3 |             18 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/Inst_Ps2Interface/frame[9]_i_1_n_0             |                                                                   |                3 |             20 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0 | nolabel_line86/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0     |                3 |             22 |
+|  timer/flexible_clock_module_100Hz/my_clk                                    |                                                               |                                                                   |               12 |             24 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/x_new_reg_n_0                                  |                                                                   |                4 |             24 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/y_new_reg_n_0                                  |                                                                   |                4 |             24 |
+|  game_over_lose_menu/flexible_clock_module_25m/CLK                           |                                                               |                                                                   |                5 |             26 |
+|  rectangle_border_y_reg[7]_i_3_n_0                                           | nolabel_line127/sel                                           |                                                                   |                5 |             26 |
+|  game_over_win_menu/flexible_clock_module_25m/CLK                            |                                                               |                                                                   |                4 |             26 |
+|  clk_IBUF_BUFG                                                               | nolabel_line86/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0 | nolabel_line86/Inst_Ps2Interface/clear__0                         |                4 |             28 |
+|  my_clk                                                                      | timer/cannot_blinking_score_reg[0][0]                         | timer/cannot_blinking_score                                       |               13 |             30 |
+|  nolabel_line127/flexible_clock_module_25m/CLK                               |                                                               |                                                                   |                9 |             30 |
+|  unit/flexible_clock_module_10Hz/blinking_reg[0]                             |                                                               | unit/blinking                                                     |                9 |             32 |
+|  nolabel_line168/flexible_clock_module_25m/CLK                               |                                                               |                                                                   |                8 |             32 |
+|  nolabel_line173/flexible_clock_module_25m/CLK                               |                                                               |                                                                   |                7 |             32 |
+| ~clk_6p25m_BUFG                                                              |                                                               | nolabel_line56/frame_counter[16]_i_1_n_0                          |                4 |             32 |
+|  my_clk                                                                      | game/E[0]                                                     | timer/SR[0]                                                       |               13 |             32 |
+|  wipe_settings_main/flexible_clock_module_25m/CLK                            | wipe_settings_main/p_1_in                                     | wipe_settings_main/pixel_data[15]_i_1__5_n_0                      |                4 |             32 |
+|  wipe_main_settings/flexible_clock_module_25m/CLK                            | wipe_main_settings/p_1_in                                     | wipe_main_settings/pixel_data[15]_i_1__7_n_0                      |                6 |             32 |
+|  time_counter_reg[2]_i_2_n_0                                                 | unit/old_led_number                                           | unit/done                                                         |                4 |             32 |
+|  time_counter_reg[2]_i_2_n_0                                                 | unit/old_switch_state                                         |                                                                   |               16 |             32 |
+|  rectangle_border_y_reg[7]_i_3_n_0                                           | nolabel_line127/animation_slider_cursor_x[7]_i_1_n_0          |                                                                   |                6 |             34 |
+|  my_clk__0_BUFG                                                              |                                                               |                                                                   |                8 |             36 |
+| ~clk_6p25m_BUFG                                                              | nolabel_line56/delay[0]_i_1_n_0                               |                                                                   |                5 |             40 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line86/reset_timeout_cnt                                  |                5 |             48 |
+|  nolabel_line121/flexible_clock_module_25m/my_clk                            |                                                               |                                                                   |               16 |             48 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line86/reset_periodic_check_cnt                           |                7 |             52 |
+|  my_clk__0_BUFG                                                              | nolabel_line108/state_reg_n_0                                 | nolabel_line108/debounce_counter[31]_i_1_n_0                      |                8 |             62 |
+|  my_clk__0_BUFG                                                              | nolabel_line110/state_reg_n_0                                 | nolabel_line110/debounce_counter[31]_i_1__1_n_0                   |                8 |             62 |
+|  my_clk__0_BUFG                                                              | nolabel_line111/state_reg_n_0                                 | nolabel_line111/debounce_counter[31]_i_1__2_n_0                   |                8 |             62 |
+|  my_clk__0_BUFG                                                              | nolabel_line112/state_reg_n_0                                 | nolabel_line112/debounce_counter[31]_i_1__3_n_0                   |                8 |             62 |
+|  clk_25m_BUFG                                                                |                                                               | game/count[31]_i_1__0_n_0                                         |                8 |             62 |
+|  clk_25m_BUFG                                                                |                                                               | game/unit8/count[31]_i_1_n_0                                      |                8 |             62 |
+|  my_clk__0_BUFG                                                              | nolabel_line109/state_reg_n_0                                 | nolabel_line109/debounce_counter[31]_i_1__0_n_0                   |                8 |             62 |
+|  clk_1000                                                                    | game/unit10/state_reg_n_0                                     | game/unit10/debounce_counter[31]_i_1__5_n_0                       |                8 |             62 |
+|  my_clk__0_BUFG                                                              | nolabel_line116/state_reg_n_0                                 | nolabel_line116/debounce_counter[31]_i_1__4_n_0                   |                8 |             62 |
+|  clk_IBUF_BUFG                                                               |                                                               | game_over_lose_menu/flexible_clock_module_10/count[0]_i_1__1_n_0  |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | game/flexible_clock_1000/clear                                    |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | flexible_clock_module_6p25m/count[0]_i_1__18_n_0                  |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | flexible_clock_module_25m/count[0]_i_1__17_n_0                    |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | flexible_clock_module_1000/count[0]_i_1__16_n_0                   |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line173/flexible_clock_module_25m/clear                   |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line173/flexible_clock_module_10/count[0]_i_1__6_n_0      |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line168/flexible_clock_module_10/count[0]_i_1__4_n_0      |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | unit/flexible_clock_module_1Hz/count[0]_i_1__20_n_0               |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | unit/flexible_clock_module_10kHz/clear                            |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | unit/flexible_clock_module_10Hz/count[0]_i_1__21_n_0              |                8 |             64 |
+|  animation_counter_reg[0]_i_4__0_n_0                                         | nolabel_line173/animation_counter                             | nolabel_line173/animation_counter[0]_i_1__0_n_0                   |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | timer/flexible_clock_module_1Hz/count[0]_i_1__15_n_0              |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line127/flexible_clock_module_1000/count[0]_i_1__8_n_0    |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | timer/flexible_clock_module_100Hz/clear                           |                8 |             64 |
+|  timer_count_reg[31]_i_3_n_0                                                 |                                                               | timer/p_1_in_0                                                    |               10 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line127/flexible_clock_module_25m/clear                   |                8 |             64 |
+| ~clk_6p25m_BUFG                                                              | nolabel_line56/FSM_onehot_state[31]_i_1__0_n_0                |                                                                   |               12 |             64 |
+|  clk_25m_BUFG                                                                | game/unit8/correct_press_count2                               |                                                                   |               10 |             64 |
+|  clk_25m_BUFG                                                                |                                                               | game/defuse_timer[31]_i_1_n_0                                     |                8 |             64 |
+|  animation_counter_reg[0]_i_4__1_n_0                                         | wipe_settings_main/animation_counter_0                        | wipe_settings_main/clear                                          |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line121/flexible_clock_module_25m/clear                   |                8 |             64 |
+|  clk_25m_BUFG                                                                |                                                               | game/unit10/SR[0]                                                 |                7 |             64 |
+|  my_clk                                                                      | timer/points_reg[31][0]                                       |                                                                   |               15 |             64 |
+|  clk_25m_BUFG                                                                |                                                               | timer/mole_state6                                                 |                8 |             64 |
+|  clk_25m_BUFG                                                                |                                                               | timer/mole_state640_in                                            |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | wipe_main_settings/flexible_clock_module_25m/count[0]_i_1__23_n_0 |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line168/flexible_clock_module_25m/clear                   |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | wipe_main_settings/flexible_clock_module_10/count[0]_i_1__22_n_0  |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | wipe_settings_main/flexible_clock_module_10/count[0]_i_1__12_n_0  |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | wipe_settings_main/flexible_clock_module_25m/count[0]_i_1__13_n_0 |                8 |             64 |
+|  clk_25m_BUFG                                                                |                                                               | timer/mole_state637_in                                            |                8 |             64 |
+|  animation_counter_reg[0]_i_4_n_0                                            | nolabel_line168/animation_counter                             | nolabel_line168/animation_counter[0]_i_1_n_0                      |                8 |             64 |
+|  wipe_main_settings/flexible_clock_module_10/animation_counter_reg[0]        | wipe_main_settings/animation_counter                          | wipe_main_settings/clear                                          |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | nolabel_line121/flexible_clock_module_1/count[0]_i_1__11_n_0      |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | game_over_win_menu/flexible_clock_module_25m/clear                |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | game_over_win_menu/flexible_clock_module_10/count[0]_i_1_n_0      |                8 |             64 |
+|  clk_IBUF_BUFG                                                               |                                                               | game_over_lose_menu/flexible_clock_module_25m/clear               |                8 |             64 |
+|  my_clk                                                                      |                                                               |                                                                   |               20 |             68 |
+| ~clk_6p25m_BUFG                                                              |                                                               | nolabel_line56/spi_word[39]_i_1_n_0                               |               20 |             90 |
+|  clk_IBUF_BUFG                                                               |                                                               |                                                                   |              150 |            866 |
+|  clk_25m_BUFG                                                                |                                                               |                                                                   |              186 |           1052 |
++------------------------------------------------------------------------------+---------------------------------------------------------------+-------------------------------------------------------------------+------------------+----------------+
+
+
