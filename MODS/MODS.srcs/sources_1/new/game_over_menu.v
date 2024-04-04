@@ -835,7 +835,7 @@ module game_over_menu(
         else if (is_char(x, y, 23, 52, 72)) pixel_data <= home_text;
         else if (is_char(x, y, 28, 52, 79)) pixel_data <= home_text;
         else if (is_char(x, y, 33, 52, 77)) pixel_data <= home_text;
-        else if (is_char(x, y, 38, 52, 69)) pixel_data <= home_text;
+        else if (is_char(x, y, 39, 52, 69)) pixel_data <= home_text;
         
         // "GAME OVER"
         else if (is_char(x, y, 27, simple_harmonic_motion(simple_harmonic_counter), 71)) pixel_data <= title_text;

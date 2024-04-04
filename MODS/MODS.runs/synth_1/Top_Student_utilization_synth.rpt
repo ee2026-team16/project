@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Apr  5 00:21:42 2024
-| Host         : SureWin running 64-bit major release  (build 9200)
+| Date         : Fri Apr  5 00:47:11 2024
+| Host         : dZhei98 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
 | Design       : Top_Student
 | Device       : 7a35tcpg236-1
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| Slice LUTs*             | 20567 |     0 |     20800 | 98.88 |
-|   LUT as Logic          | 20567 |     0 |     20800 | 98.88 |
+| Slice LUTs*             | 20553 |     0 |     20800 | 98.81 |
+|   LUT as Logic          | 20553 |     0 |     20800 | 98.81 |
 |   LUT as Memory         |     0 |     0 |      9600 |  0.00 |
 | Slice Registers         |  3089 |     0 |     41600 |  7.43 |
 |   Register as Flip Flop |  3089 |     0 |     41600 |  7.43 |
@@ -150,13 +150,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     | 6892 |                 LUT |
+| LUT2     | 6886 |                 LUT |
 | LUT3     | 5544 |                 LUT |
 | CARRY4   | 4959 |          CarryLogic |
-| LUT6     | 4555 |                 LUT |
-| LUT4     | 3598 |                 LUT |
+| LUT6     | 4556 |                 LUT |
+| LUT4     | 3579 |                 LUT |
 | FDRE     | 3045 |        Flop & Latch |
-| LUT5     | 2762 |                 LUT |
+| LUT5     | 2774 |                 LUT |
 | LUT1     |  878 |                 LUT |
 | DSP48E1  |   81 |    Block Arithmetic |
 | FDSE     |   44 |        Flop & Latch |

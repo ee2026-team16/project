@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Apr  5 00:23:39 2024
-| Host         : SureWin running 64-bit major release  (build 9200)
+| Date         : Fri Apr  5 00:50:15 2024
+| Host         : dZhei98 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_Student_methodology_drc_routed.rpt -pb Top_Student_methodology_drc_routed.pb -rpx Top_Student_methodology_drc_routed.rpx
 | Design       : Top_Student
 | Device       : xc7a35tcpg236-1
@@ -37,72 +37,72 @@ Table of Contents
 -----------------
 SYNTH-9#1 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1123__0 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1137 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#2 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1124__0 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1138 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#3 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1397 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1403__0 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#4 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1419 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1424__0 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#5 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1420 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1430 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#6 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_474__0 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_487 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#7 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_796__0 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_809 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#8 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1124 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1134 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#9 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1125 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1135 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#10 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1396 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1406 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#11 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1416 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1428 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#12 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1422 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1429 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#13 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_474 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_485 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#14 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_796 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_807 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#15 Warning
@@ -147,12 +147,12 @@ Related violations: <none>
 
 SYNTH-9#23 Warning
 Small multiplier  
-Detected multiplier at pixel_data_reg[13]_i_1122 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at pixel_data_reg[13]_i_1133 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#24 Warning
 Small multiplier  
-Detected multiplier at pixel_data_reg[13]_i_1123 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at pixel_data_reg[13]_i_1136 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-10#1 Warning

@@ -135,19 +135,6 @@ module Top_Student (
     wire [15:0] game_over_lose_pixel_data;
     game_over_menu game_over_win_menu(clk, pixel_index, game_over_win_pixel_data, 1, debounced_btnC, debounced_btnL, debounced_btnR, xpos, ypos, debounced_left, clicked_home_win, clicked_settings_win);
     game_over_menu game_over_lose_menu(clk, pixel_index, game_over_lose_pixel_data, 0, debounced_btnC, debounced_btnL, debounced_btnR, xpos, ypos, debounced_left, clicked_home_lose, clicked_settings_lose);
-    
-    // wire clicked_home_tutorial_page_1;
-    // wire clicked_next_tutorial_page_1;
-    // wire clicked_back_tutorial_page_2;
-    // wire clicked_next_tutorial_page_2;
-    // wire clicked_back_tutorial_page_3;
-    // wire clicked_home_tutorial_page_3;
-    // wire [15:0] tutorial_menu_page_1_pixel_data;
-    // wire [15:0] tutorial_menu_page_2_pixel_data;
-    // wire [15:0] tutorial_menu_page_3_pixel_data;
-    // tutorial_menu_page_1(clk, pixel_index, tutorial_menu_page_1_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, clicked_home_tutorial_page_1, clicked_next_tutorial_page_1);
-    // tutorial_menu_page_2(clk, pixel_index, tutorial_menu_page_2_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, clicked_back_tutorial_page_2, clicked_next_tutorial_page_2);
-    // tutorial_menu_page_3(clk, pixel_index, tutorial_menu_page_3_pixel_data, debounced_btnC, debounced_btnL, debounced_btnR, clicked_back_tutorial_page_3, clicked_home_tutorial_page_3);
         
     assign clicked_home = clicked_home_win || clicked_home_lose;
     assign clicked_settings = clicked_settings_main || clicked_settings_win || clicked_settings_lose;
@@ -249,9 +236,6 @@ module Top_Student (
     reg [3:0] START = 2;
     reg [3:0] GAME_OVER_WIN = 3;
     reg [3:0] GAME_OVER_LOSE = 4;
-    // reg [3:0] TUTORIAL_PAGE_1 = 4'b0101;
-    // reg [3:0] TUTORIAL_PAGE_2 = 4'b0110;
-    // reg [3:0] TUTORIAL_PAGE_3 = 4'b0111;
     reg [3:0] WIPE_MAIN_SETTINGS = 5;
     reg [3:0] WIPE_SETTINGS_MAIN = 6;
     reg [3:0] FADE_WIN_MAIN = 7;
@@ -270,7 +254,6 @@ module Top_Student (
         else if (state == START && game_stop) state <= GAME_OVER_WIN; //go to game_over directly
         else if (state == MAIN && clicked_settings) begin state <= WIPE_MAIN_SETTINGS; wipe_main_settings_active <= 1; end
         else if (state == WIPE_MAIN_SETTINGS && wipe_main_settings_end) begin state <= SETTINGS; wipe_main_settings_active <= 0; end
-        // else if (state == MAIN && clicked_tutorial) state <= TUTORIAL_PAGE_1;
         else if (state == SETTINGS && clicked_back) begin state <= WIPE_SETTINGS_MAIN; wipe_settings_main_active <= 1; end
         else if (state == WIPE_SETTINGS_MAIN && wipe_settings_main_end) begin state <= MAIN; wipe_settings_main_active <= 0; end
         else if (state == GAME_OVER_WIN && clicked_home) begin state <= FADE_WIN_MAIN; fade_win_main_active <= 1; end
@@ -278,12 +261,6 @@ module Top_Student (
         else if (state == GAME_OVER_LOSE && clicked_home) begin state <= FADE_LOSE_MAIN; fade_lose_main_active <= 1; end
         else if (state == FADE_LOSE_MAIN && fade_lose_main_end) begin state <= MAIN; fade_lose_main_active <= 0; end
         else if ((state == GAME_OVER_WIN || state == GAME_OVER_LOSE) && clicked_settings) state <= SETTINGS;
-        // else if (state == TUTORIAL_PAGE_1 && clicked_home_tutorial_page_1) state <= MAIN;
-        // else if (state == TUTORIAL_PAGE_1 && clicked_next_tutorial_page_1) state <= TUTORIAL_PAGE_2;
-        // else if (state == TUTORIAL_PAGE_2 && clicked_back_tutorial_page_2) state <= TUTORIAL_PAGE_1;
-        // else if (state == TUTORIAL_PAGE_2 && clicked_next_tutorial_page_2) state <= TUTORIAL_PAGE_3;
-        // else if (state == TUTORIAL_PAGE_3 && clicked_back_tutorial_page_3) state <= TUTORIAL_PAGE_2;
-        // else if (state == TUTORIAL_PAGE_3 && clicked_home_tutorial_page_3) state <= MAIN;
         
         game_start = (state == START) ? 1 : 0;
         
@@ -293,9 +270,6 @@ module Top_Student (
             START: pixel_data <= mole_sequence_pixel_data;
             GAME_OVER_WIN: pixel_data <= game_over_win_pixel_data;
             GAME_OVER_LOSE: pixel_data <= game_over_lose_pixel_data;
-            // TUTORIAL_PAGE_1: pixel_data <= tutorial_menu_page_1_pixel_data;
-            // TUTORIAL_PAGE_2: pixel_data <= tutorial_menu_page_2_pixel_data;
-            // TUTORIAL_PAGE_3: pixel_data <= tutorial_menu_page_3_pixel_data;
             WIPE_MAIN_SETTINGS: pixel_data <= wipe_main_settings_pixel_data;
             WIPE_SETTINGS_MAIN: pixel_data <= wipe_settings_main_pixel_data;
             FADE_WIN_MAIN: pixel_data <= fade_win_main_pixel_data;
