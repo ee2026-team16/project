@@ -51,9 +51,9 @@ def bit_rgb_to_rgb(color_16bit):
 
     return int(red), int(green), int(blue)
 
-# color_code = "#fbfbf2"
-# color_binary = color_code_to_16bit_rgb(color_code)
-# print("16-bit RGB representation:", color_binary)
-bit = "b10101_011011_00100"
-rgb = bit_rgb_to_rgb("16'" + bit)
-print("RGB components:", rgb)
+color_code = "#ffa3b1"
+color_binary = color_code_to_16bit_rgb(color_code)
+print("16-bit RGB representation:", color_binary)
+# bit = "b10101_011011_00100"
+# rgb = bit_rgb_to_rgb("16'" + bit)
+# print("RGB components:", rgb)
