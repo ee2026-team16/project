@@ -90,7 +90,7 @@ module settings_menu(
         input [11:0] xpos;
         input [11:0] ypos;
         begin
-            if (((x - xpos) ** 2 + (y - ypos) ** 2) < 5)
+            if (((curr_x - xpos) ** 2 + (curr_y - ypos) ** 2) < 5)
                 is_mouse = 1;
             else
                 is_mouse = 0;

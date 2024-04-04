@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/jun_y/OneDrive/Desktop/Y2S2/EE2026/Lab/Project/project-main-v2/project-main/MODS.xpr/MODS/MODS.runs/impl_1'
+HD_PWD='C:/Users/joshu/Desktop/project/MODS/MODS.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
