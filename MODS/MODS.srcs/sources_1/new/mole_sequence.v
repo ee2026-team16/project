@@ -110,6 +110,7 @@ module mole_sequence(input is_master, input input_mole_state0, input_mole_state1
             wrong_hit = 0;
             wrong_hit_count = 0;
             count = 0;
+            points = 0;
         end
         
         //counters and random variables
@@ -201,6 +202,5 @@ module mole_sequence(input is_master, input input_mole_state0, input_mole_state1
             bomb_defused = 1;
         end
     end
-    always @ (posedge clk_25MHz) begin
-    end
+
 endmodule

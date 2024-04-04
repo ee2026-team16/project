@@ -202,7 +202,7 @@ module Top_Student (
         .input_mole_y2(0),
         .basys_clock(clk), 
         .clk_25MHz(clk_25m), 
-        .reset(game_moving),
+        .reset(game_stop),
         .left_click(left),
         .btnC(btnC), 
         .btnU(btnU),
