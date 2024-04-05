@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Apr  5 22:54:02 2024
-| Host         : SureWin running 64-bit major release  (build 9200)
+| Date         : Sat Apr  6 00:26:42 2024
+| Host         : dZhei98 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_Student_methodology_drc_routed.rpt -pb Top_Student_methodology_drc_routed.pb -rpx Top_Student_methodology_drc_routed.rpx
 | Design       : Top_Student
 | Device       : xc7a35tcpg236-1
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1106
+             Violations found: 1114
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | SYNTH-9   | Warning  | Small multiplier              | 24         |
-| SYNTH-10  | Warning  | Wide multiplier               | 72         |
+| SYNTH-10  | Warning  | Wide multiplier               | 80         |
 | TIMING-17 | Warning  | Non-clocked sequential cell   | 1000       |
 | TIMING-18 | Warning  | Missing input or output delay | 10         |
 +-----------+----------+-------------------------------+------------+
@@ -37,37 +37,37 @@ Table of Contents
 -----------------
 SYNTH-9#1 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1096__0 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1137 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#2 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1097 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1138 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#3 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1375 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1403__0 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#4 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1395 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1424__0 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#5 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1401 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_1430 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#6 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_444 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_487 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#7 Warning
 Small multiplier  
-Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_763 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_lose_menu/pixel_data_reg[13]_i_809 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#8 Warning
@@ -82,17 +82,17 @@ Related violations: <none>
 
 SYNTH-9#10 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1410 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1406 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#11 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1431 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1428 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#12 Warning
 Small multiplier  
-Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1432 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at game_over_win_menu/pixel_data_reg[13]_i_1429 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#13 Warning
@@ -107,52 +107,52 @@ Related violations: <none>
 
 SYNTH-9#15 Warning
 Small multiplier  
-Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1375 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1338 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#16 Warning
 Small multiplier  
-Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1919 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1339 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#17 Warning
 Small multiplier  
-Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1920 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1340 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#18 Warning
 Small multiplier  
-Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1921 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1642 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#19 Warning
 Small multiplier  
-Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_2446 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1665 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#20 Warning
 Small multiplier  
-Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_2468 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_1666 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#21 Warning
 Small multiplier  
-Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_2469 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_616 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#22 Warning
 Small multiplier  
-Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_908 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at nolabel_line121/pixel_data_reg[13]_i_967 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#23 Warning
 Small multiplier  
-Detected multiplier at pixel_data_reg[13]_i_1095 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at pixel_data_reg[13]_i_1133 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-9#24 Warning
 Small multiplier  
-Detected multiplier at pixel_data_reg[13]_i_1133 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Detected multiplier at pixel_data_reg[13]_i_1136 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 SYNTH-10#1 Warning
@@ -367,152 +367,192 @@ Related violations: <none>
 
 SYNTH-10#43 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/is_bomb_return1 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#44 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/is_bomb_return1__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#45 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/is_bomb_return1__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#46 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__10 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#47 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#48 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__1 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#49 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__10 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#50 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__11 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__5 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#51 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__12 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__6 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#52 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__13 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__7 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#53 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__2 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__8 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#54 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__3 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game/unit8/oled_data3__9 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#55 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__4 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_mouse_return1 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#56 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__5 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_mouse_return1__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#57 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__6 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_mouse_return1__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#58 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__7 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_mouse_return1__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#59 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__8 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_mouse_return1__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#60 Warning
 Wide multiplier  
-Detected multiplier at game/unit8/oled_data3__9 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_mouse_return1__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#61 Warning
 Wide multiplier  
-Detected multiplier at game_over_lose_menu/is_mouse_return1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_rectangle_border_return2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#62 Warning
 Wide multiplier  
-Detected multiplier at game_over_lose_menu/is_mouse_return1__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_rectangle_border_return2__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#63 Warning
 Wide multiplier  
-Detected multiplier at game_over_lose_menu/is_mouse_return1__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_rectangle_border_return2__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#64 Warning
 Wide multiplier  
-Detected multiplier at game_over_lose_menu/is_mouse_return1__2 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_rectangle_border_return2__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#65 Warning
 Wide multiplier  
-Detected multiplier at game_over_win_menu/is_mouse_return1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_rectangle_border_return2__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#66 Warning
 Wide multiplier  
-Detected multiplier at game_over_win_menu/is_mouse_return1__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_lose_menu/is_rectangle_border_return2__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#67 Warning
 Wide multiplier  
-Detected multiplier at game_over_win_menu/is_mouse_return1__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_win_menu/is_mouse_return1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#68 Warning
 Wide multiplier  
-Detected multiplier at game_over_win_menu/is_mouse_return1__2 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_win_menu/is_mouse_return1__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#69 Warning
 Wide multiplier  
-Detected multiplier at nolabel_line121/is_bomb_return1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_win_menu/is_mouse_return1__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#70 Warning
 Wide multiplier  
-Detected multiplier at nolabel_line121/is_bomb_return1__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at game_over_win_menu/is_mouse_return1__2 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#71 Warning
 Wide multiplier  
-Detected multiplier at nolabel_line121/is_bomb_return1__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at nolabel_line121/is_bomb_return1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#72 Warning
 Wide multiplier  
+Detected multiplier at nolabel_line121/is_bomb_return1__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#73 Warning
+Wide multiplier  
+Detected multiplier at nolabel_line121/is_bomb_return1__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#74 Warning
+Wide multiplier  
 Detected multiplier at nolabel_line121/is_bomb_return1__2 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#75 Warning
+Wide multiplier  
+Detected multiplier at nolabel_line121/is_mouse_return1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#76 Warning
+Wide multiplier  
+Detected multiplier at nolabel_line121/is_mouse_return1__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#77 Warning
+Wide multiplier  
+Detected multiplier at nolabel_line121/is_mouse_return1__1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#78 Warning
+Wide multiplier  
+Detected multiplier at nolabel_line121/is_mouse_return1__2 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#79 Warning
+Wide multiplier  
+Detected multiplier at nolabel_line127/is_mouse_return1 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#80 Warning
+Wide multiplier  
+Detected multiplier at nolabel_line127/is_mouse_return1__0 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 TIMING-17#1 Warning
@@ -4497,1022 +4537,1022 @@ Related violations: <none>
 
 TIMING-17#797 Warning
 Non-clocked sequential cell  
-The clock pin game/unit9/oled_data_reg[13]/C is not reached by a timing clock
+The clock pin game/unit8/x_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#798 Warning
 Non-clocked sequential cell  
-The clock pin game/unit9/oled_data_reg[15]/C is not reached by a timing clock
+The clock pin game/unit8/x_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#799 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[0]/C is not reached by a timing clock
+The clock pin game/unit8/x_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#800 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[10]/C is not reached by a timing clock
+The clock pin game/unit8/x_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#801 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[11]/C is not reached by a timing clock
+The clock pin game/unit8/x_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#802 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[12]/C is not reached by a timing clock
+The clock pin game/unit8/x_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#803 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[13]/C is not reached by a timing clock
+The clock pin game/unit8/x_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#804 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[14]/C is not reached by a timing clock
+The clock pin game/unit8/y_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#805 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[15]/C is not reached by a timing clock
+The clock pin game/unit8/y_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#806 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[16]/C is not reached by a timing clock
+The clock pin game/unit8/y_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#807 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[17]/C is not reached by a timing clock
+The clock pin game/unit8/y_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#808 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[18]/C is not reached by a timing clock
+The clock pin game/unit8/y_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#809 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[19]/C is not reached by a timing clock
+The clock pin game/unit8/y_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#810 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[1]/C is not reached by a timing clock
+The clock pin game/unit8/y_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#811 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[20]/C is not reached by a timing clock
+The clock pin game/unit9/oled_data_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#812 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[21]/C is not reached by a timing clock
+The clock pin game/unit9/oled_data_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#813 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[22]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#814 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[23]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#815 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[24]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#816 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[25]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#817 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[26]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#818 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[27]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#819 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[28]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#820 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[29]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#821 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[2]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#822 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[30]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#823 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[31]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#824 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[3]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#825 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[4]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#826 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[5]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#827 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[6]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#828 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[7]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#829 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[8]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#830 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_count_reg[9]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#831 Warning
 Non-clocked sequential cell  
-The clock pin game/wrong_hit_reg/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#832 Warning
 Non-clocked sequential cell  
-The clock pin game/x_reg[0]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#833 Warning
 Non-clocked sequential cell  
-The clock pin game/x_reg[1]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#834 Warning
 Non-clocked sequential cell  
-The clock pin game/x_reg[2]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#835 Warning
 Non-clocked sequential cell  
-The clock pin game/x_reg[3]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#836 Warning
 Non-clocked sequential cell  
-The clock pin game/x_reg[4]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#837 Warning
 Non-clocked sequential cell  
-The clock pin game/x_reg[5]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#838 Warning
 Non-clocked sequential cell  
-The clock pin game/x_reg[6]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#839 Warning
 Non-clocked sequential cell  
-The clock pin game/y_reg[0]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#840 Warning
 Non-clocked sequential cell  
-The clock pin game/y_reg[1]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#841 Warning
 Non-clocked sequential cell  
-The clock pin game/y_reg[2]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#842 Warning
 Non-clocked sequential cell  
-The clock pin game/y_reg[3]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#843 Warning
 Non-clocked sequential cell  
-The clock pin game/y_reg[4]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#844 Warning
 Non-clocked sequential cell  
-The clock pin game/y_reg[5]/C is not reached by a timing clock
+The clock pin game/wrong_hit_count_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#845 Warning
 Non-clocked sequential cell  
-The clock pin game/y_reg[6]/C is not reached by a timing clock
+The clock pin game/wrong_hit_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#846 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[10]/C is not reached by a timing clock
+The clock pin game/x_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#847 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[11]/C is not reached by a timing clock
+The clock pin game/x_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#848 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[12]/C is not reached by a timing clock
+The clock pin game/x_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#849 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[13]/C is not reached by a timing clock
+The clock pin game/x_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#850 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[14]/C is not reached by a timing clock
+The clock pin game/x_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#851 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[15]/C is not reached by a timing clock
+The clock pin game/x_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#852 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[1]/C is not reached by a timing clock
+The clock pin game/x_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#853 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[2]/C is not reached by a timing clock
+The clock pin game/y_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#854 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[3]/C is not reached by a timing clock
+The clock pin game/y_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#855 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[4]/C is not reached by a timing clock
+The clock pin game/y_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#856 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[6]/C is not reached by a timing clock
+The clock pin game/y_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#857 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[7]/C is not reached by a timing clock
+The clock pin game/y_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#858 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/pixel_data_reg[9]/C is not reached by a timing clock
+The clock pin game/y_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#859 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/simple_harmonic_counter_reg[0]/C is not reached by a timing clock
+The clock pin game/y_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#860 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/simple_harmonic_counter_reg[1]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#861 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/simple_harmonic_counter_reg[2]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#862 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/simple_harmonic_counter_reg[3]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#863 Warning
 Non-clocked sequential cell  
-The clock pin game_over_lose_menu/simple_harmonic_counter_reg[4]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#864 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[10]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#865 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[11]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#866 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[12]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#867 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[13]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#868 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[14]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#869 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[15]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#870 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[1]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#871 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[2]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#872 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[3]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/pixel_data_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#873 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[4]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/simple_harmonic_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#874 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[6]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/simple_harmonic_counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#875 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[7]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/simple_harmonic_counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#876 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/pixel_data_reg[9]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/simple_harmonic_counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#877 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/simple_harmonic_counter_reg[0]/C is not reached by a timing clock
+The clock pin game_over_lose_menu/simple_harmonic_counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#878 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/simple_harmonic_counter_reg[1]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#879 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/simple_harmonic_counter_reg[2]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#880 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/simple_harmonic_counter_reg[3]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#881 Warning
 Non-clocked sequential cell  
-The clock pin game_over_win_menu/simple_harmonic_counter_reg[4]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#882 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/btn_out_reg/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#883 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[0]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#884 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[10]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#885 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[11]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#886 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[12]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#887 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[13]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#888 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[14]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#889 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[15]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#890 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[16]/C is not reached by a timing clock
+The clock pin game_over_win_menu/pixel_data_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#891 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[17]/C is not reached by a timing clock
+The clock pin game_over_win_menu/simple_harmonic_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#892 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[18]/C is not reached by a timing clock
+The clock pin game_over_win_menu/simple_harmonic_counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#893 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[19]/C is not reached by a timing clock
+The clock pin game_over_win_menu/simple_harmonic_counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#894 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[1]/C is not reached by a timing clock
+The clock pin game_over_win_menu/simple_harmonic_counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#895 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[20]/C is not reached by a timing clock
+The clock pin game_over_win_menu/simple_harmonic_counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#896 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[21]/C is not reached by a timing clock
+The clock pin nolabel_line108/btn_out_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#897 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[22]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#898 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[23]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#899 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[24]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#900 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[25]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#901 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[26]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#902 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[27]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#903 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[28]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#904 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[29]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#905 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[2]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#906 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[30]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#907 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[31]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#908 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[3]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#909 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[4]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#910 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[5]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#911 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[6]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#912 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[7]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#913 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[8]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#914 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/debounce_counter_reg[9]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#915 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line108/state_reg/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#916 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/btn_out_reg/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#917 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[0]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#918 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[10]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#919 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[11]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#920 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[12]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#921 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[13]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#922 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[14]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#923 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[15]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#924 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[16]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#925 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[17]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#926 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[18]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#927 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[19]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#928 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[1]/C is not reached by a timing clock
+The clock pin nolabel_line108/debounce_counter_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#929 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[20]/C is not reached by a timing clock
+The clock pin nolabel_line108/state_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#930 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[21]/C is not reached by a timing clock
+The clock pin nolabel_line109/btn_out_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#931 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[22]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#932 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[23]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#933 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[24]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#934 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[25]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#935 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[26]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#936 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[27]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#937 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[28]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#938 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[29]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#939 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[2]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#940 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[30]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#941 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[31]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#942 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[3]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#943 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[4]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#944 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[5]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#945 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[6]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#946 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[7]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#947 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[8]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#948 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/debounce_counter_reg[9]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#949 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line109/state_reg/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#950 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/btn_out_reg/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#951 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[0]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#952 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[10]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#953 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[11]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#954 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[12]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#955 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[13]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#956 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[14]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#957 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[15]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#958 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[16]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#959 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[17]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#960 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[18]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#961 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[19]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#962 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[1]/C is not reached by a timing clock
+The clock pin nolabel_line109/debounce_counter_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#963 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[20]/C is not reached by a timing clock
+The clock pin nolabel_line109/state_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#964 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[21]/C is not reached by a timing clock
+The clock pin nolabel_line110/btn_out_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#965 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[22]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#966 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[23]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#967 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[24]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#968 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[25]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#969 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[26]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#970 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[27]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#971 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[28]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#972 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[29]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#973 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[2]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#974 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[30]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#975 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[31]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#976 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[3]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#977 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[4]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#978 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[5]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#979 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[6]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#980 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[7]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#981 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[8]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#982 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/debounce_counter_reg[9]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#983 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line110/state_reg/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#984 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/btn_out_reg/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#985 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[0]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#986 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[10]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#987 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[11]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#988 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[12]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#989 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[13]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#990 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[14]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#991 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[15]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#992 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[16]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#993 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[17]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#994 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[18]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#995 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[19]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#996 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[1]/C is not reached by a timing clock
+The clock pin nolabel_line110/debounce_counter_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#997 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[20]/C is not reached by a timing clock
+The clock pin nolabel_line110/state_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#998 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[21]/C is not reached by a timing clock
+The clock pin nolabel_line111/btn_out_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#999 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[22]/C is not reached by a timing clock
+The clock pin nolabel_line111/debounce_counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#1000 Warning
 Non-clocked sequential cell  
-The clock pin nolabel_line111/debounce_counter_reg[23]/C is not reached by a timing clock
+The clock pin nolabel_line111/debounce_counter_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-18#1 Warning

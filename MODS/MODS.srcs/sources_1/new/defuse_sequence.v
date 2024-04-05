@@ -35,98 +35,45 @@ module defuse_sequence(input basys_clock, clk_25MHz, btnC, btnU, btnL, btnR, btn
     assign only_btnR = btnR && !(btnC || btnU || btnL || btnD);
     assign only_btnD = btnD && !(btnC || btnU || btnL || btnR);
     
-    reg [7:0] bomb_radius = 8;
-    function is_bomb;
-        input [7:0] curr_x;
-        input [7:0] curr_y;
-        input [7:0] center_x;
-        input [7:0] center_y;
-        integer distance_sq;
-    
-        begin
-            distance_sq = (curr_x - center_x)**2 + (curr_y - center_y)**2;
-            if (distance_sq <= bomb_radius**2)
-                is_bomb = 1;
-            else
-                is_bomb = 0;
-        end
-    endfunction
-    
-    reg [7:0] bomb_fuse_amplitude = 5;
-    reg [7:0] bomb_fuse_period = 12;
-    function is_bomb_fuse;
-        input [7:0] curr_x;
-        input [7:0] curr_y;
-        input [7:0] origin_x;
-        input [7:0] origin_y;
-        integer i;
-        reg [7:0] sine_lut [0:96];
-        
-        begin
-            // sine lut
-            for (i = 0; i <= bomb_fuse_period; i = i + 1)
-                begin
-                    sine_lut[i] = bomb_fuse_amplitude * ($sin(2 * 3.141592 * i / bomb_fuse_period));
-                end
-                   
-            is_bomb_fuse = 0;
-            for (i = 0; i < bomb_fuse_period; i = i + 1)
-            begin
-                if (curr_x == origin_x + i)
-                begin
-                    // piecewise linear interpolation
-                    if ((origin_y - sine_lut[i] <= origin_y - sine_lut[i + 1] && curr_y >= origin_y - sine_lut[i] && curr_y < origin_y - sine_lut[i + 1]) ||
-                        (origin_y - sine_lut[i] > origin_y - sine_lut[i + 1] && curr_y >= origin_y - sine_lut[i + 1] && curr_y < origin_y - sine_lut[i]))
-                    begin
-                        is_bomb_fuse = 1;
-                    end
-                end
-            end
-        end
-    endfunction
-    
-    reg [7:0] bomb_fire_amplitude = 10;
-    function is_bomb_fire;
-        input [7:0] curr_x;
-        input [7:0] curr_y;
-        input [7:0] origin_x;
-        input [7:0] origin_y;
-        real i;
-        integer index;
-        reg [7:0] x_lut [0:20];
-        reg [7:0] y_lut [0:20];
-        reg [7:0] x_prev, y_prev;
-        reg [7:0] x_curr, y_curr;
-        integer winding_number;
-        
-        begin
-            for (index = 0; index <= 20; index = index + 1)
-            begin
-                i = -1.0 + (index * 0.1);
-                x_lut[index] = bomb_fire_amplitude * i * (i * i - 1);
-                y_lut[index] = bomb_fire_amplitude * i * i + bomb_fire_amplitude;
-            end
-            
-            winding_number = 0;
-            for (index = 0; index < 20; index = index + 1)
-            begin
-                // winding number line segments
-                x_prev = origin_x + x_lut[index];
-                y_prev = origin_y - y_lut[index];
-                x_curr = origin_x + x_lut[index + 1];
-                y_curr = origin_y - y_lut[index + 1];
-                
-                // winding number ray
-                if ((y_prev <= curr_y && y_curr > curr_y) || (y_prev > curr_y && y_curr <= curr_y)) begin
-                    if (curr_x < (x_curr - x_prev) * (curr_y - y_prev) / (y_curr - y_prev) + x_prev)
-                        winding_number = winding_number + 1;
-                end
-            end
-            
-            // odd winding number = point inside curve
-            is_bomb_fire = (winding_number % 2 == 1);
-        end
-    endfunction
+    assign is_bomb_body = (((y == 33) && ((x >= 40 && x < 46))) || 
+    ((y == 34) && ((x >= 38 && x < 48))) || 
+    ((y == 35) && ((x >= 37 && x < 49))) || 
+    ((y == 36) && ((x >= 36 && x < 50))) || 
+    ((y == 37) && ((x >= 36 && x < 51))) || 
+    ((y == 38) && ((x >= 35 && x < 51))) || 
+    ((y == 39) && ((x >= 34 && x < 52))) || 
+    ((y == 40) && ((x >= 34 && x < 52))) || 
+    ((y == 41) && ((x >= 34 && x < 52))) || 
+    ((y == 42) && ((x >= 34 && x < 52))) || 
+    ((y == 43) && ((x >= 34 && x < 52))) || 
+    ((y == 44) && ((x >= 35 && x < 51))) || 
+    ((y == 45) && ((x >= 36 && x < 51))) || 
+    ((y == 46) && ((x >= 36 && x < 50))) || 
+    ((y == 47) && ((x >= 37 && x < 49))) || 
+    ((y == 48) && ((x >= 38 && x < 48))) || 
+    ((y == 49) && ((x >= 40 && x < 46))));
+
+    assign is_bomb_fuse = (((y == 28) && ((x >= 47 && x < 49))) || 
+    ((y == 29) && ((x >= 46 && x < 47) || (x >= 49 && x < 50))) || 
+    ((y == 30) && ((x >= 46 && x < 47) || (x >= 49 && x < 50))) || 
+    ((y == 31) && ((x >= 45 && x < 46) || (x >= 50 && x < 51))) || 
+    ((y == 32) && ((x >= 45 && x < 46) || (x >= 50 && x < 51))) || 
+    ((y == 33) && ((x >= 51 && x < 52) || (x >= 56 && x < 57))) || 
+    ((y == 34) && ((x >= 51 && x < 52) || (x >= 56 && x < 57))) || 
+    ((y == 35) && ((x >= 52 && x < 53) || (x >= 55 && x < 56))) || 
+    ((y == 36) && ((x >= 52 && x < 53) || (x >= 55 && x < 56))) || 
+    ((y == 37) && ((x >= 53 && x < 55))));
+
+    assign is_bomb_fire = (((y == 23) && ((x >= 55 && x < 56))) || 
+    ((y == 24) && ((x >= 56 && x < 57))) || 
+    ((y == 25) && ((x >= 55 && x < 58))) || 
+    ((y == 26) && ((x >= 55 && x < 58))) || 
+    ((y == 27) && ((x >= 54 && x < 59))) || 
+    ((y == 28) && ((x >= 53 && x < 60))) || 
+    ((y == 29) && ((x >= 53 && x < 60))) || 
+    ((y == 30) && ((x >= 54 && x < 60))) || 
+    ((y == 31) && ((x >= 54 && x < 59))) || 
+    ((y == 32) && ((x >= 55 && x < 59))));
     
     function alert;
         input [31:0] curr_x;
@@ -388,9 +335,9 @@ module defuse_sequence(input basys_clock, clk_25MHz, btnC, btnU, btnL, btnR, btn
             end
         end
         else begin
-            if (is_bomb_fuse(x, y, 70, 25)) oled_data <= bomb_fuse;
-            else if (is_bomb(x, y, 68, 33)) oled_data <= bomb;
-            else if (is_bomb_fire(x, y, 84, 35)) oled_data <= bomb_fire;
+            if (is_bomb_fuse) oled_data <= bomb_fuse;
+            else if (is_bomb_body) oled_data <= bomb;
+            else if (is_bomb_fire) oled_data <= bomb_fire;
             else oled_data <= background_green;
         end  
     end
