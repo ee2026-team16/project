@@ -727,107 +727,94 @@ module settings_menu(
     endfunction
     
     // selection at back
-    reg [7:0] select_back_x = 48;
-    reg [7:0] select_back_y = 54;
-    reg [7:0] select_back_a = 14;
-    reg [7:0] select_back_b = 5;
+    localparam select_back_x = 48;
+    localparam select_back_y = 54;
+    localparam select_back_a = 14;
+    localparam select_back_b = 5;
     
     // selection at volume
-    reg [7:0] select_volume_x = 66;
-    reg [7:0] select_volume_y = 24;
-    reg [7:0] select_volume_a = 17;
-    reg [7:0] select_volume_b = 4;
+    localparam select_volume_x = 66;
+    localparam select_volume_y = 24;
+    localparam select_volume_a = 17;
+    localparam select_volume_b = 4;
 
     // selection at animation
-    reg [7:0] select_animation_x = 66;
-    reg [7:0] select_animation_y = 40;
-    reg [7:0] select_animation_a = 17;
-    reg [7:0] select_animation_b = 4;
+    localparam select_animation_x = 66;
+    localparam select_animation_y = 40;
+    localparam select_animation_a = 17;
+    localparam select_animation_b = 4;
         
-    reg [7:0] rectangle_border_x = 128;
-    reg [7:0] rectangle_border_y = 128;
-    reg [7:0] rectangle_border_a = 128;
-    reg [7:0] rectangle_border_b = 128;
+    wire [7:0] rectangle_border_x;
+    wire [7:0] rectangle_border_y;
+    wire [7:0] rectangle_border_a;
+    wire [7:0] rectangle_border_b;
     
+    reg [1:0] selection_state;
     always @ (posedge clk_1000)
     begin
         if (is_within_rectangle_border(xpos, ypos, select_back_x, select_back_y, select_back_a, select_back_b))
             begin
-                rectangle_border_x = select_back_x;
-                rectangle_border_y = select_back_y;
-                rectangle_border_a = select_back_a;
-                rectangle_border_b = select_back_b;
+                selection_state <= 2'b01;
             end
         else if (is_within_rectangle_border(xpos, ypos, select_volume_x, select_volume_y, select_volume_a, select_volume_b))
             begin
-                rectangle_border_x = select_volume_x;
-                rectangle_border_y = select_volume_y;
-                rectangle_border_a = select_volume_a;
-                rectangle_border_b = select_volume_b;
+                selection_state <= 2'b10;
             end
         else if (is_within_rectangle_border(xpos, ypos, select_animation_x, select_animation_y, select_animation_a, select_animation_b))
             begin
-                rectangle_border_x = select_animation_x;
-                rectangle_border_y = select_animation_y;
-                rectangle_border_a = select_animation_a;
-                rectangle_border_b = select_animation_b;
+                selection_state <= 2'b11;
             end
         else if (rectangle_border_y == 128 && btnU)
             begin
-                rectangle_border_x = select_volume_x;
-                rectangle_border_y = select_volume_y;
-                rectangle_border_a = select_volume_a;
-                rectangle_border_b = select_volume_b;
+                selection_state <= 2'b10;
             end
         else if (rectangle_border_y == 128 && btnD)
             begin
-                rectangle_border_x = select_back_x;
-                rectangle_border_y = select_back_y;
-                rectangle_border_a = select_back_a;
-                rectangle_border_b = select_back_b;
+                selection_state <= 2'b01;
             end
         else if (rectangle_border_y == select_volume_y && btnD)
             begin
-                rectangle_border_x = select_animation_x;
-                rectangle_border_y = select_animation_y;
-                rectangle_border_a = select_animation_a;
-                rectangle_border_b = select_animation_b;
+                selection_state <= 2'b11;
             end
         else if (rectangle_border_y == select_animation_y && btnU)
             begin
-                rectangle_border_x = select_volume_x;
-                rectangle_border_y = select_volume_y;
-                rectangle_border_a = select_volume_a;
-                rectangle_border_b = select_volume_b;
+                selection_state <= 2'b10;
             end
         else if (rectangle_border_y == select_animation_y && btnD)
             begin
-                rectangle_border_x = select_back_x;
-                rectangle_border_y = select_back_y;
-                rectangle_border_a = select_back_a;
-                rectangle_border_b = select_back_b;
+                selection_state <= 2'b01;
             end
         else if (rectangle_border_y == select_back_y && btnU)
             begin
-                rectangle_border_x = select_animation_x;
-                rectangle_border_y = select_animation_y;
-                rectangle_border_a = select_animation_a;
-                rectangle_border_b = select_animation_b;
+                selection_state <= 2'b11;
             end
         
         if (rectangle_border_y == select_back_y && (btnC || left))
             begin
                 clicked_back = 1;
-                rectangle_border_x = 128;
-                rectangle_border_y = 128;
-                rectangle_border_a = 128;
-                rectangle_border_b = 128;
+                selection_state <= 2'b00;
             end
         else
             begin
                 clicked_back = 0;
             end
     end
+    assign rectangle_border_x = selection_state == 2'b00 ? 128 :
+    selection_state == 2'b01 ? select_back_x :
+    selection_state == 2'b10 ? select_volume_x :
+    selection_state == 2'b11 ? select_animation_x : 128;
+    assign rectangle_border_y = selection_state == 2'b00 ? 128 :
+    selection_state == 2'b01 ? select_back_y :
+    selection_state == 2'b10 ? select_volume_y :
+    selection_state == 2'b11 ? select_animation_y : 128;
+    assign rectangle_border_a = selection_state == 2'b00 ? 128 :
+    selection_state == 2'b01 ? select_back_a :
+    selection_state == 2'b10 ? select_volume_a :
+    selection_state == 2'b11 ? select_animation_a : 0;
+    assign rectangle_border_b = selection_state == 2'b00 ? 128 :
+    selection_state == 2'b01 ? select_back_b :
+    selection_state == 2'b10 ? select_volume_b :
+    selection_state == 2'b11 ? select_animation_b : 0;
     
     reg [7:0] volume_slider_cursor_x;
     initial

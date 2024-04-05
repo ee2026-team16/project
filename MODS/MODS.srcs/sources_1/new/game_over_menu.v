@@ -727,16 +727,16 @@ module game_over_menu(
     endfunction
     
     // selection at home
-    reg [7:0] select_home_x = 32;
-    reg [7:0] select_home_y = 54;
-    reg [7:0] select_home_a = 13;
-    reg [7:0] select_home_b = 5;
+    localparam select_home_x = 32;
+    localparam select_home_y = 54;
+    localparam select_home_a = 13;
+    localparam select_home_b = 5;
     
     // selection at settings
-    reg [7:0] select_settings_x = 64;
-    reg [7:0] select_settings_y = 54;
-    reg [7:0] select_settings_a = 7;
-    reg [7:0] select_settings_b = 7;
+    localparam select_settings_x = 64;
+    localparam select_settings_y = 54;
+    localparam select_settings_a = 7;
+    localparam select_settings_b = 7;
     
     reg [7:0] rectangle_border_x = 128;
     reg [7:0] rectangle_border_y = 128;

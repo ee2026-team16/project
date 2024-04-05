@@ -817,16 +817,16 @@ module main_menu(
     endfunction
     
     // selection at start
-    reg [7:0] select_start_x = 33;
-    reg [7:0] select_start_y = 54;
-    reg [7:0] select_start_a = 14;
-    reg [7:0] select_start_b = 5;
+    localparam select_start_x = 33;
+    localparam select_start_y = 54;
+    localparam select_start_a = 14;
+    localparam select_start_b = 5;
     
     // selection at settings
-    reg [7:0] select_settings_x = 64;
-    reg [7:0] select_settings_y = 54;
-    reg [7:0] select_settings_a = 7;
-    reg [7:0] select_settings_b = 7;
+    localparam select_settings_x = 64;
+    localparam select_settings_y = 54;
+    localparam select_settings_a = 7;
+    localparam select_settings_b = 7;
     
     reg [7:0] rectangle_border_x = 128;
     reg [7:0] rectangle_border_y = 128;

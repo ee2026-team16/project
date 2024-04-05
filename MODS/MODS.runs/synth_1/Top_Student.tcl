@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -33,15 +34,17 @@ add_files C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/res/00
 read_verilog -library xil_defaultlib {
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v
-  C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Music_player.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/debounce.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v
+  C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/divide_by12.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/main_menu.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v
+  C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/music.v
+  C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/music_ROM.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/point_display.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/random_number_generator.v
   C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v

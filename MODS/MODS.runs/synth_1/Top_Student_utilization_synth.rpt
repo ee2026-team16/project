@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Fri Apr  5 00:47:11 2024
+| Date         : Fri Apr  5 21:59:56 2024
 | Host         : dZhei98 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
 | Design       : Top_Student
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| Slice LUTs*             | 20553 |     0 |     20800 | 98.81 |
-|   LUT as Logic          | 20553 |     0 |     20800 | 98.81 |
+| Slice LUTs*             | 20090 |     0 |     20800 | 96.59 |
+|   LUT as Logic          | 20090 |     0 |     20800 | 96.59 |
 |   LUT as Memory         |     0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  3089 |     0 |     41600 |  7.43 |
-|   Register as Flip Flop |  3089 |     0 |     41600 |  7.43 |
+| Slice Registers         |  3016 |     0 |     41600 |  7.25 |
+|   Register as Flip Flop |  3016 |     0 |     41600 |  7.25 |
 |   Register as Latch     |     0 |     0 |     41600 |  0.00 |
-| F7 Muxes                |    17 |     0 |     16300 |  0.10 |
+| F7 Muxes                |    18 |     0 |     16300 |  0.11 |
 | F8 Muxes                |     0 |     0 |      8150 |  0.00 |
 +-------------------------+-------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 44    |          Yes |         Set |            - |
-| 3045  |          Yes |       Reset |            - |
+| 32    |          Yes |         Set |            - |
+| 2984  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -80,8 +80,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |   81 |     0 |        90 | 90.00 |
-|   DSP48E1 only |   81 |       |           |       |
+| DSPs           |   72 |     0 |        90 | 80.00 |
+|   DSP48E1 only |   72 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -150,19 +150,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     | 6886 |                 LUT |
-| LUT3     | 5544 |                 LUT |
-| CARRY4   | 4959 |          CarryLogic |
-| LUT6     | 4556 |                 LUT |
-| LUT4     | 3579 |                 LUT |
-| FDRE     | 3045 |        Flop & Latch |
-| LUT5     | 2774 |                 LUT |
-| LUT1     |  878 |                 LUT |
-| DSP48E1  |   81 |    Block Arithmetic |
-| FDSE     |   44 |        Flop & Latch |
+| LUT2     | 7129 |                 LUT |
+| LUT3     | 5277 |                 LUT |
+| CARRY4   | 4900 |          CarryLogic |
+| LUT6     | 4501 |                 LUT |
+| LUT4     | 3393 |                 LUT |
+| FDRE     | 2984 |        Flop & Latch |
+| LUT5     | 2587 |                 LUT |
+| LUT1     |  678 |                 LUT |
+| DSP48E1  |   72 |    Block Arithmetic |
 | OBUF     |   38 |                  IO |
+| FDSE     |   32 |        Flop & Latch |
 | IBUF     |   24 |                  IO |
-| MUXF7    |   17 |               MuxFx |
+| MUXF7    |   18 |               MuxFx |
 | BUFG     |   12 |               Clock |
 | OBUFT    |    8 |                  IO |
 +----------+------+---------------------+

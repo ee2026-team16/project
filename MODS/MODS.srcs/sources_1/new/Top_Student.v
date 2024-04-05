@@ -153,11 +153,6 @@ module Top_Student (
     wire fade_win_main_end;
     wire [15:0] fade_win_main_pixel_data;
     fade_animation(clk, pixel_index, fade_win_main_pixel_data, game_over_win_pixel_data, main_menu_pixel_data, fade_win_main_active, fade_win_main_end, animation_level);
-
-    reg fade_lose_main_active = 0;
-    wire fade_lose_main_end;
-    wire [15:0] fade_lose_main_pixel_data;
-    fade_animation(clk, pixel_index, fade_lose_main_pixel_data, game_over_lose_pixel_data, main_menu_pixel_data, fade_lose_main_active, fade_lose_main_end, animation_level);
     
     reg game_start; //game_start = 1 is start, 0 is not start
     wire game_stop; //game_stop = 1 is stop, 0 is not stop
@@ -221,9 +216,9 @@ module Top_Student (
         .points(points)
         );
     
-    Music_player Music(
+    music Music(
         .volume(volume_level), //assume 0 - 9;
-        .start(1),
+        .defuse(bomb_defused),
         .clk(clk_25m),
         .o_audio(JB[0]),
         .gain(JB[1]),
@@ -239,7 +234,6 @@ module Top_Student (
     reg [3:0] WIPE_MAIN_SETTINGS = 5;
     reg [3:0] WIPE_SETTINGS_MAIN = 6;
     reg [3:0] FADE_WIN_MAIN = 7;
-    reg [3:0] FADE_LOSE_MAIN = 8;
     
     reg [3:0] state;
 
@@ -258,8 +252,8 @@ module Top_Student (
         else if (state == WIPE_SETTINGS_MAIN && wipe_settings_main_end) begin state <= MAIN; wipe_settings_main_active <= 0; end
         else if (state == GAME_OVER_WIN && clicked_home) begin state <= FADE_WIN_MAIN; fade_win_main_active <= 1; end
         else if (state == FADE_WIN_MAIN && fade_win_main_end) begin state <= MAIN; fade_win_main_active <= 0; end
-        else if (state == GAME_OVER_LOSE && clicked_home) begin state <= FADE_LOSE_MAIN; fade_lose_main_active <= 1; end
-        else if (state == FADE_LOSE_MAIN && fade_lose_main_end) begin state <= MAIN; fade_lose_main_active <= 0; end
+        else if (state == GAME_OVER_LOSE && clicked_home) begin state <= FADE_WIN_MAIN; fade_win_main_active <= 1; end
+        else if (state == FADE_WIN_MAIN && fade_win_main_end) begin state <= MAIN; fade_win_main_active <= 0; end
         else if ((state == GAME_OVER_WIN || state == GAME_OVER_LOSE) && clicked_settings) state <= SETTINGS;
         
         game_start = (state == START) ? 1 : 0;
@@ -273,7 +267,6 @@ module Top_Student (
             WIPE_MAIN_SETTINGS: pixel_data <= wipe_main_settings_pixel_data;
             WIPE_SETTINGS_MAIN: pixel_data <= wipe_settings_main_pixel_data;
             FADE_WIN_MAIN: pixel_data <= fade_win_main_pixel_data;
-            FADE_LOSE_MAIN: pixel_data <= fade_lose_main_pixel_data;
             default: pixel_data <= 16'b0;
         endcase
     end

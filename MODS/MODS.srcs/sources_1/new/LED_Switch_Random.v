@@ -69,7 +69,8 @@ module LED_Switch_Random(
     .new_number(new_led_number)
     );
   
-    assign led = led_state & blinking; 
+    assign led = led_state & blinking;
+    // edit, since got moving already  
     always @ (posedge clk_10kHz)
     begin
     if((enable== 1) &&(stop == 0))
@@ -86,315 +87,60 @@ module LED_Switch_Random(
         begin
             if(blink_check == 0)
             begin
-            cannot_blinking_score = 0;
-            if(changed[0] == 0)
-            begin
-                if((led_state[0] == 1)&& (sw[0]==~old_switch_state[0]))
-                    begin
-                    points = points+ 1;
-                    changed[0] = 1;
-                    led_state[0] = 0;
-                    end
-                else
-                    begin
-                    changed[0] = 0;
-                    led_state[0] = new_led_number[0];
-                    end
-            end
-            else
-            begin
-                changed[0] = 1;
-                led_state[0] = 0;
-            end
-            if(changed[1] == 0)
-            begin
-                if((led_state[1] == 1)&& (sw[1]==~old_switch_state[1]))
-                begin
-                    points = points+ 1;
-                    changed[1] = 1;
-                    led_state[1] = 0;
-                end
-                else
-                begin
-                    changed[1] = 0;
-                    led_state[1] = new_led_number[1];
-                end
-            end
-            else
-            begin
-                changed[1] = 1;
-                led_state[1] = 0;
-            end         
-            if(changed[2] == 0)
-            begin
-                if((led_state[2] == 1)&& (sw[2]==~old_switch_state[2]))
-                begin
-                    points = points+ 1;
-                    changed[2] = 1;
-                    led_state[2] = 0;
-                end
-                else
-                begin
-                    changed[2] = 0;
-                    led_state[2] = new_led_number[2];
-                end
-            end
-            else
-            begin
-                changed[2] = 1;
-                led_state[2] = 0;
-            end
-            if(changed[3] == 0)
-            begin
-                if((led_state[3] == 1)&& (sw[3]==~old_switch_state[3]))
-                begin
-                    points = points+ 1;
-                    changed[3] = 1;
-                    led_state[3] = 0;
-                end
-                else
-                begin
-                    changed[3] = 0;
-                    led_state[3] = new_led_number[3];
-                end
-            end
-            else
-            begin
-                changed[3] = 1;
-                led_state[3] = 0;
-            end
-            if(changed[4] == 0)
-            begin
-                if((led_state[4] == 1)&& (sw[4]==~old_switch_state[4]))
-                begin
-                    points = points+ 1;
-                    changed[4] = 1;
-                    led_state[4] = 0;
-                end
-                else
-                begin
-                    changed[4] = 0;
-                    led_state[4] = new_led_number[4];
-                end
-            end
-            else
-            begin
-                changed[4] = 1;
-                led_state[4] = 0;
-            end
-            if(changed[5] == 0)
-            begin
-                if((led_state[5] == 1)&& (sw[5]==~old_switch_state[5]))
-                begin
-                    points = points+ 1;
-                    changed[5] = 1;
-                    led_state[5] = 0;
-                end
-                else
-                begin
-                    changed[5] = 0;
-                    led_state[5] = new_led_number[5];
-                end
-            end
-            else
-            begin
-                changed[5] = 1;
-                led_state[5] = 0;
-            end
-            if(changed[6] == 0)
-            begin
-            if((led_state[6] == 1)&& (sw[6]==~old_switch_state[6]))
-                begin
-                    points = points+ 1;
-                    changed[6] = 1;
-                    led_state[6] = 0;
-                end
-                else
-                begin
-                    changed[6] = 0;
-                    led_state[6] = new_led_number[6];
-                end
-            end
-            else
-            begin
-                changed[6] = 1;
-                led_state[6] = 0;
-            end
-            if(changed[7] == 0)
-            begin
-                if((led_state[7] == 1)&& (sw[7]==~old_switch_state[7]))
-                begin
-                    points = points+ 1;
-                    changed[7] = 1;
-                    led_state[7] = 0;
-                end
-                else
-                begin
-                    changed[7] = 0;
-                    led_state[7] = new_led_number[7];
-                end
-            end
-            else
-                begin
-                    changed[7] = 1;
-                    led_state[7] = 0;
-                end
-            if(changed[8] == 0)
-                begin
-                    if((led_state[8] == 1)&& (sw[8]==~old_switch_state[8]))
-                    begin
-                        points = points+ 1;
-                        changed[8] = 1;
-                        led_state[8] = 0;
-                    end
-                    else
-                    begin
-                        changed[8] = 0;
-                        led_state[8] = new_led_number[8];
-                    end
-                end
-                else
-                    begin
-                        changed[8] = 1;
-                        led_state[8] = 0;
-                    end 
-            if(changed[9] == 0)                    
-                begin
-                if((led_state[9] == 1)&& (sw[9]==~old_switch_state[9]))
-                begin
-                    points = points+ 1;
-                    changed[9] = 1;
-                    led_state[9] = 0;
-                end
-                else
-                begin
-                    changed[9] = 0;
-                    led_state[9] = new_led_number[9];
-                end
-            end
-            else
-                begin
-                    changed[9] = 1;
-                    led_state[9] = 0;
-                end
-            if(changed[10] == 0)  
-            begin
-                if((led_state[10] == 1)&& (sw[10]==~old_switch_state[10]))
-                begin
-                    points = points+ 1;
-                    changed[10] = 1;
-                    led_state[10] = 0;
-                end
-                else
-                begin
-                    changed[10] = 0;
-                    led_state[10] = new_led_number[10];
-                end
-            end
-            else
-            begin
-                changed[10] = 1;
-                led_state[10] = 0;
-            end                
-            if(changed[11] == 0)  
-            begin
-                if((led_state[11] == 1)&& (sw[11]==~old_switch_state[11]))
-                begin
-                    points = points+ 1;
-                    changed[11] = 1;
-                    led_state[11] = 0;
-                end
-                else
-                begin
-                    changed[11] = 0;
-                    led_state[11] = new_led_number[1];
-                end
-            end
-            else
-            begin
-                changed[10] = 1;
-                led_state[10] = 0;
-            end  
-            if(changed[12] == 0)  
-            begin
-                if((led_state[12] == 1)&& (sw[12]==~old_switch_state[12]))
-                begin
-                    points = points+ 1;
-                    changed[12] = 1;
-                    led_state[12] = 0;
-                end
-                else
-                begin
-                    changed[12] = 0;
-                    led_state[12] = new_led_number[12];
-                end
-            end
-            else
-            begin
-                changed[12] = 1;
-                led_state[12] = 0;
-            end
-            if(changed[13] == 0)  
-            begin
-                if((led_state[13] == 1)&& (sw[13]==~old_switch_state[13]))
-                begin
-                    points = points+ 1;
-                    changed[13] = 1;
-                    led_state[13] = 0;
-                end
-                else
-                begin
-                    changed[13] = 0;
-                    led_state[13] = new_led_number[13];
-                end
-            end
-            else
-            begin
-                changed[13] = 1;
-                led_state[13] = 0;
-            end  
-             if(changed[14] == 0)  
-            begin
-                if((led_state[14] == 1)&& (sw[14]==~old_switch_state[14]))
-                begin
-                    points = points+ 1;
-                    changed[14] = 1;
-                    led_state[14] = 0;
-                end
-                else
-                begin
-                    changed[14] = 0;
-                    led_state[14] = new_led_number[14];
-                end
-            end
-            else
-            begin
-                changed[14] = 1;
-                led_state[14] = 0;
-            end  
-            if(changed[15] == 0)  
-            begin
-                if((led_state[15] == 1)&& (sw[15]==~old_switch_state[15]))
-                begin
-                    points = points+ 1;
-                    changed[15] = 1;
-                    led_state[15] = 0;
-                end
-                else
-                begin
-                    changed[15] = 0;
-                    led_state[15] = new_led_number[15];
-                end
-            end
-            else
-            begin
-                changed[15] = 1;
-                led_state[15] = 0;
-            end                                                       
+                cannot_blinking_score = 0;
+                led_state[0] = ((new_led_number[0]==1) && (sw[0] == ~ old_switch_state[0]))?0:(new_led_number[0]&~changed[0]);
+                led_state[1] = ((new_led_number[1]==1) && (sw[1] == ~ old_switch_state[1]))?0:(new_led_number[1]&~changed[1]);   
+                led_state[2] = ((new_led_number[2]==1) && (sw[2] == ~ old_switch_state[2]))?0:(new_led_number[2]&~changed[2]);
+                led_state[3] = ((new_led_number[3]==1) && (sw[3] == ~ old_switch_state[3]))?0:(new_led_number[3]&~changed[3]);
+                led_state[4] = ((new_led_number[4]==1) && (sw[4] == ~ old_switch_state[4]))?0:(new_led_number[4]&~changed[4]);   
+                led_state[5] = ((new_led_number[5]==1) && (sw[5] == ~ old_switch_state[5]))?0:(new_led_number[5]&~changed[5]);
+                led_state[6] = ((new_led_number[6]==1) && (sw[6] == ~ old_switch_state[6]))?0:(new_led_number[6]&~changed[6]);   
+                led_state[7] = ((new_led_number[7]==1) && (sw[7] == ~ old_switch_state[7]))?0:(new_led_number[7]&~changed[7]); 
+                led_state[8] = ((new_led_number[8]==1) && (sw[8] == ~ old_switch_state[8]))?0:(new_led_number[8]&~changed[8]);
+                led_state[9] = ((new_led_number[9]==1) && (sw[9] == ~ old_switch_state[9]))?0:(new_led_number[9]&~changed[9]);   
+                led_state[10] = ((new_led_number[10]==1) && (sw[10] == ~ old_switch_state[10]))?0:(new_led_number[10]&~changed[10]);
+                led_state[11] = ((new_led_number[11]==1) && (sw[11] == ~ old_switch_state[11]))?0:(new_led_number[11]&~changed[11]);
+                led_state[12] = ((new_led_number[12]==1) && (sw[12] == ~ old_switch_state[12]))?0:(new_led_number[12]&~changed[12]);   
+                led_state[13] = ((new_led_number[13]==1) && (sw[13] == ~ old_switch_state[13]))?0:(new_led_number[13]&~changed[13]);
+                led_state[14] = ((new_led_number[14]==1) && (sw[14] == ~ old_switch_state[14]))?0:(new_led_number[14]&~changed[14]);   
+                led_state[15] = ((new_led_number[15]==1) && (sw[15] == ~ old_switch_state[15]))?0:(new_led_number[15]&~changed[15]);
+                points = ((changed[0]==0) && (new_led_number[0]==1) && (sw[0] == ~ old_switch_state[0]))? (points+1):points;
+                points = ((changed[1]==0) && (new_led_number[1]==1) && (sw[1] == ~ old_switch_state[1]))? (points+1):points;
+                points = ((changed[2]==0) && (new_led_number[2]==1) && (sw[2] == ~ old_switch_state[2]))? (points+1):points;
+                points = ((changed[3]==0) && (new_led_number[3]==1) && (sw[3] == ~ old_switch_state[3]))? (points+1):points;
+                points = ((changed[4]==0) && (new_led_number[4]==1) && (sw[4] == ~ old_switch_state[4]))? (points+1):points;
+                points = ((changed[5]==0) && (new_led_number[5]==1) && (sw[5] == ~ old_switch_state[5]))? (points+1):points;
+                points = ((changed[6]==0) && (new_led_number[6]==1) && (sw[6] == ~ old_switch_state[6]))? (points+1):points;
+                points = ((changed[7]==0) && (new_led_number[7]==1) && (sw[7] == ~ old_switch_state[7]))? (points+1):points;
+                points = ((changed[8]==0) && (new_led_number[8]==1) && (sw[8] == ~ old_switch_state[8]))? (points+1):points;
+                points = ((changed[9]==0) && (new_led_number[9]==1) && (sw[9] == ~ old_switch_state[9]))? (points+1):points;
+                points = ((changed[10]==0) && (new_led_number[10]==1) && (sw[10] == ~ old_switch_state[10]))? (points+1):points;
+                points = ((changed[11]==0) && (new_led_number[11]==1) && (sw[11] == ~ old_switch_state[11]))? (points+1):points;
+                points = ((changed[12]==0) && (new_led_number[12]==1) && (sw[12] == ~ old_switch_state[12]))? (points+1):points;
+                points = ((changed[13]==0) && (new_led_number[13]==1) && (sw[13] == ~ old_switch_state[13]))? (points+1):points;
+                points = ((changed[14]==0) && (new_led_number[14]==1) && (sw[14] == ~ old_switch_state[14]))? (points+1):points;
+                points = ((changed[15]==0) && (new_led_number[15]==1) && (sw[15] == ~ old_switch_state[15]))? (points+1):points;
+                changed[0] = (new_led_number[0]&~led_state[0])? 1: changed[0];
+                changed[1] = (new_led_number[1]&~led_state[1])? 1: changed[1];      
+                changed[2] = (new_led_number[2]&~led_state[2])? 1: changed[2];      
+                changed[3] = (new_led_number[3]&~led_state[3])? 1: changed[3];
+                changed[4] = (new_led_number[4]&~led_state[4])? 1: changed[4];      
+                changed[5] = (new_led_number[5]&~led_state[5])? 1: changed[5];      
+                changed[6] = (new_led_number[6]&~led_state[6])? 1: changed[6];  
+                changed[7] = (new_led_number[7]&~led_state[7])? 1: changed[7];  
+                changed[8] = (new_led_number[8]&~led_state[8])? 1: changed[8];
+                changed[9] = (new_led_number[9]&~led_state[9])? 1: changed[9];      
+                changed[10] = (new_led_number[10]&~led_state[10])? 1: changed[10];      
+                changed[11] = (new_led_number[11]&~led_state[11])? 1: changed[11];
+                changed[12] = (new_led_number[12]&~led_state[12])? 1: changed[12];      
+                changed[13] = (new_led_number[13]&~led_state[13])? 1: changed[13];      
+                changed[14] = (new_led_number[14]&~led_state[14])? 1: changed[14];  
+                changed[15] = (new_led_number[15]&~led_state[15])? 1: changed[15];  
+                                      
             end //for blink_check
             else // blink_check =  1
             begin   
-                changed = 0;  
+                changed = 0; 
                 if(led_state[0] == 1)
                 begin
                     if((cannot_blinking_score[0] == 0)&&(sw[0] == ~old_switch_state[0]))
@@ -666,7 +412,7 @@ module LED_Switch_Random(
                 else
                 begin
                     led_state[15] = 0;
-                end     
+                end                
             end // end of blink_check = 1
         end //defuse =1
         else
@@ -698,7 +444,6 @@ module LED_Switch_Random(
         begin
             time_counter = 1;
             blink_check = 0;
-            old_led_number = 16'h5050;
         end
     end
     
@@ -722,3 +467,5 @@ module LED_Switch_Random(
     end
 
 endmodule
+
+
