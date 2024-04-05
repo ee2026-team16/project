@@ -14,14 +14,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9588 
+INFO: Helper process launched with PID 15896 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 359.492 ; gain = 102.328
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 359.070 ; gain = 102.434
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
-INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'flexible_clock_module' (1#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'flexible_clock_module' (1#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
 	Parameter PixelCount bound to: 6144 - type: integer 
@@ -72,25 +72,25 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/joshu/Desktop/
 	Parameter SendPixel bound to: 5'b10000 
 	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
 	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
-INFO: [Synth 8-226] default block is never used [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
-WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (2#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
-INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+INFO: [Synth 8-226] default block is never used [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
+INFO: [Synth 8-226] default block is never used [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (2#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
 	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
 	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
 	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:156' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:374]
-INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
-INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (3#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
-WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:455]
-WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:461]
-WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
-WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
-INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (4#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
-INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/debounce.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'debounce' (5#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/debounce.v:60]
-INFO: [Synth 8-6157] synthesizing module 'main_menu' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/main_menu.v:22]
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:156' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:374]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (3#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:455]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:461]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (4#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/debounce.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (5#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/debounce.v:60]
+INFO: [Synth 8-6157] synthesizing module 'main_menu' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/main_menu.v:22]
 	Parameter select_start_x bound to: 33 - type: integer 
 	Parameter select_start_y bound to: 54 - type: integer 
 	Parameter select_start_a bound to: 14 - type: integer 
@@ -99,8 +99,8 @@ INFO: [Synth 8-6157] synthesizing module 'main_menu' [C:/Users/joshu/Desktop/pro
 	Parameter select_settings_y bound to: 54 - type: integer 
 	Parameter select_settings_a bound to: 7 - type: integer 
 	Parameter select_settings_b bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'main_menu' (6#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/main_menu.v:22]
-INFO: [Synth 8-6157] synthesizing module 'settings_menu' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'main_menu' (6#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/main_menu.v:22]
+INFO: [Synth 8-6157] synthesizing module 'settings_menu' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:23]
 	Parameter select_back_x bound to: 48 - type: integer 
 	Parameter select_back_y bound to: 54 - type: integer 
 	Parameter select_back_a bound to: 14 - type: integer 
@@ -113,10 +113,10 @@ INFO: [Synth 8-6157] synthesizing module 'settings_menu' [C:/Users/joshu/Desktop
 	Parameter select_animation_y bound to: 40 - type: integer 
 	Parameter select_animation_a bound to: 17 - type: integer 
 	Parameter select_animation_b bound to: 4 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:860]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:861]
-INFO: [Synth 8-6155] done synthesizing module 'settings_menu' (7#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:23]
-INFO: [Synth 8-6157] synthesizing module 'game_over_menu' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:23]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:860]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:861]
+INFO: [Synth 8-6155] done synthesizing module 'settings_menu' (7#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'game_over_menu' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:23]
 	Parameter select_home_x bound to: 32 - type: integer 
 	Parameter select_home_y bound to: 54 - type: integer 
 	Parameter select_home_a bound to: 13 - type: integer 
@@ -125,22 +125,22 @@ INFO: [Synth 8-6157] synthesizing module 'game_over_menu' [C:/Users/joshu/Deskto
 	Parameter select_settings_y bound to: 54 - type: integer 
 	Parameter select_settings_a bound to: 7 - type: integer 
 	Parameter select_settings_b bound to: 7 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:828]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:829]
-INFO: [Synth 8-6155] done synthesizing module 'game_over_menu' (8#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:23]
-INFO: [Synth 8-6157] synthesizing module 'wipe_animation' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:23]
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:69]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:70]
-INFO: [Synth 8-6155] done synthesizing module 'wipe_animation' (9#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:23]
-INFO: [Synth 8-6157] synthesizing module 'fade_animation' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:23]
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:89]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:90]
-INFO: [Synth 8-6155] done synthesizing module 'fade_animation' (10#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Count_Down_Timer' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:109]
-WARNING: [Synth 8-6014] Unused sequential element timer_digit_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:101]
-INFO: [Synth 8-6155] done synthesizing module 'Count_Down_Timer' (11#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'mole_sequence' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:6]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:828]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:829]
+INFO: [Synth 8-6155] done synthesizing module 'game_over_menu' (8#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'wipe_animation' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:23]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:69]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'wipe_animation' (9#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fade_animation' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:23]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:89]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'fade_animation' (10#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Count_Down_Timer' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:109]
+WARNING: [Synth 8-6014] Unused sequential element timer_digit_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'Count_Down_Timer' (11#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mole_sequence' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:6]
 	Parameter BLACK bound to: 16'b0000000000000000 
 	Parameter BLUE bound to: 16'b0000000000011111 
 	Parameter WHITE bound to: 16'b1111111111111111 
@@ -151,9 +151,9 @@ INFO: [Synth 8-6157] synthesizing module 'mole_sequence' [C:/Users/joshu/Desktop
 	Parameter GREY bound to: 16'b0100001000001000 
 	Parameter background bound to: 16'b1110010010100111 
 	Parameter background_green bound to: 16'b0011011000100110 
-INFO: [Synth 8-6157] synthesizing module 'random_number_generator' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/random_number_generator.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'random_number_generator' (12#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/random_number_generator.v:23]
-INFO: [Synth 8-6157] synthesizing module 'defuse_sequence' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:7]
+INFO: [Synth 8-6157] synthesizing module 'random_number_generator' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/random_number_generator.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'random_number_generator' (12#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/random_number_generator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'defuse_sequence' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:7]
 	Parameter BLACK bound to: 16'b0000000000000000 
 	Parameter RED bound to: 16'b1111100000000000 
 	Parameter ORANGE bound to: 16'b1111101100000000 
@@ -165,63 +165,63 @@ INFO: [Synth 8-6157] synthesizing module 'defuse_sequence' [C:/Users/joshu/Deskt
 	Parameter bomb_fire bound to: 16'b1110000101000000 
 	Parameter background bound to: 16'b1110010010100111 
 	Parameter background_green bound to: 16'b0011011000100110 
-WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:349]
-WARNING: [Synth 8-6090] variable 'show_bomb_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:350]
-WARNING: [Synth 8-6090] variable 'defuse_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:360]
-WARNING: [Synth 8-6090] variable 'correct_press_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:363]
-WARNING: [Synth 8-6090] variable 'button_pressed' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:364]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:339]
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:340]
-WARNING: [Synth 8-6014] Unused sequential element circleC_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:352]
-WARNING: [Synth 8-6014] Unused sequential element circleL_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:353]
-WARNING: [Synth 8-6014] Unused sequential element circleR_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:354]
-WARNING: [Synth 8-6014] Unused sequential element circleU_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:355]
-WARNING: [Synth 8-6014] Unused sequential element circleD_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:356]
-INFO: [Synth 8-6155] done synthesizing module 'defuse_sequence' (13#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:7]
-INFO: [Synth 8-6157] synthesizing module 'point_display' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/point_display.v:23]
+WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:349]
+WARNING: [Synth 8-6090] variable 'show_bomb_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:350]
+WARNING: [Synth 8-6090] variable 'defuse_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:360]
+WARNING: [Synth 8-6090] variable 'correct_press_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:363]
+WARNING: [Synth 8-6090] variable 'button_pressed' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:364]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:339]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:340]
+WARNING: [Synth 8-6014] Unused sequential element circleC_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:352]
+WARNING: [Synth 8-6014] Unused sequential element circleL_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:353]
+WARNING: [Synth 8-6014] Unused sequential element circleR_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:354]
+WARNING: [Synth 8-6014] Unused sequential element circleU_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:355]
+WARNING: [Synth 8-6014] Unused sequential element circleD_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:356]
+INFO: [Synth 8-6155] done synthesizing module 'defuse_sequence' (13#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:7]
+INFO: [Synth 8-6157] synthesizing module 'point_display' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/point_display.v:23]
 	Parameter BLACK bound to: 16'b0000000000000000 
 	Parameter WHITE bound to: 16'b1111111111111111 
 	Parameter YELLOW bound to: 16'b1111111111100000 
 	Parameter background_green bound to: 16'b0011011000100110 
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/point_display.v:256]
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/point_display.v:257]
-INFO: [Synth 8-6155] done synthesizing module 'point_display' (14#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/point_display.v:23]
-WARNING: [Synth 8-324] index 32 out of range [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:101]
-WARNING: [Synth 8-324] index 64 out of range [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:102]
-WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:117]
-WARNING: [Synth 8-6090] variable 'prev_mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:119]
-WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:120]
-WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:123]
-WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:126]
-WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:128]
-WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:129]
-WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:130]
-WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:132]
-WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:133]
-WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:134]
-WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:137]
-WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:138]
-WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:139]
-WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:175]
-WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:179]
-WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:183]
-WARNING: [Synth 8-6090] variable 'prev_defuse_length' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:193]
-WARNING: [Synth 8-6090] variable 'defuse_timer' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:194]
-INFO: [Synth 8-6155] done synthesizing module 'mole_sequence' (15#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:6]
-INFO: [Synth 8-6157] synthesizing module 'LED_Switch_Random' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v:23]
-INFO: [Synth 8-6157] synthesizing module 'random_number_generator_led' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'random_number_generator_led' (16#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'LED_Switch_Random' (17#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v:23]
-INFO: [Synth 8-6157] synthesizing module 'music' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/music.v:9]
-INFO: [Synth 8-6157] synthesizing module 'music_ROM' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/music_ROM.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'music_ROM' (18#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/music_ROM.v:23]
-INFO: [Synth 8-6157] synthesizing module 'divide_by12' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/divide_by12.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'divide_by12' (19#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/divide_by12.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'music' (20#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/music.v:9]
-WARNING: [Synth 8-3848] Net setx in module/entity Top_Student does not have driver. [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:77]
-WARNING: [Synth 8-3848] Net sety in module/entity Top_Student does not have driver. [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:77]
-WARNING: [Synth 8-3848] Net setmax_x in module/entity Top_Student does not have driver. [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:77]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (21#1) [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/point_display.v:256]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/point_display.v:257]
+INFO: [Synth 8-6155] done synthesizing module 'point_display' (14#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/point_display.v:23]
+WARNING: [Synth 8-324] index 32 out of range [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:101]
+WARNING: [Synth 8-324] index 64 out of range [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:102]
+WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:117]
+WARNING: [Synth 8-6090] variable 'prev_mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:119]
+WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:120]
+WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:123]
+WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:126]
+WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:128]
+WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:129]
+WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:130]
+WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:132]
+WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:133]
+WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:134]
+WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:137]
+WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:138]
+WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:139]
+WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:175]
+WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:179]
+WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:183]
+WARNING: [Synth 8-6090] variable 'prev_defuse_length' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:193]
+WARNING: [Synth 8-6090] variable 'defuse_timer' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:194]
+INFO: [Synth 8-6155] done synthesizing module 'mole_sequence' (15#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LED_Switch_Random' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v:23]
+INFO: [Synth 8-6157] synthesizing module 'random_number_generator_led' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'random_number_generator_led' (16#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'LED_Switch_Random' (17#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v:23]
+INFO: [Synth 8-6157] synthesizing module 'music' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/music.v:9]
+INFO: [Synth 8-6157] synthesizing module 'music_ROM' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/music_ROM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'music_ROM' (18#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/music_ROM.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divide_by12' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/divide_by12.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'divide_by12' (19#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/divide_by12.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'music' (20#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/music.v:9]
+WARNING: [Synth 8-3848] Net setx in module/entity Top_Student does not have driver. [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:77]
+WARNING: [Synth 8-3848] Net sety in module/entity Top_Student does not have driver. [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:77]
+WARNING: [Synth 8-3848] Net setmax_x in module/entity Top_Student does not have driver. [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (21#1) [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[12]
 WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[11]
 WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[10]
@@ -242,7 +242,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[5]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[4]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 516.004 ; gain = 258.840
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:13 . Memory (MB): peak = 515.074 ; gain = 258.438
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -251,48 +251,48 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin nolabel_line86:setx to constant 0 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:86]
-WARNING: [Synth 8-3295] tying undriven pin nolabel_line86:sety to constant 0 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:86]
-WARNING: [Synth 8-3295] tying undriven pin nolabel_line86:setmax_x to constant 0 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:86]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line86:setx to constant 0 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:86]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line86:sety to constant 0 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:86]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line86:setmax_x to constant 0 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/Top_Student.v:86]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 516.004 ; gain = 258.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 515.074 ; gain = 258.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 516.004 ; gain = 258.840
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 515.074 ; gain = 258.438
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
-Finished Parsing XDC File [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Parsing XDC File [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
+Finished Parsing XDC File [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 868.469 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 866.266 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 868.668 ; gain = 611.504
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 866.359 ; gain = 609.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 868.668 ; gain = 611.504
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 866.359 ; gain = 609.723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 868.668 ; gain = 611.504
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:42 . Memory (MB): peak = 866.359 ; gain = 609.723
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -369,8 +369,8 @@ INFO: [Synth 8-5545] ROM "btn_out" won't be mapped to RAM because address size (
 INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "winding_number" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:826]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:845]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:826]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:845]
 INFO: [Synth 8-5544] ROM "selection_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ascii" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ascii" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -395,9 +395,9 @@ INFO: [Synth 8-5545] ROM "stopped" won't be mapped to RAM because address size (
 INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "button_pressed0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "oled_data0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:352]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:352]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:47]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:352]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:352]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:47]
 INFO: [Synth 8-5545] ROM "bomb_defused" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "bomb_defused" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "launch" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -405,7 +405,6 @@ INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (3
 INFO: [Synth 8-5544] ROM "blink_check0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "old_switch_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "counter_octave" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "speaker" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "game_start0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "game_start0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
@@ -510,7 +509,7 @@ reset_enable_reporting_wait_ack | 0000000010000000000000000000000000000 |       
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'MouseCtl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:33 . Memory (MB): peak = 868.668 ; gain = 611.504
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:01:05 . Memory (MB): peak = 866.359 ; gain = 609.723
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -521,7 +520,7 @@ Report RTL Partitions:
 |2     |mole_sequence__GB0 |           1|     23745|
 |3     |mole_sequence__GB1 |           1|      7294|
 |4     |Top_Student__GCB0  |           1|     16759|
-|5     |Top_Student__GCB1  |           1|     19337|
+|5     |Top_Student__GCB1  |           1|     18790|
 |6     |Top_Student__GCB2  |           1|     18712|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -538,7 +537,6 @@ Detailed RTL Component Info :
 	   2 Input     24 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
 	   2 Input     16 Bit       Adders := 3     
-	   2 Input     15 Bit       Adders := 1     
 	   2 Input     12 Bit       Adders := 4     
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 77    
@@ -560,7 +558,7 @@ Detailed RTL Component Info :
 	               24 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
 	               16 Bit    Registers := 23    
-	               15 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
 	               12 Bit    Registers := 6     
 	               11 Bit    Registers := 2     
 	                9 Bit    Registers := 1     
@@ -586,49 +584,48 @@ Detailed RTL Component Info :
 	  17 Input     17 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 19    
 	  23 Input     16 Bit        Muxes := 3     
-	   2 Input     16 Bit        Muxes := 18    
+	   2 Input     16 Bit        Muxes := 17    
 	   3 Input     16 Bit        Muxes := 5     
 	   5 Input     16 Bit        Muxes := 5     
 	  38 Input     16 Bit        Muxes := 1     
 	   4 Input     16 Bit        Muxes := 1     
 	  31 Input     16 Bit        Muxes := 1     
-	   2 Input     15 Bit        Muxes := 6     
+	   2 Input     15 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 14    
 	   2 Input     11 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 11    
-	   2 Input      8 Bit        Muxes := 14    
+	   2 Input      8 Bit        Muxes := 13    
 	  97 Input      8 Bit        Muxes := 16    
 	   8 Input      8 Bit        Muxes := 6     
 	   7 Input      8 Bit        Muxes := 3     
 	   9 Input      8 Bit        Muxes := 3     
 	  37 Input      8 Bit        Muxes := 3     
-	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 3     
 	 244 Input      6 Bit        Muxes := 1     
 	  32 Input      6 Bit        Muxes := 1     
 	   5 Input      5 Bit        Muxes := 1     
 	   3 Input      5 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
 	   3 Input      4 Bit        Muxes := 3     
 	   4 Input      4 Bit        Muxes := 1     
 	  37 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
 	  11 Input      4 Bit        Muxes := 1     
 	  10 Input      4 Bit        Muxes := 1     
 	   9 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 4     
+	   2 Input      3 Bit        Muxes := 3     
 	  16 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 12    
+	   2 Input      2 Bit        Muxes := 11    
 	   3 Input      2 Bit        Muxes := 9     
 	   9 Input      2 Bit        Muxes := 1     
 	  16 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3225  
+	   2 Input      1 Bit        Muxes := 3224  
 	   5 Input      1 Bit        Muxes := 16    
 	  40 Input      1 Bit        Muxes := 8     
 	   8 Input      1 Bit        Muxes := 3     
 	  13 Input      1 Bit        Muxes := 2     
-	   3 Input      1 Bit        Muxes := 15    
+	   3 Input      1 Bit        Muxes := 14    
 	  17 Input      1 Bit        Muxes := 4     
 	  37 Input      1 Bit        Muxes := 20    
 	  11 Input      1 Bit        Muxes := 1     
@@ -1078,27 +1075,17 @@ Detailed RTL Component Info :
 Module music 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     15 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	               15 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input     15 Bit        Muxes := 4     
 	   2 Input      9 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 2     
-	   2 Input      7 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module flexible_clock_module__16 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1294,10 +1281,10 @@ INFO: [Synth 8-3886] merging instance 'gamei_4/mole_y_reg[2][30]' (FD) to 'gamei
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (gamei_4/\mole_y_reg[2][31] )
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:96]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:96]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:124]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:124]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:96]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:96]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:124]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:124]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "ascii" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -1382,10 +1369,10 @@ INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[2]' (FDE) to 'rect
 INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[7]' (FDE) to 'rectangle_border_b_reg[7]'
 INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "button_pressed0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:356]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:355]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:353]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:47]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:356]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:355]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:353]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:47]
 DSP Report: Generating DSP oled_data3, operation Mode is: A*B.
 DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
 DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
@@ -1466,20 +1453,20 @@ INFO: [Synth 8-5545] ROM "bomb_defused" won't be mapped to RAM because address s
 INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "launch" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:34]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:34]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:31]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:31]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:36]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:36]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:32]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:32]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:37]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:37]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:38]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:38]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:33]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:33]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:34]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:34]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:31]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:31]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:36]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:36]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:32]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:32]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:37]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:37]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:38]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:38]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:33]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:33]
 DSP Report: Generating DSP mouse_arrow1, operation Mode is: A*B.
 DSP Report: operator mouse_arrow1 is absorbed into DSP mouse_arrow1.
 DSP Report: operator mouse_arrow1 is absorbed into DSP mouse_arrow1.
@@ -1688,10 +1675,10 @@ WARNING: [Synth 8-3332] Sequential element (oled_data_reg[4]) is unused and will
 WARNING: [Synth 8-3332] Sequential element (button_pressed_reg) is unused and will be removed from module defuse_sequence.
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:65]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:65]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:93]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:93]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:93]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/settings_menu.v:93]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -1705,10 +1692,10 @@ INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address
 INFO: [Synth 8-5544] ROM "p_2_out1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_2_out1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_2_out2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element wipe_settings_main/animation_counter_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element wipe_main_settings/animation_counter_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element wipe_settings_main/animation_counter_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element wipe_main_settings/animation_counter_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
 INFO: [Synth 8-5546] ROM "wipe_settings_main/animation_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wipe_settings_main/has_end" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wipe_main_settings/animation_counter" won't be mapped to RAM because it is too sparse
@@ -1757,8 +1744,8 @@ DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
 INFO: [Synth 8-5546] ROM "wipe_settings_main/animation_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wipe_settings_main/has_end" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wipe_main_settings/animation_counter" won't be mapped to RAM because it is too sparse
@@ -1781,12 +1768,12 @@ WARNING: [Synth 8-3332] Sequential element (right_reg) is unused and will be rem
 WARNING: [Synth 8-3332] Sequential element (new_event_reg) is unused and will be removed from module MouseCtl.
 WARNING: [Synth 8-3332] Sequential element (x_max_reg[11]) is unused and will be removed from module MouseCtl.
 WARNING: [Synth 8-3332] Sequential element (x_max_reg[9]) is unused and will be removed from module MouseCtl.
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "animation_counter" won't be mapped to RAM because it is too sparse
@@ -1799,9 +1786,9 @@ INFO: [Synth 8-5544] ROM "game_start0" won't be mapped to Block RAM because addr
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_6p25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "animation_counter" won't be mapped to RAM because it is too sparse
@@ -1845,6 +1832,7 @@ WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[2
 WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[1]
 WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[0]
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Music/speaker_time_reg[9] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (timer/\an_display_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (an_display_reg[3]) is unused and will be removed from module Count_Down_Timer.
 INFO: [Synth 8-5544] ROM "blink_check0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -1852,15 +1840,15 @@ INFO: [Synth 8-5544] ROM "old_switch_state" won't be mapped to Block RAM because
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10kHz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element flexible_clock_module_1000/my_clk_reg was removed.  [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+WARNING: [Synth 8-6014] Unused sequential element flexible_clock_module_1000/my_clk_reg was removed.  [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/main_menu.v:206]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/main_menu.v:206]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/main_menu.v:234]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/main_menu.v:234]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/main_menu.v:79]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/main_menu.v:79]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/main_menu.v:206]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/main_menu.v:206]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/main_menu.v:234]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/main_menu.v:234]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/main_menu.v:79]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/main_menu.v:79]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10kHz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -1935,7 +1923,7 @@ WARNING: [Synth 8-3332] Sequential element (rectangle_border_x_reg[1]) is unused
 WARNING: [Synth 8-3332] Sequential element (bomb_radius_reg[5]) is unused and will be removed from module main_menu.
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_b_reg[5]) is unused and will be removed from module main_menu.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:25 . Memory (MB): peak = 868.668 ; gain = 611.504
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:02:32 . Memory (MB): peak = 866.359 ; gain = 609.723
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 140, Available = 90. Use report_utilization command for details.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is (post resource management): A*B.
@@ -2130,8 +2118,8 @@ DSP Report: operator moleR2 is absorbed into DSP moleR2.
 DSP Report: Generating DSP moleR2, operation Mode is (post resource management): (PCIN>>17)+A*B.
 DSP Report: operator moleR2 is absorbed into DSP moleR2.
 DSP Report: operator moleR2 is absorbed into DSP moleR2.
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/joshu/Desktop/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
 DSP Report: Generating DSP is_bomb_return1, operation Mode is (post resource management): A*B.
 DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
 DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
@@ -2295,21 +2283,21 @@ Report RTL Partitions:
 |2     |mole_sequence__GB0 |           1|     13682|
 |3     |mole_sequence__GB1 |           1|      6227|
 |4     |Top_Student__GCB0  |           1|     15371|
-|5     |Top_Student__GCB1  |           1|     10096|
+|5     |Top_Student__GCB1  |           1|     10030|
 |6     |Top_Student__GCB2  |           1|     15720|
 +------+-------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:01:42 . Memory (MB): peak = 874.238 ; gain = 617.074
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:02:55 . Memory (MB): peak = 868.113 ; gain = 611.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (gamei_3/\mole_y_reg[0][30] )
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:02:24 . Memory (MB): peak = 1245.809 ; gain = 988.645
+Finished Timing Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:03:52 . Memory (MB): peak = 1242.254 ; gain = 985.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2320,7 +2308,7 @@ Report RTL Partitions:
 |2     |mole_sequence__GB0 |           1|     12845|
 |3     |mole_sequence__GB1 |           1|      6227|
 |4     |Top_Student__GCB0  |           1|     13337|
-|5     |Top_Student__GCB1  |           1|     10048|
+|5     |Top_Student__GCB1  |           1|      9982|
 |6     |Top_Student__GCB2  |           1|     13550|
 |7     |game_over_menu__1  |           1|      6916|
 +------+-------------------+------------+----------+
@@ -2328,7 +2316,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:02:59 . Memory (MB): peak = 1246.965 ; gain = 989.801
+Finished Technology Mapping : Time (s): cpu = 00:01:42 ; elapsed = 00:04:46 . Memory (MB): peak = 1247.508 ; gain = 990.871
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2339,7 +2327,7 @@ Report RTL Partitions:
 |2     |mole_sequence__GB0 |           1|      5734|
 |3     |mole_sequence__GB1 |           1|      2652|
 |4     |Top_Student__GCB0  |           1|      5812|
-|5     |Top_Student__GCB1  |           1|      3665|
+|5     |Top_Student__GCB1  |           1|      3576|
 |6     |Top_Student__GCB2  |           1|      5931|
 |7     |game_over_menu__1  |           1|      3307|
 +------+-------------------+------------+----------+
@@ -2368,7 +2356,7 @@ INFO: [Synth 8-6064] Net n_0_6568 is driving 66 big block pins (URAM, BRAM and D
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:37 ; elapsed = 00:03:06 . Memory (MB): peak = 1246.965 ; gain = 989.801
+Finished IO Insertion : Time (s): cpu = 00:01:45 ; elapsed = 00:04:57 . Memory (MB): peak = 1247.508 ; gain = 990.871
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2381,7 +2369,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:37 ; elapsed = 00:03:07 . Memory (MB): peak = 1246.965 ; gain = 989.801
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:45 ; elapsed = 00:04:57 . Memory (MB): peak = 1247.508 ; gain = 990.871
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2393,25 +2381,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:40 ; elapsed = 00:03:12 . Memory (MB): peak = 1246.965 ; gain = 989.801
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:48 ; elapsed = 00:05:05 . Memory (MB): peak = 1247.508 ; gain = 990.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:03:13 . Memory (MB): peak = 1246.965 ; gain = 989.801
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:48 ; elapsed = 00:05:06 . Memory (MB): peak = 1247.508 ; gain = 990.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:03:13 . Memory (MB): peak = 1246.965 ; gain = 989.801
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:48 ; elapsed = 00:05:06 . Memory (MB): peak = 1247.508 ; gain = 990.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:40 ; elapsed = 00:03:13 . Memory (MB): peak = 1246.965 ; gain = 989.801
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:48 ; elapsed = 00:05:06 . Memory (MB): peak = 1247.508 ; gain = 990.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2428,17 +2416,17 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BUFG    |    12|
-|2     |CARRY4  |  4900|
+|2     |CARRY4  |  4890|
 |3     |DSP48E1 |    72|
-|4     |LUT1    |   678|
-|5     |LUT2    |  7129|
-|6     |LUT3    |  5277|
-|7     |LUT4    |  3393|
+|4     |LUT1    |   675|
+|5     |LUT2    |  7119|
+|6     |LUT3    |  5268|
+|7     |LUT4    |  3386|
 |8     |LUT5    |  2587|
-|9     |LUT6    |  4501|
+|9     |LUT6    |  4496|
 |10    |MUXF7   |    18|
 |11    |FDE_1   |    32|
-|12    |FDRE    |  2952|
+|12    |FDRE    |  2907|
 |13    |FDSE    |    32|
 |14    |IBUF    |    22|
 |15    |IOBUF   |     2|
@@ -2450,13 +2438,13 @@ Report Instance Areas:
 +------+--------------------------------+----------------------------+------+
 |      |Instance                        |Module                      |Cells |
 +------+--------------------------------+----------------------------+------+
-|1     |top                             |                            | 31651|
-|2     |  Music                         |music                       |   229|
-|3     |    get_fullnote                |music_ROM                   |    64|
+|1     |top                             |                            | 31562|
+|2     |  Music                         |music                       |   144|
+|3     |    get_fullnote                |music_ROM                   |    58|
 |4     |  flexible_clock_module_1000    |flexible_clock_module       |    54|
 |5     |  flexible_clock_module_25m     |flexible_clock_module_0     |    50|
 |6     |  flexible_clock_module_6p25m   |flexible_clock_module_1     |    51|
-|7     |  game                          |mole_sequence               |  5641|
+|7     |  game                          |mole_sequence               |  5640|
 |8     |    flexible_clock_1000         |flexible_clock_module_28    |    63|
 |9     |    unit1                       |random_number_generator     |    73|
 |10    |    unit10                      |debounce_29                 |   101|
@@ -2484,7 +2472,7 @@ Report Instance Areas:
 |32    |  nolabel_line121               |main_menu                   |  4181|
 |33    |    flexible_clock_module_1     |flexible_clock_module_22    |    54|
 |34    |    flexible_clock_module_25m   |flexible_clock_module_23    |    50|
-|35    |  nolabel_line127               |settings_menu               |  4184|
+|35    |  nolabel_line127               |settings_menu               |  4181|
 |36    |    flexible_clock_module_1000  |flexible_clock_module_20    |    54|
 |37    |    flexible_clock_module_25m   |flexible_clock_module_21    |    50|
 |38    |  nolabel_line155               |fade_animation              |  1308|
@@ -2509,13 +2497,13 @@ Report Instance Areas:
 |57    |    flexible_clock_module_25m   |flexible_clock_module_10    |    63|
 +------+--------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:40 ; elapsed = 00:03:13 . Memory (MB): peak = 1246.965 ; gain = 989.801
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:48 ; elapsed = 00:05:06 . Memory (MB): peak = 1247.508 ; gain = 990.871
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 58 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:29 ; elapsed = 00:03:05 . Memory (MB): peak = 1246.965 ; gain = 637.137
-Synthesis Optimization Complete : Time (s): cpu = 00:01:41 ; elapsed = 00:03:15 . Memory (MB): peak = 1246.965 ; gain = 989.801
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:36 ; elapsed = 00:04:48 . Memory (MB): peak = 1247.508 ; gain = 639.586
+Synthesis Optimization Complete : Time (s): cpu = 00:01:48 ; elapsed = 00:05:08 . Memory (MB): peak = 1247.508 ; gain = 990.871
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 5046 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 5036 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -2527,9 +2515,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 449 Infos, 132 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:45 ; elapsed = 00:03:25 . Memory (MB): peak = 1246.965 ; gain = 1002.820
+synth_design: Time (s): cpu = 00:01:52 ; elapsed = 00:05:22 . Memory (MB): peak = 1247.508 ; gain = 1003.703
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/joshu/Desktop/project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jun_y/OneDrive/Desktop/Project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1247.508 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.204 . Memory (MB): peak = 1246.965 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Apr  5 21:59:56 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.379 . Memory (MB): peak = 1247.508 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  5 22:49:30 2024...

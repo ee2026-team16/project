@@ -218,7 +218,6 @@ module Top_Student (
     
     music Music(
         .volume(volume_level), //assume 0 - 9;
-        .defuse(bomb_defused),
         .clk(clk_25m),
         .o_audio(JB[0]),
         .gain(JB[1]),

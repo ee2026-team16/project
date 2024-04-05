@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Fri Apr  5 22:03:12 2024
-| Host             : dZhei98 running 64-bit major release  (build 9200)
+| Date             : Fri Apr  5 22:54:13 2024
+| Host             : SureWin running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
 | Device           : xc7a35tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.217        |
+| Total On-Chip Power (W)  | 0.216        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.145        |
+| Dynamic (W)              | 0.144        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.9         |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.011 |        3 |       --- |             --- |
-| Slice Logic    |     0.069 |    31450 |       --- |             --- |
-|   LUT as Logic |     0.057 |    19872 |     20800 |           95.54 |
-|   CARRY4       |     0.011 |     4898 |      8150 |           60.10 |
-|   Register     |    <0.001 |     3016 |     41600 |            7.25 |
+| Clocks         |     0.012 |        3 |       --- |             --- |
+| Slice Logic    |     0.069 |    31361 |       --- |             --- |
+|   LUT as Logic |     0.057 |    19850 |     20800 |           95.43 |
+|   CARRY4       |     0.011 |     4888 |      8150 |           59.98 |
+|   Register     |    <0.001 |     2971 |     41600 |            7.14 |
 |   F7/F8 Muxes  |    <0.001 |       18 |     32600 |            0.06 |
 |   Others       |     0.000 |      192 |       --- |             --- |
 |   BUFG         |     0.000 |       11 |        32 |           34.38 |
-| Signals        |     0.062 |    30236 |       --- |             --- |
+| Signals        |     0.062 |    30148 |       --- |             --- |
 | DSPs           |     0.000 |       72 |        90 |           80.00 |
-| I/O            |     0.002 |       68 |       106 |           64.15 |
+| I/O            |    <0.001 |       68 |       106 |           64.15 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.217 |          |           |                 |
+| Total          |     0.216 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.152 |       0.142 |      0.010 |
+| Vccint    |       1.000 |     0.153 |       0.143 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -143,7 +143,7 @@ Table of Contents
 +---------------------------------+-----------+
 | Name                            | Power (W) |
 +---------------------------------+-----------+
-| Top_Student                     |     0.145 |
+| Top_Student                     |     0.144 |
 |   Music                         |    <0.001 |
 |     get_fullnote                |    <0.001 |
 |   PS2Clk_IOBUF_inst             |     0.000 |
@@ -199,7 +199,7 @@ Table of Contents
 |   wipe_main_settings            |     0.001 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
-|   wipe_settings_main            |    <0.001 |
+|   wipe_settings_main            |     0.001 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
 +---------------------------------+-----------+

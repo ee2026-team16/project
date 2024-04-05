@@ -1,14 +1,5 @@
-// Music demo verilog file
-// (c) fpga4fun.com 2003-2015
-
-// Plays a little tune on a speaker
-// Use a 25MHz clock if possible (other frequencies will 
-// change the pitch/speed of the song)
-
-/////////////////////////////////////////////////////
 module music(
     input [4:0] volume,
-    input defuse,
 	input clk,
     output o_audio,
     output gain,
@@ -16,19 +7,9 @@ module music(
 );
 
 reg [30:0] tone;
-reg [23:0] tone_siren;
 always @(posedge clk) 
 begin
-    if(defuse == 1)
-    begin
-        tone <= tone+31'd1;
-        tone_siren = 0;
-    end
-    else
-    begin
-        tone_siren <= tone_siren + 1;
-        tone = 0;
-    end
+    tone <= tone+31'd1;
 end
 
 reg [14:0] speaker_time;
@@ -64,49 +45,30 @@ case(note)
 	11: clkdivider = 9'd270;// G#/Ab
 	default: clkdivider = 9'd0;
 endcase
-reg [14:0] counter_siren;
 reg [8:0] counter_note;
 reg [7:0] counter_octave;
 always @(posedge clk) 
 begin
-    if(defuse == 1)
+    counter_note <= counter_note==0 ? clkdivider : counter_note-9'd1;
+    if(counter_note==0) 
     begin
-        counter_siren = 0;
-        counter_note <= counter_note==0 ? clkdivider : counter_note-9'd1;
-        if(counter_note==0) 
-        begin
-            counter_octave <= counter_octave==0 ? 8'd255 >> octave : counter_octave-8'd1;
-        end
-        if(counter_note==0 && counter_octave==0 && fullnote!=0 && tone[21:18]!=0) 
-        begin
-            speaker <= ~speaker;
-        end
+        counter_octave <= counter_octave==0 ? 8'd255 >> octave : counter_octave-8'd1;
     end
-    else
-    begin         
-        counter_note = 0;
-        if(counter_siren==0) 
-            begin
-                counter_siren <= (tone_siren[23] ? 28409 : 14204);
-                speaker = ~speaker;
-            end
-        else 
-            begin 
-                counter_siren <= counter_siren + 1;
-            end    
-    end
-    
+    if(counter_note==0 && counter_octave==0 && fullnote!=0 && tone[21:18]!=0) 
+    begin
+        speaker <= ~speaker;
+    end  
     case(volume)
-    1: speaker_time = (defuse == 1) ? counter_note[7:0]: counter_siren[7:0];
-    2: speaker_time = (defuse == 1) ? counter_note[6:0]: counter_siren[6:0];
-    3: speaker_time = (defuse == 1) ? counter_note[5:0]: counter_siren[5:0];
-    4: speaker_time = (defuse == 1) ? counter_note[4:0]: counter_siren[4:0];
-    5: speaker_time = (defuse == 1) ? counter_note[3:0]: counter_siren[3:0];
-    6: speaker_time = (defuse == 1) ? counter_note[2:0]: counter_siren[2:0];
-    7: speaker_time = (defuse == 1) ? counter_note[1:0]: counter_siren[1:0];
-    8: speaker_time = (defuse == 1) ? counter_note[0]: counter_siren[0];
+    1: speaker_time =  counter_note[7:0];
+    2: speaker_time =  counter_note[6:0];
+    3: speaker_time =  counter_note[5:0];
+    4: speaker_time =  counter_note[4:0];
+    5: speaker_time =  counter_note[3:0];
+    6: speaker_time =  counter_note[2:0];
+    7: speaker_time =  counter_note[1:0];
+    8: speaker_time = counter_note[0];
     9: speaker_time = 0;
-    default: speaker_time = (defuse == 1) ? counter_note: counter_siren;
+    default: speaker_time =  counter_note;
     endcase 
 end
 endmodule
