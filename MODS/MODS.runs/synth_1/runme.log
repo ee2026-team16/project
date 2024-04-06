@@ -14,9 +14,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21336 
+INFO: Helper process launched with PID 3260 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 358.832 ; gain = 102.875
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 359.699 ; gain = 103.199
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 	Parameter c_CLKS_PER_BIT bound to: 868 - type: integer 
@@ -189,25 +189,29 @@ WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/
 INFO: [Synth 8-6155] done synthesizing module 'point_display' (14#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/point_display.v:23]
 WARNING: [Synth 8-324] index 32 out of range [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:102]
 WARNING: [Synth 8-324] index 64 out of range [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:103]
-WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:119]
-WARNING: [Synth 8-6090] variable 'prev_mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:121]
-WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:122]
-WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:125]
-WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:128]
+WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:118]
+WARNING: [Synth 8-6090] variable 'prev_mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:120]
+WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:121]
+WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:124]
+WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:127]
+WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:129]
 WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:130]
 WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:131]
-WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:132]
+WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:133]
 WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:134]
 WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:135]
-WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:136]
+WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:138]
 WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:139]
 WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:140]
-WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:141]
-WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:177]
-WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:181]
-WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:185]
-WARNING: [Synth 8-6090] variable 'prev_defuse_length' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:195]
-WARNING: [Synth 8-6090] variable 'defuse_timer' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:196]
+WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:176]
+WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:177]
+WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:180]
+WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:181]
+WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:184]
+WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:185]
+WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:189]
+WARNING: [Synth 8-6090] variable 'prev_defuse_length' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:194]
+WARNING: [Synth 8-6090] variable 'defuse_timer' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:195]
 INFO: [Synth 8-6155] done synthesizing module 'mole_sequence' (15#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:6]
 INFO: [Synth 8-6157] synthesizing module 'LED_Switch_Random' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v:23]
 INFO: [Synth 8-6157] synthesizing module 'random_number_generator_led' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v:23]
@@ -224,7 +228,7 @@ INFO: [Synth 8-6157] synthesizing module 'whoWinner' [C:/Users/sean.ng/OneDrive 
 	Parameter I_LOSE bound to: 0 - type: integer 
 WARNING: [Synth 8-3848] Net led in module/entity whoWinner does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'whoWinner' (21#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:23]
-WARNING: [Synth 8-689] width (32) of port connection 'oledPointsB4Stop' does not match port width (8) of module 'whoWinner' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:246]
+WARNING: [Synth 8-689] width (32) of port connection 'total_points' does not match port width (8) of module 'whoWinner' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:245]
 INFO: [Synth 8-6157] synthesizing module 'UART_TX' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_TX.v:31]
 	Parameter CLKS_PER_BIT bound to: 868 - type: integer 
 	Parameter IDLE bound to: 2'b00 
@@ -280,7 +284,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[5]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[4]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 514.121 ; gain = 258.164
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 515.484 ; gain = 258.984
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -296,10 +300,10 @@ WARNING: [Synth 8-3295] tying undriven pin nolabel_line88:setmax_x to constant 0
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 514.121 ; gain = 258.164
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 515.484 ; gain = 258.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 514.121 ; gain = 258.164
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 515.484 ; gain = 258.984
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -315,22 +319,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 866.891 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 868.266 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 867.090 ; gain = 611.133
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 868.422 ; gain = 611.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 867.090 ; gain = 611.133
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 868.422 ; gain = 611.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 867.090 ; gain = 611.133
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 868.422 ; gain = 611.922
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -559,7 +563,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'UART_TX'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 867.090 ; gain = 611.133
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 868.422 ; gain = 611.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -567,11 +571,11 @@ Report RTL Partitions:
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
 |1     |game_over_menu    |           2|     11357|
-|2     |mole_sequence     |           1|     28344|
-|3     |Top_Student__GCB1 |           1|      4597|
-|4     |Top_Student__GCB2 |           1|     11193|
-|5     |main_menu         |           1|     12261|
-|6     |Top_Student__GCB4 |           1|     26710|
+|2     |fade_animation    |           2|      6287|
+|3     |Top_Student__GCB0 |           1|     33217|
+|4     |Top_Student__GCB1 |           1|     10123|
+|5     |Top_Student__GCB2 |           1|     19163|
+|6     |Top_Student__GCB3 |           1|     14306|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -579,20 +583,20 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     32 Bit       Adders := 25    
-	   2 Input     32 Bit       Adders := 108   
-	   5 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 109   
 	   4 Input     32 Bit       Adders := 1     
 	  16 Input     32 Bit       Adders := 1     
+	   5 Input     32 Bit       Adders := 1     
 	   2 Input     26 Bit       Adders := 1     
 	   2 Input     24 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 4     
 	   2 Input     12 Bit       Adders := 4     
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 2     
-	   3 Input      9 Bit       Adders := 11    
 	   2 Input      9 Bit       Adders := 77    
-	   2 Input      8 Bit       Adders := 34    
+	   3 Input      9 Bit       Adders := 11    
+	   2 Input      8 Bit       Adders := 33    
 	   3 Input      8 Bit       Adders := 2     
 	   2 Input      7 Bit       Adders := 3     
 	   2 Input      6 Bit       Adders := 17    
@@ -604,11 +608,11 @@ Detailed RTL Component Info :
 	   4 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               40 Bit    Registers := 1     
-	               32 Bit    Registers := 44    
+	               32 Bit    Registers := 43    
 	               26 Bit    Registers := 1     
 	               24 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
-	               16 Bit    Registers := 23    
+	               16 Bit    Registers := 27    
 	               15 Bit    Registers := 1     
 	               12 Bit    Registers := 6     
 	               11 Bit    Registers := 2     
@@ -621,7 +625,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 6     
 	                3 Bit    Registers := 6     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 102   
+	                1 Bit    Registers := 107   
 +---Multipliers : 
 	                32x32  Multipliers := 36    
 +---Muxes : 
@@ -633,14 +637,14 @@ Detailed RTL Component Info :
 	   2 Input     26 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 1     
 	  32 Input     20 Bit        Muxes := 1     
-	  17 Input     17 Bit        Muxes := 1     
 	   2 Input     17 Bit        Muxes := 19    
+	  17 Input     17 Bit        Muxes := 1     
 	  23 Input     16 Bit        Muxes := 3     
-	  31 Input     16 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 17    
+	   2 Input     16 Bit        Muxes := 16    
 	   3 Input     16 Bit        Muxes := 5     
 	   5 Input     16 Bit        Muxes := 5     
 	   4 Input     16 Bit        Muxes := 1     
+	  31 Input     16 Bit        Muxes := 1     
 	  38 Input     16 Bit        Muxes := 1     
 	   2 Input     15 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 14    
@@ -649,47 +653,45 @@ Detailed RTL Component Info :
 	   6 Input     10 Bit        Muxes := 1     
 	   4 Input     10 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 11    
+	   2 Input      8 Bit        Muxes := 14    
+	  97 Input      8 Bit        Muxes := 16    
 	   8 Input      8 Bit        Muxes := 6     
 	   7 Input      8 Bit        Muxes := 3     
 	   9 Input      8 Bit        Muxes := 3     
-	   2 Input      8 Bit        Muxes := 14    
-	  97 Input      8 Bit        Muxes := 16    
-	   6 Input      8 Bit        Muxes := 1     
 	  37 Input      8 Bit        Muxes := 3     
+	   6 Input      8 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 3     
 	 244 Input      6 Bit        Muxes := 1     
-	  32 Input      6 Bit        Muxes := 1     
 	   5 Input      5 Bit        Muxes := 1     
 	   3 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
 	  32 Input      5 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 2     
-	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 2     
+	  11 Input      4 Bit        Muxes := 3     
 	  37 Input      4 Bit        Muxes := 1     
-	  12 Input      4 Bit        Muxes := 1     
-	  11 Input      4 Bit        Muxes := 1     
-	  10 Input      4 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 6     
-	   4 Input      3 Bit        Muxes := 1     
 	  16 Input      3 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 13    
+	  16 Input      2 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 6     
 	   4 Input      2 Bit        Muxes := 1     
 	   9 Input      2 Bit        Muxes := 1     
-	  16 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3224  
-	   8 Input      1 Bit        Muxes := 3     
-	  13 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3228  
 	   5 Input      1 Bit        Muxes := 16    
 	  40 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 3     
 	   3 Input      1 Bit        Muxes := 14    
-	   6 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 6     
 	  11 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
 	  17 Input      1 Bit        Muxes := 4     
 	  37 Input      1 Bit        Muxes := 20    
+	   6 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -702,62 +704,11 @@ Detailed RTL Component Info :
 +---Registers : 
 	               16 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 6     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
-	  12 Input      4 Bit        Muxes := 1     
-	  11 Input      4 Bit        Muxes := 1     
-	  10 Input      4 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 3     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-Module flexible_clock_module__13 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__14 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__15 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module main_menu 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     32 Bit       Adders := 5     
-	   2 Input     32 Bit       Adders := 19    
-	   5 Input     32 Bit       Adders := 1     
-	   3 Input      9 Bit       Adders := 5     
-	   2 Input      8 Bit       Adders := 11    
-	   2 Input      7 Bit       Adders := 2     
-	   2 Input      4 Bit       Adders := 2     
-+---Registers : 
-	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 5     
-	                7 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
-+---Multipliers : 
-	                32x32  Multipliers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 21    
-	  23 Input     16 Bit        Muxes := 1     
-	  31 Input     16 Bit        Muxes := 1     
-	   8 Input      8 Bit        Muxes := 2     
-	   7 Input      8 Bit        Muxes := 1     
-	   9 Input      8 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 4     
-	   3 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 203   
-	   8 Input      1 Bit        Muxes := 1     
-	  13 Input      1 Bit        Muxes := 1     
 Module flexible_clock_module__1 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -797,6 +748,28 @@ Detailed RTL Component Info :
 	  40 Input      1 Bit        Muxes := 4     
 	   8 Input      1 Bit        Muxes := 1     
 Module flexible_clock_module__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module fade_animation 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module flexible_clock_module__5 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
@@ -896,7 +869,7 @@ Detailed RTL Component Info :
 	   4 Input     32 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 22    
+	               32 Bit    Registers := 21    
 	               16 Bit    Registers := 1     
 	                7 Bit    Registers := 2     
 	                3 Bit    Registers := 2     
@@ -907,162 +880,7 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 27    
 	   2 Input     16 Bit        Muxes := 2     
 	   5 Input     16 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 10    
-Module UART_RX 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     10 Bit        Muxes := 1     
-	   6 Input     10 Bit        Muxes := 1     
-	   6 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 1     
-	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 3     
-Module UART_TX 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     10 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-+---Muxes : 
-	   2 Input     10 Bit        Muxes := 1     
-	   4 Input     10 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 6     
-Module whoWinner 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-Module flexible_clock_module__4 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__5 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__6 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module random_number_generator_led 
-Detailed RTL Component Info : 
-+---XORs : 
-	   4 Input      1 Bit         XORs := 1     
-+---Registers : 
-	               16 Bit    Registers := 1     
-Module LED_Switch_Random 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 16    
-	  16 Input     32 Bit       Adders := 1     
-	   2 Input      3 Bit       Adders := 1     
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 6     
-	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 21    
-	   2 Input     16 Bit        Muxes := 10    
-	   4 Input     16 Bit        Muxes := 1     
-	   2 Input     15 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 46    
-Module flexible_clock_module__9 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__12 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module fade_animation 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input     16 Bit       Adders := 1     
-+---Registers : 
-	               16 Bit    Registers := 4     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 2     
-Module flexible_clock_module__11 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__10 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module wipe_animation__1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 1     
-+---Registers : 
-	               16 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-Module flexible_clock_module__7 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__8 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module wipe_animation 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     16 Bit       Adders := 1     
-+---Registers : 
-	               16 Bit    Registers := 2     
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 11    
 Module debounce__2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1085,46 +903,6 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__18 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__19 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module settings_menu 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     32 Bit       Adders := 4     
-	   2 Input     32 Bit       Adders := 2     
-	   3 Input      9 Bit       Adders := 6     
-	   2 Input      8 Bit       Adders := 4     
-	   3 Input      8 Bit       Adders := 2     
-	   2 Input      5 Bit       Adders := 2     
-+---Registers : 
-	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 2     
-	                5 Bit    Registers := 2     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
-+---Multipliers : 
-	                32x32  Multipliers := 4     
-+---Muxes : 
-	  38 Input     16 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 4     
-	   2 Input      9 Bit        Muxes := 7     
-	   2 Input      6 Bit        Muxes := 2     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
-	   3 Input      2 Bit        Muxes := 1     
-	   9 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 259   
 Module debounce__4 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1158,13 +936,124 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__16 
+Module Oled_Display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 3     
+	  32 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	  32 Input     20 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
+	  32 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	  32 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module flexible_clock_module__9 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
-Module flexible_clock_module__17 
+Module debounce 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module random_number_generator_led 
+Detailed RTL Component Info : 
++---XORs : 
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+Module LED_Switch_Random 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 16    
+	  16 Input     32 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 21    
+	   2 Input     16 Bit        Muxes := 10    
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     15 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 46    
+Module music_ROM 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	 244 Input      6 Bit        Muxes := 1     
+Module divide_by12 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      3 Bit        Muxes := 1     
+	  16 Input      2 Bit        Muxes := 1     
+Module music 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               15 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__15 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
@@ -1185,17 +1074,54 @@ Detailed RTL Component Info :
 	   3 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
 	  11 Input      1 Bit        Muxes := 1     
-Module debounce 
+Module flexible_clock_module__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module main_menu 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 19    
+	   5 Input     32 Bit       Adders := 1     
+	   3 Input      9 Bit       Adders := 5     
+	   2 Input      8 Bit       Adders := 11    
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 2     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 2     
 	                1 Bit    Registers := 2     
++---Multipliers : 
+	                32x32  Multipliers := 6     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   3 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 21    
+	  23 Input     16 Bit        Muxes := 1     
+	  31 Input     16 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 2     
+	   7 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 203   
+	   8 Input      1 Bit        Muxes := 1     
+	  13 Input      1 Bit        Muxes := 1     
 Module Ps2Interface 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1239,63 +1165,134 @@ Detailed RTL Component Info :
 	  37 Input      4 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 5     
 	  37 Input      1 Bit        Muxes := 20    
-Module music_ROM 
-Detailed RTL Component Info : 
-+---Registers : 
-	                6 Bit    Registers := 1     
-+---Muxes : 
-	 244 Input      6 Bit        Muxes := 1     
-Module divide_by12 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  16 Input      3 Bit        Muxes := 1     
-	  16 Input      2 Bit        Muxes := 1     
-Module music 
+Module UART_RX 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      9 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               15 Bit    Registers := 1     
-	                9 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      9 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 1     
+	   6 Input     10 Bit        Muxes := 1     
+	   6 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-Module Oled_Display 
+	   6 Input      1 Bit        Muxes := 3     
+Module UART_TX 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     17 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               40 Bit    Registers := 1     
-	               17 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     40 Bit        Muxes := 3     
-	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 2     
-	  32 Input     20 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
-	  32 Input      6 Bit        Muxes := 1     
-	   2 Input      6 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 2     
-	  32 Input      5 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 2     
-Module flexible_clock_module__20 
+	   2 Input     10 Bit        Muxes := 1     
+	   4 Input     10 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 6     
+Module whoWinner 
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 Module flexible_clock_module__21 
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__20 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module wipe_animation__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module flexible_clock_module__18 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__19 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module wipe_animation 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module flexible_clock_module__16 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module flexible_clock_module__17 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module settings_menu 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 4     
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input      9 Bit       Adders := 6     
+	   2 Input      8 Bit       Adders := 4     
+	   3 Input      8 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 4     
++---Muxes : 
+	  38 Input     16 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input      9 Bit        Muxes := 7     
+	   2 Input      6 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   9 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 259   
 Module flexible_clock_module 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1318,17 +1315,32 @@ INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5544] ROM "blink_check0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "old_switch_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_1Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_10Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_10kHz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element receive/r_RX_DV_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_RX.v:63]
-WARNING: [Synth 8-6014] Unused sequential element transmit/o_TX_Active_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_TX.v:69]
-WARNING: [Synth 8-6014] Unused sequential element transmit/o_TX_Done_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_TX.v:56]
-INFO: [Synth 8-5545] ROM "unit/flexible_clock_module_10kHz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "unit/flexible_clock_module_1Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "unit/flexible_clock_module_10Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "animation_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "has_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "animation_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "has_end" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP pixel_data2, operation Mode is: A2*B.
+DSP Report: register animation_counter_reg is absorbed into DSP pixel_data2.
+DSP Report: operator pixel_data2 is absorbed into DSP pixel_data2.
+DSP Report: Generating DSP pixel_data2, operation Mode is: A2*B.
+DSP Report: register animation_counter_reg is absorbed into DSP pixel_data2.
+DSP Report: operator pixel_data2 is absorbed into DSP pixel_data2.
+DSP Report: Generating DSP pixel_data2, operation Mode is: A2*B.
+DSP Report: register animation_counter_reg is absorbed into DSP pixel_data2.
+DSP Report: operator pixel_data2 is absorbed into DSP pixel_data2.
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JC[2]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[7]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[6]
@@ -1394,23 +1406,8 @@ DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[0]' (FDRE) to 'rectangle_border_y_reg[3]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[1]' (FDRE) to 'rectangle_border_y_reg[2]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[2]' (FDRE) to 'rectangle_border_y_reg[4]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[3]' (FDRE) to 'rectangle_border_y_reg[6]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[4]' (FDRE) to 'rectangle_border_y_reg[5]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rectangle_border_y_reg[6] )
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[0]' (FDE) to 'rectangle_border_a_reg[2]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[6]' (FDE) to 'rectangle_border_a_reg[4]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[4]' (FDE) to 'rectangle_border_a_reg[5]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[5]' (FDE) to 'rectangle_border_b_reg[3]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_b_reg[0]' (FDE) to 'rectangle_border_b_reg[2]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_b_reg[3]' (FDE) to 'rectangle_border_b_reg[4]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_b_reg[6]' (FDE) to 'rectangle_border_b_reg[4]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_b_reg[4]' (FDE) to 'rectangle_border_b_reg[5]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rectangle_border_b_reg[5] )
-INFO: [Synth 8-3886] merging instance 'pixel_data_reg[0]' (FD) to 'pixel_data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'pixel_data_reg[5]' (FD) to 'pixel_data_reg[10]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pixel_data_reg[8] )
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_x_reg[4]) is unused and will be removed from module game_over_menu.
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_x_reg[3]) is unused and will be removed from module game_over_menu.
@@ -1420,9 +1417,6 @@ WARNING: [Synth 8-3332] Sequential element (rectangle_border_x_reg[0]) is unused
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_y_reg[6]) is unused and will be removed from module game_over_menu.
 WARNING: [Synth 8-3332] Sequential element (pixel_data_reg[8]) is unused and will be removed from module game_over_menu.
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_b_reg[5]) is unused and will be removed from module game_over_menu.
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[1]' (FDE) to 'rectangle_border_b_reg[1]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[2]' (FDE) to 'rectangle_border_b_reg[2]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[7]' (FDE) to 'rectangle_border_b_reg[7]'
 INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "button_pressed0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -1684,121 +1678,142 @@ DSP Report: operator mouse_arrow1 is absorbed into DSP mouse_arrow1.
 DSP Report: Generating DSP mouse_arrow1, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator mouse_arrow1 is absorbed into DSP mouse_arrow1.
 DSP Report: operator mouse_arrow1 is absorbed into DSP mouse_arrow1.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (unit8/button_pressed_reg)
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[30]' (FD) to 'unit8/defuse_state_reg[31]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[31]' (FD) to 'unit8/defuse_state_reg[29]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[29]' (FD) to 'unit8/defuse_state_reg[28]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[28]' (FD) to 'unit8/defuse_state_reg[27]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[27]' (FD) to 'unit8/defuse_state_reg[26]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[26]' (FD) to 'unit8/defuse_state_reg[25]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[25]' (FD) to 'unit8/defuse_state_reg[24]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[24]' (FD) to 'unit8/defuse_state_reg[23]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[23]' (FD) to 'unit8/defuse_state_reg[22]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[22]' (FD) to 'unit8/defuse_state_reg[21]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[21]' (FD) to 'unit8/defuse_state_reg[20]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[20]' (FD) to 'unit8/defuse_state_reg[19]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[19]' (FD) to 'unit8/defuse_state_reg[18]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[18]' (FD) to 'unit8/defuse_state_reg[17]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[17]' (FD) to 'unit8/defuse_state_reg[16]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[16]' (FD) to 'unit8/defuse_state_reg[15]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[15]' (FD) to 'unit8/defuse_state_reg[14]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[14]' (FD) to 'unit8/defuse_state_reg[13]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[13]' (FD) to 'unit8/defuse_state_reg[12]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[12]' (FD) to 'unit8/defuse_state_reg[11]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[11]' (FD) to 'unit8/defuse_state_reg[10]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[10]' (FD) to 'unit8/defuse_state_reg[9]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[9]' (FD) to 'unit8/defuse_state_reg[8]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[8]' (FD) to 'unit8/defuse_state_reg[7]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[7]' (FD) to 'unit8/defuse_state_reg[6]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[6]' (FD) to 'unit8/defuse_state_reg[5]'
-INFO: [Synth 8-3886] merging instance 'unit8/defuse_state_reg[5]' (FD) to 'unit8/defuse_state_reg[4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (unit8/\defuse_state_reg[4] )
-INFO: [Synth 8-3886] merging instance 'unit8/oled_data_reg[0]' (FDR) to 'unit8/oled_data_reg[4]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[0]' (FD) to 'unit9/oled_data_reg[3]'
-INFO: [Synth 8-3886] merging instance 'unit8/oled_data_reg[1]' (FDR) to 'unit8/oled_data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[1]' (FD) to 'unit9/oled_data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[2]' (FD) to 'unit9/oled_data_reg[5]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[3]' (FD) to 'unit9/oled_data_reg[4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (unit8/\oled_data_reg[4] )
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[4]' (FD) to 'unit9/oled_data_reg[6]'
-INFO: [Synth 8-3886] merging instance 'unit8/oled_data_reg[5]' (FDR) to 'unit8/oled_data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[5]' (FD) to 'unit9/oled_data_reg[9]'
-INFO: [Synth 8-3886] merging instance 'unit8/oled_data_reg[6]' (FDR) to 'unit8/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[6]' (FD) to 'unit9/oled_data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[7]' (FD) to 'unit9/oled_data_reg[8]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[8]' (FD) to 'unit9/oled_data_reg[11]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[9]' (FD) to 'unit9/oled_data_reg[10]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[10]' (FD) to 'unit9/oled_data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[11]' (FD) to 'unit9/oled_data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[12]' (FD) to 'unit9/oled_data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'unit9/oled_data_reg[14]' (FD) to 'unit9/oled_data_reg[15]'
-INFO: [Synth 8-3886] merging instance 'oled_data_reg[6]' (FD) to 'oled_data_reg[15]'
+INFO: [Synth 8-5545] ROM "nolabel_line114/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line113/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line112/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line111/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (game/unit8/button_pressed_reg)
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[30]' (FD) to 'game/unit8/defuse_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[31]' (FD) to 'game/unit8/defuse_state_reg[29]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[29]' (FD) to 'game/unit8/defuse_state_reg[28]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[28]' (FD) to 'game/unit8/defuse_state_reg[27]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[27]' (FD) to 'game/unit8/defuse_state_reg[26]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[26]' (FD) to 'game/unit8/defuse_state_reg[25]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[25]' (FD) to 'game/unit8/defuse_state_reg[24]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[24]' (FD) to 'game/unit8/defuse_state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[23]' (FD) to 'game/unit8/defuse_state_reg[22]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[22]' (FD) to 'game/unit8/defuse_state_reg[21]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[21]' (FD) to 'game/unit8/defuse_state_reg[20]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[20]' (FD) to 'game/unit8/defuse_state_reg[19]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[19]' (FD) to 'game/unit8/defuse_state_reg[18]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[18]' (FD) to 'game/unit8/defuse_state_reg[17]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[17]' (FD) to 'game/unit8/defuse_state_reg[16]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[16]' (FD) to 'game/unit8/defuse_state_reg[15]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[15]' (FD) to 'game/unit8/defuse_state_reg[14]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[14]' (FD) to 'game/unit8/defuse_state_reg[13]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[13]' (FD) to 'game/unit8/defuse_state_reg[12]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[12]' (FD) to 'game/unit8/defuse_state_reg[11]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[11]' (FD) to 'game/unit8/defuse_state_reg[10]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[10]' (FD) to 'game/unit8/defuse_state_reg[9]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[9]' (FD) to 'game/unit8/defuse_state_reg[8]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[8]' (FD) to 'game/unit8/defuse_state_reg[7]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[7]' (FD) to 'game/unit8/defuse_state_reg[6]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[6]' (FD) to 'game/unit8/defuse_state_reg[5]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/defuse_state_reg[5]' (FD) to 'game/unit8/defuse_state_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (game/unit8/\defuse_state_reg[4] )
+INFO: [Synth 8-3886] merging instance 'game/unit8/oled_data_reg[0]' (FDR) to 'game/unit8/oled_data_reg[4]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[0]' (FD) to 'game/unit9/oled_data_reg[3]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/oled_data_reg[1]' (FDR) to 'game/unit8/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[1]' (FD) to 'game/unit9/oled_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[2]' (FD) to 'game/unit9/oled_data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[3]' (FD) to 'game/unit9/oled_data_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (game/unit8/\oled_data_reg[4] )
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[4]' (FD) to 'game/unit9/oled_data_reg[6]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/oled_data_reg[5]' (FDR) to 'game/unit8/oled_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[5]' (FD) to 'game/unit9/oled_data_reg[9]'
+INFO: [Synth 8-3886] merging instance 'game/unit8/oled_data_reg[6]' (FDR) to 'game/unit8/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[6]' (FD) to 'game/unit9/oled_data_reg[7]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[7]' (FD) to 'game/unit9/oled_data_reg[8]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[8]' (FD) to 'game/unit9/oled_data_reg[11]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[9]' (FD) to 'game/unit9/oled_data_reg[10]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[10]' (FD) to 'game/unit9/oled_data_reg[12]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[11]' (FD) to 'game/unit9/oled_data_reg[14]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[12]' (FD) to 'game/unit9/oled_data_reg[13]'
+INFO: [Synth 8-3886] merging instance 'game/unit9/oled_data_reg[14]' (FD) to 'game/unit9/oled_data_reg[15]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][6]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][7]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][8]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][9]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][10]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][11]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][12]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][13]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][14]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][15]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][16]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][17]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][18]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][19]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][20]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][21]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][22]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][23]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][24]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][25]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][26]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][27]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][28]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][29]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][30]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[1][31]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][6]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][7]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][8]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][9]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][10]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][11]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][12]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][13]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][14]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][15]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][16]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][17]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][18]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][19]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][20]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][21]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][22]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][23]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][24]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][25]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][26]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][27]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][28]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][29]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][30]' (FD) to 'game/mole_y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[2][31]' (FD) to 'game/mole_y_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[0][3]' (FD) to 'game/mole_y_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[0][6]' (FD) to 'game/mole_y_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'game/mole_y_reg[0][7]' (FD) to 'game/mole_y_reg[0][31]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (game/\mole_y_reg[0][31] )
 WARNING: [Synth 8-3332] Sequential element (defuse_state_reg[4]) is unused and will be removed from module defuse_sequence.
 WARNING: [Synth 8-3332] Sequential element (oled_data_reg[4]) is unused and will be removed from module defuse_sequence.
 WARNING: [Synth 8-3332] Sequential element (button_pressed_reg) is unused and will be removed from module defuse_sequence.
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-3332] Sequential element (mole_y_reg[0][31]) is unused and will be removed from module mole_sequence.
+INFO: [Synth 8-5544] ROM "blink_check0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "old_switch_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_1Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_10Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_10kHz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "animation_counter" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "has_end" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element wipe_settings_main/animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element wipe_main_settings/animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-INFO: [Synth 8-5546] ROM "wipe_settings_main/animation_counter" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "wipe_settings_main/has_end" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "wipe_main_settings/animation_counter" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "wipe_main_settings/has_end" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "flexible_clock_module_10kHz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_1Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_10Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "counter_octave" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "nolabel_line110/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "nolabel_line118/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "animation_counter" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "has_end" won't be mapped to RAM because it is too sparse
-DSP Report: Generating DSP pixel_data2, operation Mode is: A2*B.
-DSP Report: register animation_counter_reg is absorbed into DSP pixel_data2.
-DSP Report: operator pixel_data2 is absorbed into DSP pixel_data2.
-DSP Report: Generating DSP pixel_data2, operation Mode is: A2*B.
-DSP Report: register animation_counter_reg is absorbed into DSP pixel_data2.
-DSP Report: operator pixel_data2 is absorbed into DSP pixel_data2.
-DSP Report: Generating DSP pixel_data2, operation Mode is: A2*B.
-DSP Report: register animation_counter_reg is absorbed into DSP pixel_data2.
-DSP Report: operator pixel_data2 is absorbed into DSP pixel_data2.
-INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-INFO: [Synth 8-5546] ROM "wipe_main_settings/animation_counter" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "wipe_settings_main/animation_counter" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "wipe_settings_main/has_end" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "wipe_main_settings/has_end" won't be mapped to RAM because it is too sparse
-DSP Report: Generating DSP wipe_main_settings/x_boundary0, operation Mode is: A2*(B:0x60).
-DSP Report: register wipe_main_settings/animation_counter_reg is absorbed into DSP wipe_main_settings/x_boundary0.
-DSP Report: operator wipe_main_settings/x_boundary0 is absorbed into DSP wipe_main_settings/x_boundary0.
-DSP Report: Generating DSP wipe_settings_main/x_boundary0, operation Mode is: A2*(B:0x60).
-DSP Report: register wipe_settings_main/animation_counter_reg is absorbed into DSP wipe_settings_main/x_boundary0.
-DSP Report: operator wipe_settings_main/x_boundary0 is absorbed into DSP wipe_settings_main/x_boundary0.
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[12]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[11]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[10]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[9]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[8]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[7]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[6]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[5]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[4]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[3]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[2]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[1]
-WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Music/speaker_time_reg[9] )
+INFO: [Synth 8-5545] ROM "flexible_clock_module_1Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_100Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "timer_count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stopped" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element flexible_clock_module_1000/my_clk_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -1810,6 +1825,10 @@ INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recomm
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/main_menu.v:79]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_100Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "flexible_clock_module_1Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "timer_count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "stopped" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 DSP Report: Generating DSP is_rectangle_border_return2, operation Mode is: A*B.
@@ -1866,25 +1885,21 @@ DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[0]' (FDRE) to 'rectangle_border_y_reg[3]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[1]' (FDRE) to 'rectangle_border_y_reg[2]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[2]' (FDRE) to 'rectangle_border_y_reg[4]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[3]' (FDRE) to 'rectangle_border_y_reg[6]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_y_reg[4]' (FDRE) to 'rectangle_border_y_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rectangle_border_y_reg[6] )
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[1]' (FDE) to 'rectangle_border_a_reg[2]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[6]' (FDE) to 'rectangle_border_a_reg[4]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[4]' (FDE) to 'rectangle_border_a_reg[5]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[5]' (FDE) to 'rectangle_border_b_reg[3]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_b_reg[0]' (FDE) to 'rectangle_border_b_reg[2]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_b_reg[3]' (FDE) to 'rectangle_border_b_reg[4]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_b_reg[6]' (FDE) to 'rectangle_border_b_reg[4]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_b_reg[4]' (FDE) to 'rectangle_border_b_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rectangle_border_b_reg[5] )
-INFO: [Synth 8-3886] merging instance 'bomb_radius_reg[6]' (FDR) to 'bomb_radius_reg[7]'
-INFO: [Synth 8-3886] merging instance 'bomb_radius_reg[4]' (FDR) to 'bomb_radius_reg[7]'
-INFO: [Synth 8-3886] merging instance 'bomb_radius_reg[7]' (FDR) to 'bomb_radius_reg[5]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\bomb_radius_reg[5] )
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/zpos_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:1011]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/middle_down_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/middle_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/right_down_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:427]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/right_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:427]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/new_event_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:610]
+INFO: [Synth 8-5545] ROM "nolabel_line88/periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
+INFO: [Synth 8-5546] ROM "nolabel_line88/timeout" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line88/y_max_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line88/x_max_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line123/\rectangle_border_y_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line123/\rectangle_border_b_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line123/\bomb_radius_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (timer/\an_display_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (an_display_reg[3]) is unused and will be removed from module Count_Down_Timer.
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_y_reg[6]) is unused and will be removed from module main_menu.
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_x_reg[4]) is unused and will be removed from module main_menu.
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_x_reg[3]) is unused and will be removed from module main_menu.
@@ -1892,9 +1907,6 @@ WARNING: [Synth 8-3332] Sequential element (rectangle_border_x_reg[2]) is unused
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_x_reg[1]) is unused and will be removed from module main_menu.
 WARNING: [Synth 8-3332] Sequential element (bomb_radius_reg[5]) is unused and will be removed from module main_menu.
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_b_reg[5]) is unused and will be removed from module main_menu.
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[0]' (FDE) to 'rectangle_border_b_reg[1]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[2]' (FDE) to 'rectangle_border_b_reg[2]'
-INFO: [Synth 8-3886] merging instance 'rectangle_border_a_reg[7]' (FDE) to 'rectangle_border_b_reg[7]'
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:65]
@@ -1914,14 +1926,18 @@ INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address
 INFO: [Synth 8-5544] ROM "p_2_out1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_2_out1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_2_out2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_1Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_100Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "timer_count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "stopped" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "game_start0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_6p25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element wipe_settings_main/animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element wipe_main_settings/animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-5546] ROM "wipe_settings_main/animation_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wipe_settings_main/has_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wipe_main_settings/animation_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wipe_main_settings/has_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 DSP Report: Generating DSP is_rectangle_border_return2, operation Mode is: A*B.
@@ -1960,75 +1976,42 @@ DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
-INFO: [Synth 8-5545] ROM "flexible_clock_module_100Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_1Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "timer_count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "stopped" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "counter_octave" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "fsm_next_state0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "nolabel_line118/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line114/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line113/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line112/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line111/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "nolabel_line110/debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_6p25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[0]' (FDRE) to 'nolabel_line88/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[1]' (FDRE) to 'nolabel_line88/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[2]' (FDRE) to 'nolabel_line88/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[3]' (FDRE) to 'nolabel_line88/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[4]' (FDRE) to 'nolabel_line88/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[5]' (FDRE) to 'nolabel_line88/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[6]' (FDRE) to 'nolabel_line88/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[7]' (FDSE) to 'nolabel_line88/y_max_reg[9]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[8]' (FDRE) to 'nolabel_line88/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[9]' (FDSE) to 'nolabel_line88/x_max_reg[6]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[10]' (FDRE) to 'nolabel_line88/y_max_reg[11]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/y_max_reg[11]' (FDRE) to 'nolabel_line88/x_max_reg[0]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/x_max_reg[0]' (FDRE) to 'nolabel_line88/x_max_reg[1]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/x_max_reg[1]' (FDRE) to 'nolabel_line88/x_max_reg[2]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/x_max_reg[2]' (FDRE) to 'nolabel_line88/x_max_reg[3]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/x_max_reg[3]' (FDRE) to 'nolabel_line88/x_max_reg[4]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line88/x_max_reg[4]' (FDRE) to 'nolabel_line88/x_max_reg[5]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (nolabel_line88/\x_max_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (Music/\speaker_time_reg[9] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (timer/\an_display_reg[3] )
-WARNING: [Synth 8-3332] Sequential element (an_display_reg[3]) is unused and will be removed from module Count_Down_Timer.
-WARNING: [Synth 8-3332] Sequential element (zpos_reg[3]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (zpos_reg[2]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (zpos_reg[1]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (zpos_reg[0]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (middle_down_reg) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (middle_reg) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (right_down_reg) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (right_reg) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (new_event_reg) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (x_max_reg[11]) is unused and will be removed from module MouseCtl.
-WARNING: [Synth 8-3332] Sequential element (speaker_time_reg[9]) is unused and will be removed from module music.
-WARNING: [Synth 8-3332] Sequential element (x_max_reg[9]) is unused and will be removed from module MouseCtl.
+INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-5546] ROM "wipe_main_settings/animation_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wipe_settings_main/animation_counter" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wipe_main_settings/has_end" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wipe_settings_main/has_end" won't be mapped to RAM because it is too sparse
+DSP Report: Generating DSP wipe_main_settings/x_boundary0, operation Mode is: A2*(B:0x60).
+DSP Report: register wipe_main_settings/animation_counter_reg is absorbed into DSP wipe_main_settings/x_boundary0.
+DSP Report: operator wipe_main_settings/x_boundary0 is absorbed into DSP wipe_main_settings/x_boundary0.
+DSP Report: Generating DSP wipe_settings_main/x_boundary0, operation Mode is: A2*(B:0x60).
+DSP Report: register wipe_settings_main/animation_counter_reg is absorbed into DSP wipe_settings_main/x_boundary0.
+DSP Report: operator wipe_settings_main/x_boundary0 is absorbed into DSP wipe_settings_main/x_boundary0.
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[15]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[14]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[13]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[12]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[11]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[10]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[9]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[8]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[7]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[6]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[5]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[4]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[3]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[2]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[1]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port led[0]
+WARNING: [Synth 8-3332] Sequential element (r_RX_DV_reg) is unused and will be removed from module UART_RX.
+WARNING: [Synth 8-3332] Sequential element (o_TX_Active_reg) is unused and will be removed from module UART_TX.
+WARNING: [Synth 8-3332] Sequential element (o_TX_Done_reg) is unused and will be removed from module UART_TX.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:59 . Memory (MB): peak = 867.090 ; gain = 611.133
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:14 . Memory (MB): peak = 868.422 ; gain = 611.922
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 137, Available = 90. Use report_utilization command for details.
-DSP Report: Generating DSP is_bomb_return1, operation Mode is (post resource management): A*B.
-DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
-DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
-DSP Report: Generating DSP is_bomb_return1, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
-DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
-DSP Report: Generating DSP is_bomb_return1, operation Mode is (post resource management): A*B.
-DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
-DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
-DSP Report: Generating DSP is_bomb_return1, operation Mode is (post resource management): (PCIN>>17)+A*B.
-DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
-DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
+WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 140, Available = 90. Use report_utilization command for details.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is (post resource management): A*B.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
@@ -2041,6 +2024,8 @@ DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is (post resource management): (PCIN>>17)+A*B.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
 DSP Report: Generating DSP oled_data3, operation Mode is (post resource management): A*B.
 DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
 DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
@@ -2215,8 +2200,18 @@ DSP Report: operator mouse_arrow1 is absorbed into DSP mouse_arrow1.
 DSP Report: Generating DSP mouse_arrow1, operation Mode is (post resource management): (PCIN>>17)+A*B.
 DSP Report: operator mouse_arrow1 is absorbed into DSP mouse_arrow1.
 DSP Report: operator mouse_arrow1 is absorbed into DSP mouse_arrow1.
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+DSP Report: Generating DSP is_bomb_return1, operation Mode is (post resource management): A*B.
+DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
+DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
+DSP Report: Generating DSP is_bomb_return1, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
+DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
+DSP Report: Generating DSP is_bomb_return1, operation Mode is (post resource management): A*B.
+DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
+DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
+DSP Report: Generating DSP is_bomb_return1, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
+DSP Report: operator is_bomb_return1 is absorbed into DSP is_bomb_return1.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is (post resource management): A*B.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
@@ -2231,101 +2226,99 @@ DSP: Preliminary Mapping  Report (see note below)
 +------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name       | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|game_over_menu    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|game_over_menu    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|defuse_sequence   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |fade_animation    | A2*B           | 16     | 5      | -      | -      | 21     | 1    | 0    | -    | -    | -     | 0    | 0    | 
 |fade_animation    | A2*B           | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
 |fade_animation    | A2*B           | 16     | 5      | -      | -      | 21     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|Top_Student__GCB2 | A2*(B:0x60)    | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|Top_Student__GCB2 | A2*(B:0x60)    | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|game_over_menu    | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|defuse_sequence   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|mole_sequence     | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |main_menu         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |main_menu         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |main_menu         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
@@ -2356,6 +2349,8 @@ DSP: Preliminary Mapping  Report (see note below)
 |settings_menu     | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |settings_menu     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |settings_menu     | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student__GCB3 | A2*(B:0x60)    | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|Top_Student__GCB3 | A2*(B:0x60)    | 16     | 7      | -      | -      | 23     | 1    | 0    | -    | -    | -     | 0    | 0    | 
 +------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -2368,104 +2363,41 @@ Report RTL Partitions:
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
 |1     |game_over_menu    |           2|      8638|
-|2     |mole_sequence     |           1|     18892|
-|3     |Top_Student__GCB1 |           1|      1977|
-|4     |Top_Student__GCB2 |           1|      8653|
-|5     |main_menu         |           1|     13371|
-|6     |Top_Student__GCB4 |           1|     15726|
+|2     |fade_animation    |           2|      5789|
+|3     |Top_Student__GCB0 |           1|     19408|
+|4     |Top_Student__GCB1 |           1|      3161|
+|5     |Top_Student__GCB2 |           1|     16902|
+|6     |Top_Student__GCB3 |           1|     13175|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:11 . Memory (MB): peak = 871.750 ; gain = 615.793
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:27 . Memory (MB): peak = 868.676 ; gain = 612.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (game/\mole_y_reg[0][30] )
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[31]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[30]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[29]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[28]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[27]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[26]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[25]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[24]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[23]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[22]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[21]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[20]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[19]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[18]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[17]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[16]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[15]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[14]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[13]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[12]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[11]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[10]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[9]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[8]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[7]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[6]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[5]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[4]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[3]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[2]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[1]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (oledPointsB4Stop_reg[0]) is unused and will be removed from module mole_sequence.
-WARNING: [Synth 8-3332] Sequential element (mole_y_reg[0][30]) is unused and will be removed from module mole_sequence.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:39 . Memory (MB): peak = 1244.410 ; gain = 988.453
+Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:02:00 . Memory (MB): peak = 1171.906 ; gain = 915.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+------------------+------------+----------+
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
-|1     |game_over_menu    |           1|      7359|
-|2     |mole_sequence     |           1|     18046|
-|3     |Top_Student__GCB1 |           1|      1977|
-|4     |Top_Student__GCB2 |           1|      8544|
-|5     |main_menu         |           1|     13371|
-|6     |Top_Student__GCB4 |           1|     14117|
-|7     |game_over_menu__1 |           1|      6916|
+|1     |game_over_menu    |           1|      7187|
+|2     |fade_animation    |           2|      5741|
+|3     |Top_Student__GCB0 |           1|     19175|
+|4     |Top_Student__GCB3 |           1|     11507|
+|5     |game_over_menu__1 |           1|      6916|
+|6     |Top_Student_GT0   |           1|     17908|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[31]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[30]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[29]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[28]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[27]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[26]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[25]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[24]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[23]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[22]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[21]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[20]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[19]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[18]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[17]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[16]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[15]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[14]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[13]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[12]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[11]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[10]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[9]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[8]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[7]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[6]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[5]) is unused and will be removed from module mole_sequence_tempName.
-WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[4]) is unused and will be removed from module mole_sequence_tempName.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:20 ; elapsed = 00:01:43 . Memory (MB): peak = 1247.145 ; gain = 991.188
+Finished Technology Mapping : Time (s): cpu = 00:01:39 ; elapsed = 00:02:05 . Memory (MB): peak = 1172.980 ; gain = 916.480
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2473,12 +2405,12 @@ Report RTL Partitions:
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
 |1     |game_over_menu    |           1|      3324|
-|2     |mole_sequence     |           1|      7906|
-|3     |Top_Student__GCB1 |           1|      1112|
-|4     |Top_Student__GCB2 |           1|      3086|
-|5     |main_menu         |           1|      4625|
-|6     |Top_Student__GCB4 |           1|      6260|
-|7     |game_over_menu__1 |           1|      3307|
+|2     |fade_animation    |           1|      1896|
+|3     |Top_Student__GCB0 |           1|      8068|
+|4     |Top_Student__GCB3 |           1|      5026|
+|5     |game_over_menu__1 |           1|      3307|
+|6     |Top_Student_GT0   |           1|      7853|
+|7     |fade_animation__1 |           1|      1896|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2494,18 +2426,18 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5365] Flop nolabel_line88/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to nolabel_line88/Inst_Ps2Interface/ps2_clk_h_reg_inv.
 INFO: [Synth 8-5365] Flop nolabel_line88/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to nolabel_line88/Inst_Ps2Interface/ps2_data_h_reg_inv.
-INFO: [Synth 8-6064] Net n_0_14933 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_17432 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_17434 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_11338 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_27463 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_17111 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_11290 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_15876 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_15863 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_15914 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_10364 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_28975 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_15397 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_10316 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:25 ; elapsed = 00:01:48 . Memory (MB): peak = 1247.145 ; gain = 991.188
+Finished IO Insertion : Time (s): cpu = 00:01:45 ; elapsed = 00:02:12 . Memory (MB): peak = 1172.980 ; gain = 916.480
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2518,7 +2450,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:25 ; elapsed = 00:01:48 . Memory (MB): peak = 1247.145 ; gain = 991.188
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:45 ; elapsed = 00:02:12 . Memory (MB): peak = 1172.980 ; gain = 916.480
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2530,25 +2462,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:28 ; elapsed = 00:01:52 . Memory (MB): peak = 1247.145 ; gain = 991.188
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:50 ; elapsed = 00:02:17 . Memory (MB): peak = 1172.980 ; gain = 916.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:52 . Memory (MB): peak = 1247.145 ; gain = 991.188
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:02:17 . Memory (MB): peak = 1172.980 ; gain = 916.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:29 ; elapsed = 00:01:53 . Memory (MB): peak = 1247.145 ; gain = 991.188
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:51 ; elapsed = 00:02:18 . Memory (MB): peak = 1172.980 ; gain = 916.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:29 ; elapsed = 00:01:53 . Memory (MB): peak = 1247.145 ; gain = 991.188
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:51 ; elapsed = 00:02:18 . Memory (MB): peak = 1172.980 ; gain = 916.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2565,21 +2497,21 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BUFG    |    12|
-|2     |CARRY4  |  4763|
+|2     |CARRY4  |  4960|
 |3     |DSP48E1 |    72|
-|4     |LUT1    |   671|
-|5     |LUT2    |  6857|
-|6     |LUT3    |  5191|
-|7     |LUT4    |  3448|
-|8     |LUT5    |  2566|
-|9     |LUT6    |  4253|
+|4     |LUT1    |   769|
+|5     |LUT2    |  7089|
+|6     |LUT3    |  5432|
+|7     |LUT4    |  3534|
+|8     |LUT5    |  2765|
+|9     |LUT6    |  4742|
 |10    |MUXF7   |    17|
 |11    |FDE_1   |    32|
-|12    |FDRE    |  2971|
-|13    |FDSE    |    30|
-|14    |IBUF    |    23|
+|12    |FDRE    |  3098|
+|13    |FDSE    |    31|
+|14    |IBUF    |    24|
 |15    |IOBUF   |     2|
-|16    |OBUF    |    39|
+|16    |OBUF    |    40|
 |17    |OBUFT   |     6|
 +------+--------+------+
 
@@ -2587,76 +2519,79 @@ Report Instance Areas:
 +------+--------------------------------+----------------------------+------+
 |      |Instance                        |Module                      |Cells |
 +------+--------------------------------+----------------------------+------+
-|1     |top                             |                            | 30953|
+|1     |top                             |                            | 32625|
 |2     |  Music                         |music                       |   144|
 |3     |    get_fullnote                |music_ROM                   |    58|
-|4     |  flexible_clock_module_1000    |flexible_clock_module       |    54|
-|5     |  flexible_clock_module_25m     |flexible_clock_module_0     |    50|
-|6     |  flexible_clock_module_6p25m   |flexible_clock_module_1     |    51|
-|7     |  game                          |mole_sequence               |  5765|
-|8     |    flexible_clock_1000         |flexible_clock_module_28    |    63|
-|9     |    unit1                       |random_number_generator     |    73|
-|10    |    unit10                      |debounce_29                 |   111|
-|11    |    unit2                       |random_number_generator_30  |    73|
-|12    |    unit3                       |random_number_generator_31  |    74|
-|13    |    unit4                       |random_number_generator_32  |   104|
-|14    |    unit5                       |random_number_generator_33  |   105|
-|15    |    unit6                       |random_number_generator_34  |   105|
-|16    |    unit7                       |random_number_generator_35  |   104|
-|17    |    unit8                       |defuse_sequence             |  1228|
-|18    |      unit                      |random_number_generator_36  |    64|
-|19    |    unit9                       |point_display               |   168|
-|20    |  game_over_lose_menu           |game_over_menu              |  1109|
-|21    |    flexible_clock_module_10    |flexible_clock_module_26    |    55|
-|22    |    flexible_clock_module_25m   |flexible_clock_module_27    |    50|
-|23    |  game_over_win_menu            |game_over_menu_2            |  1201|
-|24    |    flexible_clock_module_10    |flexible_clock_module_24    |    55|
-|25    |    flexible_clock_module_25m   |flexible_clock_module_25    |    50|
-|26    |  nolabel_line110               |debounce                    |    54|
-|27    |  nolabel_line111               |debounce_3                  |    54|
-|28    |  nolabel_line112               |debounce_4                  |    54|
-|29    |  nolabel_line113               |debounce_5                  |    54|
-|30    |  nolabel_line114               |debounce_6                  |    54|
-|31    |  nolabel_line118               |debounce_7                  |    55|
-|32    |  nolabel_line123               |main_menu                   |  1315|
-|33    |    flexible_clock_module_1     |flexible_clock_module_22    |    54|
-|34    |    flexible_clock_module_25m   |flexible_clock_module_23    |    50|
-|35    |  nolabel_line129               |settings_menu               |  3650|
-|36    |    flexible_clock_module_1000  |flexible_clock_module_20    |    54|
-|37    |    flexible_clock_module_25m   |flexible_clock_module_21    |    50|
-|38    |  nolabel_line157               |fade_animation              |  1309|
-|39    |    flexible_clock_module_10    |flexible_clock_module_18    |    55|
-|40    |    flexible_clock_module_25m   |flexible_clock_module_19    |    50|
-|41    |  nolabel_line58                |Oled_Display                |  2686|
-|42    |  nolabel_line88                |MouseCtl                    |   952|
-|43    |    Inst_Ps2Interface           |Ps2Interface                |   282|
-|44    |  receive                       |UART_RX                     |    90|
-|45    |  timer                         |Count_Down_Timer            |  1142|
-|46    |    flexible_clock_module_100Hz |flexible_clock_module_16    |    54|
-|47    |    flexible_clock_module_1Hz   |flexible_clock_module_17    |    54|
-|48    |  transmit                      |UART_TX                     |    48|
-|49    |  u1                            |whoWinner                   |    18|
-|50    |  unit                          |LED_Switch_Random           |  1685|
-|51    |    flexible_clock_module_10Hz  |flexible_clock_module_13    |    55|
-|52    |    flexible_clock_module_10kHz |flexible_clock_module_14    |    53|
-|53    |    flexible_clock_module_1Hz   |flexible_clock_module_15    |    54|
-|54    |    unit                        |random_number_generator_led |   198|
-|55    |  wipe_main_settings            |wipe_animation              |   413|
-|56    |    flexible_clock_module_10    |flexible_clock_module_11    |    63|
-|57    |    flexible_clock_module_25m   |flexible_clock_module_12    |    63|
-|58    |  wipe_settings_main            |wipe_animation_8            |   463|
-|59    |    flexible_clock_module_10    |flexible_clock_module_9     |    63|
-|60    |    flexible_clock_module_25m   |flexible_clock_module_10    |    63|
+|4     |  fade_lose_animation           |fade_animation              |   821|
+|5     |    flexible_clock_module_10    |flexible_clock_module_38    |    55|
+|6     |    flexible_clock_module_25m   |flexible_clock_module_39    |    50|
+|7     |  fade_win_animation            |fade_animation_0            |   820|
+|8     |    flexible_clock_module_10    |flexible_clock_module_36    |    55|
+|9     |    flexible_clock_module_25m   |flexible_clock_module_37    |    50|
+|10    |  flexible_clock_module_1000    |flexible_clock_module       |    54|
+|11    |  flexible_clock_module_25m     |flexible_clock_module_1     |    50|
+|12    |  flexible_clock_module_6p25m   |flexible_clock_module_2     |    63|
+|13    |  game                          |mole_sequence               |  6720|
+|14    |    flexible_clock_1000         |flexible_clock_module_27    |    63|
+|15    |    unit1                       |random_number_generator     |    64|
+|16    |    unit10                      |debounce_28                 |   108|
+|17    |    unit2                       |random_number_generator_29  |    64|
+|18    |    unit3                       |random_number_generator_30  |    64|
+|19    |    unit4                       |random_number_generator_31  |   104|
+|20    |    unit5                       |random_number_generator_32  |    73|
+|21    |    unit6                       |random_number_generator_33  |    74|
+|22    |    unit7                       |random_number_generator_34  |   104|
+|23    |    unit8                       |defuse_sequence             |  1311|
+|24    |      unit                      |random_number_generator_35  |    64|
+|25    |    unit9                       |point_display               |  1352|
+|26    |  game_over_lose_menu           |game_over_menu              |  1120|
+|27    |    flexible_clock_module_10    |flexible_clock_module_25    |    55|
+|28    |    flexible_clock_module_25m   |flexible_clock_module_26    |    50|
+|29    |  game_over_win_menu            |game_over_menu_3            |  1136|
+|30    |    flexible_clock_module_10    |flexible_clock_module_23    |    55|
+|31    |    flexible_clock_module_25m   |flexible_clock_module_24    |    50|
+|32    |  nolabel_line110               |debounce                    |    54|
+|33    |  nolabel_line111               |debounce_4                  |    54|
+|34    |  nolabel_line112               |debounce_5                  |    54|
+|35    |  nolabel_line113               |debounce_6                  |    54|
+|36    |  nolabel_line114               |debounce_7                  |    54|
+|37    |  nolabel_line118               |debounce_8                  |    55|
+|38    |  nolabel_line123               |main_menu                   |  5130|
+|39    |    flexible_clock_module_1     |flexible_clock_module_21    |    54|
+|40    |    flexible_clock_module_25m   |flexible_clock_module_22    |    50|
+|41    |  nolabel_line129               |settings_menu               |  3918|
+|42    |    flexible_clock_module_1000  |flexible_clock_module_19    |    54|
+|43    |    flexible_clock_module_25m   |flexible_clock_module_20    |    50|
+|44    |  nolabel_line58                |Oled_Display                |  2480|
+|45    |  nolabel_line88                |MouseCtl                    |   936|
+|46    |    Inst_Ps2Interface           |Ps2Interface                |   269|
+|47    |  receive                       |UART_RX                     |    92|
+|48    |  timer                         |Count_Down_Timer            |  1059|
+|49    |    flexible_clock_module_100Hz |flexible_clock_module_17    |    54|
+|50    |    flexible_clock_module_1Hz   |flexible_clock_module_18    |    54|
+|51    |  transmit                      |UART_TX                     |    48|
+|52    |  u1                            |whoWinner                   |   177|
+|53    |  unit                          |LED_Switch_Random           |  1351|
+|54    |    flexible_clock_module_10Hz  |flexible_clock_module_14    |    55|
+|55    |    flexible_clock_module_10kHz |flexible_clock_module_15    |    53|
+|56    |    flexible_clock_module_1Hz   |flexible_clock_module_16    |    54|
+|57    |    unit                        |random_number_generator_led |   178|
+|58    |  wipe_main_settings            |wipe_animation              |   415|
+|59    |    flexible_clock_module_10    |flexible_clock_module_12    |    63|
+|60    |    flexible_clock_module_25m   |flexible_clock_module_13    |    63|
+|61    |  wipe_settings_main            |wipe_animation_9            |   466|
+|62    |    flexible_clock_module_10    |flexible_clock_module_10    |    63|
+|63    |    flexible_clock_module_25m   |flexible_clock_module_11    |    63|
 +------+--------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:53 . Memory (MB): peak = 1247.145 ; gain = 991.188
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:51 ; elapsed = 00:02:18 . Memory (MB): peak = 1172.980 ; gain = 916.480
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 121 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:01:45 . Memory (MB): peak = 1247.145 ; gain = 638.219
-Synthesis Optimization Complete : Time (s): cpu = 00:01:29 ; elapsed = 00:01:53 . Memory (MB): peak = 1247.145 ; gain = 991.188
+Synthesis finished with 0 errors, 0 critical warnings and 58 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:36 ; elapsed = 00:02:09 . Memory (MB): peak = 1172.980 ; gain = 563.543
+Synthesis Optimization Complete : Time (s): cpu = 00:01:51 ; elapsed = 00:02:19 . Memory (MB): peak = 1172.980 ; gain = 916.480
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 4909 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-17] Analyzing 5107 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -2665,11 +2600,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-458 Infos, 211 Warnings, 0 Critical Warnings and 0 Errors encountered.
+457 Infos, 152 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:37 ; elapsed = 00:02:01 . Memory (MB): peak = 1247.145 ; gain = 1003.844
+synth_design: Time (s): cpu = 00:02:00 ; elapsed = 00:02:27 . Memory (MB): peak = 1172.980 ; gain = 929.332
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.136 . Memory (MB): peak = 1247.145 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 13:42:58 2024...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.181 . Memory (MB): peak = 1172.980 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 17:16:50 2024...

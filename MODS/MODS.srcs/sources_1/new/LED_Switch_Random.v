@@ -77,7 +77,7 @@ module LED_Switch_Random(
     begin
         done = 0;
     end
-    else
+    else // stop == 1
     begin
         done = 1;
     end
@@ -421,10 +421,10 @@ module LED_Switch_Random(
         end
     end
     else
-    begin // for done = 1
+    begin // for done = 1 ie stop = 1
         led_state = 16'h0000;
         changed = 16'h0000;
-        points = 0;     
+        points <= 0;      // for UART <=
     end
     end   
 

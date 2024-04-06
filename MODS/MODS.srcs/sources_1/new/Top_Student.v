@@ -13,7 +13,7 @@
 
 module Top_Student (
     input clk,
-    input JA1,
+    input JA1, JA2,
     input [15:0] sw,
     output [15:0] led,
     output [6:0] seg,
@@ -22,7 +22,7 @@ module Top_Student (
     input btnC, btnU, btnL, btnR, btnD,
     output [7:0] JC,
     output [7:0] JB,
-    output JAout1,
+    output JAout1, JAout2,
     inout PS2Clk, PS2Data
 );
     //  clocks
@@ -132,13 +132,11 @@ module Top_Student (
     wire clicked_home_lose;
     wire clicked_settings_win;
     wire clicked_settings_lose;
-    wire clicked_home;
     wire [15:0] game_over_win_pixel_data;
     wire [15:0] game_over_lose_pixel_data;
     game_over_menu game_over_win_menu(clk, pixel_index, game_over_win_pixel_data, 1, debounced_btnC, debounced_btnL, debounced_btnR, xpos, ypos, debounced_left, clicked_home_win, clicked_settings_win);
     game_over_menu game_over_lose_menu(clk, pixel_index, game_over_lose_pixel_data, 0, debounced_btnC, debounced_btnL, debounced_btnR, xpos, ypos, debounced_left, clicked_home_lose, clicked_settings_lose);
-        
-    assign clicked_home = clicked_home_win || clicked_home_lose;
+    
     assign clicked_settings = clicked_settings_main || clicked_settings_win || clicked_settings_lose;
 
     reg wipe_main_settings_active = 0;
@@ -154,13 +152,16 @@ module Top_Student (
     reg fade_win_main_active = 0;
     wire fade_win_main_end;
     wire [15:0] fade_win_main_pixel_data;
-    fade_animation(clk, pixel_index, fade_win_main_pixel_data, game_over_win_pixel_data, main_menu_pixel_data, fade_win_main_active, fade_win_main_end, animation_level);
+    fade_animation fade_win_animation(clk, pixel_index, fade_win_main_pixel_data, game_over_win_pixel_data, main_menu_pixel_data, fade_win_main_active, fade_win_main_end, animation_level);
+    
+    reg fade_lose_main_active = 0;
+    wire fade_lose_main_end;
+    wire [15:0] fade_lose_main_pixel_data;
+    fade_animation fade_lose_animation(clk, pixel_index, fade_lose_main_pixel_data, game_over_lose_pixel_data, main_menu_pixel_data, fade_lose_main_active, fade_lose_main_end, animation_level);
     
     reg game_start; //game_start = 1 is start, 0 is not start
     wire game_stop; //game_stop = 1 is stop, 0 is not stop
     wire game_moving; //game_moving = 1 is moving, 0 is not moving
-    wire [31:0] oledPointsB4Stop; // test
-    wire [31:0] ledPointsB4Stop = 1; // test
     
     Count_Down_Timer timer(
         .pb_start(game_start),
@@ -173,6 +174,7 @@ module Top_Student (
     );
     
     wire [31:0] points; // = 0; // testing
+    wire hasProcessedWinner; // testing
         
     wire [15:0] mole_sequence_pixel_data;
     wire [31:0] total_points, mole_y [2:0];
@@ -188,7 +190,7 @@ module Top_Student (
         .input_mole_y2(0),
         .basys_clock(clk), 
         .clk_25MHz(clk_25m), 
-        .reset(game_stop),
+        .reset(hasProcessedWinner),
         .left_click(left),
         .btnC(btnC), 
         .btnU(btnU),
@@ -207,14 +209,13 @@ module Top_Student (
         .mole_state2(mole_state[2]),
         .mole_y0(mole_y[0]),
         .mole_y1(mole_y[1]),
-        .mole_y2(mole_y[2]),
-        .oledPointsB4Stop(oledPointsB4Stop) // testing default =1
+        .mole_y2(mole_y[2])
     );
     // testing
     LED_Switch_Random unit(
         .enable(game_moving),
         .defuse(bomb_defused),
-        .stop(game_stop),
+        .stop(hasProcessedWinner), // testing was game_stop
         .basys_clk(clk),
         .sw(sw),
         .led(led),
@@ -230,32 +231,33 @@ module Top_Student (
     );
     
     // UART setup
-        parameter c_CLKS_PER_BIT    = 868; // 100_000_000 / 115200 = 868 Clocks Per Bit.
-        wire TX_Active, TX_Done;
-        
-        wire RX_DV; // if =1 then read
-        wire [7:0] RX_otherPoints, myPoints; 
-           
-        wire isWinner;
-        parameter I_WIN = 1;
-        parameter I_LOSE = 0;
-        
-        wire hasProcessedWinner;
-
-        // hasProcessedWinner = 1 only after game_stop = 1
-        whoWinner u1 (.clk(clk), .game_stop(game_stop), .ledPointsB4Stop(0), .oledPointsB4Stop(total_points), 
-                .otherPoints(RX_otherPoints), .isWinner(isWinner), 
-                .hasProcessedWinner(hasProcessedWinner), .myPoints(myPoints), .led(led));    
-        
-        // game_stop = 1 >> will send score over
-        UART_TX #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) transmit
-        (.i_clk(clk), .i_TX_DV(1), .i_TX_Byte(myPoints),
-        .o_TX_Active(TX_Active), .o_TX_Serial(JAout1), .o_TX_Done(TX_Done));
-         
-        UART_RX #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) receive
-        (.i_clk(clk), .i_RX_Serial(JA1), 
-          .o_RX_DV(RX_DV), .o_RX_Byte(RX_otherPoints));
-
+    parameter c_CLKS_PER_BIT    = 868; // 100_000_000 / 115200 = 868 Clocks Per Bit.
+    wire TX_Active, TX_Done;
+    
+    wire RX_DV; // if =1 then read
+    wire [7:0] RX_otherPoints, myPoints; 
+       
+    wire isWinner;
+    parameter I_WIN = 1;
+    parameter I_LOSE = 0;
+    
+    // hasProcessedWinner = 1 only after game_stop = 1
+    whoWinner u1 (.clk(clk), .game_stop(game_stop), .total_points(total_points), 
+            .otherPoints(RX_otherPoints), .isWinner(isWinner), 
+            .hasProcessedWinner(hasProcessedWinner), .myPoints(myPoints), .led(led));    
+    
+    // continuously tx and rx
+    UART_TX #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) transmit
+    (.i_clk(clk), .i_TX_DV(1), .i_TX_Byte(myPoints),
+    .o_TX_Active(TX_Active), .o_TX_Serial(JAout1), .o_TX_Done(TX_Done));
+     
+    UART_RX #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) receive
+    (.i_clk(clk), .i_RX_Serial(JA1), 
+      .o_RX_DV(RX_DV), .o_RX_Byte(RX_otherPoints));
+    
+    // reg to tx START signal to other board ie start at same time
+    reg r_JAout2 = 0;
+    assign JAout2 = r_JAout2;
     
     // ---------- state machine ----------
     reg [3:0] MAIN = 0;
@@ -266,6 +268,7 @@ module Top_Student (
     reg [3:0] WIPE_MAIN_SETTINGS = 5;
     reg [3:0] WIPE_SETTINGS_MAIN = 6;
     reg [3:0] FADE_WIN_MAIN = 7;
+    reg [3:0] FADE_LOSE_MAIN = 8;
     
     reg [3:0] state;
 
@@ -277,17 +280,18 @@ module Top_Student (
     
     always @ (posedge clk)
     begin
-        if (state == MAIN && clicked_start) state <= START;
-        else if (state == START && hasProcessedWinner && isWinner) begin state <= GAME_OVER_WIN; end //go to game_over directly
-        else if (state == START && hasProcessedWinner && ~isWinner) begin state <= GAME_OVER_LOSE; end //go to game_over directly
+        if (state == MAIN && clicked_start) begin state <= START; r_JAout2 <= 1; end // if I start, you start
+        else if (state == MAIN && JA2) state <= START; // if you start, I start
+        else if (state == START && hasProcessedWinner && isWinner) begin state <= GAME_OVER_WIN; r_JAout2 <= 0; end //go to game_over directly
+        else if (state == START && hasProcessedWinner && ~isWinner) begin state <= GAME_OVER_LOSE; r_JAout2 <= 0; end //go to game_over directly
         else if (state == MAIN && clicked_settings) begin state <= WIPE_MAIN_SETTINGS; wipe_main_settings_active <= 1; end
         else if (state == WIPE_MAIN_SETTINGS && wipe_main_settings_end) begin state <= SETTINGS; wipe_main_settings_active <= 0; end
         else if (state == SETTINGS && clicked_back) begin state <= WIPE_SETTINGS_MAIN; wipe_settings_main_active <= 1; end
         else if (state == WIPE_SETTINGS_MAIN && wipe_settings_main_end) begin state <= MAIN; wipe_settings_main_active <= 0; end
-        else if (state == GAME_OVER_WIN && clicked_home) begin state <= FADE_WIN_MAIN; fade_win_main_active <= 1; end
+        else if (state == GAME_OVER_WIN && clicked_home_win) begin state <= FADE_WIN_MAIN; fade_win_main_active <= 1; end
         else if (state == FADE_WIN_MAIN && fade_win_main_end) begin state <= MAIN; fade_win_main_active <= 0; end
-        else if (state == GAME_OVER_LOSE && clicked_home) begin state <= FADE_WIN_MAIN; fade_win_main_active <= 1; end
-        else if (state == FADE_WIN_MAIN && fade_win_main_end) begin state <= MAIN; fade_win_main_active <= 0; end
+        else if (state == GAME_OVER_LOSE && clicked_home_lose) begin state <= FADE_LOSE_MAIN; fade_lose_main_active <= 1; end
+        else if (state == FADE_LOSE_MAIN && fade_lose_main_end) begin state <= MAIN; fade_lose_main_active <= 0; end
         else if ((state == GAME_OVER_WIN || state == GAME_OVER_LOSE) && clicked_settings) state <= SETTINGS;
         
         game_start = (state == START) ? 1 : 0;
@@ -301,6 +305,7 @@ module Top_Student (
             WIPE_MAIN_SETTINGS: pixel_data <= wipe_main_settings_pixel_data;
             WIPE_SETTINGS_MAIN: pixel_data <= wipe_settings_main_pixel_data;
             FADE_WIN_MAIN: pixel_data <= fade_win_main_pixel_data;
+            FADE_LOSE_MAIN: pixel_data <= fade_lose_main_pixel_data;
             default: pixel_data <= 16'b0;
         endcase
     end

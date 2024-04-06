@@ -101,8 +101,12 @@ set_property src_info {type:XDC file:1 line:71 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports btnD]
 set_property src_info {type:XDC file:1 line:75 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN J1   IOSTANDARD LVCMOS33 } [get_ports {JA1}];#Sch name = JA1
+set_property src_info {type:XDC file:1 line:76 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L2   IOSTANDARD LVCMOS33 } [get_ports {JA2}];#Sch name = JA2
 set_property src_info {type:XDC file:1 line:79 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN H1   IOSTANDARD LVCMOS33 } [get_ports {JAout1}];#Sch name = JA7
+set_property src_info {type:XDC file:1 line:80 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN K2   IOSTANDARD LVCMOS33 } [get_ports {JAout2}];#Sch name = JA8
 set_property src_info {type:XDC file:1 line:85 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN A14   IOSTANDARD LVCMOS33 } [get_ports {JB[0]}];#Sch name = JB1
 set_property src_info {type:XDC file:1 line:86 export:INPUT save:INPUT read:READ} [current_design]

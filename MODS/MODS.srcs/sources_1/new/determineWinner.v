@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module whoWinner(input clk, game_stop, input [7:0] ledPointsB4Stop, oledPointsB4Stop, otherPoints, 
+module whoWinner(input clk, game_stop, input [7:0] total_points, otherPoints, 
         output reg isWinner, reg hasProcessedWinner = 0, output reg [7:0] myPoints, output [15:0] led); //testing
     parameter I_WIN = 1;
     parameter I_LOSE = 0;
@@ -32,23 +32,12 @@ module whoWinner(input clk, game_stop, input [7:0] ledPointsB4Stop, oledPointsB4
 //    assign led[7:0] = myPoints;
     
     always @ (posedge clk) begin // myPoints always updated
-        myPoints = ledPointsB4Stop + oledPointsB4Stop; // default 1 + 1
-        
-    end
-    
-    always @ (posedge clk) begin // only when RX otherPoints
-//        has_RX_DV = 1;
-//        led[15] <= has_RX_DV ? 1 : 0;
-//        led[14:8] <= otherPoints;
-//        led[7:0] <= myPoints;
+        // immediate assignment
+        myPoints <= total_points; // default 1 + 1
         isWinner <= (otherPoints > myPoints) ? I_LOSE : I_WIN;
+        // delayed assignment
         hasProcessedWinner <= game_stop ? 1 : 0;
     end
-//    always @ (negedge game_stop) begin
-//        hasProcessedWinner <= 0;
-//    end
-    
-//    assign points = hasProcessedWinner ? 0 : points;
-//    assign total_points = hasProcessedWinner ? 0 : total_points;
+
     
 endmodule
