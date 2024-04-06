@@ -44,7 +44,7 @@ module Count_Down_Timer(
         .my_clk(clk_100Hz)
     ); 
     
-    reg [31:0] timer_count = 10; // testing was 90
+    reg [31:0] timer_count = 90; // testing was 90
     reg digit = 0;
     reg [6:0] seg_display = 7'b1111111;
     reg [3:0] an_display = 4'b1111;
@@ -66,7 +66,7 @@ module Count_Down_Timer(
         end
         else // if moving == 0
         begin
-            timer_count <= 10; // was 90 previously
+            timer_count <= 90; // was 90 previously
             stopped = 0;
         end
     end 

@@ -2,12 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Apr  6 17:14:15 2024
-# Process ID: 15356
-# Current directory: C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.runs/synth_1
+# Start of session at: Sat Apr  6 17:46:58 2024
+# Process ID: 21716
+# Current directory: C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
-# Log file: C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.runs/synth_1/Top_Student.vds
-# Journal file: C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.runs/synth_1\vivado.jou
+# Log file: C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.runs/synth_1/Top_Student.vds
+# Journal file: C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Top_Student.tcl -notrace
 Command: synth_design -top Top_Student -part xc7a35tcpg236-1
@@ -15,17 +15,17 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3260 
+INFO: Helper process launched with PID 5660 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 359.699 ; gain = 103.199
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 359.035 ; gain = 102.371
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 	Parameter c_CLKS_PER_BIT bound to: 868 - type: integer 
 	Parameter I_WIN bound to: 1 - type: integer 
 	Parameter I_LOSE bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'flexible_clock_module' (1#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-6157] synthesizing module 'flexible_clock_module' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'flexible_clock_module' (1#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
 	Parameter Width bound to: 96 - type: integer 
 	Parameter Height bound to: 64 - type: integer 
 	Parameter PixelCount bound to: 6144 - type: integer 
@@ -76,25 +76,25 @@ INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/sean.ng/OneDri
 	Parameter SendPixel bound to: 5'b10000 
 	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
 	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
-INFO: [Synth 8-226] default block is never used [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
-WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
-INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (2#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
-INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+INFO: [Synth 8-226] default block is never used [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:123]
+INFO: [Synth 8-226] default block is never used [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:198]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:346]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (2#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v:36]
+INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
 	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
 	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
 	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:156' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:374]
-INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
-INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (3#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
-WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:455]
-WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:461]
-WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
-WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
-INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (4#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
-INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/debounce.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'debounce' (5#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/debounce.v:60]
-INFO: [Synth 8-6157] synthesizing module 'main_menu' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/main_menu.v:22]
+INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:156' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:374]
+INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (3#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Ps2Interface.vhd:184]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:455]
+WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:461]
+WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:519]
+WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:525]
+INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (4#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:212]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/debounce.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (5#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/debounce.v:60]
+INFO: [Synth 8-6157] synthesizing module 'main_menu' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/main_menu.v:22]
 	Parameter select_start_x bound to: 33 - type: integer 
 	Parameter select_start_y bound to: 54 - type: integer 
 	Parameter select_start_a bound to: 14 - type: integer 
@@ -103,8 +103,8 @@ INFO: [Synth 8-6157] synthesizing module 'main_menu' [C:/Users/sean.ng/OneDrive 
 	Parameter select_settings_y bound to: 54 - type: integer 
 	Parameter select_settings_a bound to: 7 - type: integer 
 	Parameter select_settings_b bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'main_menu' (6#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/main_menu.v:22]
-INFO: [Synth 8-6157] synthesizing module 'settings_menu' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'main_menu' (6#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/main_menu.v:22]
+INFO: [Synth 8-6157] synthesizing module 'settings_menu' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:23]
 	Parameter select_back_x bound to: 48 - type: integer 
 	Parameter select_back_y bound to: 54 - type: integer 
 	Parameter select_back_a bound to: 14 - type: integer 
@@ -117,10 +117,10 @@ INFO: [Synth 8-6157] synthesizing module 'settings_menu' [C:/Users/sean.ng/OneDr
 	Parameter select_animation_y bound to: 40 - type: integer 
 	Parameter select_animation_a bound to: 17 - type: integer 
 	Parameter select_animation_b bound to: 4 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:860]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:861]
-INFO: [Synth 8-6155] done synthesizing module 'settings_menu' (7#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:23]
-INFO: [Synth 8-6157] synthesizing module 'game_over_menu' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:23]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:860]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:861]
+INFO: [Synth 8-6155] done synthesizing module 'settings_menu' (7#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'game_over_menu' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:23]
 	Parameter select_home_x bound to: 32 - type: integer 
 	Parameter select_home_y bound to: 54 - type: integer 
 	Parameter select_home_a bound to: 13 - type: integer 
@@ -129,22 +129,22 @@ INFO: [Synth 8-6157] synthesizing module 'game_over_menu' [C:/Users/sean.ng/OneD
 	Parameter select_settings_y bound to: 54 - type: integer 
 	Parameter select_settings_a bound to: 7 - type: integer 
 	Parameter select_settings_b bound to: 7 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:828]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:829]
-INFO: [Synth 8-6155] done synthesizing module 'game_over_menu' (8#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:23]
-INFO: [Synth 8-6157] synthesizing module 'wipe_animation' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:23]
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:69]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:70]
-INFO: [Synth 8-6155] done synthesizing module 'wipe_animation' (9#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:23]
-INFO: [Synth 8-6157] synthesizing module 'fade_animation' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:23]
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:89]
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:90]
-INFO: [Synth 8-6155] done synthesizing module 'fade_animation' (10#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:23]
-INFO: [Synth 8-6157] synthesizing module 'Count_Down_Timer' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:109]
-WARNING: [Synth 8-6014] Unused sequential element timer_digit_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:101]
-INFO: [Synth 8-6155] done synthesizing module 'Count_Down_Timer' (11#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:23]
-INFO: [Synth 8-6157] synthesizing module 'mole_sequence' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:6]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:828]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:829]
+INFO: [Synth 8-6155] done synthesizing module 'game_over_menu' (8#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:23]
+INFO: [Synth 8-6157] synthesizing module 'wipe_animation' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:23]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:69]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'wipe_animation' (9#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fade_animation' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:23]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:89]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'fade_animation' (10#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Count_Down_Timer' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:109]
+WARNING: [Synth 8-6014] Unused sequential element timer_digit_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'Count_Down_Timer' (11#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mole_sequence' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:6]
 	Parameter BLACK bound to: 16'b0000000000000000 
 	Parameter BLUE bound to: 16'b0000000000011111 
 	Parameter WHITE bound to: 16'b1111111111111111 
@@ -155,9 +155,9 @@ INFO: [Synth 8-6157] synthesizing module 'mole_sequence' [C:/Users/sean.ng/OneDr
 	Parameter GREY bound to: 16'b0100001000001000 
 	Parameter background bound to: 16'b1110010010100111 
 	Parameter background_green bound to: 16'b0011011000100110 
-INFO: [Synth 8-6157] synthesizing module 'random_number_generator' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/random_number_generator.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'random_number_generator' (12#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/random_number_generator.v:23]
-INFO: [Synth 8-6157] synthesizing module 'defuse_sequence' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:7]
+INFO: [Synth 8-6157] synthesizing module 'random_number_generator' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/random_number_generator.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'random_number_generator' (12#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/random_number_generator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'defuse_sequence' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:7]
 	Parameter BLACK bound to: 16'b0000000000000000 
 	Parameter RED bound to: 16'b1111100000000000 
 	Parameter ORANGE bound to: 16'b1111101100000000 
@@ -169,86 +169,86 @@ INFO: [Synth 8-6157] synthesizing module 'defuse_sequence' [C:/Users/sean.ng/One
 	Parameter bomb_fire bound to: 16'b1110000101000000 
 	Parameter background bound to: 16'b1110010010100111 
 	Parameter background_green bound to: 16'b0011011000100110 
-WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:296]
-WARNING: [Synth 8-6090] variable 'show_bomb_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:297]
-WARNING: [Synth 8-6090] variable 'defuse_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:307]
-WARNING: [Synth 8-6090] variable 'correct_press_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:310]
-WARNING: [Synth 8-6090] variable 'button_pressed' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:311]
-WARNING: [Synth 8-6014] Unused sequential element circleC_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:299]
-WARNING: [Synth 8-6014] Unused sequential element circleL_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:300]
-WARNING: [Synth 8-6014] Unused sequential element circleR_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:301]
-WARNING: [Synth 8-6014] Unused sequential element circleU_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:302]
-WARNING: [Synth 8-6014] Unused sequential element circleD_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:303]
-INFO: [Synth 8-6155] done synthesizing module 'defuse_sequence' (13#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:7]
-INFO: [Synth 8-6157] synthesizing module 'point_display' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/point_display.v:23]
+WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:296]
+WARNING: [Synth 8-6090] variable 'show_bomb_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:297]
+WARNING: [Synth 8-6090] variable 'defuse_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:307]
+WARNING: [Synth 8-6090] variable 'correct_press_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:310]
+WARNING: [Synth 8-6090] variable 'button_pressed' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:311]
+WARNING: [Synth 8-6014] Unused sequential element circleC_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:299]
+WARNING: [Synth 8-6014] Unused sequential element circleL_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:300]
+WARNING: [Synth 8-6014] Unused sequential element circleR_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:301]
+WARNING: [Synth 8-6014] Unused sequential element circleU_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:302]
+WARNING: [Synth 8-6014] Unused sequential element circleD_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:303]
+INFO: [Synth 8-6155] done synthesizing module 'defuse_sequence' (13#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:7]
+INFO: [Synth 8-6157] synthesizing module 'point_display' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/point_display.v:23]
 	Parameter BLACK bound to: 16'b0000000000000000 
 	Parameter WHITE bound to: 16'b1111111111111111 
 	Parameter YELLOW bound to: 16'b1111111111100000 
 	Parameter background_green bound to: 16'b0011011000100110 
-WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/point_display.v:256]
-WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/point_display.v:257]
-INFO: [Synth 8-6155] done synthesizing module 'point_display' (14#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/point_display.v:23]
-WARNING: [Synth 8-324] index 32 out of range [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:102]
-WARNING: [Synth 8-324] index 64 out of range [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:103]
-WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:118]
-WARNING: [Synth 8-6090] variable 'prev_mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:120]
-WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:121]
-WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:124]
-WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:127]
-WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:129]
-WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:130]
-WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:131]
-WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:133]
-WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:134]
-WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:135]
-WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:138]
-WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:139]
-WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:140]
-WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:176]
-WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:177]
-WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:180]
-WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:181]
-WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:184]
-WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:185]
-WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:189]
-WARNING: [Synth 8-6090] variable 'prev_defuse_length' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:194]
-WARNING: [Synth 8-6090] variable 'defuse_timer' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:195]
-INFO: [Synth 8-6155] done synthesizing module 'mole_sequence' (15#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:6]
-INFO: [Synth 8-6157] synthesizing module 'LED_Switch_Random' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v:23]
-INFO: [Synth 8-6157] synthesizing module 'random_number_generator_led' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'random_number_generator_led' (16#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'LED_Switch_Random' (17#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v:23]
-INFO: [Synth 8-6157] synthesizing module 'music' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/music.v:1]
-INFO: [Synth 8-6157] synthesizing module 'music_ROM' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/music_ROM.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'music_ROM' (18#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/music_ROM.v:23]
-INFO: [Synth 8-6157] synthesizing module 'divide_by12' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/divide_by12.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'divide_by12' (19#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/divide_by12.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'music' (20#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/music.v:1]
-INFO: [Synth 8-6157] synthesizing module 'whoWinner' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:23]
+WARNING: [Synth 8-6014] Unused sequential element y_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/point_display.v:256]
+WARNING: [Synth 8-6014] Unused sequential element x_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/point_display.v:257]
+INFO: [Synth 8-6155] done synthesizing module 'point_display' (14#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/point_display.v:23]
+WARNING: [Synth 8-324] index 32 out of range [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:102]
+WARNING: [Synth 8-324] index 64 out of range [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:103]
+WARNING: [Synth 8-6090] variable 'count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:118]
+WARNING: [Synth 8-6090] variable 'prev_mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:120]
+WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:121]
+WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:124]
+WARNING: [Synth 8-6090] variable 'mole_count' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:127]
+WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:129]
+WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:130]
+WARNING: [Synth 8-6090] variable 'mole_state' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:131]
+WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:133]
+WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:134]
+WARNING: [Synth 8-6090] variable 'mole_position_change' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:135]
+WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:138]
+WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:139]
+WARNING: [Synth 8-6090] variable 'mole_y' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:140]
+WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:176]
+WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:177]
+WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:180]
+WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:181]
+WARNING: [Synth 8-6090] variable 'mole_hit' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:184]
+WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:185]
+WARNING: [Synth 8-6090] variable 'points' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:189]
+WARNING: [Synth 8-6090] variable 'prev_defuse_length' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:194]
+WARNING: [Synth 8-6090] variable 'defuse_timer' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:195]
+INFO: [Synth 8-6155] done synthesizing module 'mole_sequence' (15#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:6]
+INFO: [Synth 8-6157] synthesizing module 'LED_Switch_Random' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v:23]
+INFO: [Synth 8-6157] synthesizing module 'random_number_generator_led' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'random_number_generator_led' (16#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'LED_Switch_Random' (17#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v:23]
+INFO: [Synth 8-6157] synthesizing module 'music' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/music.v:1]
+INFO: [Synth 8-6157] synthesizing module 'music_ROM' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/music_ROM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'music_ROM' (18#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/music_ROM.v:23]
+INFO: [Synth 8-6157] synthesizing module 'divide_by12' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/divide_by12.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'divide_by12' (19#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/divide_by12.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'music' (20#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/music.v:1]
+INFO: [Synth 8-6157] synthesizing module 'whoWinner' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:23]
 	Parameter I_WIN bound to: 1 - type: integer 
 	Parameter I_LOSE bound to: 0 - type: integer 
-WARNING: [Synth 8-3848] Net led in module/entity whoWinner does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:24]
-INFO: [Synth 8-6155] done synthesizing module 'whoWinner' (21#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:23]
-WARNING: [Synth 8-689] width (32) of port connection 'total_points' does not match port width (8) of module 'whoWinner' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:245]
-INFO: [Synth 8-6157] synthesizing module 'UART_TX' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_TX.v:31]
+WARNING: [Synth 8-3848] Net led in module/entity whoWinner does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'whoWinner' (21#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'total_points' does not match port width (8) of module 'whoWinner' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:245]
+INFO: [Synth 8-6157] synthesizing module 'UART_TX' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/UART_TX.v:31]
 	Parameter CLKS_PER_BIT bound to: 868 - type: integer 
 	Parameter IDLE bound to: 2'b00 
 	Parameter TX_START_BIT bound to: 2'b01 
 	Parameter TX_DATA_BITS bound to: 2'b10 
 	Parameter TX_STOP_BIT bound to: 2'b11 
-INFO: [Synth 8-6155] done synthesizing module 'UART_TX' (22#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_TX.v:31]
-INFO: [Synth 8-6157] synthesizing module 'UART_RX' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_RX.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'UART_TX' (22#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/UART_TX.v:31]
+INFO: [Synth 8-6157] synthesizing module 'UART_RX' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/UART_RX.v:33]
 	Parameter CLKS_PER_BIT bound to: 868 - type: integer 
 	Parameter IDLE bound to: 3'b000 
 	Parameter RX_START_BIT bound to: 3'b001 
 	Parameter RX_DATA_BITS bound to: 3'b010 
 	Parameter RX_STOP_BIT bound to: 3'b011 
 	Parameter CLEANUP bound to: 3'b100 
-INFO: [Synth 8-6155] done synthesizing module 'UART_RX' (23#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_RX.v:33]
-WARNING: [Synth 8-3848] Net setx in module/entity Top_Student does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:79]
-WARNING: [Synth 8-3848] Net sety in module/entity Top_Student does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:79]
-WARNING: [Synth 8-3848] Net setmax_x in module/entity Top_Student does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:79]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (24#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'UART_RX' (23#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/UART_RX.v:33]
+WARNING: [Synth 8-3848] Net setx in module/entity Top_Student does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:79]
+WARNING: [Synth 8-3848] Net sety in module/entity Top_Student does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:79]
+WARNING: [Synth 8-3848] Net setmax_x in module/entity Top_Student does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (24#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 WARNING: [Synth 8-3331] design whoWinner has unconnected port led[15]
 WARNING: [Synth 8-3331] design whoWinner has unconnected port led[14]
 WARNING: [Synth 8-3331] design whoWinner has unconnected port led[13]
@@ -285,7 +285,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[5]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[4]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 515.484 ; gain = 258.984
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 515.152 ; gain = 258.488
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -294,48 +294,48 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin nolabel_line88:setx to constant 0 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:88]
-WARNING: [Synth 8-3295] tying undriven pin nolabel_line88:sety to constant 0 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:88]
-WARNING: [Synth 8-3295] tying undriven pin nolabel_line88:setmax_x to constant 0 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:88]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line88:setx to constant 0 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:88]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line88:sety to constant 0 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:88]
+WARNING: [Synth 8-3295] tying undriven pin nolabel_line88:setmax_x to constant 0 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:88]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 515.484 ; gain = 258.984
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 515.152 ; gain = 258.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 515.484 ; gain = 258.984
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 515.152 ; gain = 258.488
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
-Finished Parsing XDC File [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
+Parsing XDC File [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
+Finished Parsing XDC File [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/constrs_1/new/my_basys3_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Student_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Student_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 868.266 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 868.152 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 868.422 ; gain = 611.922
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 868.309 ; gain = 611.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 868.422 ; gain = 611.922
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 868.309 ; gain = 611.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 868.422 ; gain = 611.922
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 868.309 ; gain = 611.645
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -412,8 +412,8 @@ INFO: [Synth 8-5545] ROM "btn_out" won't be mapped to RAM because address size (
 INFO: [Synth 8-5545] ROM "state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "debounce_counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "winding_number" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:826]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:845]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:826]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:845]
 INFO: [Synth 8-5544] ROM "selection_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ascii" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ascii" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -438,8 +438,8 @@ INFO: [Synth 8-5545] ROM "stopped" won't be mapped to RAM because address size (
 INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "button_pressed0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "oled_data0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:299]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:299]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:299]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:299]
 INFO: [Synth 8-5545] ROM "bomb_defused" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "bomb_defused" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "launch" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -564,7 +564,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'UART_TX'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 868.422 ; gain = 611.922
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 868.309 ; gain = 611.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1316,19 +1316,19 @@ INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "animation_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "has_end" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "animation_counter" won't be mapped to RAM because it is too sparse
@@ -1350,10 +1350,10 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[4]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:96]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:96]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:124]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:124]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:96]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:96]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:124]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/game_over_menu.v:124]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_10/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "ascii" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -1421,10 +1421,10 @@ WARNING: [Synth 8-3332] Sequential element (rectangle_border_b_reg[5]) is unused
 INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "button_pressed0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:303]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:302]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:301]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:300]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:303]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:302]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:301]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/defuse_sequence.v:300]
 DSP Report: Generating DSP oled_data3, operation Mode is: A*B.
 DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
 DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
@@ -1497,20 +1497,20 @@ INFO: [Synth 8-5545] ROM "p_0_out" won't be mapped to RAM because address size (
 INFO: [Synth 8-5545] ROM "launch" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "bomb_defused" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "bomb_defused" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:36]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:36]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:37]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:37]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:38]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:38]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:33]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:33]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:32]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:32]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:31]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:31]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:34]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:34]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:36]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:36]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:37]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:37]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:38]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:38]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:33]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:33]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:32]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:32]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:31]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:31]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:34]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/mole_sequence.v:34]
 DSP Report: Generating DSP click_mole[0]3, operation Mode is: A*B.
 DSP Report: operator click_mole[0]3 is absorbed into DSP click_mole[0]3.
 DSP Report: operator click_mole[0]3 is absorbed into DSP click_mole[0]3.
@@ -1815,15 +1815,15 @@ INFO: [Synth 8-5545] ROM "flexible_clock_module_1Hz/my_clk0" won't be mapped to 
 INFO: [Synth 8-5545] ROM "flexible_clock_module_100Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "timer_count0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "stopped" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-6014] Unused sequential element flexible_clock_module_1000/my_clk_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
+WARNING: [Synth 8-6014] Unused sequential element flexible_clock_module_1000/my_clk_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/flexible_clock_module.v:29]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/main_menu.v:206]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/main_menu.v:206]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/main_menu.v:234]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/main_menu.v:234]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/main_menu.v:79]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/main_menu.v:79]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/main_menu.v:206]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/main_menu.v:206]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/main_menu.v:234]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/main_menu.v:234]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/main_menu.v:79]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/main_menu.v:79]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_100Hz/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -1886,12 +1886,12 @@ DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/zpos_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:1011]
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/middle_down_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/middle_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/right_down_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:427]
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/right_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:427]
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/new_event_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:610]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/zpos_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:1011]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/middle_down_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/middle_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:425]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/right_down_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:427]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/right_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:427]
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line88/new_event_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/imports/Desktop/Mouse_Control.vhd:610]
 INFO: [Synth 8-5545] ROM "nolabel_line88/periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "nolabel_line88/timeout" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line88/y_max_reg[11] )
@@ -1910,10 +1910,10 @@ WARNING: [Synth 8-3332] Sequential element (bomb_radius_reg[5]) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (rectangle_border_b_reg[5]) is unused and will be removed from module main_menu.
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:65]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:65]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:93]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:93]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:65]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:93]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/settings_menu.v:93]
 INFO: [Synth 8-5545] ROM "flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "flexible_clock_module_1000/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -1927,10 +1927,10 @@ INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address
 INFO: [Synth 8-5544] ROM "p_2_out1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_2_out1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "p_2_out2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element wipe_settings_main/animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-WARNING: [Synth 8-6014] Unused sequential element wipe_main_settings/animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element wipe_settings_main/animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+WARNING: [Synth 8-6014] Unused sequential element wipe_main_settings/animation_counter_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
 INFO: [Synth 8-5546] ROM "wipe_settings_main/animation_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wipe_settings_main/has_end" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wipe_main_settings/animation_counter" won't be mapped to RAM because it is too sparse
@@ -1978,8 +1978,8 @@ DSP Report: Generating DSP is_mouse_return1, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
-INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_main_settings/animation_counter_reg[15:0]' into 'wipe_main_settings/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
+INFO: [Synth 8-4471] merging register 'wipe_settings_main/animation_counter_reg[15:0]' into 'wipe_settings_main/animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v:50]
 INFO: [Synth 8-5546] ROM "wipe_main_settings/animation_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wipe_settings_main/animation_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "wipe_main_settings/has_end" won't be mapped to RAM because it is too sparse
@@ -2010,7 +2010,7 @@ WARNING: [Synth 8-3332] Sequential element (r_RX_DV_reg) is unused and will be r
 WARNING: [Synth 8-3332] Sequential element (o_TX_Active_reg) is unused and will be removed from module UART_TX.
 WARNING: [Synth 8-3332] Sequential element (o_TX_Done_reg) is unused and will be removed from module UART_TX.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:14 . Memory (MB): peak = 868.422 ; gain = 611.922
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:10 . Memory (MB): peak = 868.309 ; gain = 611.645
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 140, Available = 90. Use report_utilization command for details.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is (post resource management): A*B.
@@ -2025,8 +2025,8 @@ DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is (post resource management): (PCIN>>17)+A*B.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
 DSP Report: operator is_mouse_return1 is absorbed into DSP is_mouse_return1.
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
-INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
+INFO: [Synth 8-4471] merging register 'animation_counter_reg[15:0]' into 'animation_counter_reg[15:0]' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.srcs/sources_1/new/fade_animation.v:50]
 DSP Report: Generating DSP oled_data3, operation Mode is (post resource management): A*B.
 DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
 DSP Report: operator oled_data3 is absorbed into DSP oled_data3.
@@ -2374,13 +2374,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:27 . Memory (MB): peak = 868.676 ; gain = 612.176
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:22 . Memory (MB): peak = 873.078 ; gain = 616.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:33 ; elapsed = 00:02:00 . Memory (MB): peak = 1171.906 ; gain = 915.406
+Finished Timing Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:53 . Memory (MB): peak = 1177.117 ; gain = 920.453
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2398,7 +2398,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:39 ; elapsed = 00:02:05 . Memory (MB): peak = 1172.980 ; gain = 916.480
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:58 . Memory (MB): peak = 1178.227 ; gain = 921.562
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2438,7 +2438,7 @@ INFO: [Synth 8-6064] Net n_0_10316 is driving 66 big block pins (URAM, BRAM and 
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:45 ; elapsed = 00:02:12 . Memory (MB): peak = 1172.980 ; gain = 916.480
+Finished IO Insertion : Time (s): cpu = 00:01:38 ; elapsed = 00:02:04 . Memory (MB): peak = 1178.227 ; gain = 921.562
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2451,7 +2451,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:45 ; elapsed = 00:02:12 . Memory (MB): peak = 1172.980 ; gain = 916.480
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:39 ; elapsed = 00:02:04 . Memory (MB): peak = 1178.227 ; gain = 921.562
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2463,25 +2463,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:50 ; elapsed = 00:02:17 . Memory (MB): peak = 1172.980 ; gain = 916.480
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:43 ; elapsed = 00:02:08 . Memory (MB): peak = 1178.227 ; gain = 921.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:51 ; elapsed = 00:02:17 . Memory (MB): peak = 1172.980 ; gain = 916.480
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:43 ; elapsed = 00:02:09 . Memory (MB): peak = 1178.227 ; gain = 921.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:51 ; elapsed = 00:02:18 . Memory (MB): peak = 1172.980 ; gain = 916.480
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:44 ; elapsed = 00:02:09 . Memory (MB): peak = 1178.227 ; gain = 921.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:51 ; elapsed = 00:02:18 . Memory (MB): peak = 1172.980 ; gain = 916.480
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:44 ; elapsed = 00:02:09 . Memory (MB): peak = 1178.227 ; gain = 921.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2508,8 +2508,8 @@ Report Cell Usage:
 |9     |LUT6    |  4742|
 |10    |MUXF7   |    17|
 |11    |FDE_1   |    32|
-|12    |FDRE    |  3098|
-|13    |FDSE    |    31|
+|12    |FDRE    |  3096|
+|13    |FDSE    |    33|
 |14    |IBUF    |    24|
 |15    |IOBUF   |     2|
 |16    |OBUF    |    40|
@@ -2585,14 +2585,14 @@ Report Instance Areas:
 |63    |    flexible_clock_module_25m   |flexible_clock_module_11    |    63|
 +------+--------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:51 ; elapsed = 00:02:18 . Memory (MB): peak = 1172.980 ; gain = 916.480
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:44 ; elapsed = 00:02:09 . Memory (MB): peak = 1178.227 ; gain = 921.562
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 58 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:36 ; elapsed = 00:02:09 . Memory (MB): peak = 1172.980 ; gain = 563.543
-Synthesis Optimization Complete : Time (s): cpu = 00:01:51 ; elapsed = 00:02:19 . Memory (MB): peak = 1172.980 ; gain = 916.480
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:31 ; elapsed = 00:02:02 . Memory (MB): peak = 1178.227 ; gain = 568.406
+Synthesis Optimization Complete : Time (s): cpu = 00:01:44 ; elapsed = 00:02:10 . Memory (MB): peak = 1178.227 ; gain = 921.562
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 5107 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -2603,9 +2603,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 457 Infos, 152 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:00 ; elapsed = 00:02:27 . Memory (MB): peak = 1172.980 ; gain = 929.332
+synth_design: Time (s): cpu = 00:01:53 ; elapsed = 00:02:19 . Memory (MB): peak = 1178.227 ; gain = 934.012
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/final/project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.181 . Memory (MB): peak = 1172.980 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 17:16:50 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.173 . Memory (MB): peak = 1178.227 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  6 17:49:24 2024...
