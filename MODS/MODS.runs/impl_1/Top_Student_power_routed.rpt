@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Apr  6 00:26:49 2024
-| Host             : dZhei98 running 64-bit major release  (build 9200)
+| Date             : Sat Apr  6 12:50:06 2024
+| Host             : LAPTOP-NSS21NBQ running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
 | Device           : xc7a35tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.226        |
+| Total On-Chip Power (W)  | 0.228        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.154        |
+| Dynamic (W)              | 0.156        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.9         |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.011 |        3 |       --- |             --- |
-| Slice Logic    |     0.069 |    29503 |       --- |             --- |
-|   LUT as Logic |     0.057 |    18506 |     20800 |           88.97 |
-|   CARRY4       |     0.011 |     4537 |      8150 |           55.67 |
-|   Register     |    <0.001 |     2986 |     41600 |            7.18 |
-|   F7/F8 Muxes  |    <0.001 |       18 |     32600 |            0.06 |
-|   Others       |     0.000 |      194 |       --- |             --- |
-|   BUFG         |     0.000 |       11 |        32 |           34.38 |
-| Signals        |     0.063 |    28309 |       --- |             --- |
-| DSPs           |     0.007 |       80 |        90 |           88.89 |
-| I/O            |     0.004 |       68 |       106 |           64.15 |
+| Clocks         |     0.012 |        3 |       --- |             --- |
+| Slice Logic    |     0.071 |    29772 |       --- |             --- |
+|   LUT as Logic |     0.059 |    18727 |     20800 |           90.03 |
+|   CARRY4       |     0.012 |     4585 |      8150 |           56.26 |
+|   Register     |    <0.001 |     2792 |     41600 |            6.71 |
+|   F7/F8 Muxes  |    <0.001 |       19 |     32600 |            0.06 |
+|   Others       |     0.000 |      187 |       --- |             --- |
+|   BUFG         |     0.000 |        9 |        32 |           28.13 |
+| Signals        |     0.064 |    28415 |       --- |             --- |
+| DSPs           |     0.004 |       72 |        90 |           80.00 |
+| I/O            |     0.005 |       54 |       106 |           50.94 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.226 |          |           |                 |
+| Total          |     0.228 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.161 |       0.151 |      0.010 |
+| Vccint    |       1.000 |     0.160 |       0.151 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -143,7 +143,7 @@ Table of Contents
 +---------------------------------+-----------+
 | Name                            | Power (W) |
 +---------------------------------+-----------+
-| Top_Student                     |     0.154 |
+| Top_Student                     |     0.156 |
 |   Music                         |    <0.001 |
 |     get_fullnote                |    <0.001 |
 |   PS2Clk_IOBUF_inst             |     0.000 |
@@ -164,42 +164,40 @@ Table of Contents
 |     unit8                       |    <0.001 |
 |       unit                      |    <0.001 |
 |     unit9                       |    <0.001 |
-|   game_over_lose_menu           |     0.027 |
+|   game_over_lose_menu           |     0.021 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
 |   game_over_win_menu            |     0.019 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
-|   nolabel_line108               |    <0.001 |
-|   nolabel_line109               |    <0.001 |
 |   nolabel_line110               |    <0.001 |
 |   nolabel_line111               |    <0.001 |
 |   nolabel_line112               |    <0.001 |
-|   nolabel_line116               |    <0.001 |
-|   nolabel_line121               |     0.028 |
+|   nolabel_line113               |    <0.001 |
+|   nolabel_line114               |    <0.001 |
+|   nolabel_line118               |    <0.001 |
+|   nolabel_line123               |     0.027 |
 |     flexible_clock_module_1     |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
-|   nolabel_line127               |     0.024 |
+|   nolabel_line129               |     0.023 |
 |     flexible_clock_module_1000  |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
-|   nolabel_line155               |    <0.001 |
+|   nolabel_line157               |     0.001 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
-|   nolabel_line56                |     0.002 |
-|   nolabel_line86                |     0.004 |
+|   nolabel_line58                |     0.003 |
+|   nolabel_line88                |     0.004 |
 |     Inst_Ps2Interface           |     0.001 |
+|   receive                       |    <0.001 |
 |   timer                         |     0.004 |
 |     flexible_clock_module_100Hz |    <0.001 |
 |     flexible_clock_module_1Hz   |    <0.001 |
-|   unit                          |     0.002 |
-|     flexible_clock_module_10Hz  |    <0.001 |
-|     flexible_clock_module_10kHz |    <0.001 |
-|     flexible_clock_module_1Hz   |    <0.001 |
-|     unit                        |    <0.001 |
+|   transmit                      |    <0.001 |
+|   u1                            |    <0.001 |
 |   wipe_main_settings            |     0.001 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
-|   wipe_settings_main            |    <0.001 |
+|   wipe_settings_main            |     0.001 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
 +---------------------------------+-----------+

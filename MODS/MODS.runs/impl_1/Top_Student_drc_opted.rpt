@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Apr  6 00:24:41 2024
-| Host         : dZhei98 running 64-bit major release  (build 9200)
+| Date         : Sat Apr  6 12:48:28 2024
+| Host         : LAPTOP-NSS21NBQ running 64-bit major release  (build 9200)
 | Command      : report_drc -file Top_Student_drc_opted.rpt -pb Top_Student_drc_opted.pb -rpx Top_Student_drc_opted.rpx
 | Design       : Top_Student
 | Device       : xc7a35tcpg236-1
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 320
+             Violations found: 288
 +--------+----------+------------------------+------------+
 | Rule   | Severity | Description            | Violations |
 +--------+----------+------------------------+------------+
-| DPIP-1 | Warning  | Input pipelining       | 160        |
-| DPOP-1 | Warning  | PREG Output pipelining | 80         |
-| DPOP-2 | Warning  | MREG Output pipelining | 80         |
+| DPIP-1 | Warning  | Input pipelining       | 144        |
+| DPOP-1 | Warning  | PREG Output pipelining | 72         |
+| DPOP-2 | Warning  | MREG Output pipelining | 72         |
 +--------+----------+------------------------+------------+
 
 2. REPORT DETAILS
@@ -497,342 +497,262 @@ Related violations: <none>
 
 DPIP-1#93 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__2 input game/unit8/oled_data3__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__11 input game/unit8/oled_data3__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#94 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__2 input game/unit8/oled_data3__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__11 input game/unit8/oled_data3__11/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#95 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__3 input game/unit8/oled_data3__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__12 input game/unit8/oled_data3__12/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#96 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__3 input game/unit8/oled_data3__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__12 input game/unit8/oled_data3__12/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#97 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__4 input game/unit8/oled_data3__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__13 input game/unit8/oled_data3__13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#98 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__4 input game/unit8/oled_data3__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__13 input game/unit8/oled_data3__13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#99 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__5 input game/unit8/oled_data3__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__14 input game/unit8/oled_data3__14/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#100 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__5 input game/unit8/oled_data3__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__14 input game/unit8/oled_data3__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#101 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__6 input game/unit8/oled_data3__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__2 input game/unit8/oled_data3__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#102 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__6 input game/unit8/oled_data3__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__2 input game/unit8/oled_data3__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#103 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__7 input game/unit8/oled_data3__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__3 input game/unit8/oled_data3__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#104 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__7 input game/unit8/oled_data3__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__3 input game/unit8/oled_data3__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#105 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__8 input game/unit8/oled_data3__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__4 input game/unit8/oled_data3__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#106 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__8 input game/unit8/oled_data3__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__4 input game/unit8/oled_data3__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#107 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__9 input game/unit8/oled_data3__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__5 input game/unit8/oled_data3__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#108 Warning
 Input pipelining  
-DSP game/unit8/oled_data3__9 input game/unit8/oled_data3__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__5 input game/unit8/oled_data3__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#109 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1 input game_over_lose_menu/is_mouse_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__6 input game/unit8/oled_data3__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#110 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1 input game_over_lose_menu/is_mouse_return1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__6 input game/unit8/oled_data3__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#111 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__0 input game_over_lose_menu/is_mouse_return1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__7 input game/unit8/oled_data3__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#112 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__0 input game_over_lose_menu/is_mouse_return1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__7 input game/unit8/oled_data3__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#113 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__1 input game_over_lose_menu/is_mouse_return1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__8 input game/unit8/oled_data3__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#114 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__1 input game_over_lose_menu/is_mouse_return1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__8 input game/unit8/oled_data3__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#115 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__2 input game_over_lose_menu/is_mouse_return1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__9 input game/unit8/oled_data3__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#116 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__2 input game_over_lose_menu/is_mouse_return1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game/unit8/oled_data3__9 input game/unit8/oled_data3__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#117 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__3 input game_over_lose_menu/is_mouse_return1__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_lose_menu/is_mouse_return1 input game_over_lose_menu/is_mouse_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#118 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__3 input game_over_lose_menu/is_mouse_return1__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_lose_menu/is_mouse_return1 input game_over_lose_menu/is_mouse_return1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#119 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__4 input game_over_lose_menu/is_mouse_return1__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_lose_menu/is_mouse_return1__0 input game_over_lose_menu/is_mouse_return1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#120 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_mouse_return1__4 input game_over_lose_menu/is_mouse_return1__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_lose_menu/is_mouse_return1__0 input game_over_lose_menu/is_mouse_return1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#121 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2 input game_over_lose_menu/is_rectangle_border_return2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_lose_menu/is_mouse_return1__1 input game_over_lose_menu/is_mouse_return1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#122 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2 input game_over_lose_menu/is_rectangle_border_return2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_lose_menu/is_mouse_return1__1 input game_over_lose_menu/is_mouse_return1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#123 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__0 input game_over_lose_menu/is_rectangle_border_return2__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_lose_menu/is_mouse_return1__2 input game_over_lose_menu/is_mouse_return1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#124 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__0 input game_over_lose_menu/is_rectangle_border_return2__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_lose_menu/is_mouse_return1__2 input game_over_lose_menu/is_mouse_return1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#125 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__1 input game_over_lose_menu/is_rectangle_border_return2__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_win_menu/is_mouse_return1 input game_over_win_menu/is_mouse_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#126 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__1 input game_over_lose_menu/is_rectangle_border_return2__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_win_menu/is_mouse_return1 input game_over_win_menu/is_mouse_return1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#127 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__2 input game_over_lose_menu/is_rectangle_border_return2__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_win_menu/is_mouse_return1__0 input game_over_win_menu/is_mouse_return1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#128 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__2 input game_over_lose_menu/is_rectangle_border_return2__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_win_menu/is_mouse_return1__0 input game_over_win_menu/is_mouse_return1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#129 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__3 input game_over_lose_menu/is_rectangle_border_return2__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_win_menu/is_mouse_return1__1 input game_over_win_menu/is_mouse_return1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#130 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__3 input game_over_lose_menu/is_rectangle_border_return2__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_win_menu/is_mouse_return1__1 input game_over_win_menu/is_mouse_return1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#131 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__4 input game_over_lose_menu/is_rectangle_border_return2__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_win_menu/is_mouse_return1__2 input game_over_win_menu/is_mouse_return1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#132 Warning
 Input pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__4 input game_over_lose_menu/is_rectangle_border_return2__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP game_over_win_menu/is_mouse_return1__2 input game_over_win_menu/is_mouse_return1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#133 Warning
 Input pipelining  
-DSP game_over_win_menu/is_mouse_return1 input game_over_win_menu/is_mouse_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line123/is_bomb_return1 input nolabel_line123/is_bomb_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#134 Warning
 Input pipelining  
-DSP game_over_win_menu/is_mouse_return1 input game_over_win_menu/is_mouse_return1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line123/is_bomb_return1 input nolabel_line123/is_bomb_return1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#135 Warning
 Input pipelining  
-DSP game_over_win_menu/is_mouse_return1__0 input game_over_win_menu/is_mouse_return1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line123/is_bomb_return1__0 input nolabel_line123/is_bomb_return1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#136 Warning
 Input pipelining  
-DSP game_over_win_menu/is_mouse_return1__0 input game_over_win_menu/is_mouse_return1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line123/is_bomb_return1__0 input nolabel_line123/is_bomb_return1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#137 Warning
 Input pipelining  
-DSP game_over_win_menu/is_mouse_return1__1 input game_over_win_menu/is_mouse_return1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line123/is_bomb_return1__1 input nolabel_line123/is_bomb_return1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#138 Warning
 Input pipelining  
-DSP game_over_win_menu/is_mouse_return1__1 input game_over_win_menu/is_mouse_return1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line123/is_bomb_return1__1 input nolabel_line123/is_bomb_return1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#139 Warning
 Input pipelining  
-DSP game_over_win_menu/is_mouse_return1__2 input game_over_win_menu/is_mouse_return1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line123/is_bomb_return1__2 input nolabel_line123/is_bomb_return1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#140 Warning
 Input pipelining  
-DSP game_over_win_menu/is_mouse_return1__2 input game_over_win_menu/is_mouse_return1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line123/is_bomb_return1__2 input nolabel_line123/is_bomb_return1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#141 Warning
 Input pipelining  
-DSP nolabel_line121/is_bomb_return1 input nolabel_line121/is_bomb_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line129/is_mouse_return1 input nolabel_line129/is_mouse_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#142 Warning
 Input pipelining  
-DSP nolabel_line121/is_bomb_return1 input nolabel_line121/is_bomb_return1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line129/is_mouse_return1 input nolabel_line129/is_mouse_return1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#143 Warning
 Input pipelining  
-DSP nolabel_line121/is_bomb_return1__0 input nolabel_line121/is_bomb_return1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line129/is_mouse_return1__0 input nolabel_line129/is_mouse_return1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#144 Warning
 Input pipelining  
-DSP nolabel_line121/is_bomb_return1__0 input nolabel_line121/is_bomb_return1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#145 Warning
-Input pipelining  
-DSP nolabel_line121/is_bomb_return1__1 input nolabel_line121/is_bomb_return1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#146 Warning
-Input pipelining  
-DSP nolabel_line121/is_bomb_return1__1 input nolabel_line121/is_bomb_return1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#147 Warning
-Input pipelining  
-DSP nolabel_line121/is_bomb_return1__2 input nolabel_line121/is_bomb_return1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#148 Warning
-Input pipelining  
-DSP nolabel_line121/is_bomb_return1__2 input nolabel_line121/is_bomb_return1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#149 Warning
-Input pipelining  
-DSP nolabel_line121/is_mouse_return1 input nolabel_line121/is_mouse_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#150 Warning
-Input pipelining  
-DSP nolabel_line121/is_mouse_return1 input nolabel_line121/is_mouse_return1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#151 Warning
-Input pipelining  
-DSP nolabel_line121/is_mouse_return1__0 input nolabel_line121/is_mouse_return1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#152 Warning
-Input pipelining  
-DSP nolabel_line121/is_mouse_return1__0 input nolabel_line121/is_mouse_return1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#153 Warning
-Input pipelining  
-DSP nolabel_line121/is_mouse_return1__1 input nolabel_line121/is_mouse_return1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#154 Warning
-Input pipelining  
-DSP nolabel_line121/is_mouse_return1__1 input nolabel_line121/is_mouse_return1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#155 Warning
-Input pipelining  
-DSP nolabel_line121/is_mouse_return1__2 input nolabel_line121/is_mouse_return1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#156 Warning
-Input pipelining  
-DSP nolabel_line121/is_mouse_return1__2 input nolabel_line121/is_mouse_return1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#157 Warning
-Input pipelining  
-DSP nolabel_line127/is_mouse_return1 input nolabel_line127/is_mouse_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#158 Warning
-Input pipelining  
-DSP nolabel_line127/is_mouse_return1 input nolabel_line127/is_mouse_return1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#159 Warning
-Input pipelining  
-DSP nolabel_line127/is_mouse_return1__0 input nolabel_line127/is_mouse_return1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#160 Warning
-Input pipelining  
-DSP nolabel_line127/is_mouse_return1__0 input nolabel_line127/is_mouse_return1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP nolabel_line129/is_mouse_return1__0 input nolabel_line129/is_mouse_return1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
@@ -1067,172 +987,132 @@ Related violations: <none>
 
 DPOP-1#47 Warning
 PREG Output pipelining  
-DSP game/unit8/oled_data3__2 output game/unit8/oled_data3__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__11 output game/unit8/oled_data3__11/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#48 Warning
 PREG Output pipelining  
-DSP game/unit8/oled_data3__3 output game/unit8/oled_data3__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__12 output game/unit8/oled_data3__12/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#49 Warning
 PREG Output pipelining  
-DSP game/unit8/oled_data3__4 output game/unit8/oled_data3__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__13 output game/unit8/oled_data3__13/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#50 Warning
 PREG Output pipelining  
-DSP game/unit8/oled_data3__5 output game/unit8/oled_data3__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__14 output game/unit8/oled_data3__14/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#51 Warning
 PREG Output pipelining  
-DSP game/unit8/oled_data3__6 output game/unit8/oled_data3__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__2 output game/unit8/oled_data3__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#52 Warning
 PREG Output pipelining  
-DSP game/unit8/oled_data3__7 output game/unit8/oled_data3__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__3 output game/unit8/oled_data3__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#53 Warning
 PREG Output pipelining  
-DSP game/unit8/oled_data3__8 output game/unit8/oled_data3__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__4 output game/unit8/oled_data3__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#54 Warning
 PREG Output pipelining  
-DSP game/unit8/oled_data3__9 output game/unit8/oled_data3__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__5 output game/unit8/oled_data3__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#55 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1 output game_over_lose_menu/is_mouse_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__6 output game/unit8/oled_data3__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#56 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__0 output game_over_lose_menu/is_mouse_return1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__7 output game/unit8/oled_data3__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#57 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__1 output game_over_lose_menu/is_mouse_return1__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__8 output game/unit8/oled_data3__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#58 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__2 output game_over_lose_menu/is_mouse_return1__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game/unit8/oled_data3__9 output game/unit8/oled_data3__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#59 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__3 output game_over_lose_menu/is_mouse_return1__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game_over_lose_menu/is_mouse_return1 output game_over_lose_menu/is_mouse_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#60 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__4 output game_over_lose_menu/is_mouse_return1__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game_over_lose_menu/is_mouse_return1__0 output game_over_lose_menu/is_mouse_return1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#61 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2 output game_over_lose_menu/is_rectangle_border_return2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game_over_lose_menu/is_mouse_return1__1 output game_over_lose_menu/is_mouse_return1__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#62 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__0 output game_over_lose_menu/is_rectangle_border_return2__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game_over_lose_menu/is_mouse_return1__2 output game_over_lose_menu/is_mouse_return1__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#63 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__1 output game_over_lose_menu/is_rectangle_border_return2__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game_over_win_menu/is_mouse_return1 output game_over_win_menu/is_mouse_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#64 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__2 output game_over_lose_menu/is_rectangle_border_return2__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game_over_win_menu/is_mouse_return1__0 output game_over_win_menu/is_mouse_return1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#65 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__3 output game_over_lose_menu/is_rectangle_border_return2__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game_over_win_menu/is_mouse_return1__1 output game_over_win_menu/is_mouse_return1__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#66 Warning
 PREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__4 output game_over_lose_menu/is_rectangle_border_return2__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP game_over_win_menu/is_mouse_return1__2 output game_over_win_menu/is_mouse_return1__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#67 Warning
 PREG Output pipelining  
-DSP game_over_win_menu/is_mouse_return1 output game_over_win_menu/is_mouse_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP nolabel_line123/is_bomb_return1 output nolabel_line123/is_bomb_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#68 Warning
 PREG Output pipelining  
-DSP game_over_win_menu/is_mouse_return1__0 output game_over_win_menu/is_mouse_return1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP nolabel_line123/is_bomb_return1__0 output nolabel_line123/is_bomb_return1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#69 Warning
 PREG Output pipelining  
-DSP game_over_win_menu/is_mouse_return1__1 output game_over_win_menu/is_mouse_return1__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP nolabel_line123/is_bomb_return1__1 output nolabel_line123/is_bomb_return1__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#70 Warning
 PREG Output pipelining  
-DSP game_over_win_menu/is_mouse_return1__2 output game_over_win_menu/is_mouse_return1__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP nolabel_line123/is_bomb_return1__2 output nolabel_line123/is_bomb_return1__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#71 Warning
 PREG Output pipelining  
-DSP nolabel_line121/is_bomb_return1 output nolabel_line121/is_bomb_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP nolabel_line129/is_mouse_return1 output nolabel_line129/is_mouse_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#72 Warning
 PREG Output pipelining  
-DSP nolabel_line121/is_bomb_return1__0 output nolabel_line121/is_bomb_return1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#73 Warning
-PREG Output pipelining  
-DSP nolabel_line121/is_bomb_return1__1 output nolabel_line121/is_bomb_return1__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#74 Warning
-PREG Output pipelining  
-DSP nolabel_line121/is_bomb_return1__2 output nolabel_line121/is_bomb_return1__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#75 Warning
-PREG Output pipelining  
-DSP nolabel_line121/is_mouse_return1 output nolabel_line121/is_mouse_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#76 Warning
-PREG Output pipelining  
-DSP nolabel_line121/is_mouse_return1__0 output nolabel_line121/is_mouse_return1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#77 Warning
-PREG Output pipelining  
-DSP nolabel_line121/is_mouse_return1__1 output nolabel_line121/is_mouse_return1__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#78 Warning
-PREG Output pipelining  
-DSP nolabel_line121/is_mouse_return1__2 output nolabel_line121/is_mouse_return1__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#79 Warning
-PREG Output pipelining  
-DSP nolabel_line127/is_mouse_return1 output nolabel_line127/is_mouse_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#80 Warning
-PREG Output pipelining  
-DSP nolabel_line127/is_mouse_return1__0 output nolabel_line127/is_mouse_return1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP nolabel_line129/is_mouse_return1__0 output nolabel_line129/is_mouse_return1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning
@@ -1467,172 +1347,132 @@ Related violations: <none>
 
 DPOP-2#47 Warning
 MREG Output pipelining  
-DSP game/unit8/oled_data3__2 multiplier stage game/unit8/oled_data3__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__11 multiplier stage game/unit8/oled_data3__11/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#48 Warning
 MREG Output pipelining  
-DSP game/unit8/oled_data3__3 multiplier stage game/unit8/oled_data3__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__12 multiplier stage game/unit8/oled_data3__12/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#49 Warning
 MREG Output pipelining  
-DSP game/unit8/oled_data3__4 multiplier stage game/unit8/oled_data3__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__13 multiplier stage game/unit8/oled_data3__13/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#50 Warning
 MREG Output pipelining  
-DSP game/unit8/oled_data3__5 multiplier stage game/unit8/oled_data3__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__14 multiplier stage game/unit8/oled_data3__14/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#51 Warning
 MREG Output pipelining  
-DSP game/unit8/oled_data3__6 multiplier stage game/unit8/oled_data3__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__2 multiplier stage game/unit8/oled_data3__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#52 Warning
 MREG Output pipelining  
-DSP game/unit8/oled_data3__7 multiplier stage game/unit8/oled_data3__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__3 multiplier stage game/unit8/oled_data3__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#53 Warning
 MREG Output pipelining  
-DSP game/unit8/oled_data3__8 multiplier stage game/unit8/oled_data3__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__4 multiplier stage game/unit8/oled_data3__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#54 Warning
 MREG Output pipelining  
-DSP game/unit8/oled_data3__9 multiplier stage game/unit8/oled_data3__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__5 multiplier stage game/unit8/oled_data3__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#55 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1 multiplier stage game_over_lose_menu/is_mouse_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__6 multiplier stage game/unit8/oled_data3__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#56 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__0 multiplier stage game_over_lose_menu/is_mouse_return1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__7 multiplier stage game/unit8/oled_data3__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#57 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__1 multiplier stage game_over_lose_menu/is_mouse_return1__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__8 multiplier stage game/unit8/oled_data3__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#58 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__2 multiplier stage game_over_lose_menu/is_mouse_return1__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game/unit8/oled_data3__9 multiplier stage game/unit8/oled_data3__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#59 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__3 multiplier stage game_over_lose_menu/is_mouse_return1__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game_over_lose_menu/is_mouse_return1 multiplier stage game_over_lose_menu/is_mouse_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#60 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_mouse_return1__4 multiplier stage game_over_lose_menu/is_mouse_return1__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game_over_lose_menu/is_mouse_return1__0 multiplier stage game_over_lose_menu/is_mouse_return1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#61 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2 multiplier stage game_over_lose_menu/is_rectangle_border_return2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game_over_lose_menu/is_mouse_return1__1 multiplier stage game_over_lose_menu/is_mouse_return1__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#62 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__0 multiplier stage game_over_lose_menu/is_rectangle_border_return2__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game_over_lose_menu/is_mouse_return1__2 multiplier stage game_over_lose_menu/is_mouse_return1__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#63 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__1 multiplier stage game_over_lose_menu/is_rectangle_border_return2__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game_over_win_menu/is_mouse_return1 multiplier stage game_over_win_menu/is_mouse_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#64 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__2 multiplier stage game_over_lose_menu/is_rectangle_border_return2__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game_over_win_menu/is_mouse_return1__0 multiplier stage game_over_win_menu/is_mouse_return1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#65 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__3 multiplier stage game_over_lose_menu/is_rectangle_border_return2__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game_over_win_menu/is_mouse_return1__1 multiplier stage game_over_win_menu/is_mouse_return1__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#66 Warning
 MREG Output pipelining  
-DSP game_over_lose_menu/is_rectangle_border_return2__4 multiplier stage game_over_lose_menu/is_rectangle_border_return2__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP game_over_win_menu/is_mouse_return1__2 multiplier stage game_over_win_menu/is_mouse_return1__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#67 Warning
 MREG Output pipelining  
-DSP game_over_win_menu/is_mouse_return1 multiplier stage game_over_win_menu/is_mouse_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP nolabel_line123/is_bomb_return1 multiplier stage nolabel_line123/is_bomb_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#68 Warning
 MREG Output pipelining  
-DSP game_over_win_menu/is_mouse_return1__0 multiplier stage game_over_win_menu/is_mouse_return1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP nolabel_line123/is_bomb_return1__0 multiplier stage nolabel_line123/is_bomb_return1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#69 Warning
 MREG Output pipelining  
-DSP game_over_win_menu/is_mouse_return1__1 multiplier stage game_over_win_menu/is_mouse_return1__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP nolabel_line123/is_bomb_return1__1 multiplier stage nolabel_line123/is_bomb_return1__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#70 Warning
 MREG Output pipelining  
-DSP game_over_win_menu/is_mouse_return1__2 multiplier stage game_over_win_menu/is_mouse_return1__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP nolabel_line123/is_bomb_return1__2 multiplier stage nolabel_line123/is_bomb_return1__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#71 Warning
 MREG Output pipelining  
-DSP nolabel_line121/is_bomb_return1 multiplier stage nolabel_line121/is_bomb_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP nolabel_line129/is_mouse_return1 multiplier stage nolabel_line129/is_mouse_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#72 Warning
 MREG Output pipelining  
-DSP nolabel_line121/is_bomb_return1__0 multiplier stage nolabel_line121/is_bomb_return1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#73 Warning
-MREG Output pipelining  
-DSP nolabel_line121/is_bomb_return1__1 multiplier stage nolabel_line121/is_bomb_return1__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#74 Warning
-MREG Output pipelining  
-DSP nolabel_line121/is_bomb_return1__2 multiplier stage nolabel_line121/is_bomb_return1__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#75 Warning
-MREG Output pipelining  
-DSP nolabel_line121/is_mouse_return1 multiplier stage nolabel_line121/is_mouse_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#76 Warning
-MREG Output pipelining  
-DSP nolabel_line121/is_mouse_return1__0 multiplier stage nolabel_line121/is_mouse_return1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#77 Warning
-MREG Output pipelining  
-DSP nolabel_line121/is_mouse_return1__1 multiplier stage nolabel_line121/is_mouse_return1__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#78 Warning
-MREG Output pipelining  
-DSP nolabel_line121/is_mouse_return1__2 multiplier stage nolabel_line121/is_mouse_return1__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#79 Warning
-MREG Output pipelining  
-DSP nolabel_line127/is_mouse_return1 multiplier stage nolabel_line127/is_mouse_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#80 Warning
-MREG Output pipelining  
-DSP nolabel_line127/is_mouse_return1__0 multiplier stage nolabel_line127/is_mouse_return1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP nolabel_line129/is_mouse_return1__0 multiplier stage nolabel_line129/is_mouse_return1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 

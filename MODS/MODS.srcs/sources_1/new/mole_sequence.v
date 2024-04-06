@@ -3,7 +3,7 @@
 // Engineer: Mohamed Abubaker Mustafa Abdelaal Elsayed
 
 
-module mole_sequence(input is_master, input input_mole_state0, input_mole_state1, input_mole_state2, input [31:0] input_mole_y0, input_mole_y1, input_mole_y2, input basys_clock, clk_25MHz, reset, left_click, btnC, btnU, btnL, btnR, btnD, input [11:0] xpos, ypos, input [12:0] pixel_index, input [31:0] switch_points, output reg [15:0] oled_data, output [31:0] total_points, output reg bomb_defused = 1, output mole_state0, mole_state1, mole_state2, output [31:0] mole_y0, mole_y1, mole_y2);
+module mole_sequence(input is_master, input input_mole_state0, input_mole_state1, input_mole_state2, input [31:0] input_mole_y0, input_mole_y1, input_mole_y2, input basys_clock, clk_25MHz, reset, left_click, btnC, btnU, btnL, btnR, btnD, input [11:0] xpos, ypos, input [12:0] pixel_index, input [31:0] switch_points, output reg [15:0] oled_data, output [31:0] total_points, output reg [31:0] oledPointsB4Stop, output reg bomb_defused = 1, output mole_state0, mole_state1, mole_state2, output [31:0] mole_y0, mole_y1, mole_y2);
     parameter BLACK = 16'b00000_000000_00000; // else case
     parameter BLUE = 16'b00000_000000_11111;
     parameter WHITE = 16'b11111_111111_11111;
@@ -83,6 +83,7 @@ module mole_sequence(input is_master, input input_mole_state0, input_mole_state1
     
     always @ (posedge clk_25MHz) 
     begin
+//        oledPointsB4Stop = reset ? oledPointsB4Stop : points; // testing UART
         y = pixel_index / 96;
         x = pixel_index % 96;
         if (reset) begin
@@ -110,6 +111,7 @@ module mole_sequence(input is_master, input input_mole_state0, input_mole_state1
             wrong_hit = 0;
             wrong_hit_count = 0;
             count = 0;
+            oledPointsB4Stop = points; // testing UART //from prev till reset
             points = 0;
         end
         

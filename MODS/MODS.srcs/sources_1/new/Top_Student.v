@@ -13,6 +13,7 @@
 
 module Top_Student (
     input clk,
+    input JA1,
     input [15:0] sw,
     output [15:0] led,
     output [6:0] seg,
@@ -21,6 +22,7 @@ module Top_Student (
     input btnC, btnU, btnL, btnR, btnD,
     output [7:0] JC,
     output [7:0] JB,
+    output JAout1,
     inout PS2Clk, PS2Data
 );
     //  clocks
@@ -157,7 +159,9 @@ module Top_Student (
     reg game_start; //game_start = 1 is start, 0 is not start
     wire game_stop; //game_stop = 1 is stop, 0 is not stop
     wire game_moving; //game_moving = 1 is moving, 0 is not moving
-
+    wire [31:0] oledPointsB4Stop; // test
+    wire [31:0] ledPointsB4Stop = 1; // test
+    
     Count_Down_Timer timer(
         .pb_start(game_start),
         .basys_clk(clk),
@@ -168,8 +172,8 @@ module Top_Student (
         .moving(game_moving)
     );
     
-    wire [31:0] points;
-    
+    wire [31:0] points = 0; // testing
+        
     wire [15:0] mole_sequence_pixel_data;
     wire [31:0] total_points, mole_y [2:0];
     wire bomb_defused, mole_state [2:0];
@@ -203,18 +207,19 @@ module Top_Student (
         .mole_state2(mole_state[2]),
         .mole_y0(mole_y[0]),
         .mole_y1(mole_y[1]),
-        .mole_y2(mole_y[2])
+        .mole_y2(mole_y[2]),
+        .oledPointsB4Stop(oledPointsB4Stop) // testing default =1
     );
-    
-    LED_Switch_Random unit(
-        .enable(game_moving),
-        .defuse(bomb_defused),
-        .stop(game_stop),
-        .basys_clk(clk),
-        .sw(sw),
-        .led(led),
-        .points(points)
-        );
+    // testing
+//    LED_Switch_Random unit(
+//        .enable(game_moving),
+//        .defuse(bomb_defused),
+//        .stop(game_stop),
+//        .basys_clk(clk),
+//        .sw(sw),
+//        .led(led),
+//        .points(points)
+//        );
     
     music Music(
         .volume(volume_level), //assume 0 - 9;
@@ -223,6 +228,34 @@ module Top_Student (
         .gain(JB[1]),
         .shutdown(JB[3])
     );
+    
+    // UART setup
+        parameter c_CLKS_PER_BIT    = 868; // 100_000_000 / 115200 = 868 Clocks Per Bit.
+        wire TX_Active, TX_Done;
+        
+        wire RX_DV; // if =1 then read
+        wire [7:0] RX_otherPoints, myPoints; 
+           
+        wire isWinner;
+        parameter I_WIN = 1;
+        parameter I_LOSE = 0;
+        
+        wire hasProcessedWinner;
+
+        // hasProcessedWinner = 1 only after game_stop = 1
+        whoWinner u1 (.clk(clk), .game_stop(game_stop), .ledPointsB4Stop(0), .oledPointsB4Stop(total_points), 
+                .otherPoints(RX_otherPoints), .isWinner(isWinner), 
+                .hasProcessedWinner(hasProcessedWinner), .myPoints(myPoints), .led(led));    
+        
+        // game_stop = 1 >> will send score over
+        UART_TX #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) transmit
+        (.i_clk(clk), .i_TX_DV(1), .i_TX_Byte(myPoints),
+        .o_TX_Active(TX_Active), .o_TX_Serial(JAout1), .o_TX_Done(TX_Done));
+         
+        UART_RX #(.CLKS_PER_BIT(c_CLKS_PER_BIT)) receive
+        (.i_clk(clk), .i_RX_Serial(JA1), 
+          .o_RX_DV(RX_DV), .o_RX_Byte(RX_otherPoints));
+
     
     // ---------- state machine ----------
     reg [3:0] MAIN = 0;
@@ -240,11 +273,13 @@ module Top_Student (
     begin
         state = MAIN;
     end
-        
+   
+    
     always @ (posedge clk)
     begin
         if (state == MAIN && clicked_start) state <= START;
-        else if (state == START && game_stop) state <= GAME_OVER_WIN; //go to game_over directly
+        else if (state == START && hasProcessedWinner && isWinner) begin state <= GAME_OVER_WIN; end //go to game_over directly
+        else if (state == START && hasProcessedWinner && ~isWinner) begin state <= GAME_OVER_LOSE; end //go to game_over directly
         else if (state == MAIN && clicked_settings) begin state <= WIPE_MAIN_SETTINGS; wipe_main_settings_active <= 1; end
         else if (state == WIPE_MAIN_SETTINGS && wipe_main_settings_end) begin state <= SETTINGS; wipe_main_settings_active <= 0; end
         else if (state == SETTINGS && clicked_back) begin state <= WIPE_SETTINGS_MAIN; wipe_settings_main_active <= 1; end
