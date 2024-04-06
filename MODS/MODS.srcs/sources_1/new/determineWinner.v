@@ -24,11 +24,12 @@ module whoWinner(input clk, game_stop, input [7:0] ledPointsB4Stop, oledPointsB4
         output reg isWinner, reg hasProcessedWinner = 0, output reg [7:0] myPoints, output [15:0] led); //testing
     parameter I_WIN = 1;
     parameter I_LOSE = 0;
-    reg has_RX_DV = 0;
     
-    assign led[15] = has_RX_DV ? 1 : 0;
-    assign led[14:8] = otherPoints;
-    assign led[7:0] = myPoints;
+    
+    // testing
+//    assign led[15] = game_stop;
+//    assign led[14:8] = otherPoints;
+//    assign led[7:0] = myPoints;
     
     always @ (posedge clk) begin // myPoints always updated
         myPoints = ledPointsB4Stop + oledPointsB4Stop; // default 1 + 1

@@ -33,6 +33,7 @@ add_files {{C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop
 add_files {{C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/res/00.coe}}
 read_verilog -library xil_defaultlib {
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Count_Down_Timer.v}
+  {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/LED_Switch_Random.v}
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/imports/Desktop/Oled_Display.v}
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_RX.v}
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/UART_TX.v}
@@ -49,6 +50,7 @@ read_verilog -library xil_defaultlib {
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/music_ROM.v}
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/point_display.v}
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/random_number_generator.v}
+  {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/random_number_generator_led.v}
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/settings_menu.v}
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/wipe_animation.v}
   {C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/project/MODS/MODS.srcs/sources_1/new/Top_Student.v}

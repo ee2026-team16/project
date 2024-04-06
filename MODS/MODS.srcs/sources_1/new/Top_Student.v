@@ -172,7 +172,7 @@ module Top_Student (
         .moving(game_moving)
     );
     
-    wire [31:0] points = 0; // testing
+    wire [31:0] points; // = 0; // testing
         
     wire [15:0] mole_sequence_pixel_data;
     wire [31:0] total_points, mole_y [2:0];
@@ -211,15 +211,15 @@ module Top_Student (
         .oledPointsB4Stop(oledPointsB4Stop) // testing default =1
     );
     // testing
-//    LED_Switch_Random unit(
-//        .enable(game_moving),
-//        .defuse(bomb_defused),
-//        .stop(game_stop),
-//        .basys_clk(clk),
-//        .sw(sw),
-//        .led(led),
-//        .points(points)
-//        );
+    LED_Switch_Random unit(
+        .enable(game_moving),
+        .defuse(bomb_defused),
+        .stop(game_stop),
+        .basys_clk(clk),
+        .sw(sw),
+        .led(led),
+        .points(points)
+        );
     
     music Music(
         .volume(volume_level), //assume 0 - 9;

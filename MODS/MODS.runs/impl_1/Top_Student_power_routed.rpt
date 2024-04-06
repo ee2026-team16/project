@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Sat Apr  6 12:50:06 2024
+| Date             : Sat Apr  6 13:45:26 2024
 | Host             : LAPTOP-NSS21NBQ running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.228        |
+| Total On-Chip Power (W)  | 0.220        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.156        |
+| Dynamic (W)              | 0.148        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 83.9         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.012 |        3 |       --- |             --- |
-| Slice Logic    |     0.071 |    29772 |       --- |             --- |
-|   LUT as Logic |     0.059 |    18727 |     20800 |           90.03 |
-|   CARRY4       |     0.012 |     4585 |      8150 |           56.26 |
-|   Register     |    <0.001 |     2792 |     41600 |            6.71 |
-|   F7/F8 Muxes  |    <0.001 |       19 |     32600 |            0.06 |
-|   Others       |     0.000 |      187 |       --- |             --- |
-|   BUFG         |     0.000 |        9 |        32 |           28.13 |
-| Signals        |     0.064 |    28415 |       --- |             --- |
-| DSPs           |     0.004 |       72 |        90 |           80.00 |
-| I/O            |     0.005 |       54 |       106 |           50.94 |
+| Slice Logic    |     0.070 |    30772 |       --- |             --- |
+|   LUT as Logic |     0.058 |    19255 |     20800 |           92.57 |
+|   CARRY4       |     0.012 |     4761 |      8150 |           58.42 |
+|   Register     |    <0.001 |     3033 |     41600 |            7.29 |
+|   F7/F8 Muxes  |    <0.001 |       17 |     32600 |            0.05 |
+|   Others       |     0.000 |      195 |       --- |             --- |
+|   BUFG         |     0.000 |       11 |        32 |           34.38 |
+| Signals        |     0.064 |    29595 |       --- |             --- |
+| DSPs           |     0.000 |       72 |        90 |           80.00 |
+| I/O            |     0.002 |       70 |       106 |           66.04 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.228 |          |           |                 |
+| Total          |     0.220 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,9 +74,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.160 |       0.151 |      0.010 |
+| Vccint    |       1.000 |     0.156 |       0.146 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -143,7 +143,7 @@ Table of Contents
 +---------------------------------+-----------+
 | Name                            | Power (W) |
 +---------------------------------+-----------+
-| Top_Student                     |     0.156 |
+| Top_Student                     |     0.148 |
 |   Music                         |    <0.001 |
 |     get_fullnote                |    <0.001 |
 |   PS2Clk_IOBUF_inst             |     0.000 |
@@ -151,7 +151,7 @@ Table of Contents
 |   flexible_clock_module_1000    |    <0.001 |
 |   flexible_clock_module_25m     |    <0.001 |
 |   flexible_clock_module_6p25m   |    <0.001 |
-|   game                          |     0.014 |
+|   game                          |     0.012 |
 |     flexible_clock_1000         |    <0.001 |
 |     unit1                       |    <0.001 |
 |     unit10                      |    <0.001 |
@@ -163,8 +163,8 @@ Table of Contents
 |     unit7                       |     0.001 |
 |     unit8                       |    <0.001 |
 |       unit                      |    <0.001 |
-|     unit9                       |    <0.001 |
-|   game_over_lose_menu           |     0.021 |
+|     unit9                       |     0.000 |
+|   game_over_lose_menu           |     0.020 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
 |   game_over_win_menu            |     0.019 |
@@ -176,13 +176,13 @@ Table of Contents
 |   nolabel_line113               |    <0.001 |
 |   nolabel_line114               |    <0.001 |
 |   nolabel_line118               |    <0.001 |
-|   nolabel_line123               |     0.027 |
+|   nolabel_line123               |     0.016 |
 |     flexible_clock_module_1     |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
-|   nolabel_line129               |     0.023 |
+|   nolabel_line129               |     0.022 |
 |     flexible_clock_module_1000  |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
-|   nolabel_line157               |     0.001 |
+|   nolabel_line157               |    <0.001 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
 |   nolabel_line58                |     0.003 |
@@ -194,6 +194,11 @@ Table of Contents
 |     flexible_clock_module_1Hz   |    <0.001 |
 |   transmit                      |    <0.001 |
 |   u1                            |    <0.001 |
+|   unit                          |     0.002 |
+|     flexible_clock_module_10Hz  |    <0.001 |
+|     flexible_clock_module_10kHz |    <0.001 |
+|     flexible_clock_module_1Hz   |    <0.001 |
+|     unit                        |    <0.001 |
 |   wipe_main_settings            |     0.001 |
 |     flexible_clock_module_10    |    <0.001 |
 |     flexible_clock_module_25m   |    <0.001 |
