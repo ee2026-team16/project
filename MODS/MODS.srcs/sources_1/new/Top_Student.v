@@ -282,8 +282,8 @@ module Top_Student (
     begin
         if (state == MAIN && clicked_start) begin state <= START; r_JAout2 <= 1; end // if I start, you start
         else if (state == MAIN && JA2) state <= START; // if you start, I start
-        else if (state == START && hasProcessedWinner && isWinner) begin state <= GAME_OVER_WIN; r_JAout2 <= 0; end //go to game_over directly
-        else if (state == START && hasProcessedWinner && ~isWinner) begin state <= GAME_OVER_LOSE; r_JAout2 <= 0; end //go to game_over directly
+        else if (state == START && game_stop && isWinner) begin state <= GAME_OVER_WIN; r_JAout2 <= 0; end //go to game_over directly   // CHANGE
+        else if (state == START && game_stop && ~isWinner) begin state <= GAME_OVER_LOSE; r_JAout2 <= 0; end //go to game_over directly // CHANGE
         else if (state == MAIN && clicked_settings) begin state <= WIPE_MAIN_SETTINGS; wipe_main_settings_active <= 1; end
         else if (state == WIPE_MAIN_SETTINGS && wipe_main_settings_end) begin state <= SETTINGS; wipe_main_settings_active <= 0; end
         else if (state == SETTINGS && clicked_back) begin state <= WIPE_SETTINGS_MAIN; wipe_settings_main_active <= 1; end
