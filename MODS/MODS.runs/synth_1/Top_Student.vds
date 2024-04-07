@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Apr  7 23:46:08 2024
-# Process ID: 17268
+# Start of session at: Mon Apr  8 00:19:50 2024
+# Process ID: 22080
 # Current directory: C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.runs/synth_1
 # Command line: vivado.exe -log Top_Student.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Student.tcl
 # Log file: C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.runs/synth_1/Top_Student.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15004 
+INFO: Helper process launched with PID 19588 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 358.273 ; gain = 102.367
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 359.316 ; gain = 102.258
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:14]
 	Parameter c_CLKS_PER_BIT bound to: 868 - type: integer 
@@ -227,7 +227,9 @@ INFO: [Synth 8-6155] done synthesizing module 'music' (20#1) [C:/Users/sean.ng/O
 INFO: [Synth 8-6157] synthesizing module 'whoWinner' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:23]
 	Parameter I_WIN bound to: 1 - type: integer 
 	Parameter I_LOSE bound to: 0 - type: integer 
-	Parameter THREE_SEC bound to: 28'b1111111111111111111111111111 
+	Parameter FIVE_SEC bound to: 29'b11111111111111111111111111111 
+WARNING: [Synth 8-6014] Unused sequential element delay_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:33]
+WARNING: [Synth 8-6014] Unused sequential element start_delay_reg was removed.  [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:32]
 WARNING: [Synth 8-3848] Net led in module/entity whoWinner does not have driver. [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'whoWinner' (21#1) [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.srcs/sources_1/new/determineWinner.v:23]
 WARNING: [Synth 8-689] width (32) of port connection 'total_points' does not match port width (8) of module 'whoWinner' [C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.srcs/sources_1/new/Top_Student.v:245]
@@ -266,6 +268,7 @@ WARNING: [Synth 8-3331] design whoWinner has unconnected port led[3]
 WARNING: [Synth 8-3331] design whoWinner has unconnected port led[2]
 WARNING: [Synth 8-3331] design whoWinner has unconnected port led[1]
 WARNING: [Synth 8-3331] design whoWinner has unconnected port led[0]
+WARNING: [Synth 8-3331] design whoWinner has unconnected port game_stop
 WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[12]
 WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[11]
 WARNING: [Synth 8-3331] design fade_animation has unconnected port pixel_index[10]
@@ -286,7 +289,7 @@ WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[5]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[4]
 WARNING: [Synth 8-3331] design Top_Student has unconnected port JB[2]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 515.070 ; gain = 259.164
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 515.359 ; gain = 258.301
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -302,10 +305,10 @@ WARNING: [Synth 8-3295] tying undriven pin nolabel_line88:setmax_x to constant 0
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 515.070 ; gain = 259.164
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 515.359 ; gain = 258.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 515.070 ; gain = 259.164
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 515.359 ; gain = 258.301
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -321,22 +324,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 868.297 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 868.434 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 868.395 ; gain = 612.488
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 868.633 ; gain = 611.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 868.395 ; gain = 612.488
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 868.633 ; gain = 611.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 868.395 ; gain = 612.488
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 868.633 ; gain = 611.574
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Oled_Display'
@@ -448,8 +451,6 @@ INFO: [Synth 8-5545] ROM "count0" won't be mapped to RAM because address size (3
 INFO: [Synth 8-5544] ROM "blink_check0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "old_switch_state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5546] ROM "counter_octave" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "start_delay" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "hasProcessedWinner0" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
 INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'UART_TX'
 INFO: [Synth 8-5544] ROM "o_TX_Serial" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "r_SM_Main" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
@@ -567,7 +568,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'UART_TX'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 868.395 ; gain = 612.488
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 868.633 ; gain = 611.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -577,7 +578,7 @@ Report RTL Partitions:
 |1     |game_over_menu    |           2|     11357|
 |2     |fade_animation    |           2|      6287|
 |3     |mole_sequence     |           1|     28281|
-|4     |Top_Student__GCB1 |           1|      4106|
+|4     |Top_Student__GCB1 |           1|      3123|
 |5     |Top_Student__GCB2 |           1|     14838|
 |6     |Top_Student__GCB3 |           1|     30565|
 +------+------------------+------------+----------+
@@ -591,7 +592,6 @@ Detailed RTL Component Info :
 	   4 Input     32 Bit       Adders := 1     
 	   5 Input     32 Bit       Adders := 1     
 	  16 Input     32 Bit       Adders := 1     
-	   2 Input     28 Bit       Adders := 1     
 	   2 Input     26 Bit       Adders := 1     
 	   2 Input     24 Bit       Adders := 1     
 	   2 Input     17 Bit       Adders := 1     
@@ -614,7 +614,6 @@ Detailed RTL Component Info :
 +---Registers : 
 	               40 Bit    Registers := 1     
 	               32 Bit    Registers := 43    
-	               28 Bit    Registers := 1     
 	               26 Bit    Registers := 1     
 	               24 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
@@ -631,7 +630,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 6     
 	                3 Bit    Registers := 6     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 108   
+	                1 Bit    Registers := 107   
 +---Multipliers : 
 	                32x32  Multipliers := 36    
 +---Muxes : 
@@ -640,7 +639,6 @@ Detailed RTL Component Info :
 	   2 Input     37 Bit        Muxes := 69    
 	   2 Input     32 Bit        Muxes := 82    
 	  32 Input     32 Bit        Muxes := 1     
-	   2 Input     28 Bit        Muxes := 1     
 	   2 Input     26 Bit        Muxes := 1     
 	   2 Input     24 Bit        Muxes := 1     
 	  32 Input     20 Bit        Muxes := 1     
@@ -683,12 +681,12 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 6     
 	   4 Input      3 Bit        Muxes := 1     
 	  16 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 15    
+	   2 Input      2 Bit        Muxes := 13    
 	   3 Input      2 Bit        Muxes := 6     
 	   4 Input      2 Bit        Muxes := 1     
 	   9 Input      2 Bit        Muxes := 1     
 	  16 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3230  
+	   2 Input      1 Bit        Muxes := 3228  
 	   5 Input      1 Bit        Muxes := 16    
 	  40 Input      1 Bit        Muxes := 8     
 	   8 Input      1 Bit        Muxes := 3     
@@ -957,16 +955,9 @@ Detailed RTL Component Info :
 	   4 Input      1 Bit        Muxes := 6     
 Module whoWinner 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     28 Bit       Adders := 1     
 +---Registers : 
-	               28 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-+---Muxes : 
-	   2 Input     28 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
+	                1 Bit    Registers := 2     
 Module flexible_clock_module__12 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1738,8 +1729,6 @@ INFO: [Synth 8-5545] ROM "wipe_settings_main/flexible_clock_module_10/my_clk0" w
 INFO: [Synth 8-5546] ROM "wipe_settings_main/animation_counter" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "wipe_settings_main/flexible_clock_module_25m/my_clk0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5546] ROM "wipe_settings_main/has_end" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "u1/start_delay" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "u1/hasProcessedWinner0" won't be mapped to RAM because address size (28) is larger than maximum supported(25)
 DSP Report: Generating DSP wipe_settings_main/x_boundary0, operation Mode is: A2*(B:0x60).
 DSP Report: register wipe_settings_main/animation_counter_reg is absorbed into DSP wipe_settings_main/x_boundary0.
 DSP Report: operator wipe_settings_main/x_boundary0 is absorbed into DSP wipe_settings_main/x_boundary0.
@@ -1949,6 +1938,7 @@ INFO: [Synth 8-3886] merging instance 'game/oled_data_reg[6]' (FD) to 'game/oled
 WARNING: [Synth 8-3332] Sequential element (defuse_state_reg[4]) is unused and will be removed from module defuse_sequence.
 WARNING: [Synth 8-3332] Sequential element (oled_data_reg[4]) is unused and will be removed from module defuse_sequence.
 WARNING: [Synth 8-3332] Sequential element (button_pressed_reg) is unused and will be removed from module defuse_sequence.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\u1/hasProcessedWinner_reg )
 INFO: [Synth 8-3886] merging instance 'i_1/nolabel_line123/rectangle_border_y_reg[0]' (FDRE) to 'i_1/nolabel_line123/rectangle_border_y_reg[3]'
 INFO: [Synth 8-3886] merging instance 'i_1/nolabel_line123/rectangle_border_y_reg[1]' (FDRE) to 'i_1/nolabel_line123/rectangle_border_y_reg[2]'
 INFO: [Synth 8-3886] merging instance 'i_1/nolabel_line123/rectangle_border_y_reg[2]' (FDRE) to 'i_1/nolabel_line123/rectangle_border_y_reg[4]'
@@ -2018,7 +2008,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (game/\mol
 WARNING: [Synth 8-3332] Sequential element (mole_y_reg[0][31]) is unused and will be removed from module mole_sequence.
 WARNING: [Synth 8-3332] Sequential element (x_max_reg[9]) is unused and will be removed from module MouseCtl.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 976.738 ; gain = 720.832
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 973.922 ; gain = 716.863
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 140, Available = 90. Use report_utilization command for details.
 DSP Report: Generating DSP is_mouse_return1, operation Mode is (post resource management): A*B.
@@ -2409,23 +2399,23 @@ Report RTL Partitions:
 +------+------------------+------------+----------+
 |1     |game_over_menu    |           1|      8545|
 |2     |fade_animation    |           2|      5777|
-|3     |mole_sequence     |           1|     22429|
-|4     |Top_Student__GCB1 |           1|      2116|
+|3     |mole_sequence     |           1|     20538|
+|4     |Top_Student__GCB1 |           1|      2018|
 |5     |Top_Student__GCB2 |           1|     10764|
-|6     |Top_Student__GCB3 |           1|     17042|
+|6     |Top_Student__GCB3 |           1|     17076|
 |7     |game_over_menu__1 |           1|      4404|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 976.738 ; gain = 720.832
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:21 . Memory (MB): peak = 973.922 ; gain = 716.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:39 . Memory (MB): peak = 1247.227 ; gain = 991.320
+Finished Timing Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 1244.480 ; gain = 987.422
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2434,10 +2424,10 @@ Report RTL Partitions:
 +------+------------------+------------+----------+
 |1     |game_over_menu    |           1|      8545|
 |2     |fade_animation    |           2|      5777|
-|3     |mole_sequence     |           1|     22429|
-|4     |Top_Student__GCB1 |           1|      2116|
+|3     |mole_sequence     |           1|     20538|
+|4     |Top_Student__GCB1 |           1|      2018|
 |5     |Top_Student__GCB2 |           1|     10764|
-|6     |Top_Student__GCB3 |           1|     17042|
+|6     |Top_Student__GCB3 |           1|     17076|
 |7     |game_over_menu__1 |           1|      4376|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -2472,7 +2462,7 @@ WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[6]) is unus
 WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[5]) is unused and will be removed from module mole_sequence.
 WARNING: [Synth 8-3332] Sequential element (actual_defuse_length_reg[4]) is unused and will be removed from module mole_sequence.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:51 ; elapsed = 00:01:55 . Memory (MB): peak = 1282.121 ; gain = 1026.215
+Finished Technology Mapping : Time (s): cpu = 00:01:55 ; elapsed = 00:02:02 . Memory (MB): peak = 1255.578 ; gain = 998.520
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2494,18 +2484,18 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5365] Flop nolabel_line88/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to nolabel_line88/Inst_Ps2Interface/ps2_clk_h_reg_inv.
 INFO: [Synth 8-5365] Flop nolabel_line88/Inst_Ps2Interface/ps2_data_h_reg is being inverted and renamed to nolabel_line88/Inst_Ps2Interface/ps2_data_h_reg_inv.
-INFO: [Synth 8-6064] Net n_0_15823 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_15810 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_15861 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_15779 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_13442 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_15777 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
 INFO: [Synth 8-6064] Net n_0_9520 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
 INFO: [Synth 8-6064] Net n_0_9453 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
-INFO: [Synth 8-6064] Net n_0_15281 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_15429 is driving 72 big block pins (URAM, BRAM and DSP loads). Created 8 replicas of its driver. 
 INFO: [Synth 8-6064] Net n_0_9472 is driving 66 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:01:57 . Memory (MB): peak = 1282.121 ; gain = 1026.215
+Finished IO Insertion : Time (s): cpu = 00:01:57 ; elapsed = 00:02:04 . Memory (MB): peak = 1255.578 ; gain = 998.520
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2518,7 +2508,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:01:57 . Memory (MB): peak = 1282.121 ; gain = 1026.215
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:58 ; elapsed = 00:02:04 . Memory (MB): peak = 1255.578 ; gain = 998.520
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2530,25 +2520,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:56 ; elapsed = 00:02:00 . Memory (MB): peak = 1282.121 ; gain = 1026.215
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:07 . Memory (MB): peak = 1255.578 ; gain = 998.520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:56 ; elapsed = 00:02:00 . Memory (MB): peak = 1282.121 ; gain = 1026.215
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:01 ; elapsed = 00:02:07 . Memory (MB): peak = 1255.578 ; gain = 998.520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:56 ; elapsed = 00:02:00 . Memory (MB): peak = 1282.121 ; gain = 1026.215
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 1255.578 ; gain = 998.520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:56 ; elapsed = 00:02:00 . Memory (MB): peak = 1282.121 ; gain = 1026.215
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 1255.578 ; gain = 998.520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2565,17 +2555,17 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BUFG    |    12|
-|2     |CARRY4  |  4837|
+|2     |CARRY4  |  4830|
 |3     |DSP48E1 |    80|
-|4     |LUT1    |   837|
-|5     |LUT2    |  6940|
-|6     |LUT3    |  5319|
-|7     |LUT4    |  3430|
-|8     |LUT5    |  2696|
-|9     |LUT6    |  4539|
+|4     |LUT1    |   881|
+|5     |LUT2    |  6595|
+|6     |LUT3    |  5418|
+|7     |LUT4    |  3686|
+|8     |LUT5    |  2401|
+|9     |LUT6    |  4278|
 |10    |MUXF7   |    17|
 |11    |FDE_1   |    32|
-|12    |FDRE    |  3129|
+|12    |FDRE    |  3090|
 |13    |FDSE    |    33|
 |14    |IBUF    |    24|
 |15    |IOBUF   |     2|
@@ -2587,7 +2577,7 @@ Report Instance Areas:
 +------+--------------------------------+----------------------------+------+
 |      |Instance                        |Module                      |Cells |
 +------+--------------------------------+----------------------------+------+
-|1     |top                             |                            | 31973|
+|1     |top                             |                            | 31425|
 |2     |  Music                         |music                       |   144|
 |3     |    get_fullnote                |music_ROM                   |    58|
 |4     |  fade_lose_animation           |fade_animation              |   823|
@@ -2599,19 +2589,19 @@ Report Instance Areas:
 |10    |  flexible_clock_module_1000    |flexible_clock_module       |    54|
 |11    |  flexible_clock_module_25m     |flexible_clock_module_1     |    50|
 |12    |  flexible_clock_module_6p25m   |flexible_clock_module_2     |    51|
-|13    |  game                          |mole_sequence               |  5414|
+|13    |  game                          |mole_sequence               |  5144|
 |14    |    flexible_clock_1000         |flexible_clock_module_27    |    63|
 |15    |    unit1                       |random_number_generator     |    73|
-|16    |    unit10                      |debounce_28                 |   108|
+|16    |    unit10                      |debounce_28                 |   109|
 |17    |    unit2                       |random_number_generator_29  |    73|
 |18    |    unit3                       |random_number_generator_30  |    74|
-|19    |    unit4                       |random_number_generator_31  |   104|
+|19    |    unit4                       |random_number_generator_31  |    73|
 |20    |    unit5                       |random_number_generator_32  |    73|
 |21    |    unit6                       |random_number_generator_33  |    74|
-|22    |    unit7                       |random_number_generator_34  |   104|
+|22    |    unit7                       |random_number_generator_34  |    73|
 |23    |    unit8                       |defuse_sequence             |  1191|
 |24    |      unit                      |random_number_generator_35  |    64|
-|25    |    unit9                       |point_display               |   166|
+|25    |    unit9                       |point_display               |   170|
 |26    |  game_over_lose_menu           |game_over_menu              |  1234|
 |27    |    flexible_clock_module_10    |flexible_clock_module_25    |    55|
 |28    |    flexible_clock_module_25m   |flexible_clock_module_26    |    50|
@@ -2627,23 +2617,23 @@ Report Instance Areas:
 |38    |  nolabel_line123               |main_menu                   |  4291|
 |39    |    flexible_clock_module_1     |flexible_clock_module_21    |    54|
 |40    |    flexible_clock_module_25m   |flexible_clock_module_22    |    50|
-|41    |  nolabel_line129               |settings_menu               |  4058|
+|41    |  nolabel_line129               |settings_menu               |  4060|
 |42    |    flexible_clock_module_1000  |flexible_clock_module_19    |    54|
 |43    |    flexible_clock_module_25m   |flexible_clock_module_20    |    50|
-|44    |  nolabel_line58                |Oled_Display                |  2723|
-|45    |  nolabel_line88                |MouseCtl                    |   937|
+|44    |  nolabel_line58                |Oled_Display                |  2738|
+|45    |  nolabel_line88                |MouseCtl                    |   934|
 |46    |    Inst_Ps2Interface           |Ps2Interface                |   282|
 |47    |  receive                       |UART_RX                     |    90|
-|48    |  timer                         |Count_Down_Timer            |  1067|
+|48    |  timer                         |Count_Down_Timer            |  1069|
 |49    |    flexible_clock_module_100Hz |flexible_clock_module_17    |    54|
 |50    |    flexible_clock_module_1Hz   |flexible_clock_module_18    |    54|
 |51    |  transmit                      |UART_TX                     |    48|
-|52    |  u1                            |whoWinner                   |   217|
-|53    |  unit                          |LED_Switch_Random           |  1688|
+|52    |  u1                            |whoWinner                   |    13|
+|53    |  unit                          |LED_Switch_Random           |  1631|
 |54    |    flexible_clock_module_10Hz  |flexible_clock_module_14    |    55|
 |55    |    flexible_clock_module_10kHz |flexible_clock_module_15    |    53|
 |56    |    flexible_clock_module_1Hz   |flexible_clock_module_16    |    54|
-|57    |    unit                        |random_number_generator_led |   170|
+|57    |    unit                        |random_number_generator_led |   145|
 |58    |  wipe_main_settings            |wipe_animation              |   437|
 |59    |    flexible_clock_module_10    |flexible_clock_module_12    |    55|
 |60    |    flexible_clock_module_25m   |flexible_clock_module_13    |    50|
@@ -2652,14 +2642,14 @@ Report Instance Areas:
 |63    |    flexible_clock_module_25m   |flexible_clock_module_11    |    50|
 +------+--------------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:56 ; elapsed = 00:02:00 . Memory (MB): peak = 1282.121 ; gain = 1026.215
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 1255.578 ; gain = 998.520
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 76 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:45 ; elapsed = 00:01:53 . Memory (MB): peak = 1282.121 ; gain = 672.891
-Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:02:01 . Memory (MB): peak = 1282.121 ; gain = 1026.215
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:49 ; elapsed = 00:02:00 . Memory (MB): peak = 1255.578 ; gain = 645.246
+Synthesis Optimization Complete : Time (s): cpu = 00:02:01 ; elapsed = 00:02:08 . Memory (MB): peak = 1255.578 ; gain = 998.520
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 4992 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 4985 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -2668,11 +2658,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-463 Infos, 170 Warnings, 0 Critical Warnings and 0 Errors encountered.
+460 Infos, 173 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:03 ; elapsed = 00:02:08 . Memory (MB): peak = 1282.121 ; gain = 1039.047
+synth_design: Time (s): cpu = 00:02:08 ; elapsed = 00:02:17 . Memory (MB): peak = 1255.578 ; gain = 1011.406
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/sean.ng/OneDrive - National University of Singapore/Desktop/4SEM/EE2026/Lab/github/project/MODS/MODS.runs/synth_1/Top_Student.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1282.121 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Apr  7 23:48:22 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.173 . Memory (MB): peak = 1255.578 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  8 00:22:14 2024...

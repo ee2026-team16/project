@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Apr  7 23:48:22 2024
+| Date         : Mon Apr  8 00:22:14 2024
 | Host         : LAPTOP-NSS21NBQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_Student_utilization_synth.rpt -pb Top_Student_utilization_synth.pb
 | Design       : Top_Student
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+-------+-------+-----------+-------+
 |        Site Type        |  Used | Fixed | Available | Util% |
 +-------------------------+-------+-------+-----------+-------+
-| Slice LUTs*             | 20267 |     0 |     20800 | 97.44 |
-|   LUT as Logic          | 20267 |     0 |     20800 | 97.44 |
+| Slice LUTs*             | 19639 |     0 |     20800 | 94.42 |
+|   LUT as Logic          | 19639 |     0 |     20800 | 94.42 |
 |   LUT as Memory         |     0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  3194 |     0 |     41600 |  7.68 |
-|   Register as Flip Flop |  3194 |     0 |     41600 |  7.68 |
+| Slice Registers         |  3155 |     0 |     41600 |  7.58 |
+|   Register as Flip Flop |  3155 |     0 |     41600 |  7.58 |
 |   Register as Latch     |     0 |     0 |     41600 |  0.00 |
 | F7 Muxes                |    17 |     0 |     16300 |  0.10 |
 | F8 Muxes                |     0 |     0 |      8150 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 33    |          Yes |         Set |            - |
-| 3161  |          Yes |       Reset |            - |
+| 3122  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,14 +150,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     | 6940 |                 LUT |
-| LUT3     | 5319 |                 LUT |
-| CARRY4   | 4837 |          CarryLogic |
-| LUT6     | 4539 |                 LUT |
-| LUT4     | 3430 |                 LUT |
-| FDRE     | 3161 |        Flop & Latch |
-| LUT5     | 2696 |                 LUT |
-| LUT1     |  837 |                 LUT |
+| LUT2     | 6595 |                 LUT |
+| LUT3     | 5418 |                 LUT |
+| CARRY4   | 4830 |          CarryLogic |
+| LUT6     | 4278 |                 LUT |
+| LUT4     | 3686 |                 LUT |
+| FDRE     | 3122 |        Flop & Latch |
+| LUT5     | 2401 |                 LUT |
+| LUT1     |  881 |                 LUT |
 | DSP48E1  |   80 |    Block Arithmetic |
 | OBUF     |   40 |                  IO |
 | FDSE     |   33 |        Flop & Latch |
